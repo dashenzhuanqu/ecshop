@@ -1,14 +1,14 @@
-﻿<!-- $Id: goods_type_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\privilege\privilege.html";i:1536196103;}*/ ?>
+<!-- $Id: privilege_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>ECSHOP 管理中心 - 新建商品类型 </title>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>ECSHOP 管理中心 - 管理员列表 </title>
 <meta name="robots" content="noindex, nofollow">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../../../static/css/general.css" rel="stylesheet" type="text/css" />
-<link href="../../../static/css/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<base href="__PUBLIC__/static/" />
+<link href="__PUBLIC__/static/css/general.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/static/css/main.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="__PUBLIC__/static/js/transport.js"></script><script type="text/javascript" src="__PUBLIC__/static/js/common.js"></script>
 <style>
   .panel-icloud .panel-right iframe {
     height: 300px;
@@ -29,12 +29,12 @@ var todolist_save = "保存";
 var todolist_clear = "清除";
 var todolist_confirm_save = "是否将更改保存到记事本？";
 var todolist_confirm_clear = "是否清空内容？";
-var lang_enabled = "启用";
-var lang_remove = "移除";
-var attribute = "属性";
-var remove_confirm = "删除商品类型将会清除该类型下的所有属性。\
-您确定要删除选定的商品类型吗？";
-var type_name_empty = "商品类型名称不能为空！";
+var user_name_empty = "管理员用户名不能为空!";
+var password_invaild = "密码必须同时包含字母及数字且长度不能小于6!";
+var email_empty = "Email地址不能为空!";
+var email_error = "Email地址格式不正确!";
+var password_error = "两次输入的密码不一致!";
+var captcha_empty = "您没有输入验证码!";
 //-->
 /*关闭按钮*/
   function get_certificate(){
@@ -44,7 +44,7 @@ var type_name_empty = "商品类型名称不能为空！";
 	  if(panel&&CMask&&frame){
 	      panel.style.display = 'block';
 	      mask.style.display = 'block';
-	      frame.src = 'https://openapi.shopex.cn/oauth/authorize?response_type=code&client_id=yogfss4l&redirect_uri=http%3A%2F%2F127.0.0.1%2FECShop_V4.0.0_UTF8_release0830%2Fsource%2Fecshop%2Fadmin%2Fcertificate.php%3Fact%3Dget_certificate%26type%3Dindex&view=auth_ecshop';
+	      frame.src = 'https://openapi.shopex.cn/oauth/authorize?response_type=code&client_id=yogfss4l&redirect_uri=http%3A%2F%2Flocalhost%2Fdayi%2Fecshop%2Fecshop%2Fadmin%2Fcertificate.php%3Fact%3Dget_certificate%26type%3Dindex&view=auth_ecshop';
 	    }
 	}
 
@@ -61,7 +61,7 @@ var type_name_empty = "商品类型名称不能为空！";
 </head>
 <body>
 <!--云起激活系统面板-->
-<div class="panel-hint panel-icloud" id="panelCloud">
+<!-- <div class="panel-hint panel-icloud" id="panelCloud">
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -75,102 +75,108 @@ var type_name_empty = "商品类型名称不能为空！";
   <div class="panel-right">
     <h5 class="logo">云起</h5>
     <p>正在激活中</p>
-    <iframe src="" frameborder="0" id="CFrame"></iframe>
+    <iframe src="privilege.html" id="CFrame" frameborder="0"></iframe>
     <div class="cloud-passw">
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-</div>
+</div> -->
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-      <a class="btn btn-right" href="/index/goods/goods_type_manage">商品类型列表</a>
+      <a class="btn btn-right" href="<?php echo url('privilege/addprivilege'); ?>">添加管理员</a>
   
-    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;新建商品类型 </span>
+    <span class="action-span1"><a href="<?php echo url('ads/main'); ?>">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;&gt;&nbsp;&nbsp;管理员列表 </span>
   <div style="clear:both"></div>
-</h1><script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/validator.js"></script>
-<div class="main-div">
-  <form action="" method="post" name="theForm" onsubmit="return validate();">
-    <table cellspacing="1" cellpadding="3" width="100%">
-      <tr>
-        <td class="label">商品类型名称:</td>
-        <td><input type="text" name="cat_name" value="" size="40" />
-        <span class="require-field">*</span></td>
-      </tr>
-      <tr style="display:none">
-        <td class="label">状态:</td>
-        <td><input type="radio" name="enabled" value="0">&nbsp;禁用&nbsp;<input type="radio" name="enabled" value="1" checked>&nbsp;启用&nbsp;</td>
-      </tr>
-      <tr>
-        <td class="label"><a href="javascript:showNotice('noticeAttrGroups');" title="点击此处查看提示信息"><img src="../../../static/picture/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息"></a> 属性分组:</td>
-        <td>
-          <textarea name="attr_group" rows="5" cols="40"></textarea><br />
-          <span class="notice-span" style="display:block"  id="noticeAttrGroups">每行一个商品属性组。排序也将按照自然顺序排序。</span>
-        </td>
-      </tr>
-      <tr align="center">
-        <td colspan="2">
-          <input type="hidden" name="cat_id" value="" />
-          <input type="submit" value=" 确定 " class="button" />
-          <input type="reset" value=" 重置 " class="button" />
-          <input type="hidden" name="act" value="insert" />
-        </td>
-      </tr>
-    </table>
-  </form>
+</h1><script type="text/javascript" src="privilege_data/utils.js"></script><script type="text/javascript" src="privilege_data/listtable.js"></script>
+<div class="list-div" id="listDiv">
+
+<table id="list-table" cellspacing="1" cellpadding="3">
+  <tbody><tr>
+    <th>用户名</th>
+    <th>Email地址</th>
+    <th>加入时间</th>
+    <th>最后登录时间</th>
+    <th>操作</th>
+  </tr>
+    <tr>
+    <td class="first-cell" style="background-color: rgb(255, 255, 255);">88180801933648</td>
+    <td style="background-color: rgb(255, 255, 255);" align="left">88180801933648</td>
+    <td style="background-color: rgb(255, 255, 255);" align="center">2018-09-03 21:21:36</td>
+    <td style="background-color: rgb(255, 255, 255);" align="center">N/A</td>
+    <td style="background-color: rgb(255, 255, 255);" align="center">
+      <a href="http://localhost/dayi/ecshop/ecshop/admin/privilege.php?act=allot&amp;id=2&amp;user=88180801933648" title="分派权限">分派权限</a>&nbsp;
+      <a href="http://localhost/dayi/ecshop/ecshop/admin/admin_logs.php?act=list&amp;id=2" title="查看日志">查看日志</a>&nbsp;
+      <a href="http://localhost/dayi/ecshop/ecshop/admin/privilege.php?act=edit&amp;id=2" title="编辑">编辑</a>&nbsp;
+      <a href="javascript:;" onclick="listTable.remove(2, '您确认要删除这条记录吗?')" title="移除">移除</a></td>
+  </tr>
+<<<<<<< HEAD:ThinkPHP/application/index/view/goods/brand_add.html
+  <tr>
+    <td colspan="2" align="center"><br />
+      <input type="submit" class="button" value=" 确定 " />
+      <input type="reset" class="button" value=" 重置 " />
+      <!--<input type="hidden" name="act" value="insert" />-->
+      <!--<input type="hidden" name="old_brandname" value="" />-->
+      <!--<input type="hidden" name="id" value="" />-->
+      <!--<input type="hidden" name="old_brandlogo" value="">-->
+    </td>
+=======
+    <tr>
+    <td class="first-cell" style="background-color: rgb(255, 255, 255);">admin</td>
+    <td style="background-color: rgb(255, 255, 255);" align="left">2972409305@qq.com</td>
+    <td style="background-color: rgb(255, 255, 255);" align="center">2018-09-03 21:21:27</td>
+    <td style="background-color: rgb(255, 255, 255);" align="center">2018-09-04 19:58:32</td>
+    <td style="background-color: rgb(255, 255, 255);" align="center">
+      <a href="http://localhost/dayi/ecshop/ecshop/admin/privilege.php?act=allot&amp;id=1&amp;user=admin" title="分派权限">分派权限</a>&nbsp;
+      <a href="http://localhost/dayi/ecshop/ecshop/admin/admin_logs.php?act=list&amp;id=1" title="查看日志">查看日志</a>&nbsp;
+      <a href="http://localhost/dayi/ecshop/ecshop/admin/privilege.php?act=edit&amp;id=1" title="编辑">编辑</a>&nbsp;
+      <a href="javascript:;" onclick="listTable.remove(1, '您确认要删除这条记录吗?')" title="移除">移除</a></td>
+>>>>>>> f9ab5cafe81fe890b8d92dafa3658532693993d9:ThinkPHP/runtime/temp/b84176f7de66a54c54c821c7838549b2.php
+  </tr>
+  </tbody></table>
+
 </div>
-
-<script type="text/javascript">
-<!--
-
-onload = function() {
-  document.forms['theForm'].elements['cat_name'].focus();
-  startCheckOrder();
-}
-
-function validate()
-{
-  var validator = new Validator('theForm');
-  validator.required('cat_name', type_name_empty);
-
-  return validator.passed();
-}
+<script type="text/javascript" language="JavaScript">
   
-//-->
+  onload = function()
+  {
+    // 开始检查订单
+    startCheckOrder();
+  }
+  
 </script>
-
 <div id="footer">
-共执行 2 个查询，用时 0.016500 秒，Gzip 已禁用，内存占用 1.331 MB<br />
-版权所有 &copy; 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
+共执行 3 个查询，用时 0.010860 秒，Gzip 已禁用，内存占用 1.404 MB<br>
+版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
 <!-- 新订单提示信息 -->
 <div id="popMsg">
-  <table cellspacing="0" cellpadding="0" width="100%" bgcolor="#cfdef4" border="0">
-  <tr>
+  <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#cfdef4">
+  <tbody><tr>
     <td style="color: #0f2c8c" width="30" height="24"></td>
-    <td style="font-weight: normal; color: #1f336b; padding-top: 4px;padding-left: 4px" valign="center" width="100%"> 新订单通知</td>
-    <td style="padding-top: 2px;padding-right:2px" valign="center" align="right" width="19"><span title="关闭" style="cursor: hand;cursor:pointer;color:red;font-size:12px;font-weight:bold;margin-right:4px;" onclick="Message.close()" >×</span><!-- <img title=关闭 style="cursor: hand" onclick=closediv() hspace=3 src="static/picture/msgclose.jpg"> --></td>
+    <td style="font-weight: normal; color: #1f336b; padding-top: 4px;padding-left: 4px" width="100%" valign="center"> 新订单通知</td>
+    <td style="padding-top: 2px;padding-right:2px" width="19" valign="center" align="right"><span title="关闭" style="cursor: hand;cursor:pointer;color:red;font-size:12px;font-weight:bold;margin-right:4px;" onclick="Message.close()">×</span><!-- <img title=关闭 style="cursor: hand" onclick=closediv() hspace=3 src="msgclose.jpg"> --></td>
   </tr>
   <tr>
     <td style="padding-right: 1px; padding-bottom: 1px" colspan="3" height="70">
     <div id="popMsgContent">
       <p>您有 <strong style="color:#ff0000" id="spanNewOrder">1</strong> 个新订单以及       <strong style="color:#ff0000" id="spanNewPaid">0</strong> 个新付款的订单</p>
-      <p align="center" style="word-break:break-all"><a href="order.php?act=list"><span style="color:#ff0000">点击查看新订单</span></a></p>
+      <p style="word-break:break-all" align="center"><a href="http://localhost/dayi/ecshop/ecshop/admin/order.php?act=list"><span style="color:#ff0000">点击查看新订单</span></a></p>
     </div>
     </td>
   </tr>
-  </table>
+  </tbody></table>
 </div>
 
 <!--
-<embed src="static/flash/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
+<embed src="images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
 -->
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
   <param name="movie" value="images/online.swf">
   <param name="quality" value="high">
-  <embed src="../../../images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
-  </embed>
+  <embed src="privilege_data/online.swf" name="msgBeep" id="msgBeep" quality="high" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash" width="0" height="0">
+  
 </object>
 
 <script language="JavaScript">
@@ -316,5 +322,5 @@ if (document.getElementById("listDiv"))
 
 //-->
 </script>
-</body>
-</html>
+
+</body></html>

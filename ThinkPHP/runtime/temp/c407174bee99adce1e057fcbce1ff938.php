@@ -1,14 +1,14 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\brand_add.html";i:1536237464;}*/ ?>
-﻿<!-- $Id: brand_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:98:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\ads\ads_list.html";i:1536146630;}*/ ?>
+﻿<!-- $Id: ads_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>ECSHOP 管理中心 - 添加品牌 </title>
+<title>ECSHOP 管理中心 - 广告列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../../../static/css/general.css" rel="stylesheet" type="text/css" />
-<link href="../../../static/css/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>
+<link href="static/css/general.css" rel="stylesheet" type="text/css" />
+<link href="static/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="static/js/transport.js"></script><script type="text/javascript" src="static/js/common.js"></script>
 <style>
   .panel-icloud .panel-right iframe {
     height: 300px;
@@ -29,8 +29,21 @@ var todolist_save = "保存";
 var todolist_clear = "清除";
 var todolist_confirm_save = "是否将更改保存到记事本？";
 var todolist_confirm_clear = "是否清空内容？";
-var no_brandname = "您必须输入品牌名称！";
-var require_num = "排序序号必须是一个数字";
+var posit_name_empty = "广告位名称不能为空!";
+var ad_width_empty = "请输入广告位的宽度!";
+var ad_height_empty = "请输入广告位的高度!";
+var ad_width_number = "广告位的宽度必须是一个数字!";
+var ad_height_number = "广告位的高度必须是一个数字!";
+var no_outside_address = "建议您指定该广告所要投放的站点的名称，方便于该广告的来源统计!";
+var width_value = "广告位的宽度值必须在1到1024之间!";
+var height_value = "广告位的高度值必须在1到1024之间!";
+var ad_name_empty = "请输入广告名称!";
+var ad_link_empty = "请输入广告的链接URL!";
+var ad_text_empty = "广告的内容不能为空!";
+var ad_photo_empty = "广告的图片不能为空!";
+var ad_flash_empty = "广告的flash不能为空!";
+var ad_code_empty = "广告的代码不能为空!";
+var empty_position_style = "广告位的模版不能为空!";
 //-->
 /*关闭按钮*/
   function get_certificate(){
@@ -82,78 +95,108 @@ var require_num = "排序序号必须是一个数字";
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-      <a class="btn btn-right" href="/index/goods/brand_list">商品品牌</a>
+      <a class="btn btn-right" href="ads.php?act=add">添加广告</a>
   
-    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;添加品牌 </span>
+    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;广告列表 </span>
   <div style="clear:both"></div>
-</h1><div class="main-div">
-<form method="post" action="/index/goods/brand_adds" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
-<table cellspacing="1" cellpadding="3" width="100%">
+</h1><script type="text/javascript" src="static/js/utils.js"></script><script type="text/javascript" src="static/js/listtable.js"></script>
+<form method="post" action="" name="listForm">
+<!-- start ads list -->
+<div class="list-div" id="listDiv">
+
+<table cellpadding="3" cellspacing="1">
   <tr>
-    <td class="label">品牌名称</td>
-    <td><input type="text" name="brand_name" maxlength="60" value="" /><span class="require-field">*</span></td>
+    <th><a href="javascript:listTable.sort('ad_name'); ">广告名称</a><img src="static/picture/sort_desc.png"/></th>
+    <th><a href="javascript:listTable.sort('position_id'); ">广告位置</a></th>
+    <th><a href="javascript:listTable.sort('media_type'); ">媒介类型</a></th>
+    <th><a href="javascript:listTable.sort('start_date'); ">开始日期</a></th>
+    <th><a href="javascript:listTable.sort('end_date'); ">结束日期</a></th>
+    <th><a href="javascript:listTable.sort('click_count'); ">点击次数</a></th>
+    <th>生成订单</th>
+    <th>操作</th>
   </tr>
-  <tr>
-    <td class="label">品牌网址</td>
-    <td><input type="text" name="brand_url" maxlength="60" size="40" value="" /></td>
-  </tr>
-  <tr>
-    <td class="label"><a href="javascript:showNotice('warn_brandlogo');" title="点击此处查看提示信息">
-        <img src="../../../static/picture/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息"></a>品牌LOGO</td>
-    <td><input type="file" name="brand_img" id="logo" size="45">    <br /><span class="notice-span" style="display:block"  id="warn_brandlogo">
-        请上传图片，做为品牌的LOGO！        </span>
+    <tr>
+    <td class="first-cell">
+    <span onclick="javascript:listTable.edit(this, 'edit_ad_name', 1)">漂亮的妹子</span>
+    </td>
+    <td align="left"><span>站外广告</span>
+    </td>
+    <td align="left"><span>图片</span></td>
+    <td align="center"><span>2018-08-30</span></td>
+    <td align="center"><span>2018-09-29</span></td>
+    <td align="right"><span>0</span></td>
+    <td align="right"><span>0</span></td>
+    <td align="right"><span>
+            <a href="ads.php?act=add_js&type=0&id=1" title="生成并复制JS代码">生成并复制JS代码</a>
+            <a href="ads.php?act=edit&id=1" title="编辑">编辑</a>
+      <a href="javascript:;" onclick="listTable.remove(1, '您确认要删除这条记录吗?')" title="移除">移除</a></span>
     </td>
   </tr>
-  <tr>
-    <td class="label">品牌描述</td>
-    <td><textarea  name="brand_desc" cols="60" rows="4"  ></textarea></td>
-  </tr>
-  <tr>
-    <td class="label">排序</td>
-    <td><input type="text" name="sort_order" maxlength="40" size="15" value="50" /></td>
-  </tr>
-  <tr>
-    <td class="label">是否显示</td>
-    <td><input type="radio" name="is_show" value="1" checked="checked" /> 是        <input type="radio" name="is_show" value="0"  /> 否        (当品牌下还没有商品的时候，首页及分类页的品牌区将不会显示该品牌。)
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center"><br />
-      <input type="submit" class="button" value=" 确定 " />
-      <input type="reset" class="button" value=" 重置 " />
-      <!--<input type="hidden" name="act" value="insert" />-->
-      <!--<input type="hidden" name="old_brandname" value="" />-->
-      <!--<input type="hidden" name="id" value="" />-->
-      <!--<input type="hidden" name="old_brandlogo" value="">-->
-    </td>
+    <tr>
+<<<<<<< HEAD:ThinkPHP/application/index/view/goods/brand_list.html
+      <td class="first-cell">
+        <span style="float:right"></span>
+        <span onclick="javascript:listTable.edit(this, 'edit_brand_name', 1)">{$v.brand_name}</span>
+      </td>
+      <td><img src="__ROOT__/uploads/{$v.brand_img}" width="100" alt=""></td>
+      <td>{$v.brand_url}</td>
+      <td align="left">{$v.brand_desc}</td>
+      <td align="right"><span onclick="javascript:listTable.edit(this, 'edit_sort_order', 1)">{$v.sort_order}</span></td>
+      <td align="center"><img src="../../../static/picture/yes.svg" width="20" onclick="listTable.toggle(this, 'toggle_show', 1)" /></td>
+      <td align="center">
+        <a href="brand.php?act=edit&id=1" title="编辑">编辑</a> |
+        <a href="javascript:;" onclick="listTable.remove(1, '你确认要删除选定的商品品牌吗？')" title="编辑">移除</a> 
+      </td>
+    </tr>
+    <?php } ?>
+      <td align="right" nowrap="true" colspan="6">
+      <!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+=======
+    <td align="right" nowrap="true" colspan="10"><!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+>>>>>>> f9ab5cafe81fe890b8d92dafa3658532693993d9:ThinkPHP/runtime/temp/c407174bee99adce1e057fcbce1ff938.php
+<div id="turn-page">
+  <span id="pageCurrent">1</span> / <span id="totalPages">1</span>
+  页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">
+  条记录，总共 <span id="totalRecords">1</span>
+  条记录
+  <span id="page-link">
+    <a href="javascript:listTable.gotoPageFirst()">第一页</a>
+    <a href="javascript:listTable.gotoPagePrev()">上一页</a>
+    <a href="javascript:listTable.gotoPageNext()">下一页</a>
+    <a href="javascript:listTable.gotoPageLast()">最末页</a>
+    <select id="gotoPage" onchange="listTable.gotoPage(this.value)">
+      <option value='1'>1</option>    </select>
+  </span>
+</div>
+</td>
   </tr>
 </table>
-</form>
+
 </div>
-<script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/validator.js"></script>
-<script language="JavaScript">
-<!--
-document.forms['theForm'].elements['brand_name'].focus();
-onload = function()
-{
+<!-- end ad_position list -->
+</form>
+
+<script type="text/javascript" language="JavaScript">
+  listTable.recordCount = 1;
+  listTable.pageCount = 1;
+
+    listTable.filter.sort_by = 'ad.ad_name';
+    listTable.filter.sort_order = 'DESC';
+    listTable.filter.record_count = '1';
+    listTable.filter.page_size = '15';
+    listTable.filter.page = '1';
+    listTable.filter.page_count = '1';
+    listTable.filter.start = '0';
+    
+  onload = function()
+  {
     // 开始检查订单
     startCheckOrder();
-}
-/**
- * 检查表单输入的数据
- */
-function validate()
-{
-    validator = new Validator("theForm");
-    validator.required("brand_name",  no_brandname);
-    validator.isNumber("sort_order", require_num, true);
-    return validator.passed();
-}
-//-->
+  }
+  
 </script>
-
 <div id="footer">
-共执行 2 个查询，用时 0.015498 秒，Gzip 已禁用，内存占用 1.409 MB<br />
+共执行 4 个查询，用时 0.013499 秒，Gzip 已禁用，内存占用 1.470 MB<br />
 版权所有 &copy; 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
 <!-- 新订单提示信息 -->
 <div id="popMsg">
@@ -180,7 +223,7 @@ function validate()
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
   <param name="movie" value="images/online.swf">
   <param name="quality" value="high">
-  <embed src="../../../images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
+  <embed src="images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
 

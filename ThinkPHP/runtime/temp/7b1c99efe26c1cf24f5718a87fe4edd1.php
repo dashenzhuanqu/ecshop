@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html";i:1536240532;}*/ ?>
+=======
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html";i:1536135651;}*/ ?>
+>>>>>>> f9ab5cafe81fe890b8d92dafa3658532693993d9
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -115,7 +119,7 @@ var adminId = "1";
     <!-- <li class="fix-spacel">&nbsp;</li> -->
     <li><a href="index.php?act=main" target="main-frame">起始页</a></li>
     <li><a href="privilege.php?act=modif" target="main-frame">设置导航栏</a></li>
-        <li><a href="/index/goods/goods" target="main-frame">商品列表</a></li>
+        <li><a href="goods.php?act=list" target="main-frame">商品列表</a></li>
         <li><a href="order.php?act=list" target="main-frame">订单列表</a></li>
         <li><a href="/index/goods/comment_manage_list" target="main-frame">用户评论</a></li>
         <li><a href="users.php?act=list" target="main-frame">会员列表</a></li>

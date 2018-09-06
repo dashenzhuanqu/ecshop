@@ -100,7 +100,6 @@ var Transport =
     asyn = asyn === false ? false : true;
 
     /* 处理HTTP请求和响应 */
-
   },
 
   /* *
