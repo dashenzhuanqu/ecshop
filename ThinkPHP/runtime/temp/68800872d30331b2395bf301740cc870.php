@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html";i:1536140516;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html";i:1536227197;}*/ ?>
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -18,7 +18,7 @@ var helpLang = "zh_cn";
 <body class="nav">
 <div class="menu">
   <div id="logo-div">
-    <a href="index.php"><img width="87" class="logo" src="../../../../static/picture/ecshop_logo@2x.png" alt="ECSHOP - power for e-commerce" /></a>
+    <a href="index.html"><img width="87" class="logo" src="../../../../static/picture/ecshop_logo@2x.png" alt="ECSHOP - power for e-commerce" /></a>
         <a href="javascript:;" class="noauthorize"><img src="../../../static/picture/noauthorize.png" class="icon" width="12"> 未授权用户</a>
       </div>
   <div id="license-div"></div>
@@ -41,17 +41,17 @@ var helpLang = "zh_cn";
                         </ul>
           </div>
                   </li>
-                          <li key="02_cat_and_goods" class="icon-goods" data-url="goods.php?act=list" data-key="01_goods_list" name="menu" onclick="showsub(this)">
+                          <li key="02_cat_and_goods" class="icon-goods" data-url="/index/goods/goods" data-key="01_goods_list" name="menu" onclick="showsub(this)">
           商品管理                    <div class="submenu">
             <div class="title">商品管理</div>
             <ul>
-                          <li id="sub-menu-01_goods_list" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=list" target="main-frame">商品列表</a></li>
-                          <li id="sub-menu-02_goods_add" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=add" target="main-frame">添加新商品</a></li>
-                          <li id="sub-menu-03_category_list" class="menu-item" onclick="showact(this, event)"><a href="category.php?act=list" target="main-frame">商品分类</a></li>
-                          <li id="sub-menu-05_comment_manage" class="menu-item" onclick="showact(this, event)"><a href="comment_manage.php?act=list" target="main-frame">用户评论</a></li>
-                          <li id="sub-menu-06_goods_brand_list" class="menu-item" onclick="showact(this, event)"><a href="brand.php?act=list" target="main-frame">商品品牌</a></li>
-                          <li id="sub-menu-08_goods_type" class="menu-item" onclick="showact(this, event)"><a href="goods_type.php?act=manage" target="main-frame">商品类型</a></li>
-                          <li id="sub-menu-11_goods_trash" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=trash" target="main-frame">商品回收站</a></li>
+                          <li id="sub-menu-01_goods_list" class="menu-item" onclick="showact(this, event)"><a href="/index/goods/goods" target="main-frame">商品列表</a></li>
+                          <li id="sub-menu-02_goods_add" class="menu-item" onclick="showact(this, event)"><a href="/index/goods/goods_add" target="main-frame">添加新商品</a></li>
+                          <li id="sub-menu-03_category_list" class="menu-item" onclick="showact(this, event)"><a href="/index/goods/category_list" target="main-frame">商品分类</a></li>
+                          <li id="sub-menu-05_comment_manage" class="menu-item" onclick="showact(this, event)"><a href="/index/goods/comment_manage_list" target="main-frame">用户评论</a></li>
+                          <li id="sub-menu-06_goods_brand_list" class="menu-item" onclick="showact(this, event)"><a href="/index/goods/brand_list" target="main-frame">商品品牌</a></li>
+                          <li id="sub-menu-08_goods_type" class="menu-item" onclick="showact(this, event)"><a href="/index/goods/goods_type_manage" target="main-frame">商品类型</a></li>
+                          <li id="sub-menu-11_goods_trash" class="menu-item" onclick="showact(this, event)"><a href="/index/goods/goods_trash" target="main-frame">商品回收站</a></li>
                           <li id="sub-menu-12_batch_pic" class="menu-item" onclick="showact(this, event)"><a href="picture_batch.php" target="main-frame">图片批量处理</a></li>
                           <li id="sub-menu-13_batch_add" class="menu-item" onclick="showact(this, event)"><a href="goods_batch.php?act=add" target="main-frame">商品批量上传</a></li>
                           <li id="sub-menu-14_goods_export" class="menu-item" onclick="showact(this, event)"><a href="goods_export.php?act=goods_export" target="main-frame">商品批量导出</a></li>
@@ -97,7 +97,7 @@ var helpLang = "zh_cn";
                         </ul>
           </div>
                   </li>
-                          <li key="05_banner" class="icon-banner" data-url="ads/ads/ads_list" data-key="ad_list" name="menu" onclick="showsub(this)">
+                          <li key="05_banner" class="icon-banner" data-url="index/ads/ads_list" data-key="ad_list" name="menu" onclick="showsub(this)">
           广告管理                    <div class="submenu">
             <div class="title">广告管理</div>
             <ul>
@@ -248,7 +248,7 @@ var helpLang = "zh_cn";
           </div>
                   </li>
                   </ul>
-      <script language="JavaScript" src="../../../static/js/menu_ext.js"></script>
+      <!--<script language="JavaScript" src="../../../static/js/menu_ext.js"></script>-->
     </div>
     <div id="help-div" style="display:none">
       <h1 id="help-title"></h1>
