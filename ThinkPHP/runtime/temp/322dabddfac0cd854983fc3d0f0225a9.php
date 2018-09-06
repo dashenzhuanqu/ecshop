@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\brand_list.html";i:1536234088;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\brand_list.html";i:1536240288;}*/ ?>
 ﻿<!-- $Id: brand_list.htm 15898 2009-05-04 07:25:41Z liuhui $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -126,7 +126,7 @@ var require_num = "排序序号必须是一个数字";
         <span style="float:right"></span>
         <span onclick="javascript:listTable.edit(this, 'edit_brand_name', 1)"><?php echo $v['brand_name']; ?></span>
       </td>
-      <td><img src="<?php echo $v['brand_img']; ?>" width="100" alt=""></td>
+      <td><img src="/uploads/<?php echo $v['brand_img']; ?>" width="100" alt=""></td>
       <td><?php echo $v['brand_url']; ?></td>
       <td align="left"><?php echo $v['brand_desc']; ?></td>
       <td align="right"><span onclick="javascript:listTable.edit(this, 'edit_sort_order', 1)"><?php echo $v['sort_order']; ?></span></td>

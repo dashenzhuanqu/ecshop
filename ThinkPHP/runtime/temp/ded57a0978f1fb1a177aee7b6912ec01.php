@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\brand_add.html";i:1536221572;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\brand_add.html";i:1536237464;}*/ ?>
 ﻿<!-- $Id: brand_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -121,10 +121,10 @@ var require_num = "排序序号必须是一个数字";
     <td colspan="2" align="center"><br />
       <input type="submit" class="button" value=" 确定 " />
       <input type="reset" class="button" value=" 重置 " />
-      <input type="hidden" name="act" value="insert" />
-      <input type="hidden" name="old_brandname" value="" />
-      <input type="hidden" name="id" value="" />
-      <input type="hidden" name="old_brandlogo" value="">
+      <!--<input type="hidden" name="act" value="insert" />-->
+      <!--<input type="hidden" name="old_brandname" value="" />-->
+      <!--<input type="hidden" name="id" value="" />-->
+      <!--<input type="hidden" name="old_brandlogo" value="">-->
     </td>
   </tr>
 </table>

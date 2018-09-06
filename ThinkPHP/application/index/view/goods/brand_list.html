@@ -125,7 +125,7 @@ var require_num = "排序序号必须是一个数字";
         <span style="float:right"></span>
         <span onclick="javascript:listTable.edit(this, 'edit_brand_name', 1)">{$v.brand_name}</span>
       </td>
-      <td><img src="{$v.brand_img}" width="100" alt=""></td>
+      <td><img src="__ROOT__/uploads/{$v.brand_img}" width="100" alt=""></td>
       <td>{$v.brand_url}</td>
       <td align="left">{$v.brand_desc}</td>
       <td align="right"><span onclick="javascript:listTable.edit(this, 'edit_sort_order', 1)">{$v.sort_order}</span></td>

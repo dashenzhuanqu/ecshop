@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\goods_add.html";i:1536226475;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\goods_add.html";i:1536240459;}*/ ?>
 ﻿<!-- $Id: goods_info.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -125,10 +125,10 @@ var cancel_color = "无样式";
         class="tab-back" id="detail-tab">详细描述</span><span
         class="tab-back" id="mix-tab">其他信息</span><span
         class="tab-back" id="properties-tab">商品属性</span><span
-        class="tab-back" id="gallery-tab">商品相册</span><span
-        class="tab-back" id="linkgoods-tab">关联商品</span><span
-        class="tab-back" id="groupgoods-tab">配件</span><span
-        class="tab-back" id="article-tab">关联文章</span>
+        class="tab-back" id="gallery-tab">商品相册</span><!--<span-->
+        <!--class="tab-back" id="linkgoods-tab">关联商品</span><span-->
+        <!--class="tab-back" id="groupgoods-tab">配件</span><span-->
+        <!--class="tab-back" id="article-tab">关联文章</span>-->
       </p>
     </div>
 
