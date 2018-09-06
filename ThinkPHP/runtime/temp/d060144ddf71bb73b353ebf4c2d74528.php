@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:102:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html";i:1536197293;}*/ ?>
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -151,9 +152,9 @@ var helpLang = "zh_cn";
           权限管理                    <div class="submenu">
             <div class="title">权限管理</div>
             <ul>
-                          <li id="sub-menu-admin_list" class="menu-item" onclick="showact(this, event)"><a href="{:url('privilege/privilege')}" target="main-frame">管理员列表</a></li>
+                          <li id="sub-menu-admin_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('privilege/privilege'); ?>" target="main-frame">管理员列表</a></li>
                           <li id="sub-menu-admin_logs" class="menu-item" onclick="showact(this, event)"><a href="admin_logs.php?act=list" target="main-frame">管理员日志</a></li>
-                          <li id="sub-menu-admin_role" class="menu-item" onclick="showact(this, event)"><a href="{:url('role/role')}" target="main-frame">角色管理</a></li>
+                          <li id="sub-menu-admin_role" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('role/role'); ?>" target="main-frame">角色管理</a></li>
                           <li id="sub-menu-agency_list" class="menu-item" onclick="showact(this, event)"><a href="agency.php?act=list" target="main-frame">办事处列表</a></li>
                           <li id="sub-menu-suppliers_list" class="menu-item" onclick="showact(this, event)"><a href="suppliers.php?act=list" target="main-frame">供货商列表</a></li>
                         </ul>

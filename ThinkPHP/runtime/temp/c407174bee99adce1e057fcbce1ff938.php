@@ -1,14 +1,14 @@
-﻿<!-- $Id: goods_type.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:98:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\ads\ads_list.html";i:1536146630;}*/ ?>
+﻿<!-- $Id: ads_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>ECSHOP 管理中心 - 商品类型 </title>
+<title>ECSHOP 管理中心 - 广告列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../../../static/css/general.css" rel="stylesheet" type="text/css" />
-<link href="../../../static/css/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>
+<link href="static/css/general.css" rel="stylesheet" type="text/css" />
+<link href="static/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="static/js/transport.js"></script><script type="text/javascript" src="static/js/common.js"></script>
 <style>
   .panel-icloud .panel-right iframe {
     height: 300px;
@@ -29,12 +29,21 @@ var todolist_save = "保存";
 var todolist_clear = "清除";
 var todolist_confirm_save = "是否将更改保存到记事本？";
 var todolist_confirm_clear = "是否清空内容？";
-var lang_enabled = "启用";
-var lang_remove = "移除";
-var attribute = "属性";
-var remove_confirm = "删除商品类型将会清除该类型下的所有属性。\
-您确定要删除选定的商品类型吗？";
-var type_name_empty = "商品类型名称不能为空！";
+var posit_name_empty = "广告位名称不能为空!";
+var ad_width_empty = "请输入广告位的宽度!";
+var ad_height_empty = "请输入广告位的高度!";
+var ad_width_number = "广告位的宽度必须是一个数字!";
+var ad_height_number = "广告位的高度必须是一个数字!";
+var no_outside_address = "建议您指定该广告所要投放的站点的名称，方便于该广告的来源统计!";
+var width_value = "广告位的宽度值必须在1到1024之间!";
+var height_value = "广告位的高度值必须在1到1024之间!";
+var ad_name_empty = "请输入广告名称!";
+var ad_link_empty = "请输入广告的链接URL!";
+var ad_text_empty = "广告的内容不能为空!";
+var ad_photo_empty = "广告的图片不能为空!";
+var ad_flash_empty = "广告的flash不能为空!";
+var ad_code_empty = "广告的代码不能为空!";
+var empty_position_style = "广告位的模版不能为空!";
 //-->
 /*关闭按钮*/
   function get_certificate(){
@@ -86,129 +95,49 @@ var type_name_empty = "商品类型名称不能为空！";
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-      <a class="btn btn-right" href="/index/goods/goods_type_add">新建商品类型</a>
+      <a class="btn btn-right" href="ads.php?act=add">添加广告</a>
   
-    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;商品类型 </span>
+    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;广告列表 </span>
   <div style="clear:both"></div>
-</h1><script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/listtable.js"></script>
+</h1><script type="text/javascript" src="static/js/utils.js"></script><script type="text/javascript" src="static/js/listtable.js"></script>
 <form method="post" action="" name="listForm">
-<!-- start goods type list -->
+<!-- start ads list -->
 <div class="list-div" id="listDiv">
 
-<table width="100%" cellpadding="3" cellspacing="1" id="listTable">
+<table cellpadding="3" cellspacing="1">
   <tr>
-    <th>商品类型名称</th>
-    <th>属性分组</th>
-    <th>属性数</th>
-    <th>状态</th>
+    <th><a href="javascript:listTable.sort('ad_name'); ">广告名称</a><img src="static/picture/sort_desc.png"/></th>
+    <th><a href="javascript:listTable.sort('position_id'); ">广告位置</a></th>
+    <th><a href="javascript:listTable.sort('media_type'); ">媒介类型</a></th>
+    <th><a href="javascript:listTable.sort('start_date'); ">开始日期</a></th>
+    <th><a href="javascript:listTable.sort('end_date'); ">结束日期</a></th>
+    <th><a href="javascript:listTable.sort('click_count'); ">点击次数</a></th>
+    <th>生成订单</th>
     <th>操作</th>
   </tr>
     <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 1)">书</span></td>
-    <td></td>
-    <td align="right">12</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=1" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=1" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(1, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
+    <td class="first-cell">
+    <span onclick="javascript:listTable.edit(this, 'edit_ad_name', 1)">漂亮的妹子</span>
+    </td>
+    <td align="left"><span>站外广告</span>
+    </td>
+    <td align="left"><span>图片</span></td>
+    <td align="center"><span>2018-08-30</span></td>
+    <td align="center"><span>2018-09-29</span></td>
+    <td align="right"><span>0</span></td>
+    <td align="right"><span>0</span></td>
+    <td align="right"><span>
+            <a href="ads.php?act=add_js&type=0&id=1" title="生成并复制JS代码">生成并复制JS代码</a>
+            <a href="ads.php?act=edit&id=1" title="编辑">编辑</a>
+      <a href="javascript:;" onclick="listTable.remove(1, '您确认要删除这条记录吗?')" title="移除">移除</a></span>
     </td>
   </tr>
     <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 2)">音乐</span></td>
-    <td></td>
-    <td align="right">19</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=2" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=2" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(2, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 3)">电影</span></td>
-    <td></td>
-    <td align="right">24</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=3" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=3" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(3, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 4)">手机</span></td>
-    <td></td>
-    <td align="right">26</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=4" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=4" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(4, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 5)">笔记本电脑</span></td>
-    <td></td>
-    <td align="right">19</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=5" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=5" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(5, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 6)">数码相机</span></td>
-    <td></td>
-    <td align="right">41</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=6" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=6" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(6, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 7)">数码摄像机</span></td>
-    <td></td>
-    <td align="right">23</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=7" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=7" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(7, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 8)">化妆品</span></td>
-    <td></td>
-    <td align="right">7</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=8" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=8" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(8, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 9)">精品手机</span></td>
-    <td></td>
-    <td align="right">39</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=9" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=9" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(9, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-      <tr>
-      <td align="right" nowrap="true" colspan="6">
-      <!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+    <td align="right" nowrap="true" colspan="10"><!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 <div id="turn-page">
   <span id="pageCurrent">1</span> / <span id="totalPages">1</span>
   页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">
-  条记录，总共 <span id="totalRecords">9</span>
+  条记录，总共 <span id="totalRecords">1</span>
   条记录
   <span id="page-link">
     <a href="javascript:listTable.gotoPageFirst()">第一页</a>
@@ -219,38 +148,35 @@ var type_name_empty = "商品类型名称不能为空！";
       <option value='1'>1</option>    </select>
   </span>
 </div>
-      </td>
-    </tr>
-  </table>
+</td>
+  </tr>
+</table>
 
 </div>
-<!-- end goods type list -->
+<!-- end ad_position list -->
 </form>
 
 <script type="text/javascript" language="JavaScript">
-<!--
-  listTable.recordCount = 9;
+  listTable.recordCount = 1;
   listTable.pageCount = 1;
 
-    listTable.filter.record_count = '9';
+    listTable.filter.sort_by = 'ad.ad_name';
+    listTable.filter.sort_order = 'DESC';
+    listTable.filter.record_count = '1';
     listTable.filter.page_size = '15';
     listTable.filter.page = '1';
     listTable.filter.page_count = '1';
     listTable.filter.start = '0';
-   
-  
+    
   onload = function()
   {
     // 开始检查订单
     startCheckOrder();
   }
-
-//-->
+  
 </script>
-
-
 <div id="footer">
-共执行 2 个查询，用时 0.011003 秒，Gzip 已禁用，内存占用 1.311 MB<br />
+共执行 4 个查询，用时 0.013499 秒，Gzip 已禁用，内存占用 1.470 MB<br />
 版权所有 &copy; 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
 <!-- 新订单提示信息 -->
 <div id="popMsg">
@@ -277,7 +203,7 @@ var type_name_empty = "商品类型名称不能为空！";
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
   <param name="movie" value="images/online.swf">
   <param name="quality" value="high">
-  <embed src="../../../images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
+  <embed src="images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
 
