@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\brand_list.html";i:1536240288;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\brand_list.html";i:1536325297;}*/ ?>
 ﻿<!-- $Id: brand_list.htm 15898 2009-05-04 07:25:41Z liuhui $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -83,33 +83,32 @@ var require_num = "排序序号必须是一个数字";
 <!--遮罩-->
 <h1>
       <a class="btn btn-right" href="/index/goods/brand_add">添加品牌</a>
-  
+
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;商品品牌 </span>
   <div style="clear:both"></div>
 </h1><script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/listtable.js"></script><!-- 品牌搜索 -->
 <!-- $Id: brand_search.htm 2009-05-04 liuhui $ -->
-<div class="form-div">
-  <form action="javascript:search_brand()" name="searchForm">
+<!--<div class="form-div">-->
+  <form action="<?php echo url('goods/brand_list'); ?>" method="post">
     <img src="../../../static/picture/icon_search.svg" width="26" height="22" border="0" alt="SEARCH" />
-     <input type="text" name="brand_name" size="15" />
+     <input type="text" name="search" size="15" />
     <input type="submit" value=" 搜索 " class="button" />
   </form>
-</div>
+<!--</div>-->
 
-<script language="JavaScript">
-    function search_brand()
-    {
-        listTable.filter['brand_name'] = Utils.trim(document.forms['searchForm'].elements['brand_name'].value);
-        listTable.filter['page'] = 1;
-        
-        listTable.loadList();
-    }
+<!--<script language="JavaScript">-->
+        <!--function search_brand()-->
+        <!--{-->
+            <!--listTable.filter['brand_name'] = Utils.trim(document.forms['searchForm'].elements['brand_name'].value);-->
+            <!--listTable.filter['page'] = 1;-->
 
-</script>
-<form method="post" action="" name="listForm">
+            <!--listTable.loadList();-->
+        <!--}-->
+
+<!--</script>-->
+<!--<form method="post" action="aaa" name="listForm">-->
 <!-- start brand list -->
 <div class="list-div" id="listDiv">
-
   <table cellpadding="3" cellspacing="1">
     <tr>
       <th>品牌名称</th>
@@ -120,46 +119,55 @@ var require_num = "排序序号必须是一个数字";
       <th>是否显示</th>
       <th>操作</th>
     </tr>
-    <?php foreach($arr as $k=>$v){ ?>
+     <?php foreach($data as $v): ?>
     <tr>
       <td class="first-cell">
         <span style="float:right"></span>
-        <span onclick="javascript:listTable.edit(this, 'edit_brand_name', 1)"><?php echo $v['brand_name']; ?></span>
+        <span><?php echo $v['brand_name']; ?></span>
       </td>
       <td><img src="/uploads/<?php echo $v['brand_img']; ?>" width="100" alt=""></td>
       <td><?php echo $v['brand_url']; ?></td>
       <td align="left"><?php echo $v['brand_desc']; ?></td>
       <td align="right"><span onclick="javascript:listTable.edit(this, 'edit_sort_order', 1)"><?php echo $v['sort_order']; ?></span></td>
-      <td align="center"><img src="../../../static/picture/yes.svg" width="20" onclick="listTable.toggle(this, 'toggle_show', 1)" /></td>
       <td align="center">
-        <a href="brand.php?act=edit&id=1" title="编辑">编辑</a> |
-        <a href="javascript:;" onclick="listTable.remove(1, '你确认要删除选定的商品品牌吗？')" title="编辑">移除</a> 
+        <?php if(in_array(($v['is_show']), explode(',',"1"))): ?>
+        <img src="../../../static/picture/yes.svg" width="20"/>
+        <?php else: ?>
+        <img src="../../../static/picture/no.svg" width="20"/>
+        <?php endif; ?>
+      </td>
+      <td align="center">
+        <a href="<?php echo url('goods/brand_edit'); ?>?id=<?php echo $v['b_id']; ?>" title="编辑">编辑</a> |
+        <a href="<?php echo url('goods/brand_del'); ?>?id=<?php echo $v['b_id']; ?>" title="编辑">移除</a>
       </td>
     </tr>
-    <?php } ?>
-      <td align="right" nowrap="true" colspan="6">
-      <!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-<div id="turn-page">
-  <span id="pageCurrent">1</span> / <span id="totalPages">1</span>
-  页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">
-  条记录，总共 <span id="totalRecords">2</span>
-  条记录
-  <span id="page-link">
-    <a href="javascript:listTable.gotoPageFirst()">第一页</a>
-    <a href="javascript:listTable.gotoPagePrev()">上一页</a>
-    <a href="javascript:listTable.gotoPageNext()">下一页</a>
-    <a href="javascript:listTable.gotoPageLast()">最末页</a>
-    <select id="gotoPage" onchange="listTable.gotoPage(this.value)">
-      <option value='1'>1</option>    </select>
-  </span>
-</div>
-      </td>
-    </tr>
+    <?php endforeach; ?>
   </table>
+    <!--<td align="right" nowrap="true" colspan="6">-->
+      <!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+      <center><div><?php echo $data->render(); ?></div></center>
+
+      <!--<div id="turn-page">-->
+  <!--<span id="pageCurrent">1</span> / <span id="totalPages">1</span>-->
+  <!--页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">-->
+  <!--条记录，总共 <span id="totalRecords">2</span>-->
+  <!--条记录-->
+  <!--<span id="page-link">-->
+    <!--<a href="javascript:listTable.gotoPageFirst()">第一页</a>-->
+    <!--<a href="javascript:listTable.gotoPagePrev()">上一页</a>-->
+    <!--<a href="javascript:listTable.gotoPageNext()">下一页</a>-->
+    <!--<a href="javascript:listTable.gotoPageLast()">最末页</a>-->
+    <!--<select id="gotoPage" onchange="listTable.gotoPage(this.value)">-->
+      <!--<option value='1'>1</option>    </select>-->
+  <!--</span>-->
+<!--</div>-->
+      <!--</td>-->
+    <!--</tr>-->
+
 
 <!-- end brand list -->
 </div>
-</form>
+<!--</form>-->
 
 <script type="text/javascript" language="javascript">
   <!--
@@ -171,14 +179,14 @@ var require_num = "排序序号必须是一个数字";
     listTable.filter.page = '1';
     listTable.filter.page_count = '1';
     listTable.filter.start = '0';
-  
-  
+
+
   onload = function()
   {
       // 开始检查订单
       startCheckOrder();
   }
-  
+
   //-->
 </script>
 <div id="footer">

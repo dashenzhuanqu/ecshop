@@ -1,0 +1,830 @@
+---------------------------------------------------------------
+[ 2018-09-08T07:42:07+08:00 ] 127.0.0.1 GET /
+[ info ] www.ecshop4.com/ [运行时间：0.084501s][吞吐率：11.83req/s] [内存消耗：1,319.98kb] [文件加载：33]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:07+08:00 ] 127.0.0.1 GET /index/index/menu.html
+[ info ] www.ecshop4.com/index/index/menu.html [运行时间：0.054998s][吞吐率：18.18req/s] [内存消耗：1,336.42kb] [文件加载：33]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'menu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->menu[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:07+08:00 ] 127.0.0.1 GET /index/index/top.html
+[ info ] www.ecshop4.com/index/index/top.html [运行时间：0.063497s][吞吐率：15.75req/s] [内存消耗：1,320.43kb] [文件加载：33]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'top',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->top[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:07+08:00 ] 127.0.0.1 GET /index/index/main.html
+[ info ] www.ecshop4.com/index/index/main.html [运行时间：0.073499s][吞吐率：13.61req/s] [内存消耗：1,274.68kb] [文件加载：32]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->main[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/backup.png
+[ info ] www.ecshop4.com/static/images/nav/backup.png [运行时间：0.055998s][吞吐率：17.86req/s] [内存消耗：1,049.92kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/lead.png
+[ info ] www.ecshop4.com/static/images/nav/lead.png [运行时间：0.106500s][吞吐率：9.39req/s] [内存消耗：1,049.93kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/sms.png
+[ info ] www.ecshop4.com/static/images/nav/sms.png [运行时间：0.144001s][吞吐率：6.94req/s] [内存消耗：1,049.91kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/system.png
+[ info ] www.ecshop4.com/static/images/nav/system.png [运行时间：0.077000s][吞吐率：12.99req/s] [内存消耗：1,049.91kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/template.png
+[ info ] www.ecshop4.com/static/images/nav/template.png [运行时间：0.208999s][吞吐率：4.78req/s] [内存消耗：1,049.96kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/order.png
+[ info ] www.ecshop4.com/static/images/nav/order.png [运行时间：0.050999s][吞吐率：19.61req/s] [内存消耗：1,049.92kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/email.png
+[ info ] www.ecshop4.com/static/images/nav/email.png [运行时间：0.115998s][吞吐率：8.62req/s] [内存消耗：1,049.94kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/content.png
+[ info ] www.ecshop4.com/static/images/nav/content.png [运行时间：0.084500s][吞吐率：11.83req/s] [内存消耗：1,049.95kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/rec.png
+[ info ] www.ecshop4.com/static/images/nav/rec.png [运行时间：0.241501s][吞吐率：4.14req/s] [内存消耗：1,049.90kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/stats.png
+[ info ] www.ecshop4.com/static/images/nav/stats.png [运行时间：0.048002s][吞吐率：20.83req/s] [内存消耗：1,049.92kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/goods.png
+[ info ] www.ecshop4.com/static/images/nav/goods.png [运行时间：0.237499s][吞吐率：4.21req/s] [内存消耗：1,049.92kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/promotion.png
+[ info ] www.ecshop4.com/static/images/nav/promotion.png [运行时间：0.068501s][吞吐率：14.60req/s] [内存消耗：1,050.04kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/banner.png
+[ info ] www.ecshop4.com/static/images/nav/banner.png [运行时间：0.054497s][吞吐率：18.35req/s] [内存消耗：1,049.91kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/members.png
+[ info ] www.ecshop4.com/static/images/nav/members.png [运行时间：0.103000s][吞吐率：9.71req/s] [内存消耗：1,049.95kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/certificate.png
+[ info ] www.ecshop4.com/static/images/nav/certificate.png [运行时间：0.046496s][吞吐率：21.51req/s] [内存消耗：1,050.02kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:08+08:00 ] 127.0.0.1 GET /static/images/nav/priv.png
+[ info ] www.ecshop4.com/static/images/nav/priv.png [运行时间：0.054496s][吞吐率：18.35req/s] [内存消耗：1,049.93kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:10+08:00 ] 127.0.0.1 GET /static/images/nav/goods.on.png
+[ info ] www.ecshop4.com/static/images/nav/goods.on.png [运行时间：0.045499s][吞吐率：21.98req/s] [内存消耗：1,049.96kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:11+08:00 ] 127.0.0.1 GET /static/images/nav/certificate.on.png
+[ info ] www.ecshop4.com/static/images/nav/certificate.on.png [运行时间：0.042503s][吞吐率：23.53req/s] [内存消耗：1,050.00kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:13+08:00 ] 127.0.0.1 GET /static/images/nav/promotion.on.png
+[ info ] www.ecshop4.com/static/images/nav/promotion.on.png [运行时间：0.042500s][吞吐率：23.53req/s] [内存消耗：1,050.01kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'nav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/static/css/nav.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:15+08:00 ] 127.0.0.1 GET /index/goods/goods.html
+[ info ] www.ecshop4.com/index/goods/goods.html [运行时间：0.149499s][吞吐率：6.69req/s] [内存消耗：2,457.82kb] [文件加载：42]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\goods_list.html [ array (
+  0 => 'arr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016000s ] mysql:host=127.0.0.1;dbname=ecsp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `good` [ RunTime:0.030507s ]
+[ sql ] [ SQL ] SELECT * FROM `good` [ RunTime:0.000999s ]
+---------------------------------------------------------------
+[ 2018-09-08T07:42:17+08:00 ] 127.0.0.1 GET /index/goods/goods_add.html
+[ info ] www.ecshop4.com/index/goods/goods_add.html [运行时间：0.058001s][吞吐率：17.24req/s] [内存消耗：1,371.23kb] [文件加载：34]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'goods_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/index/index/menu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Fri%2C%2007%20Sep%202018%2023%3A42%3A15%20GMT',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->goods_add[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\goods_add.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:18+08:00 ] 127.0.0.1 GET /index/includes/fckeditor/editor/fckeditor.html?InstanceName=goods_desc&Toolbar=Normal
+[ info ] www.ecshop4.com/index/includes/fckeditor/editor/fckeditor.html?InstanceName=goods_desc&Toolbar=Normal [运行时间：0.049002s][吞吐率：20.41req/s] [内存消耗：1,057.33kb] [文件加载：29]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'includes',
+    2 => 'fckeditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/index/goods/goods_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+  'InstanceName' => 'goods_desc',
+  'Toolbar' => 'Normal',
+  'editor' => 'fckeditor',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:19+08:00 ] 127.0.0.1 GET /index/goods/category_list.html
+[ info ] www.ecshop4.com/index/goods/category_list.html [运行时间：0.047001s][吞吐率：21.28req/s] [内存消耗：1,392.70kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'category_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/index/index/menu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Fri%2C%2007%20Sep%202018%2023%3A42%3A15%20GMT',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->category_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\category_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:19+08:00 ] 127.0.0.1 GET /static/picture/menu_minus.gif
+[ info ] www.ecshop4.com/static/picture/menu_minus.gif [运行时间：0.052999s][吞吐率：18.87req/s] [内存消耗：1,049.98kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'picture',
+    2 => 'menu_minus.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/index/goods/category_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:19+08:00 ] 127.0.0.1 GET /index/goods/images/menu_plus.gif
+[ info ] www.ecshop4.com/index/goods/images/menu_plus.gif [运行时间：0.062496s][吞吐率：16.00req/s] [内存消耗：1,352.93kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/index/goods/category_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Fri%2C%2007%20Sep%202018%2023%3A42%3A15%20GMT',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:20+08:00 ] 127.0.0.1 GET /index/goods/comment_manage_list.html
+[ info ] www.ecshop4.com/index/goods/comment_manage_list.html [运行时间：0.048499s][吞吐率：20.62req/s] [内存消耗：1,392.82kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'comment_manage_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/index/index/menu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Fri%2C%2007%20Sep%202018%2023%3A42%3A15%20GMT',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->comment_manage_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\comment_manage_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-08T07:42:22+08:00 ] 127.0.0.1 GET /index/goods/brand_list.html
+[ info ] www.ecshop4.com/index/goods/brand_list.html [运行时间：0.093499s][吞吐率：10.70req/s] [内存消耗：2,641.14kb] [文件加载：47]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'brand_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/index/index/menu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Fri%2C%2007%20Sep%202018%2023%3A42%3A15%20GMT',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->brand_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\brand_list.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001501s ] mysql:host=127.0.0.1;dbname=ecsp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand` WHERE  (  1 = 1 ) LIMIT 1 [ RunTime:0.003498s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  (  1 = 1 ) LIMIT 0,3 [ RunTime:0.001039s ]

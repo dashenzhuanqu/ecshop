@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html";i:1536140516;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html";i:1536308922;}*/ ?>
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -18,7 +18,7 @@ var helpLang = "zh_cn";
 <body class="nav">
 <div class="menu">
   <div id="logo-div">
-    <a href="index.php"><img width="87" class="logo" src="../../../../static/picture/ecshop_logo@2x.png" alt="ECSHOP - power for e-commerce" /></a>
+    <a href="index.php"><img width="87" class="logo" src="../../../static/picture/ecshop_logo@2x.png" alt="ECSHOP - power for e-commerce" /></a>
         <a href="javascript:;" class="noauthorize"><img src="../../../static/picture/noauthorize.png" class="icon" width="12"> 未授权用户</a>
       </div>
   <div id="license-div"></div>
@@ -41,27 +41,27 @@ var helpLang = "zh_cn";
                         </ul>
           </div>
                   </li>
-                          <li key="02_cat_and_goods" class="icon-goods" data-url="goods.php?act=list" data-key="01_goods_list" name="menu" onclick="showsub(this)">
+                          <li key="02_cat_and_goods" class="icon-goods" data-url="<?php echo url('goods/goods'); ?>" data-key="01_goods_list" name="menu" onclick="showsub(this)">
           商品管理                    <div class="submenu">
             <div class="title">商品管理</div>
             <ul>
-                          <li id="sub-menu-01_goods_list" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=list" target="main-frame">商品列表</a></li>
-                          <li id="sub-menu-02_goods_add" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=add" target="main-frame">添加新商品</a></li>
-                          <li id="sub-menu-03_category_list" class="menu-item" onclick="showact(this, event)"><a href="category.php?act=list" target="main-frame">商品分类</a></li>
-                          <li id="sub-menu-05_comment_manage" class="menu-item" onclick="showact(this, event)"><a href="comment_manage.php?act=list" target="main-frame">用户评论</a></li>
-                          <li id="sub-menu-06_goods_brand_list" class="menu-item" onclick="showact(this, event)"><a href="brand.php?act=list" target="main-frame">商品品牌</a></li>
-                          <li id="sub-menu-08_goods_type" class="menu-item" onclick="showact(this, event)"><a href="goods_type.php?act=manage" target="main-frame">商品类型</a></li>
-                          <li id="sub-menu-11_goods_trash" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=trash" target="main-frame">商品回收站</a></li>
-                          <li id="sub-menu-12_batch_pic" class="menu-item" onclick="showact(this, event)"><a href="picture_batch.php" target="main-frame">图片批量处理</a></li>
-                          <li id="sub-menu-13_batch_add" class="menu-item" onclick="showact(this, event)"><a href="goods_batch.php?act=add" target="main-frame">商品批量上传</a></li>
-                          <li id="sub-menu-14_goods_export" class="menu-item" onclick="showact(this, event)"><a href="goods_export.php?act=goods_export" target="main-frame">商品批量导出</a></li>
-                          <li id="sub-menu-15_batch_edit" class="menu-item" onclick="showact(this, event)"><a href="goods_batch.php?act=select" target="main-frame">商品批量修改</a></li>
-                          <li id="sub-menu-16_goods_script" class="menu-item" onclick="showact(this, event)"><a href="gen_goods_script.php?act=setup" target="main-frame">生成商品代码</a></li>
-                          <li id="sub-menu-17_tag_manage" class="menu-item" onclick="showact(this, event)"><a href="tag_manage.php?act=list" target="main-frame">标签管理</a></li>
-                          <li id="sub-menu-50_virtual_card_list" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=list&extension_code=virtual_card" target="main-frame">虚拟商品列表</a></li>
-                          <li id="sub-menu-51_virtual_card_add" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=add&extension_code=virtual_card" target="main-frame">添加虚拟商品</a></li>
-                          <li id="sub-menu-52_virtual_card_change" class="menu-item" onclick="showact(this, event)"><a href="virtual_card.php?act=change" target="main-frame">更改加密串</a></li>
-                          <li id="sub-menu-goods_auto" class="menu-item" onclick="showact(this, event)"><a href="goods_auto.php?act=list" target="main-frame">商品自动上下架</a></li>
+                          <li id="sub-menu-01_goods_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/goods'); ?>" target="main-frame">商品列表</a></li>
+                          <li id="sub-menu-02_goods_add" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/goods_add'); ?>" target="main-frame">添加新商品</a></li>
+                          <li id="sub-menu-03_category_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/category_list'); ?>" target="main-frame">商品分类</a></li>
+                          <li id="sub-menu-05_comment_manage" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/comment_manage_list'); ?>" target="main-frame">用户评论</a></li>
+                          <li id="sub-menu-06_goods_brand_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/brand_list'); ?>" target="main-frame">商品品牌</a></li>
+                          <li id="sub-menu-08_goods_type" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/goods_type_manage'); ?>" target="main-frame">商品类型</a></li>
+                          <li id="sub-menu-11_goods_trash" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/goods_trash'); ?>" target="main-frame">商品回收站</a></li>
+                          <!--<li id="sub-menu-12_batch_pic" class="menu-item" onclick="showact(this, event)"><a href="picture_batch.php" target="main-frame">图片批量处理</a></li>-->
+                          <!--<li id="sub-menu-13_batch_add" class="menu-item" onclick="showact(this, event)"><a href="goods_batch.php?act=add" target="main-frame">商品批量上传</a></li>-->
+                          <!--<li id="sub-menu-14_goods_export" class="menu-item" onclick="showact(this, event)"><a href="goods_export.php?act=goods_export" target="main-frame">商品批量导出</a></li>-->
+                          <!--<li id="sub-menu-15_batch_edit" class="menu-item" onclick="showact(this, event)"><a href="goods_batch.php?act=select" target="main-frame">商品批量修改</a></li>-->
+                          <!--<li id="sub-menu-16_goods_script" class="menu-item" onclick="showact(this, event)"><a href="gen_goods_script.php?act=setup" target="main-frame">生成商品代码</a></li>-->
+                          <!--<li id="sub-menu-17_tag_manage" class="menu-item" onclick="showact(this, event)"><a href="tag_manage.php?act=list" target="main-frame">标签管理</a></li>-->
+                          <!--<li id="sub-menu-50_virtual_card_list" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=list&extension_code=virtual_card" target="main-frame">虚拟商品列表</a></li>-->
+                          <!--<li id="sub-menu-51_virtual_card_add" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=add&extension_code=virtual_card" target="main-frame">添加虚拟商品</a></li>-->
+                          <!--<li id="sub-menu-52_virtual_card_change" class="menu-item" onclick="showact(this, event)"><a href="virtual_card.php?act=change" target="main-frame">更改加密串</a></li>-->
+                          <!--<li id="sub-menu-goods_auto" class="menu-item" onclick="showact(this, event)"><a href="goods_auto.php?act=list" target="main-frame">商品自动上下架</a></li>-->
                         </ul>
           </div>
                   </li>
@@ -148,13 +148,13 @@ var helpLang = "zh_cn";
                         </ul>
           </div>
                   </li>
-                          <li key="10_priv_admin" class="icon-priv" data-url="privilege.php?act=list" data-key="admin_list" name="menu" onclick="showsub(this)">
+                          <li key="10_priv_admin" class="icon-priv" data-url="" data-key="admin_list" name="menu" onclick="showsub(this)">
           权限管理                    <div class="submenu">
             <div class="title">权限管理</div>
             <ul>
-                          <li id="sub-menu-admin_list" class="menu-item" onclick="showact(this, event)"><a href="privilege.php?act=list" target="main-frame">管理员列表</a></li>
+                          <li id="sub-menu-admin_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('privilege/privilege'); ?>" target="main-frame">管理员列表</a></li>
                           <li id="sub-menu-admin_logs" class="menu-item" onclick="showact(this, event)"><a href="admin_logs.php?act=list" target="main-frame">管理员日志</a></li>
-                          <li id="sub-menu-admin_role" class="menu-item" onclick="showact(this, event)"><a href="role.php?act=list" target="main-frame">角色管理</a></li>
+                          <li id="sub-menu-admin_role" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('role/role'); ?>" target="main-frame">角色管理</a></li>
                           <li id="sub-menu-agency_list" class="menu-item" onclick="showact(this, event)"><a href="agency.php?act=list" target="main-frame">办事处列表</a></li>
                           <li id="sub-menu-suppliers_list" class="menu-item" onclick="showact(this, event)"><a href="suppliers.php?act=list" target="main-frame">供货商列表</a></li>
                         </ul>
