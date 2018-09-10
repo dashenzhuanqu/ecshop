@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:98:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\ads\ads_list.html";i:1536146630;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:98:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\ads\ads_list.html";i:1536283592;}*/ ?>
 ﻿<!-- $Id: ads_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -133,27 +133,7 @@ var empty_position_style = "广告位的模版不能为空!";
     </td>
   </tr>
     <tr>
-<<<<<<< HEAD:ThinkPHP/application/index/view/goods/brand_list.html
-      <td class="first-cell">
-        <span style="float:right"></span>
-        <span onclick="javascript:listTable.edit(this, 'edit_brand_name', 1)">{$v.brand_name}</span>
-      </td>
-      <td><img src="__ROOT__/uploads/{$v.brand_img}" width="100" alt=""></td>
-      <td>{$v.brand_url}</td>
-      <td align="left">{$v.brand_desc}</td>
-      <td align="right"><span onclick="javascript:listTable.edit(this, 'edit_sort_order', 1)">{$v.sort_order}</span></td>
-      <td align="center"><img src="../../../static/picture/yes.svg" width="20" onclick="listTable.toggle(this, 'toggle_show', 1)" /></td>
-      <td align="center">
-        <a href="brand.php?act=edit&id=1" title="编辑">编辑</a> |
-        <a href="javascript:;" onclick="listTable.remove(1, '你确认要删除选定的商品品牌吗？')" title="编辑">移除</a> 
-      </td>
-    </tr>
-    <?php } ?>
-      <td align="right" nowrap="true" colspan="6">
-      <!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-=======
     <td align="right" nowrap="true" colspan="10"><!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
->>>>>>> f9ab5cafe81fe890b8d92dafa3658532693993d9:ThinkPHP/runtime/temp/c407174bee99adce1e057fcbce1ff938.php
 <div id="turn-page">
   <span id="pageCurrent">1</span> / <span id="totalPages">1</span>
   页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">

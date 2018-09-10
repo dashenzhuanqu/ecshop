@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:102:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html";i:1536197293;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:102:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html";i:1536581681;}*/ ?>
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -147,18 +147,27 @@ var helpLang = "zh_cn";
                           <li id="sub-menu-10_user_account_manage" class="menu-item" onclick="showact(this, event)"><a href="user_account_manage.php?act=list" target="main-frame">资金管理</a></li>
                         </ul>
           </div>
+
+
                   </li>
                           <li key="10_priv_admin" class="icon-priv" data-url="" data-key="admin_list" name="menu" onclick="showsub(this)">
           权限管理                    <div class="submenu">
-            <div class="title">权限管理</div>
+ <div class="title">权限管理</div>
             <ul>
-                          <li id="sub-menu-admin_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('privilege/privilege'); ?>" target="main-frame">管理员列表</a></li>
-                          <li id="sub-menu-admin_logs" class="menu-item" onclick="showact(this, event)"><a href="admin_logs.php?act=list" target="main-frame">管理员日志</a></li>
-                          <li id="sub-menu-admin_role" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('role/role'); ?>" target="main-frame">角色管理</a></li>
-                          <li id="sub-menu-agency_list" class="menu-item" onclick="showact(this, event)"><a href="agency.php?act=list" target="main-frame">办事处列表</a></li>
-                          <li id="sub-menu-suppliers_list" class="menu-item" onclick="showact(this, event)"><a href="suppliers.php?act=list" target="main-frame">供货商列表</a></li>
+            <li id="sub-menu-admin_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('quanxi/privilege'); ?>" target="main-frame">管理员列表</a></li>
+
+            <li id="sub-menu-admin_logs" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('quanxi/admin_logs'); ?>" target="main-frame">管理员日志</a></li>
+
+            <li id="sub-menu-admin_role" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('quanxi/role'); ?>" target="main-frame">角色管理</a></li>
+
+            <li id="sub-menu-agency_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('quanxi/agency'); ?>" target="main-frame">办事处列表</a></li>
+
+            <li id="sub-menu-suppliers_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('quanxi/suppliers'); ?>" target="main-frame">供货商列表</a></li>
                         </ul>
-          </div>
+          </div
+
+
+
                   </li>
                           <li key="11_system" class="icon-system" data-url="shop_config.php?act=list_edit" data-key="01_shop_config" name="menu" onclick="showsub(this)">
           系统设置                    <div class="submenu">
@@ -251,7 +260,7 @@ var helpLang = "zh_cn";
       <script language="JavaScript" src="../../../static/js/menu_ext.js"></script>
     </div>
     <div id="help-div" style="display:none">
-      <h1 id="help-title"></h1>
+      <h1 id="help-title"></h1>index
       <div id="help-content"></div>
     </div>
   </div>

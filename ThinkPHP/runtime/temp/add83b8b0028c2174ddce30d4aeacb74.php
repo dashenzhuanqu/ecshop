@@ -1,14 +1,14 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\role\role.html";i:1536148919;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\role\role.html";i:1536307560;}*/ ?>
 <!-- $Id: role_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <title>ECSHOP 管理中心 - 角色管理 </title>
-<base href="__PUBLIC__/static/" />
+<base href="/" />
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="__PUBLIC__/static/css/general.css" rel="stylesheet" type="text/css">
-<link href="__PUBLIC__/static/css/main.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="__PUBLIC__/static/js/transport.js"></script><script type="text/javascript" src="__PUBLIC__/static/js/common.js"></script>
+<link href="static/css/general.css" rel="stylesheet" type="text/css">
+<link href="static/css/main.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="static/js/transport.js"></script><script type="text/javascript" src="static/js/common.js"></script>
 <style>
   .panel-icloud .panel-right iframe {
     height: 300px;

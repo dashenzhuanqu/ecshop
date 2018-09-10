@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 html {
   height: 100%;
   overflow: hidden;
@@ -121,135 +121,135 @@ html {
 }
 
 #menu-list > ul .icon-certificate {
-  background-image: url(../images/nav/certificate.png);
+  background-image: url(../images/certificate.png);
 }
 
 #menu-list > ul .icon-certificate.active, #menu-list > ul .icon-certificate:hover {
-  background-image: url(../images/nav/certificate.on.png);
+  background-image: url(../images/certificate.on.png);
 }
 
 #menu-list > ul .icon-goods {
-  background-image: url(../images/nav/goods.png);
+  background-image: url(../images/goods.png);
 }
 
 #menu-list > ul .icon-goods.active, #menu-list > ul .icon-goods:hover {
-  background-image: url(../images/nav/goods.on.png);
+  background-image: url(../images/goods.on.png);
 }
 
 #menu-list > ul .icon-promotion {
-  background-image: url(../images/nav/promotion.png);
+  background-image: url(../images/promotion.png);
 }
 
 #menu-list > ul .icon-promotion.active, #menu-list > ul .icon-promotion:hover {
-  background-image: url(../images/nav/promotion.on.png);
+  background-image: url(../images/promotion.on.png);
 }
 
 #menu-list > ul .icon-order {
-  background-image: url(../images/nav/order.png);
+  background-image: url(../images/order.png);
 }
 
 #menu-list > ul .icon-order.active, #menu-list > ul .icon-order:hover {
-  background-image: url(../images/nav/order.on.png);
+  background-image: url(../images/order.on.png);
 }
 
 #menu-list > ul .icon-banner {
-  background-image: url(../images/nav/banner.png);
+  background-image: url(../images/banner.png);
 }
 
 #menu-list > ul .icon-banner.active, #menu-list > ul .icon-banner:hover {
-  background-image: url(../images/nav/banner.on.png);
+  background-image: url(../images/banner.on.png);
 }
 
 #menu-list > ul .icon-stats {
-  background-image: url(../images/nav/stats.png);
+  background-image: url(../images/stats.png);
 }
 
 #menu-list > ul .icon-stats.active, #menu-list > ul .icon-stats:hover {
-  background-image: url(../images/nav/stats.on.png);
+  background-image: url(../images/stats.on.png);
 }
 
 #menu-list > ul .icon-content {
-  background-image: url(../images/nav/content.png);
+  background-image: url(../images/content.png);
 }
 
 #menu-list > ul .icon-content.active, #menu-list > ul .icon-content:hover {
-  background-image: url(../images/nav/content.on.png);
+  background-image: url(../images/content.on.png);
 }
 
 #menu-list > ul .icon-members {
-  background-image: url(../images/nav/members.png);
+  background-image: url(../images/members.png);
 }
 
 #menu-list > ul .icon-members.active, #menu-list > ul .icon-members:hover {
-  background-image: url(../images/nav/members.on.png);
+  background-image: url(../images/members.on.png);
 }
 
 #menu-list > ul .icon-priv {
-  background-image: url(../images/nav/priv.png);
+  background-image: url(../images/priv.png);
 }
 
 #menu-list > ul .icon-priv.active, #menu-list > ul .icon-priv:hover {
-  background-image: url(../images/nav/priv.on.png);
+  background-image: url(../images/priv.on.png);
 }
 
 #menu-list > ul .icon-system {
-  background-image: url(../images/nav/system.png);
+  background-image: url(../images/system.png);
 }
 
 #menu-list > ul .icon-system.active, #menu-list > ul .icon-system:hover {
-  background-image: url(../images/nav/system.on.png);
+  background-image: url(../images/system.on.png);
 }
 
 #menu-list > ul .icon-template {
-  background-image: url(../images/nav/template.png);
+  background-image: url(../images/template.png);
 }
 
 #menu-list > ul .icon-template.active, #menu-list > ul .icon-template:hover {
-  background-image: url(../images/nav/template.on.png);
+  background-image: url(../images/template.on.png);
 }
 
 #menu-list > ul .icon-backup {
-  background-image: url(../images/nav/backup.png);
+  background-image: url(../images/backup.png);
 }
 
 #menu-list > ul .icon-backup.active, #menu-list > ul .icon-backup:hover {
-  background-image: url(../images/nav/backup.on.png);
+  background-image: url(../images/backup.on.png);
 }
 
 #menu-list > ul .icon-sms {
-  background-image: url(../images/nav/sms.png);
+  background-image: url(../images/sms.png);
 }
 
 #menu-list > ul .icon-sms.active, #menu-list > ul .icon-sms:hover {
-  background-image: url(../images/nav/sms.on.png);
+  background-image: url(../images/sms.on.png);
 }
 
 #menu-list > ul .icon-rec {
-  background-image: url(../images/nav/rec.png);
+  background-image: url(../images/rec.png);
 }
 
 #menu-list > ul .icon-rec.active, #menu-list > ul .icon-rec:hover {
-  background-image: url(../images/nav/rec.on.png);
+  background-image: url(../images/rec.on.png);
 }
 
 #menu-list > ul .icon-email {
-  background-image: url(../images/nav/email.png);
+  background-image: url(../images/email.png);
 }
 
 #menu-list > ul .icon-email.active, #menu-list > ul .icon-email:hover {
-  background-image: url(../images/nav/email.on.png);
+  background-image: url(../images/email.on.png);
 }
 
 #menu-list > ul .icon-lead {
-  background-image: url(../images/nav/lead.png);
+  background-image: url(../images/lead.png);
 }
 
 #menu-list > ul .icon-lead.active, #menu-list > ul .icon-lead:hover {
-  background-image: url(../images/nav/lead.on.png);
+  background-image: url(../images/lead.on.png);
 }
 
 .menu-item {
-  /*background: url(images/menu_arrow.gif) no-repeat 0 3px;*/
+  /*background: url(../images/menu_arrow.gif) no-repeat 0 3px;*/
   font-weight: normal;
 }
 

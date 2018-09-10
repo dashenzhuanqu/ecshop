@@ -1,14 +1,15 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\privilege\privilege.html";i:1536196103;}*/ ?>
-<!-- $Id: privilege_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\privilege\privilege.html";i:1536568762;}*/ ?>
+﻿<!-- $Id: privilege_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
 <title>ECSHOP 管理中心 - 管理员列表 </title>
 <meta name="robots" content="noindex, nofollow">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<base href="__PUBLIC__/static/" />
-<link href="__PUBLIC__/static/css/general.css" rel="stylesheet" type="text/css">
-<link href="__PUBLIC__/static/css/main.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="__PUBLIC__/static/js/transport.js"></script><script type="text/javascript" src="__PUBLIC__/static/js/common.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/static/css/general.css" rel="stylesheet" type="text/css" />
+<link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/static/js/transport.js"></script><script type="text/javascript" src="/static/js/common.js"></script>
 <style>
   .panel-icloud .panel-right iframe {
     height: 300px;
@@ -44,7 +45,7 @@ var captcha_empty = "您没有输入验证码!";
 	  if(panel&&CMask&&frame){
 	      panel.style.display = 'block';
 	      mask.style.display = 'block';
-	      frame.src = 'https://openapi.shopex.cn/oauth/authorize?response_type=code&client_id=yogfss4l&redirect_uri=http%3A%2F%2Flocalhost%2Fdayi%2Fecshop%2Fecshop%2Fadmin%2Fcertificate.php%3Fact%3Dget_certificate%26type%3Dindex&view=auth_ecshop';
+	      frame.src = 'https://openapi.shopex.cn/oauth/authorize?response_type=code&client_id=yogfss4l&redirect_uri=http%3A%2F%2Flocalhost%2Fda1%2Fsource%2Fecshop%2Fadmin%2Fcertificate.php%3Fact%3Dget_certificate%26type%3Dindex&view=auth_ecshop';
 	    }
 	}
 
@@ -61,7 +62,7 @@ var captcha_empty = "您没有输入验证码!";
 </head>
 <body>
 <!--云起激活系统面板-->
-<!-- <div class="panel-hint panel-icloud" id="panelCloud">
+<div class="panel-hint panel-icloud" id="panelCloud">
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -75,26 +76,26 @@ var captcha_empty = "您没有输入验证码!";
   <div class="panel-right">
     <h5 class="logo">云起</h5>
     <p>正在激活中</p>
-    <iframe src="privilege.html" id="CFrame" frameborder="0"></iframe>
+    <iframe src="" frameborder="0" id="CFrame"></iframe>
     <div class="cloud-passw">
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-</div> -->
+</div>
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-      <a class="btn btn-right" href="<?php echo url('privilege/addprivilege'); ?>">添加管理员</a>
+      <a class="btn btn-right" href="privilege.php?act=add">添加管理员</a>
   
-    <span class="action-span1"><a href="<?php echo url('ads/main'); ?>">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;&gt;&nbsp;&nbsp;管理员列表 </span>
+    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;管理员列表 </span>
   <div style="clear:both"></div>
-</h1><script type="text/javascript" src="privilege_data/utils.js"></script><script type="text/javascript" src="privilege_data/listtable.js"></script>
+</h1><script type="text/javascript" src="static/js/utils.js"></script><script type="text/javascript" src="static/js/listtable.js"></script>
 <div class="list-div" id="listDiv">
 
-<table id="list-table" cellspacing="1" cellpadding="3">
-  <tbody><tr>
+<table cellspacing='1' cellpadding='3' id='list-table'>
+  <tr>
     <th>用户名</th>
     <th>Email地址</th>
     <th>加入时间</th>
@@ -102,40 +103,28 @@ var captcha_empty = "您没有输入验证码!";
     <th>操作</th>
   </tr>
     <tr>
-    <td class="first-cell" style="background-color: rgb(255, 255, 255);">88180801933648</td>
-    <td style="background-color: rgb(255, 255, 255);" align="left">88180801933648</td>
-    <td style="background-color: rgb(255, 255, 255);" align="center">2018-09-03 21:21:36</td>
-    <td style="background-color: rgb(255, 255, 255);" align="center">N/A</td>
-    <td style="background-color: rgb(255, 255, 255);" align="center">
-      <a href="http://localhost/dayi/ecshop/ecshop/admin/privilege.php?act=allot&amp;id=2&amp;user=88180801933648" title="分派权限">分派权限</a>&nbsp;
-      <a href="http://localhost/dayi/ecshop/ecshop/admin/admin_logs.php?act=list&amp;id=2" title="查看日志">查看日志</a>&nbsp;
-      <a href="http://localhost/dayi/ecshop/ecshop/admin/privilege.php?act=edit&amp;id=2" title="编辑">编辑</a>&nbsp;
+    <td class="first-cell" >88180801933563</td>
+    <td align="left">88180801933563</td>
+    <td align="center">2018-08-31 09:57:24</td>
+    <td align="center">N/A</td>
+    <td align="center">
+      <a href="privilege.php?act=allot&id=2&user=88180801933563" title="分派权限">分派权限</a>&nbsp;
+      <a href="admin_logs.php?act=list&id=2" title="查看日志">查看日志</a>&nbsp;
+      <a href="privilege.php?act=edit&id=2" title="编辑">编辑</a>&nbsp;
       <a href="javascript:;" onclick="listTable.remove(2, '您确认要删除这条记录吗?')" title="移除">移除</a></td>
   </tr>
-<<<<<<< HEAD:ThinkPHP/application/index/view/goods/brand_add.html
-  <tr>
-    <td colspan="2" align="center"><br />
-      <input type="submit" class="button" value=" 确定 " />
-      <input type="reset" class="button" value=" 重置 " />
-      <!--<input type="hidden" name="act" value="insert" />-->
-      <!--<input type="hidden" name="old_brandname" value="" />-->
-      <!--<input type="hidden" name="id" value="" />-->
-      <!--<input type="hidden" name="old_brandlogo" value="">-->
-    </td>
-=======
     <tr>
-    <td class="first-cell" style="background-color: rgb(255, 255, 255);">admin</td>
-    <td style="background-color: rgb(255, 255, 255);" align="left">2972409305@qq.com</td>
-    <td style="background-color: rgb(255, 255, 255);" align="center">2018-09-03 21:21:27</td>
-    <td style="background-color: rgb(255, 255, 255);" align="center">2018-09-04 19:58:32</td>
-    <td style="background-color: rgb(255, 255, 255);" align="center">
-      <a href="http://localhost/dayi/ecshop/ecshop/admin/privilege.php?act=allot&amp;id=1&amp;user=admin" title="分派权限">分派权限</a>&nbsp;
-      <a href="http://localhost/dayi/ecshop/ecshop/admin/admin_logs.php?act=list&amp;id=1" title="查看日志">查看日志</a>&nbsp;
-      <a href="http://localhost/dayi/ecshop/ecshop/admin/privilege.php?act=edit&amp;id=1" title="编辑">编辑</a>&nbsp;
+    <td class="first-cell" >admin123</td>
+    <td align="left">1351164168@qq.com</td>
+    <td align="center">2018-08-31 09:55:49</td>
+    <td align="center">2018-09-10 16:26:35</td>
+    <td align="center">
+      <a href="privilege.php?act=allot&id=1&user=admin123" title="分派权限">分派权限</a>&nbsp;
+      <a href="admin_logs.php?act=list&id=1" title="查看日志">查看日志</a>&nbsp;
+      <a href="privilege.php?act=edit&id=1" title="编辑">编辑</a>&nbsp;
       <a href="javascript:;" onclick="listTable.remove(1, '您确认要删除这条记录吗?')" title="移除">移除</a></td>
->>>>>>> f9ab5cafe81fe890b8d92dafa3658532693993d9:ThinkPHP/runtime/temp/b84176f7de66a54c54c821c7838549b2.php
   </tr>
-  </tbody></table>
+  </table>
 
 </div>
 <script type="text/javascript" language="JavaScript">
@@ -148,35 +137,35 @@ var captcha_empty = "您没有输入验证码!";
   
 </script>
 <div id="footer">
-共执行 3 个查询，用时 0.010860 秒，Gzip 已禁用，内存占用 1.404 MB<br>
-版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
+共执行 3 个查询，用时 0.026364 秒，Gzip 已禁用，内存占用 1.153 MB<br />
+版权所有 &copy; 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
 <!-- 新订单提示信息 -->
 <div id="popMsg">
-  <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#cfdef4">
-  <tbody><tr>
+  <table cellspacing="0" cellpadding="0" width="100%" bgcolor="#cfdef4" border="0">
+  <tr>
     <td style="color: #0f2c8c" width="30" height="24"></td>
-    <td style="font-weight: normal; color: #1f336b; padding-top: 4px;padding-left: 4px" width="100%" valign="center"> 新订单通知</td>
-    <td style="padding-top: 2px;padding-right:2px" width="19" valign="center" align="right"><span title="关闭" style="cursor: hand;cursor:pointer;color:red;font-size:12px;font-weight:bold;margin-right:4px;" onclick="Message.close()">×</span><!-- <img title=关闭 style="cursor: hand" onclick=closediv() hspace=3 src="msgclose.jpg"> --></td>
+    <td style="font-weight: normal; color: #1f336b; padding-top: 4px;padding-left: 4px" valign="center" width="100%"> 新订单通知</td>
+    <td style="padding-top: 2px;padding-right:2px" valign="center" align="right" width="19"><span title="关闭" style="cursor: hand;cursor:pointer;color:red;font-size:12px;font-weight:bold;margin-right:4px;" onclick="Message.close()" >×</span><!-- <img title=关闭 style="cursor: hand" onclick=closediv() hspace=3 src="static/picture/msgclose.jpg"> --></td>
   </tr>
   <tr>
     <td style="padding-right: 1px; padding-bottom: 1px" colspan="3" height="70">
     <div id="popMsgContent">
       <p>您有 <strong style="color:#ff0000" id="spanNewOrder">1</strong> 个新订单以及       <strong style="color:#ff0000" id="spanNewPaid">0</strong> 个新付款的订单</p>
-      <p style="word-break:break-all" align="center"><a href="http://localhost/dayi/ecshop/ecshop/admin/order.php?act=list"><span style="color:#ff0000">点击查看新订单</span></a></p>
+      <p align="center" style="word-break:break-all"><a href="order.php?act=list"><span style="color:#ff0000">点击查看新订单</span></a></p>
     </div>
     </td>
   </tr>
-  </tbody></table>
+  </table>
 </div>
 
 <!--
-<embed src="images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
+<embed src="static/flash/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
 -->
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
   <param name="movie" value="images/online.swf">
   <param name="quality" value="high">
-  <embed src="privilege_data/online.swf" name="msgBeep" id="msgBeep" quality="high" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash" width="0" height="0">
-  
+  <embed src="images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
+  </embed>
 </object>
 
 <script language="JavaScript">
@@ -322,5 +311,5 @@ if (document.getElementById("listDiv"))
 
 //-->
 </script>
-
-</body></html>
+</body>
+</html>
