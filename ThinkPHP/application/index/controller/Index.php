@@ -1,6 +1,5 @@
 <?php
 namespace app\index\controller;
-
 class Index
 {
     public function index()
@@ -18,5 +17,8 @@ class Index
     public function top()
     {
         return view('index_top');
+    }
+    public function success(){
+        return view('success');
     }
 }

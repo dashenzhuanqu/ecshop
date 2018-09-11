@@ -8,7 +8,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../../static/css/general.css" rel="stylesheet" type="text/css" />
 <link href="../../../static/css/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>
+  <link href="../../../static/css/main.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../../static/js/jquery-2.1.4.min.js"></script>
+<!--<script type="text/javascript" src="../../../static/js/transport.js"></script>-->
+  <!--<script type="text/javascript" src="../../../static/js/common.js"></script>-->
 <style>
   .panel-icloud .panel-right iframe {
     height: 300px;
@@ -113,11 +116,13 @@ var cancel_color = "无样式";
   
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;商品列表 </span>
   <div style="clear:both"></div>
-</h1><script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/listtable.js"></script>
+</h1>
+<!--<script type="text/javascript" src="../../../static/js/utils.js"></script>-->
+<!--<script type="text/javascript" src="../../../static/js/listtable.js"></script>-->
 <!-- 商品搜索 -->
 <!-- $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ -->
 <div class="form-div">
-  <form action="javascript:searchGoods()" name="searchForm">
+  <form action="{:url('goods/goods')}" method="post">
         <!-- 分类 -->
     商品分类
     <select name="cat_id"><option value="0">所有分类</option><option value="1" >饮料</option><option value="2" >&nbsp;&nbsp;&nbsp;&nbsp;学习</option></select>
@@ -130,7 +135,7 @@ var cancel_color = "无样式";
         <!-- 上架 -->
     上架状态
     <input type="radio" name="is_on_sale" id="" value="1"> 上架    <input type="radio" name="is_on_sale" id="" value="0"> 下架        <!-- 关键字 -->
-    &nbsp;&nbsp; 关键字 <input type="text" name="keyword" size="25" />
+    &nbsp;&nbsp; 关键字 <input type="text" name="search" size="25" />
     <button type="submit" class="btn"> 搜索 </button>
   </form>
 </div>
@@ -179,30 +184,30 @@ var cancel_color = "无样式";
     <td align="right"><span onclick="listTable.edit(this, 'edit_goods_price', 1)">{$v.goods_price}</span></td>
       <td>
         {in name="$v.is_put" value="1"}
-        <img src="../../../static/picture/yes.svg" width="20"/>
+        <img src="../../../static/picture/yes.svg" class="is_put" id="{$v.g_id}" value="{$v.is_put}" width="20"/>
         {else/}
-        <img src="../../../static/picture/no.svg" width="20"/>
+        <img src="../../../static/picture/no.svg" class="is_put" id="{$v.g_id}" value="{$v.is_put}" width="20"/>
         {/in}
       </td>
       <td>
         {in name="$v.is_best" value="1"}
-        <img src="../../../static/picture/yes.svg" width="20"/>
+        <img src="../../../static/picture/yes.svg" class="is_best" id="{$v.g_id}" value="{$v.is_best}" width="20"/>
         {else/}
-        <img src="../../../static/picture/no.svg" width="20"/>
+        <img src="../../../static/picture/no.svg" class="is_best" id="{$v.g_id}" value="{$v.is_best}" width="20"/>
         {/in}
       </td>
       <td>
         {in name="$v.is_new" value="1"}
-        <img src="../../../static/picture/yes.svg" width="20" />
+        <img src="../../../static/picture/yes.svg" class="is_new" id="{$v.g_id}" value="{$v.is_new}" width="20" />
         {else/}
-        <img src="../../../static/picture/no.svg" width="20" />
+        <img src="../../../static/picture/no.svg" class="is_new" id="{$v.g_id}" value="{$v.is_new}" width="20" />
         {/in}
       </td>
       <td>
         {in name="$v.is_hot" value="1"}
-        <img src="../../../static/picture/yes.svg" width="20"/>
+        <img src="../../../static/picture/yes.svg" class="is_hot" id="{$v.g_id}" value="{$v.is_hot}" width="20"/>
         {else/}
-        <img src="../../../static/picture/no.svg" width="20"/>
+        <img src="../../../static/picture/no.svg" class="is_hot" id="{$v.g_id}" value="{$v.is_hot}" width="20"/>
         {/in}
       </td>
     <td align="center"><span onclick="listTable.edit(this, 'edit_sort_order', 1)">{$v.sork}</span></td>
@@ -212,11 +217,12 @@ var cancel_color = "无样式";
       <a href="../goods.php?id=1" target="_blank" title="查看">查看</a>
       <a href="/index/goods/goods_a" title="编辑">编辑</a>
       <a href="/index/goods/coty" title="复制">复制</a>
-      <a href="javascript:;" onclick="listTable.remove(1, '您确实要把该商品放入回收站吗？')" title="回收站">回收站</a>
+      <a href="javascript:;" class="is_delete" id="{$v.g_id}" value="is_delete" title="回收站">回收站</a>
       <img src="../../../static/picture/empty.gif" width="16" height="16" border="0">          </td>
   </tr>
   <?php } ?>
   </table>
+    {$arr->render()}
 <!-- end goods list -->
 
 <!-- 分页 -->
@@ -236,7 +242,6 @@ var cancel_color = "无样式";
         <option value="hot">热销</option>
         <option value="not_hot">取消热销</option>
         <option value="move_to">转移到分类</option>
-          
       </select>
       <select name="target_cat" style="display:none">
         <option value="0">请选择...</option><option value="1" >饮料</option><option value="2" >&nbsp;&nbsp;&nbsp;&nbsp;学习</option>      </select>
@@ -246,11 +251,11 @@ var cancel_color = "无样式";
     </td>
     <td align="right" nowrap="true">
     <!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-<div id="turn-page">
-  <span id="pageCurrent">1</span> / <span id="totalPages">1</span>
-  页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">
-  条记录，总共 <span id="totalRecords">1</span>
-  条记录
+<!--<div id="turn-page">-->
+  <!--<span id="pageCurrent">1</span> / <span id="totalPages">1</span>-->
+  <!--页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">-->
+  <!--条记录，总共 <span id="totalRecords">1</span>-->
+  <!--条记录-->
   <!--<span id="page-link">-->
     <!--<a href="javascript:listTable.gotoPageFirst()">第一页</a>-->
     <!--<a href="javascript:listTable.gotoPagePrev()">上一页</a>-->
@@ -259,9 +264,9 @@ var cancel_color = "无样式";
     <!--<select id="gotoPage" onchange="listTable.gotoPage(this.value)">-->
       <!--<option value='1'>1</option>    </select>-->
   <!--</span>-->
-</div>
-    </td>
-  </tr>
+<!--</div>-->
+    <!--</td>-->
+  <!--</tr>-->
 </table>
 
 </div>
@@ -292,11 +297,11 @@ var cancel_color = "无样式";
     listTable.filter.start = '0';
   
   
-  onload = function()
-  {
-    startCheckOrder(); // 开始检查订单
-    document.forms['listForm'].reset();
-  }
+//  onload = function()
+//  {
+//    startCheckOrder(); // 开始检查订单
+//    document.forms['listForm'].reset();
+//  }
 
   /**
    * @param: bool ext 其他条件：用于转移分类
@@ -519,3 +524,130 @@ if (document.getElementById("listDiv"))
 </script>
 </body>
 </html>
+<script>
+     $(document).on('click','.is_put',function(){
+        var status = $(this).attr('value');
+//        alert(status)
+        var g_id = $(this).attr('id');
+//        alert(g_id)
+        var obj = $(this);
+        $.ajax({
+            url:"{:url('goods/goods_show')}",
+            data:{status:status,g_id:g_id},
+            dataType:"json",
+            success:function(res){
+                if(res.status==1){
+                    alert(res.msg);
+                    return false;
+                }else{
+                    if(status==1){
+                        obj.prop("src","../../../static/picture/no.svg");
+                        obj.attr("value",0)
+                    }else{
+                        obj.prop("src","../../../static/picture/yes.svg");
+                        obj.attr("value",1)
+                    }
+                }
+            }
+        })
+    });
+     $(document).on('click','.is_best',function(){
+         var status = $(this).attr('value');
+//        alert(status)
+         var g_id = $(this).attr('id');
+//        alert(g_id)
+         var obj = $(this);
+         $.ajax({
+             url:"{:url('goods/goods_shows')}",
+             data:{status:status,g_id:g_id},
+             dataType:"json",
+             success:function(res){
+                 if(res.status==1){
+                     alert(res.msg);
+                     return false;
+                 }else{
+                     if(status==1){
+                         obj.prop("src","../../../static/picture/no.svg");
+                         obj.attr("value",0)
+                     }else{
+                         obj.prop("src","../../../static/picture/yes.svg");
+                         obj.attr("value",1)
+                     }
+                 }
+             }
+         })
+     });
+  $(document).on('click','.is_new',function(){
+      var g_id=$(this).attr('id');
+      var status=$(this).attr('value');
+      var obj=$(this);
+      $.ajax({
+          url:"{:url('goods/goods_list')}",
+          data:{status:status,g_id:g_id},
+          dataType:"json",
+          success:function(res){
+              if(res.status==1){
+                    alert(res.msg);
+                  return false;
+              }else{
+                  if(status==1){
+                      obj.prop("src","../../../static/picture/no.svg");
+                      obj.attr("value",0);
+                  }else{
+                      obj.prop("src","../../../static/picture/yes.svg");
+                      obj.attr("value",1);
+                  }
+              }
+          }
+      })
+  });
+  $(document).on('click','.is_hot',function(){
+      var g_id=$(this).attr('id');
+      var status=$(this).attr('value');
+      var obj=$(this);
+      $.ajax({
+          url:"{:url('goods/goods_lists')}",
+          data:{g_id:g_id,status:status},
+          dataType:"json",
+          success:function(res){
+              if(res.status==1){
+                  alert(res.msg);
+                  return false;
+              }else{
+                  if(status==1){
+                      obj.prop("src","../../../static/picture/no.svg");
+                      obj.attr("value",0);
+                  }else{
+                      obj.prop("src","../../../static/picture/yes.svg");
+                      obj.attr("value",1);
+                  }
+              }
+          }
+      })
+  });
+     $(document).on('click','.is_delete',function(){
+         var r=confirm("你确定要放入回收站吗？");
+         if(!r){return};
+         var g_id=$(this).attr('id');
+         var status=$(this).attr('value');
+         var obj=$(this);
+         $.ajax({
+             url:"{:url('goods/trash_do')}",
+             data:{g_id:g_id,status:status},
+             dataType:"json",
+             success:function(res){
+                 if(res.status==1){
+                     alert(res.msg);
+                     return false;
+                 }else{
+                     if(status==1){
+                        alert('放入回收站成功');
+                        obj.parents().remove();
+                     }else{
+                        alert("放入回收站失败");
+                     }
+                 }
+             }
+         })
+     })
+</script>

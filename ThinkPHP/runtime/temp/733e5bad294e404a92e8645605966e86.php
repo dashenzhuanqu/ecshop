@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html";i:1536240119;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html";i:1536638786;}*/ ?>
 ﻿<!-- $Id: start.htm 17216 2011-01-19 06:03:12Z liubo $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -315,7 +315,7 @@ onload = function()
   /* 检查订单 */
   startCheckOrder();
 }
-  // Ajax.call('index.php?is_ajax=1&act=main_api','', start_api, 'GET', 'TEXT','FLASE');
+  // Ajax.call('index.html?is_ajax=1&act=main_api','', start_api, 'GET', 'TEXT','FLASE');
   //Ajax.call('cloud.php?is_ajax=1&act=cloud_remind','', cloud_api, 'GET', 'JSON');
    // function start_api(result)
    //  {

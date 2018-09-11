@@ -64,11 +64,11 @@ var helpLang = "zh_cn";
                         </ul>
           </div>
                   </li>
-                          <li key="03_promotion" class="icon-promotion" data-url="bonus.php?act=list" data-key="04_bonustype_list" name="menu" onclick="showsub(this)">
+                          <li key="03_promotion" class="icon-promotion" data-url="{:url('money/money')}" data-key="04_bonustype_list" name="menu" onclick="showsub(this)">
           促销管理                    <div class="submenu">
             <div class="title">促销管理</div>
             <ul>
-                          <li id="sub-menu-04_bonustype_list" class="menu-item" onclick="showact(this, event)"><a href="bonus.php?act=list" target="main-frame">红包类型</a></li>
+                          <li id="sub-menu-04_bonustype_list" class="menu-item" onclick="showact(this, event)"><a href="{:url('money/money')}" target="main-frame">红包类型</a></li>
                           <li id="sub-menu-06_pack_list" class="menu-item" onclick="showact(this, event)"><a href="pack.php?act=list" target="main-frame">商品包装</a></li>
                           <li id="sub-menu-07_card_list" class="menu-item" onclick="showact(this, event)"><a href="card.php?act=list" target="main-frame">祝福贺卡</a></li>
                           <li id="sub-menu-08_group_buy" class="menu-item" onclick="showact(this, event)"><a href="group_buy.php?act=list" target="main-frame">团购活动</a></li>
@@ -96,12 +96,12 @@ var helpLang = "zh_cn";
                         </ul>
           </div>
                   </li>
-                          <li key="05_banner" class="icon-banner" data-url="ads/ads/ads_list" data-key="ad_list" name="menu" onclick="showsub(this)">
+                          <li key="05_banner" class="icon-banner" data-url="{:url('add/add')}" data-key="ad_list" name="menu" onclick="showsub(this)">
           广告管理                    <div class="submenu">
             <div class="title">广告管理</div>
             <ul>
-                          <li id="sub-menu-ad_list" class="menu-item" onclick="showact(this, event)"><a href="ads/ads/ads_list" target="main-frame">广告列表</a></li>
-                          <li id="sub-menu-ad_position" class="menu-item" onclick="showact(this, event)"><a href="ad_position.php?act=list" target="main-frame">广告位置</a></li>
+                          <li id="sub-menu-ad_list" class="menu-item" onclick="showact(this, event)"><a href="{:url('add/add')}" target="main-frame">广告列表</a></li>
+                          <li id="sub-menu-ad_position" class="menu-item" onclick="showact(this, event)"><a href="{:url('adds/adds')}" target="main-frame">广告位置</a></li>
                         </ul>
           </div>
                   </li>
@@ -147,35 +147,35 @@ var helpLang = "zh_cn";
                         </ul>
           </div>
                   </li>
-                          <li key="10_priv_admin" class="icon-priv" data-url="" data-key="admin_list" name="menu" onclick="showsub(this)">
+                          <li key="10_priv_admin" class="icon-priv" data-url="{:url('Quanxi/privilege')}" data-key="admin_list" name="menu" onclick="showsub(this)">
           权限管理                    <div class="submenu">
             <div class="title">权限管理</div>
             <ul>
-                          <li id="sub-menu-admin_list" class="menu-item" onclick="showact(this, event)"><a href="{:url('privilege/privilege')}" target="main-frame">管理员列表</a></li>
-                          <li id="sub-menu-admin_logs" class="menu-item" onclick="showact(this, event)"><a href="admin_logs.php?act=list" target="main-frame">管理员日志</a></li>
-                          <li id="sub-menu-admin_role" class="menu-item" onclick="showact(this, event)"><a href="{:url('role/role')}" target="main-frame">角色管理</a></li>
-                          <li id="sub-menu-agency_list" class="menu-item" onclick="showact(this, event)"><a href="agency.php?act=list" target="main-frame">办事处列表</a></li>
-                          <li id="sub-menu-suppliers_list" class="menu-item" onclick="showact(this, event)"><a href="suppliers.php?act=list" target="main-frame">供货商列表</a></li>
+                          <li id="sub-menu-admin_list" class="menu-item" onclick="showact(this, event)"><a href="{:url('Quanxi/privilege')}" target="main-frame">管理员列表</a></li>
+                          <li id="sub-menu-admin_logs" class="menu-item" onclick="showact(this, event)"><a href="{:url('Quanxi/admin_logs')}" target="main-frame">管理员日志</a></li>
+                          <li id="sub-menu-admin_role" class="menu-item" onclick="showact(this, event)"><a href="{:url('Quanxi/role')}" target="main-frame">角色管理</a></li>
+                          <li id="sub-menu-agency_list" class="menu-item" onclick="showact(this, event)"><a href="{:url('Quanxi/agency')}" target="main-frame">办事处列表</a></li>
+                          <li id="sub-menu-suppliers_list" class="menu-item" onclick="showact(this, event)"><a href="{:url('Quanxi/suppliers')}" target="main-frame">供货商列表</a></li>
                         </ul>
           </div>
                   </li>
-                          <li key="11_system" class="icon-system" data-url="shop_config.php?act=list_edit" data-key="01_shop_config" name="menu" onclick="showsub(this)">
+                          <li key="11_system" class="icon-system" data-url="{:url('system/system_list')}" data-key="01_shop_config" name="menu" onclick="showsub(this)">
           系统设置                    <div class="submenu">
             <div class="title">系统设置</div>
             <ul>
-                          <li id="sub-menu-01_shop_config" class="menu-item" onclick="showact(this, event)"><a href="shop_config.php?act=list_edit" target="main-frame">商店设置</a></li>
-                          <li id="sub-menu-021_reg_fields" class="menu-item" onclick="showact(this, event)"><a href="reg_fields.php?act=list" target="main-frame">会员注册项设置</a></li>
-                          <li id="sub-menu-02_payment_list" class="menu-item" onclick="showact(this, event)"><a href="payment.php?act=list" target="main-frame">支付方式</a></li>
-                          <li id="sub-menu-03_shipping_list" class="menu-item" onclick="showact(this, event)"><a href="shipping.php?act=list" target="main-frame">配送方式</a></li>
-                          <li id="sub-menu-04_mail_settings" class="menu-item" onclick="showact(this, event)"><a href="shop_config.php?act=mail_settings" target="main-frame">邮件服务器设置</a></li>
-                          <li id="sub-menu-05_area_list" class="menu-item" onclick="showact(this, event)"><a href="area_manage.php?act=list" target="main-frame">地区列表</a></li>
-                          <li id="sub-menu-07_cron_schcron" class="menu-item" onclick="showact(this, event)"><a href="cron.php?act=list" target="main-frame">计划任务</a></li>
-                          <li id="sub-menu-08_friendlink_list" class="menu-item" onclick="showact(this, event)"><a href="friend_link.php?act=list" target="main-frame">友情链接</a></li>
-                          <li id="sub-menu-captcha_manage" class="menu-item" onclick="showact(this, event)"><a href="captcha_manage.php?act=main" target="main-frame">验证码管理</a></li>
-                          <li id="sub-menu-check_file_priv" class="menu-item" onclick="showact(this, event)"><a href="check_file_priv.php?act=check" target="main-frame">文件权限检测</a></li>
-                          <li id="sub-menu-file_check" class="menu-item" onclick="showact(this, event)"><a href="filecheck.php" target="main-frame">文件校验</a></li>
-                          <li id="sub-menu-navigator" class="menu-item" onclick="showact(this, event)"><a href="navigator.php?act=list" target="main-frame">自定义导航栏</a></li>
-                          <li id="sub-menu-sitemap" class="menu-item" onclick="showact(this, event)"><a href="sitemap.php" target="main-frame">站点地图</a></li>
+                          <li id="sub-menu-01_shop_config" class="menu-item" onclick="showact(this, event)"><a href="{:url('system/system_list')}" target="main-frame">商店设置</a></li>
+                          <li id="sub-menu-021_reg_fields" class="menu-item" onclick="showact(this, event)"><a href="{:url('system/system_hy')}" target="main-frame">会员注册项设置</a></li>
+                          <li id="sub-menu-02_payment_list" class="menu-item" onclick="showact(this, event)"><a href="{:url('system/system_zc')}" target="main-frame">支付方式</a></li>
+                          <li id="sub-menu-03_shipping_list" class="menu-item" onclick="showact(this, event)"><a href="{:url('system/system_ps')}" target="main-frame">配送方式</a></li>
+                          <li id="sub-menu-04_mail_settings" class="menu-item" onclick="showact(this, event)"><a href="{:url('system/system_hy')}" target="main-frame">邮件服务器设置</a></li>
+                          <li id="sub-menu-05_area_list" class="menu-item" onclick="showact(this, event)"><a href="{:url('system/system_dq')}" target="main-frame">地区列表</a></li>
+                          <!--<li id="sub-menu-07_cron_schcron" class="menu-item" onclick="showact(this, event)"><a href="{:url('system/system_hy')}" target="main-frame">计划任务</a></li>-->
+                          <li id="sub-menu-08_friendlink_list" class="menu-item" onclick="showact(this, event)"><a href="{:url('system/system_yq')}" target="main-frame">友情链接</a></li>
+                          <!--<li id="sub-menu-captcha_manage" class="menu-item" onclick="showact(this, event)"><a href="captcha_manage.php?act=main" target="main-frame">验证码管理</a></li>-->
+                          <!--<li id="sub-menu-check_file_priv" class="menu-item" onclick="showact(this, event)"><a href="check_file_priv.php?act=check" target="main-frame">文件权限检测</a></li>-->
+                          <!--<li id="sub-menu-file_check" class="menu-item" onclick="showact(this, event)"><a href="filecheck.php" target="main-frame">文件校验</a></li>-->
+                          <!--<li id="sub-menu-navigator" class="menu-item" onclick="showact(this, event)"><a href="navigator.php?act=list" target="main-frame">自定义导航栏</a></li>-->
+                          <!--<li id="sub-menu-sitemap" class="menu-item" onclick="showact(this, event)"><a href="sitemap.php" target="main-frame">站点地图</a></li>-->
                         </ul>
           </div>
                   </li>

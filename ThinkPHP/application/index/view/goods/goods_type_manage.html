@@ -8,7 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../../static/css/general.css" rel="stylesheet" type="text/css" />
 <link href="../../../static/css/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>
+  <script type="text/javascript" src="../../../static/js/jquery-2.1.4.min.js"></script>
+<!--<script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>-->
 <style>
   .panel-icloud .panel-right iframe {
     height: 300px;
@@ -89,8 +90,8 @@ var type_name_empty = "商品类型名称不能为空！";
       <a class="btn btn-right" href="/index/goods/goods_type_add">新建商品类型</a>
   
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;商品类型 </span>
-  <div style="clear:both"></div>
-</h1><script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/listtable.js"></script>
+  <div style="clear:both"></div></h1>
+<!--<script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/listtable.js"></script>-->
 <form method="post" action="" name="listForm">
 <!-- start goods type list -->
 <div class="list-div" id="listDiv">
@@ -103,125 +104,46 @@ var type_name_empty = "商品类型名称不能为空！";
     <th>状态</th>
     <th>操作</th>
   </tr>
+  {foreach($arr as $k =>$v)}
     <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 1)">书</span></td>
-    <td></td>
-    <td align="right">12</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
+    <td class="first-cell"><span>{$v.goods_type_name}</span></td>
+    <td align="right">{$v.classs}</td>
+    <td align="right">{$v.num}</td>
     <td align="center">
-      <a href="{:url('goods/attribute_list')}" title="属性列表">属性列表</a> |
-      <a href="{:url('goods/goods_type_edit')}" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(1, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
+        {in name="$v.is_new" value="1"}
+        <img src="../../../static/picture/yes.svg" class="is_new" id="{$v.t_id}" value="{$v.is_new}" width="20"/>
+        {else/}
+        <img src="../../../static/picture/no.svg" class="is_new" id="{$v.t_id}" value="{$v.is_new}" width="20"/>
+        {/in}</td>
+    <td align="center">
+      <a href="{:url('goods/attribute_list')}?id={$v.t_id}" title="属性列表">属性列表</a> |
+      <a href="{:url('goods/goods_type_edit')}?id={$v.t_id}" title="编辑">编辑</a> |
+      <a href="{:url('goods/goods_type_del')}?id={$v.t_id}" title="移除">移除</a>
     </td>
   </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 2)">音乐</span></td>
-    <td></td>
-    <td align="right">19</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=2" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=2" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(2, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 3)">电影</span></td>
-    <td></td>
-    <td align="right">24</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=3" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=3" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(3, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 4)">手机</span></td>
-    <td></td>
-    <td align="right">26</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=4" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=4" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(4, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 5)">笔记本电脑</span></td>
-    <td></td>
-    <td align="right">19</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=5" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=5" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(5, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 6)">数码相机</span></td>
-    <td></td>
-    <td align="right">41</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=6" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=6" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(6, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 7)">数码摄像机</span></td>
-    <td></td>
-    <td align="right">23</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=7" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=7" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(7, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 8)">化妆品</span></td>
-    <td></td>
-    <td align="right">7</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=8" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=8" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(8, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="javascript:listTable.edit(this, 'edit_type_name', 9)">精品手机</span></td>
-    <td></td>
-    <td align="right">39</td>
-    <td align="center"><img src="../../../static/picture/yes.gif" ></td>
-    <td align="center">
-      <a href="attribute.php?act=list&goods_type=9" title="属性列表">属性列表</a> |
-      <a href="goods_type.php?act=edit&cat_id=9" title="编辑">编辑</a> |
-      <a href="javascript:;" onclick="listTable.remove(9, '删除商品类型将会清除该类型下的所有属性。\n您确定要删除选定的商品类型吗？')" title="移除">移除</a>
-    </td>
-  </tr>
-      <tr>
-      <td align="right" nowrap="true" colspan="6">
+  {/foreach}
+</table>
+  {$arr->render()}
+      <!--<tr>-->
+      <!--<td align="right" nowrap="true" colspan="6">-->
       <!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-<div id="turn-page">
-  <span id="pageCurrent">1</span> / <span id="totalPages">1</span>
-  页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">
-  条记录，总共 <span id="totalRecords">9</span>
-  条记录
-  <span id="page-link">
-    <a href="javascript:listTable.gotoPageFirst()">第一页</a>
-    <a href="javascript:listTable.gotoPagePrev()">上一页</a>
-    <a href="javascript:listTable.gotoPageNext()">下一页</a>
-    <a href="javascript:listTable.gotoPageLast()">最末页</a>
-    <select id="gotoPage" onchange="listTable.gotoPage(this.value)">
-      <option value='1'>1</option>    </select>
-  </span>
-</div>
-      </td>
-    </tr>
-  </table>
+<!--<div id="turn-page">-->
+  <!--<span id="pageCurrent">1</span> / <span id="totalPages">1</span>-->
+  <!--页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">-->
+  <!--条记录，总共 <span id="totalRecords">9</span>-->
+  <!--条记录-->
+  <!--<span id="page-link">-->
+    <!--<a href="javascript:listTable.gotoPageFirst()">第一页</a>-->
+    <!--<a href="javascript:listTable.gotoPagePrev()">上一页</a>-->
+    <!--<a href="javascript:listTable.gotoPageNext()">下一页</a>-->
+    <!--<a href="javascript:listTable.gotoPageLast()">最末页</a>-->
+    <!--<select id="gotoPage" onchange="listTable.gotoPage(this.value)">-->
+      <!--<option value='1'>1</option>    </select>-->
+  <!--</span>-->
+<!--</div>-->
+      <!--</td>-->
+    <!--</tr>-->
+
 
 </div>
 <!-- end goods type list -->
@@ -237,8 +159,8 @@ var type_name_empty = "商品类型名称不能为空！";
     listTable.filter.page = '1';
     listTable.filter.page_count = '1';
     listTable.filter.start = '0';
-   
-  
+
+
   onload = function()
   {
     // 开始检查订单
@@ -299,7 +221,6 @@ document.onmousemove=function(e)
     obj.title = '点击对列表排序';
   }
 }
-<!--
 
 
 var MyTodolist;
@@ -426,3 +347,29 @@ if (document.getElementById("listDiv"))
 </script>
 </body>
 </html>
+<script>
+    $(document).on('click','.is_new',function(){
+        var t_id=$(this).attr('id');
+        var status=$(this).attr('value');
+        var obj=$(this);
+        $.ajax({
+            url:"{:url('goods/goods_type_show')}",
+            data:{t_id:t_id,status:status},
+            dataType:"json",
+            success:function(res){
+                if(res.status==1){
+                    alert(res.msg);
+                    return false;
+                }else{
+                    if(status==1){
+                        obj.prop("src","../../../static/picture/no.svg");
+                        obj.attr("value",0);
+                    }else{
+                        obj.prop("src","../../../static/picture/yes.svg");
+                        obj.attr("value",1);
+                    }
+                }
+            }
+        })
+    })
+</script>

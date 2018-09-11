@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html";i:1536292192;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html";i:1536638787;}*/ ?>
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,7 +15,7 @@ body{
 <script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript">
 // onload = function()
 // {
-//   Ajax.call('index.php?is_ajax=1&act=license','', start_sendmail_Response, 'GET', 'JSON');
+//   Ajax.call('index.html?is_ajax=1&act=license','', start_sendmail_Response, 'GET', 'JSON');
 // }
 /**
  * 帮助系统调用

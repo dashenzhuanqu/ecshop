@@ -78,29 +78,7 @@ var Transport =
   * @param   {boolean}   asyn            是否异步请求的方式
   * @param   {boolean}   quiet           是否安静模式请求
   */
-  run : function (url, params, callback, transferMode, responseType, asyn, quiet)
-  {
-    /* 处理用户在调用该方法时输入的参数 */
-    params = this.parseParams(params);
-    transferMode = typeof(transferMode) === "string"
-    && transferMode.toUpperCase() === "GET"
-    ? "GET"
-    : "POST";
 
-    if (transferMode === "GET")
-    {
-      var d = new Date();
-
-      url += params ? (url.indexOf("?") === - 1 ? "?" : "&") + params : "";
-      url = encodeURI(url) + (url.indexOf("?") === - 1 ? "?" : "&") + d.getTime() + d.getMilliseconds();
-      params = null;
-    }
-
-    responseType = typeof(responseType) === "string" && ((responseType = responseType.toUpperCase()) === "JSON" || responseType === "XML") ? responseType : "TEXT";
-    asyn = asyn === false ? false : true;
-
-    /* 处理HTTP请求和响应 */
-  },
 
   /* *
   * 如果开启了调试模式，该方法会打印出相应的信息。

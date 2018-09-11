@@ -115,14 +115,12 @@ var cancel_color = "无样式";
 <!-- 商品搜索 -->
 <!-- $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ -->
 <div class="form-div">
-  <form action="javascript:searchGoods()" name="searchForm">
+  <form action="{:url('goods_trash')}" method="post">
         <!-- 关键字 -->
-    &nbsp;&nbsp; 关键字 <input type="text" name="keyword" size="25" />
+    &nbsp;&nbsp; 关键字 <input type="text" name="search" size="25" />
     <button type="submit" class="btn"> 搜索 </button>
   </form>
 </div>
-
-
 <script>
   function searchGoods() {
 
@@ -148,15 +146,25 @@ var cancel_color = "无样式";
     <th><a href="javascript:listTable.sort('shop_price'); ">价格</a></th>
     <th>操作</th>
   <tr>
-    <tr><td class="no-records" colspan="10">没有找到任何记录</td></tr>
+  {foreach ($list as $k => $v)}
+  <tr>
+    <td>{$v.goods_id}</td>
+    <td>{$v.goods_name}</td>
+    <td>{$v.goods_art}</td>
+    <td>{$v.goods_price}</td>
+    <td><a href="#">还原</a> |
+    <a href="{:url('goods/goods_trash_del')}?id={$v.goods_id}">移除</a></td>
+  </tr>
+  {/foreach}
+    <!--<tr><td class="no-records" colspan="10">没有找到任何记录</td></tr>-->
   </table>
+    {$list->render()}
 <!-- end goods list -->
-
 <!-- 分页 -->
 <table id="page-table" cellspacing="0">
   <tr>
     <td>
-      <input type="hidden" name="act" value="batch" />
+      <input type="hidden" name="act" value= batch" />
       <select name="type" id="selAction" onchange="changeAction()">
         <option value="">请选择...</option>
         <option value="restore">还原</option>
@@ -165,25 +173,26 @@ var cancel_color = "无样式";
       <select name="target_cat" style="display:none" onchange="checkIsLeaf(this)"><option value="0">请选择...</caption><option value="1" >饮料</option><option value="2" >&nbsp;&nbsp;&nbsp;&nbsp;学习</option></select>
       <input type="submit" value=" 确定 " id="btnSubmit" name="btnSubmit" class="button" disabled="true" />
     </td>
-    <td align="right" nowrap="true">
-    <!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-<div id="turn-page">
-  <span id="pageCurrent">1</span> / <span id="totalPages">1</span>
-  页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">
-  条记录，总共 <span id="totalRecords">0</span>
-  条记录
-  <span id="page-link">
-    <a href="javascript:listTable.gotoPageFirst()">第一页</a>
-    <a href="javascript:listTable.gotoPagePrev()">上一页</a>
-    <a href="javascript:listTable.gotoPageNext()">下一页</a>
-    <a href="javascript:listTable.gotoPageLast()">最末页</a>
-    <select id="gotoPage" onchange="listTable.gotoPage(this.value)">
-      <option value='1'>1</option>    </select>
-  </span>
-</div>
-    </td>
   </tr>
-</table>
+
+    <!--<td align="right" nowrap="true">-->
+    <!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+<!--<div id="turn-page">-->
+  <!--<span id="pageCurrent">1</span> / <span id="totalPages">1</span>-->
+  <!--页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">-->
+  <!--条记录，总共 <span id="totalRecords">0</span>-->
+  <!--条记录-->
+  <!--<span id="page-link">-->
+    <!--<a href="javascript:listTable.gotoPageFirst()">第一页</a>-->
+    <!--<a href="javascript:listTable.gotoPagePrev()">上一页</a>-->
+    <!--<a href="javascript:listTable.gotoPageNext()">下一页</a>-->
+    <!--<a href="javascript:listTable.gotoPageLast()">最末页</a>-->
+    <!--<select id="gotoPage" onchange="listTable.gotoPage(this.value)">-->
+      <!--<option value='1'>1</option>    </select>-->
+  <!--</span>-->
+<!--</div>-->
+    <!--</td>-->
+
 </div>
 
 </form>
