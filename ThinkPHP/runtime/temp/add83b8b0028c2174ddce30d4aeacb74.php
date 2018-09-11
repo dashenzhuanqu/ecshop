@@ -1,19 +1,13 @@
-<<<<<<< HEAD:ThinkPHP/application/index/view/System/system_yq.html
-
-<!-- $Id: link_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-=======
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:98:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\ads\ads_list.html";i:1536283592;}*/ ?>
-﻿<!-- $Id: ads_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3:ThinkPHP/runtime/temp/c407174bee99adce1e057fcbce1ff938.php
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\role\role.html";i:1536307560;}*/ ?>
+<!-- $Id: role_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>ECSHOP 管理中心 - 友情链接列表 </title>
-<base href="\">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>ECSHOP 管理中心 - 角色管理 </title>
+<base href="/" />
 <meta name="robots" content="noindex, nofollow">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="static/css/general.css" rel="stylesheet" type="text/css" />
-<link href="static/css/main.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="static/css/general.css" rel="stylesheet" type="text/css">
+<link href="static/css/main.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="static/js/transport.js"></script><script type="text/javascript" src="static/js/common.js"></script>
 <style>
   .panel-icloud .panel-right iframe {
@@ -26,7 +20,7 @@
 </style>
 
 <script>
-//<!--
+<!--
 // 这里把JS用到的所有语言都赋值到这里
 var process_request = "正在处理您的请求...";
 var todolist_caption = "记事本";
@@ -35,9 +29,12 @@ var todolist_save = "保存";
 var todolist_clear = "清除";
 var todolist_confirm_save = "是否将更改保存到记事本？";
 var todolist_confirm_clear = "是否清空内容？";
-var link_name_empty = "请输入链接名称!";
-var link_url_empty = "请输入链接地址!";
-var show_order_type = "显示的顺序必须是一个数字!";
+var user_name_empty = "管理员用户名不能为空!";
+var password_invaild = "密码必须同时包含字母及数字且长度不能小于6!";
+var email_empty = "Email地址不能为空!";
+var email_error = "Email地址格式不正确!";
+var password_error = "两次输入的密码不一致!";
+var captcha_empty = "您没有输入验证码!";
 //-->
 /*关闭按钮*/
   function get_certificate(){
@@ -47,7 +44,7 @@ var show_order_type = "显示的顺序必须是一个数字!";
 	  if(panel&&CMask&&frame){
 	      panel.style.display = 'block';
 	      mask.style.display = 'block';
-	      frame.src = 'https://openapi.shopex.cn/oauth/authorize?response_type=code&client_id=yogfss4l&redirect_uri=http%3A%2F%2Fwww.zjh.com%2FECShop%2Fsource%2Fecshop%2Fadmin%2Fcertificate.php%3Fact%3Dget_certificate%26type%3Dindex&view=auth_ecshop';
+	      frame.src = 'https://openapi.shopex.cn/oauth/authorize?response_type=code&client_id=yogfss4l&redirect_uri=http%3A%2F%2Flocalhost%2Fdayi%2Fecshop%2Fecshop%2Fadmin%2Fcertificate.php%3Fact%3Dget_certificate%26type%3Dindex&view=auth_ecshop';
 	    }
 	}
 
@@ -62,9 +59,9 @@ var show_order_type = "显示的顺序必须是一个数字!";
 	}
 </script>
 </head>
-<body>
+<body style="cursor: auto;">
 <!--云起激活系统面板-->
-<div class="panel-hint panel-icloud" id="panelCloud">
+<!-- <div class="panel-hint panel-icloud" id="panelCloud">
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -78,98 +75,35 @@ var show_order_type = "显示的顺序必须是一个数字!";
   <div class="panel-right">
     <h5 class="logo">云起</h5>
     <p>正在激活中</p>
-    <iframe src="" frameborder="0" id="CFrame"></iframe>
+    <iframe src="role.html" id="CFrame" frameborder="0"></iframe>
     <div class="cloud-passw">
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-</div>
+</div> -->
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-      <a class="btn btn-right" href="friend_link.php?act=add">添加新链接</a>
+      <a class="btn btn-right" href="<?php echo url('role/addrole'); ?>">添加角色</a>
   
-    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;友情链接列表 </span>
+    <span class="action-span1"><a href="<?php echo url('ads/main'); ?>">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;&gt;&nbsp;&nbsp;角色管理 </span>
   <div style="clear:both"></div>
-</h1><script type="text/javascript" src="static/js/utils.js"></script><script type="text/javascript" src="static/js/listtable.js"></script>
-<form method="post" action="" name="listForm">
-<!-- start ads list -->
+</h1><script type="text/javascript" src="role_data/utils.js"></script><script type="text/javascript" src="role_data/listtable.js"></script>
 <div class="list-div" id="listDiv">
 
-<table cellpadding="3" cellspacing="1">
-  <tr>
-    <th><a href="javascript:listTable.sort('link_name'); ">链接名称</a></th>
-    <th><a href="javascript:listTable.sort('link_url'); ">链接地址</a></th>
-    <th><a href="javascript:listTable.sort('link_logo'); ">链接LOGO</a></th>
-    <th><a href="javascript:listTable.sort('show_order'); ">显示顺序</a></th>
+<table id="list-table" cellspacing="1" cellpadding="3">
+  <tbody><tr>
+    <th>角色名</th>
+    <th>角色描述</th>
     <th>操作</th>
   </tr>
-  <tr>
-    <tr>
-    <td class="first-cell"><span onclick="listTable.edit(this, 'edit_link_name', 3)">免费开独立网店</span></td>
-    <td align="left"><span><a href="http://www.wdwd.com/" target="_blank">http://www.wdwd.com/</a></span></td>
-    <td align="center"><span></span></td>
-    <td align="right"><span onclick="listTable.edit(this, 'edit_show_order', 3)">52</span></td>
-    <td align="center"><span>
-    <a href="{:url('Admin/System/system_yq_upd')}" title="编辑">编辑</a>&nbsp;
-    <a href="javascript:;" onclick="listTable.remove(3, '您确认要删除这条记录吗?')" title="移除">移除</a></span></td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="listTable.edit(this, 'edit_link_name', 2)">买否网</span></td>
-    <td align="left"><span><a href="http://www.maifou.net/" target="_blank">http://www.maifou.net/</a></span></td>
-    <td align="center"><span></span></td>
-    <td align="right"><span onclick="listTable.edit(this, 'edit_show_order', 2)">51</span></td>
-    <td align="center"><span>
-    <a href="{:url('Admin/System/system_yq_upd')}" title="编辑">编辑</a>&nbsp;
-    <a href="javascript:;" onclick="listTable.remove(2, '您确认要删除这条记录吗?')" title="移除">移除</a></span></td>
-  </tr>
-    <tr>
-    <td class="first-cell"><span onclick="listTable.edit(this, 'edit_link_name', 1)">ECSHOP 网上商店管理系统</span></td>
-    <td align="left"><span><a href="http://www.ecshop.com/" target="_blank">http://www.ecshop.com/</a></span></td>
-    <td align="center"><span><img src='http://www.ecshop.com/images/logo/ecshop_logo.gif' width=88 height=31 /></span></td>
-    <td align="right"><span onclick="listTable.edit(this, 'edit_show_order', 1)">50</span></td>
-    <td align="center"><span>
-    <a href="{:url('Admin/System/system_yq_upd')}" title="编辑">编辑</a>&nbsp;
-    <a href="javascript:;" onclick="listTable.remove(1, '您确认要删除这条记录吗?')" title="移除">移除</a></span></td>
-  </tr>
-    <tr>
-    <td align="right" nowrap="true" colspan="10"><!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-<div id="turn-page">
-  <span id="pageCurrent">1</span> / <span id="totalPages">1</span>
-  页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">
-  条记录，总共 <span id="totalRecords">3</span>
-  条记录
-  <span id="page-link">
-    <a href="javascript:listTable.gotoPageFirst()">第一页</a>
-    <a href="javascript:listTable.gotoPagePrev()">上一页</a>
-    <a href="javascript:listTable.gotoPageNext()">下一页</a>
-    <a href="javascript:listTable.gotoPageLast()">最末页</a>
-    <select id="gotoPage" onchange="listTable.gotoPage(this.value)">
-      <option value='1'>1</option>    </select>
-  </span>
-</div>
-</td>
-  </tr>
-</table>
+  </tbody></table>
 
 </div>
-<!-- end ad_position list -->
-</form>
-
 <script type="text/javascript" language="JavaScript">
-  listTable.recordCount = 3;
-  listTable.pageCount = 1;
-
-    listTable.filter.sort_by = 'link_id';
-    listTable.filter.sort_order = 'DESC';
-    listTable.filter.record_count = '3';
-    listTable.filter.page_size = '15';
-    listTable.filter.page = '1';
-    listTable.filter.page_count = '1';
-    listTable.filter.start = '0';
-    
+  
   onload = function()
   {
     // 开始检查订单
@@ -178,25 +112,25 @@ var show_order_type = "显示的顺序必须是一个数字!";
   
 </script>
 <div id="footer">
-共执行 4 个查询，用时 0.087189 秒，Gzip 已禁用，内存占用 1.389 MB<br />
-版权所有 &copy; 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
+共执行 3 个查询，用时 0.015624 秒，Gzip 已禁用，内存占用 1.301 MB<br>
+版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
 <!-- 新订单提示信息 -->
 <div id="popMsg">
-  <table cellspacing="0" cellpadding="0" width="100%" bgcolor="#cfdef4" border="0">
-  <tr>
+  <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#cfdef4">
+  <tbody><tr>
     <td style="color: #0f2c8c" width="30" height="24"></td>
-    <td style="font-weight: normal; color: #1f336b; padding-top: 4px;padding-left: 4px" valign="center" width="100%"> 新订单通知</td>
-    <td style="padding-top: 2px;padding-right:2px" valign="center" align="right" width="19"><span title="关闭" style="cursor: hand;cursor:pointer;color:red;font-size:12px;font-weight:bold;margin-right:4px;" onclick="Message.close()" >×</span><!-- <img title=关闭 style="cursor: hand" onclick=closediv() hspace=3 src="msgclose.jpg"> --></td>
+    <td style="font-weight: normal; color: #1f336b; padding-top: 4px;padding-left: 4px" width="100%" valign="center"> 新订单通知</td>
+    <td style="padding-top: 2px;padding-right:2px" width="19" valign="center" align="right"><span title="关闭" style="cursor: hand;cursor:pointer;color:red;font-size:12px;font-weight:bold;margin-right:4px;" onclick="Message.close()">×</span><!-- <img title=关闭 style="cursor: hand" onclick=closediv() hspace=3 src="msgclose.jpg"> --></td>
   </tr>
   <tr>
     <td style="padding-right: 1px; padding-bottom: 1px" colspan="3" height="70">
     <div id="popMsgContent">
       <p>您有 <strong style="color:#ff0000" id="spanNewOrder">1</strong> 个新订单以及       <strong style="color:#ff0000" id="spanNewPaid">0</strong> 个新付款的订单</p>
-      <p align="center" style="word-break:break-all"><a href="order.php?act=list"><span style="color:#ff0000">点击查看新订单</span></a></p>
+      <p style="word-break:break-all" align="center"><a href="http://localhost/dayi/ecshop/ecshop/admin/order.php?act=list"><span style="color:#ff0000">点击查看新订单</span></a></p>
     </div>
     </td>
   </tr>
-  </table>
+  </tbody></table>
 </div>
 
 <!--
@@ -205,8 +139,8 @@ var show_order_type = "显示的顺序必须是一个数字!";
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
   <param name="movie" value="images/online.swf">
   <param name="quality" value="high">
-  <embed src="static/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
-  </embed>
+  <embed src="role_data/online.swf" name="msgBeep" id="msgBeep" quality="high" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash" width="0" height="0">
+  
 </object>
 
 <script language="JavaScript">
@@ -227,7 +161,7 @@ document.onmousemove=function(e)
     obj.title = '点击对列表排序';
   }
 }
-//<!--
+<!--
 
 
 var MyTodolist;
@@ -235,7 +169,7 @@ function showTodoList(adminid)
 {
   if(!MyTodolist)
   {
-    var global = $import("js/global.js","js");
+    var global = $import("../js/global.js","js");
     global.onload = global.onreadystatechange= function()
     {
       if(this.readyState && this.readyState=="loading")return;
@@ -352,5 +286,5 @@ if (document.getElementById("listDiv"))
 
 //-->
 </script>
-</body>
-</html>
+
+</body></html>

@@ -1,26 +1,20 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:103:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\quanxi\admin_logs.html";i:1536580584;}*/ ?>
 ﻿<!-- $Id: admin_logs.htm 15477 2008-12-22 03:44:50Z sunxiaodong $ -->
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<<<<<<< HEAD
-  <base href="\">
-=======
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 <title>ECSHOP 管理中心 - 管理员日志 </title>
+<base href="/ThinkPHP/public/quanxi/"/>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/static/css/general_2.css" rel="stylesheet" type="text/css" />
-<link href="/static/css/main_2.css" rel="stylesheet" type="text/css" />
+<link href="../../../public/static/css/general_2.css" rel="stylesheet" type="text/css" />
+<link href="../../../public/static/css/main_2.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
 <!--云起激活系统面板-->
-<<<<<<< HEAD
-<div class="panel-hint panel-icloud" id="panelCloud">
-=======
 <!-- <div class="panel-hint panel-icloud" id="panelCloud">
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -39,11 +33,7 @@
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-<<<<<<< HEAD
-</div>
-=======
 </div> -->
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
@@ -88,11 +78,7 @@
 <table cellpadding="3" cellspacing="1">
   <tr>
     <th><input onclick='listTable.selectAll(this, "checkboxes")' type="checkbox">
-<<<<<<< HEAD
-    <a href="javascript:listTable.sort('log_id'); ">编号</a><img src="/static/picture/sort_desc.png"/></th>
-=======
     <a href="javascript:listTable.sort('log_id'); ">编号</a><img src="static/picture/sort_desc_1.png"/></th>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
     <th><a href="javascript:listTable.sort('user_id'); ">操作者</a></th>
     <th><a href="javascript:listTable.sort('log_time'); ">操作日期</a></th>
     <th><a href="javascript:listTable.sort('ip_address'); ">IP地址</a></th>
@@ -250,10 +236,6 @@
   </tr>
   </table>
 </div>
-<<<<<<< HEAD
-  </form>
-=======
 
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 </body>
 </html>

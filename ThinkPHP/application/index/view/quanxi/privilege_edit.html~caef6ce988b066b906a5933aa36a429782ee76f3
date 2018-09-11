@@ -2,21 +2,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<<<<<<< HEAD:ThinkPHP/application/index/view/quanxi/privilege_add.html
-  <base href="\">
-=======
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3:ThinkPHP/application/index/view/quanxi/privilege_add.html
-<title>ECSHOP 管理中心 - 添加管理员 </title>
+<title>ECSHOP 管理中心 - 编辑管理员 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/static/css/general.css" rel="stylesheet" type="text/css" />
 <link href="/static/css/main.css" rel="stylesheet" type="text/css" />
 
-
 </head>
 <body>
 <!--云起激活系统面板-->
-<div class="panel-hint panel-icloud" id="panelCloud">
+<!-- <div class="panel-hint panel-icloud" id="panelCloud">
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -35,56 +30,62 @@
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-</div>
+</div> -->
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-<<<<<<< HEAD:ThinkPHP/application/index/view/quanxi/privilege_add.html
-      <a class="btn btn-right" href="{:url('quanxi/privilege')}">管理员列表</a>
-=======
       <a class="btn btn-right" href="privilege.html">管理员列表</a>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3:ThinkPHP/application/index/view/quanxi/privilege_add.html
   
-    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;添加管理员 </span>
+    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;编辑管理员 </span>
   <div style="clear:both"></div>
 </h1><div class="main-div">
 <form name="theForm" method="post" enctype="multipart/form-data" onsubmit="return validate();">
 <table width="100%">
+  <?php foreach ($list as $k=>$v) { ?>
+
   <tr>
     <td class="label">用户名</td>
     <td>
-      <input type="text" name="user_name" maxlength="20" value="" size="34"/><span class="require-field">*</span></td>
+      <input type="text" name="user_name" maxlength="20" value="<?=$v['admin_name']?>" size="34"/><span class="require-field">*</span></td>
   </tr>
   <tr>
     <td class="label">Email地址</td>
     <td>
-      <input type="text" name="email" value="" size="34" /><span class="require-field">*</span></td>
+      <input type="text" name="email" value="<?=$v['admin_email']?>" size="34" /><span class="require-field">*</span></td>
   </tr>
-   <tr>
-    <td class="label">密  码</td>
+     <tr>
+    <td class="label">
+      <a href="javascript:showNotice('passwordNotic');" title="点击此处查看提示信息">
+        <img src="static/picture/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息"></a>旧密码</td>
     <td>
-      <input type="password" name="password" maxlength="32" size="34" /><span class="require-field">*</span></td>
+      <input type="password" name="old_password" size="34" /><span class="require-field">*</span>      <br /><span class="notice-span" style="display:block"  id="passwordNotic">如果要修改密码,请先填写旧密码,如留空,密码保持不变</span></td>
+  </tr>
+  <tr>
+    <td class="label">新密码</td>
+    <td>
+      <input type="password" name="new_password" maxlength="32" size="34" /><span class="require-field">*</span></td>
   </tr>
   <tr>
     <td class="label">确认密码</td>
     <td>
-      <input type="password" name="pwd_confirm" maxlength="32" size="34" /><span class="require-field">*</span></td>
+      <input type="password" name="pwd_confirm" value="" size="34" /><span class="require-field">*</span></td>
   </tr>
            <tr>
     <td colspan="2" align="center">
       <input type="submit" value=" 确定 " class="button" />&nbsp;&nbsp;&nbsp;
       <input type="reset" value=" 重置 " class="button" />
-      <input type="hidden" name="act" value="insert" />
+      <input type="hidden" name="act" value="update" />
       <input type="hidden" name="token" value="" />
-      <input type="hidden" name="id" value="" /></td>
-  </tr>
+      <input type="hidden" name="id" value="<?=$v['admin_id']?>" /></td>
+  </tr>      
+  <?php }  ?>
 </table>
 </form>
 </div>
 <script type="text/javascript" src="static/js/utils.js"></script><script type="text/javascript" src="static/js/validator.js"></script><script language="JavaScript">
-var action = "add";
+var action = "edit";
 <!--
 
 document.forms['theForm'].elements['user_name'].focus();
@@ -203,7 +204,7 @@ function get_navlist()
 
 </script>
 <div id="footer">
-共执行 3 个查询，用时 0.010002 秒，Gzip 已禁用，内存占用 1.438 MB<br />
+共执行 4 个查询，用时 0.021585 秒，Gzip 已禁用，内存占用 1.175 MB<br />
 版权所有 &copy; 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
 <!-- 新订单提示信息 -->
 <div id="popMsg">

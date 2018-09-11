@@ -1,25 +1,65 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:103:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\agency\agency_add.html";i:1536307914;}*/ ?>
 ﻿<!-- $Id: agency_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<<<<<<< HEAD
-  <base href="\">
-=======
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
+<base href="/" />
 <title>ECSHOP 管理中心 - 添加办事处 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/static/css/general.css" rel="stylesheet" type="text/css" />
-<link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+<link href="static/css/general.css" rel="stylesheet" type="text/css" />
+<link href="static/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="static/js/transport.js"></script><script type="text/javascript" src="static/js/common.js"></script>
+<style>
+  .panel-icloud .panel-right iframe {
+    height: 300px;
+    margin-top: 15px;
+  }
+  .panel-hint{
+    top: 0%;
+  }
+</style>
 
+<script>
+<!--
+// 这里把JS用到的所有语言都赋值到这里
+var process_request = "正在处理您的请求...";
+var todolist_caption = "记事本";
+var todolist_autosave = "自动保存";
+var todolist_save = "保存";
+var todolist_clear = "清除";
+var todolist_confirm_save = "是否将更改保存到记事本？";
+var todolist_confirm_clear = "是否清空内容？";
+var batch_drop_confirm = "您确实要删除选中的办事处吗？";
+var region_exists = "该地区已存在";
+var no_agencyname = "没有填办事处名称";
+//-->
+/*关闭按钮*/
+  function get_certificate(){
+	  var panel = document.getElementById('panelCloud');
+	  var mask  = document.getElementById('CMask')||null;
+	  var frame = document.getElementById('CFrame');
+	  if(panel&&CMask&&frame){
+	      panel.style.display = 'block';
+	      mask.style.display = 'block';
+	      frame.src = 'https://openapi.shopex.cn/oauth/authorize?response_type=code&client_id=yogfss4l&redirect_uri=http%3A%2F%2F127.0.0.1%2FECShop_V4.0.0_UTF8_release0830%2Fsource%2Fecshop%2Fadmin%2Fcertificate.php%3Fact%3Dget_certificate%26type%3Dindex&view=auth_ecshop';
+	    }
+	}
+
+	/*关闭按钮*/
+	function btnCancel(item){
+	  var par  = item.offsetParent;
+	  var mask  = document.getElementById('CMask')||null;
+	  var frame = document.getElementById('CFrame');
+	  par.style.display = 'none';
+	  if(mask){mask.style.display = 'none';}
+	  frame.src = '';
+	}
+</script>
 </head>
 <body>
 <!--云起激活系统面板-->
-<<<<<<< HEAD
-<div class="panel-hint panel-icloud" id="panelCloud">
-=======
 <!-- <div class="panel-hint panel-icloud" id="panelCloud">
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -38,26 +78,18 @@
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-<<<<<<< HEAD
-</div>
-=======
 </div> -->
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-<<<<<<< HEAD
-      <a class="btn btn-right" href="{:url('quanxi/agency')}">办事处列表</a>
-=======
-      <a class="btn btn-right" href="agency.php?act=list">办事处列表</a>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
+      <a class="btn btn-right" href="<?php echo url('agency/agency'); ?>">办事处列表</a>
   
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;添加办事处 </span>
   <div style="clear:both"></div>
 </h1><script type="text/javascript" src="static/js/validator.js"></script><script type="text/javascript" src="static/js/region.js"></script><div class="main-div">
-<form method="post" action="" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
+<form method="post" action="" name="theForm" id="fm" enctype="multipart/form-data" onsubmit="return validate()">
 <table cellspacing="1" cellpadding="3" width="100%">
   <tr>
     <td class="label">办事处名称：</td>
@@ -118,8 +150,8 @@
     <td colspan="2" align="center">
       <input type="submit" class="button" value=" 确定 " />
       <input type="reset" class="button" value=" 重置 " />
-      <input type="hidden" name="act" value="insert" />
-      <input type="hidden" name="id" value="0" />
+<!--       <input type="hidden" name="act" value="insert" />
+      <input type="hidden" name="id" value="0" /> -->
     </td>
   </tr>
 </table>
@@ -392,7 +424,31 @@ if (document.getElementById("listDiv"))
 
 }
 
+
+
+  $("#button").click(function(){
+    var fm = $('.button').serialize();
+    $.ajax({
+      url:"<?php echo url('agency/add_agency'); ?>",
+      type:'post',
+      data:fm,
+      dataType:'json',
+      success:function(e)
+      {
+          if (e.code==100) 
+          {
+              alert(e.msg);
+          } else {
+            console.log(e)
+          }
+      }
+    })
+
+  })
+
+
 //-->
 </script>
 </body>
 </html>
+

@@ -1,22 +1,19 @@
-﻿<!-- $Id: privilege_info.htm 16616 2009-08-27 01:56:35Z liuhui $ -->
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:97:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\quanxi\role.html";i:1536576968;}*/ ?>
+﻿<!-- $Id: role_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<<<<<<< HEAD:ThinkPHP/application/index/view/quanxi/privilege_add.html
-  <base href="\">
-=======
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3:ThinkPHP/application/index/view/quanxi/privilege_add.html
-<title>ECSHOP 管理中心 - 添加管理员 </title>
+<title>ECSHOP 管理中心 - 角色管理 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/static/css/general.css" rel="stylesheet" type="text/css" />
-<link href="/static/css/main.css" rel="stylesheet" type="text/css" />
-
+<link href="/static/css/general_2.css" rel="stylesheet" type="text/css" />
+<link href="/static/css/main_2.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
 <!--云起激活系统面板-->
-<div class="panel-hint panel-icloud" id="panelCloud">
+<!-- <div class="panel-hint panel-icloud" id="panelCloud">
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -35,175 +32,40 @@
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-</div>
+</div> -->
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-<<<<<<< HEAD:ThinkPHP/application/index/view/quanxi/privilege_add.html
-      <a class="btn btn-right" href="{:url('quanxi/privilege')}">管理员列表</a>
-=======
-      <a class="btn btn-right" href="privilege.html">管理员列表</a>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3:ThinkPHP/application/index/view/quanxi/privilege_add.html
+      <a class="btn btn-right" href="role_add.html">添加角色</a>
   
-    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;添加管理员 </span>
+    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;角色管理 </span>
   <div style="clear:both"></div>
-</h1><div class="main-div">
-<form name="theForm" method="post" enctype="multipart/form-data" onsubmit="return validate();">
-<table width="100%">
+</h1>
+<div class="list-div" id="listDiv">
+
+<table cellspacing='1' cellpadding='3' id='list-table'>
   <tr>
-    <td class="label">用户名</td>
-    <td>
-      <input type="text" name="user_name" maxlength="20" value="" size="34"/><span class="require-field">*</span></td>
+    <th>角色名</th>
+    <th>角色描述</th>
+    <th>操作</th>
   </tr>
-  <tr>
-    <td class="label">Email地址</td>
-    <td>
-      <input type="text" name="email" value="" size="34" /><span class="require-field">*</span></td>
+  <?php foreach ($list as $v) { ?>
+    <tr>
+    <td class="first-cell" ><?=$v['role_name'];?></td>
+    <td class="first-cell" ><?=$v['role_desc'];?></td>
+    <td align="center">
+      <a href="role_edit.html?id=<?=$v['role_id'];?>" title="编辑">编辑</a>&nbsp;&nbsp;
+      <a href="javascript:;" onclick="listTable.remove(<?=$v['role_id'];?>, '您确认要删除这条记录吗?')" title="移除">移除</a></td>
   </tr>
-   <tr>
-    <td class="label">密  码</td>
-    <td>
-      <input type="password" name="password" maxlength="32" size="34" /><span class="require-field">*</span></td>
-  </tr>
-  <tr>
-    <td class="label">确认密码</td>
-    <td>
-      <input type="password" name="pwd_confirm" maxlength="32" size="34" /><span class="require-field">*</span></td>
-  </tr>
-           <tr>
-    <td colspan="2" align="center">
-      <input type="submit" value=" 确定 " class="button" />&nbsp;&nbsp;&nbsp;
-      <input type="reset" value=" 重置 " class="button" />
-      <input type="hidden" name="act" value="insert" />
-      <input type="hidden" name="token" value="" />
-      <input type="hidden" name="id" value="" /></td>
-  </tr>
-</table>
-</form>
+  <?php } ?>
+  </table>
+
 </div>
-<script type="text/javascript" src="static/js/utils.js"></script><script type="text/javascript" src="static/js/validator.js"></script><script language="JavaScript">
-var action = "add";
-<!--
 
-document.forms['theForm'].elements['user_name'].focus();
-onload = function()
-{
-    // 开始检查订单
-    startCheckOrder();
-}
-
-/**
- * 切换增加按钮的状态
- */
-function toggleAddButton()
-{
-    var sel = document.getElementById("all_menu_list");
-    document.getElementById("btnAdd").disabled = (sel.selectedIndex > -1) ? false : true;
-}
-
-/**
- * 切换移出，上移，下移按钮状态
- */
-function toggleButtonSatus()
-{
-    var sel = document.getElementById("menus_navlist");
-    document.getElementById("btnRemove").disabled = (sel.selectedIndex > -1) ? false : true;
-    document.getElementById("btnMoveUp").disabled = (sel.selectedIndex > -1) ? false : true;
-    document.getElementById("btnMoveDown").disabled = (sel.selectedIndex > -1) ? false : true;
-}
-
-/**
- * 移动选定的列表项
- */
-function moveOptions(direction)
-{
-    var sel = document.getElementById('menus_navlist');
-    if (sel.selectedIndex == -1)
-    {
-        return;
-    }
-
-    len = sel.length
-    for (i = 0; i < len; i++)
-    {
-        if (sel.options[i].selected)
-        {
-            if (i == 0 && direction == 'up')
-            {
-                return;
-            }
-
-            newOpt = sel.options[i].cloneNode(true);
-
-            sel.removeChild(sel.options[i]);
-            tarOpt = (direction == "up") ? sel.options[i-1] : sel.options[i+1]
-            sel.insertBefore(newOpt, tarOpt);
-            newOpt.selected = true;
-            break;
-        }
-    }
-}
-
-/**
-* 检查表单输入的数据
-*/
-function validate()
-{
-  get_navlist();
-
-  validator = new Validator("theForm");
-  validator.password = function (controlId, msg)
-  {
-    var obj = document.forms[this.formName].elements[controlId];
-    obj.value = Utils.trim(obj.value);
-    if (!(obj.value.length >= 6 && /\d+/.test(obj.value) && /[a-zA-Z]+/.test(obj.value)))
-    {
-      this.addErrorMsg(msg);
-    }
-
-  }
-
-  validator.required("user_name", user_name_empty);
-  validator.required("email", email_empty, 1);
-  validator.isEmail("email", email_error);
-
-  if (action == "add")
-  {
-    if (document.forms['theForm'].elements['password'])
-    {
-      validator.password("password", password_invaild);
-      validator.eqaul("password", "pwd_confirm", password_error);
-    }
-  }
-  if (action == "edit" || action == "modif")
-  {
-    if (document.forms['theForm'].elements['old_password'].value.length > 0)
-    {
-      validator.password("new_password", password_invaild);
-      validator.eqaul("new_password", "pwd_confirm", password_error);
-    }
-  }
-
-  return validator.passed();
-}
-
-function get_navlist()
-{
-  if (!document.getElementById('nav_list[]'))
-  {
-    return;
-  }
-
-  document.getElementById('nav_list[]').value = joinItem(document.getElementById('menus_navlist'));
-  //alert(document.getElementById('nav_list[]').value);
-}
-//-->
-
-</script>
 <div id="footer">
-共执行 3 个查询，用时 0.010002 秒，Gzip 已禁用，内存占用 1.438 MB<br />
+共执行 3 个查询，用时 0.013600 秒，Gzip 已禁用，内存占用 1.078 MB<br />
 版权所有 &copy; 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
 <!-- 新订单提示信息 -->
 <div id="popMsg">
@@ -225,7 +87,7 @@ function get_navlist()
 </div>
 
 <!--
-<embed src="static/flash/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
+<embed src="static/flash/online_2.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
 -->
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
   <param name="movie" value="images/online.swf">

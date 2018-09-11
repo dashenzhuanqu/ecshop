@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <base href="\">
-=======
-﻿privi<!-- $Id: privilege_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:102:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\quanxi\privilege.html";i:1536577429;}*/ ?>
+﻿<!-- $Id: privilege_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 <title>ECSHOP 管理中心 - 管理员列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,11 +13,7 @@
 </head>
 <body>
 <!--云起激活系统面板-->
-<<<<<<< HEAD
-<div class="panel-hint panel-icloud" id="panelCloud">
-=======
 <!-- <div class="panel-hint panel-icloud" id="panelCloud">
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -42,21 +32,13 @@
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-<<<<<<< HEAD
-</div>
-=======
 </div> -->
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-<<<<<<< HEAD
-      <a class="btn btn-right" href="{:url('quanxi/privilege_add')}">添加管理员</a>
-=======
       <a class="btn btn-right" href="privilege_add.html">添加管理员</a>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
   
     <span class="action-span1"><a href="../Index/index_main.html">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;管理员列表 </span>
   <div style="clear:both"></div>
@@ -78,15 +60,9 @@
       <td align="center"><?=$v['date_time'];?></td>
       <!-- <td align="center">2018-08-31 14:29:20</td> -->
       <td align="center">
-<<<<<<< HEAD
-        <a href="{:url('quanxi/role_edit')}?id=<?=$v['admin_id'];?>" title="分派权限">分派权限</a>&nbsp;
-        <a href="{:url('quanxi/admin_logs')}?id=<?=$v['admin_id'];?>" title="查看日志">查看日志</a>&nbsp;
-        <a href="{:url('quanxi/privilege_edit')}?id=<?=$v['admin_id'];?>" title="编辑">编辑</a>&nbsp;
-=======
         <a href="role_edit.html?id=<?=$v['admin_id'];?>" title="分派权限">分派权限</a>&nbsp;
         <a href="admin_logs.html?id=<?=$v['admin_id'];?>" title="查看日志">查看日志</a>&nbsp;
         <a href="privilege_edit.html?id=<?=$v['admin_id'];?>" title="编辑">编辑</a>&nbsp;
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
         <a href="javascript:;" onclick="listTable.remove(2, '您确认要删除这条记录吗?')" title="移除">移除</a></td>
     </tr>
   <?php } ?>

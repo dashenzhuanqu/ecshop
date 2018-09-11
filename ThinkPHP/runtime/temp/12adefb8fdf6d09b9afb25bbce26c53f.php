@@ -1,12 +1,10 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:99:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\quanxi\agency.html";i:1536578959;}*/ ?>
 ﻿<!-- $Id: agency_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<<<<<<< HEAD
-  <base href="\">
-=======
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
+
 <title>ECSHOP 管理中心 - 办事处列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,11 +14,7 @@
 </head>
 <body>
 <!--云起激活系统面板-->
-<<<<<<< HEAD
-<div class="panel-hint panel-icloud" id="panelCloud">
-=======
 <!-- <div class="panel-hint panel-icloud" id="panelCloud">
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -39,21 +33,13 @@
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-<<<<<<< HEAD
-</div>
-=======
 </div> -->
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-<<<<<<< HEAD
-      <a class="btn btn-right" href="{:url('quanxi/agency_add')}">添加办事处</a>
-=======
       <a class="btn btn-right" href="agency_add.html">添加办事处</a>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
   
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;办事处列表 </span>
   <div style="clear:both"></div>
@@ -64,11 +50,7 @@
   <table cellpadding="3" cellspacing="1">
     <tr>
       <th> <input onclick='listTable.selectAll(this, "checkboxes")' type="checkbox" />
-<<<<<<< HEAD
-          <a href="javascript:listTable.sort('agency_id'); ">编号</a><img src="/static/picture/sort_desc.png"/> </th>
-=======
           <a href="javascript:listTable.sort('agency_id'); ">编号</a><img src="images/sort_desc.png"/> </th>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
       <th><a href="javascript:listTable.sort('agency_name'); ">办事处名称</a></th>
       <th>办事处描述</th>
       <th>操作</th>
@@ -81,11 +63,7 @@
           <span onclick="javascript:listTable.edit(this, 'edit_agency_name', <?=$v['agency_id']?>)"><?=$v['agency_name']?>      </span></td>
         <td><?=$v['agency_desc']?></td>
         <td align="center">
-<<<<<<< HEAD
-          <a href="{:url('quanxi/agency_edit')}?id=<?=$v['agency_id']?>" title="编辑">编辑</a> |
-=======
           <a href="agency_edit.html?id=<?=$v['agency_id']?>" title="编辑">编辑</a> |
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
           <a href="javascript:;" onclick="listTable.remove(<?=$v['agency_id']?>, '您确认要删除这条记录吗?')" title="移除">移除</a>      </td>
       </tr>
     <?php } ?>

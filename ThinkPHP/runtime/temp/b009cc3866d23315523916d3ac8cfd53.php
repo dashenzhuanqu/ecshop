@@ -1,11 +1,8 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:106:"D:\phpStudy\PHPTutorial\WWW\da1\ecshop\ThinkPHP\public/../application/index\view\quanxi\privilege_add.html";i:1536576952;}*/ ?>
 ﻿<!-- $Id: privilege_info.htm 16616 2009-08-27 01:56:35Z liuhui $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<<<<<<< HEAD:ThinkPHP/application/index/view/quanxi/privilege_add.html
-  <base href="\">
-=======
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3:ThinkPHP/application/index/view/quanxi/privilege_add.html
 <title>ECSHOP 管理中心 - 添加管理员 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,7 +13,7 @@
 </head>
 <body>
 <!--云起激活系统面板-->
-<div class="panel-hint panel-icloud" id="panelCloud">
+<!-- <div class="panel-hint panel-icloud" id="panelCloud">
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -35,17 +32,13 @@
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-</div>
+</div> -->
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-<<<<<<< HEAD:ThinkPHP/application/index/view/quanxi/privilege_add.html
-      <a class="btn btn-right" href="{:url('quanxi/privilege')}">管理员列表</a>
-=======
       <a class="btn btn-right" href="privilege.html">管理员列表</a>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3:ThinkPHP/application/index/view/quanxi/privilege_add.html
   
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;添加管理员 </span>
   <div style="clear:both"></div>

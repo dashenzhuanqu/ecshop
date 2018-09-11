@@ -1,18 +1,59 @@
-﻿<!-- $Id: privilege_info.htm 16616 2009-08-27 01:56:35Z liuhui $ -->
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\goods\brand_list.html";i:1536240288;}*/ ?>
+﻿<!-- $Id: brand_list.htm 15898 2009-05-04 07:25:41Z liuhui $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<<<<<<< HEAD:ThinkPHP/application/index/view/quanxi/privilege_add.html
-  <base href="\">
-=======
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3:ThinkPHP/application/index/view/quanxi/privilege_add.html
-<title>ECSHOP 管理中心 - 添加管理员 </title>
+<title>ECSHOP 管理中心 - 商品品牌 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/static/css/general.css" rel="stylesheet" type="text/css" />
-<link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+<link href="../../../static/css/general.css" rel="stylesheet" type="text/css" />
+<link href="../../../static/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>
+<style>
+  .panel-icloud .panel-right iframe {
+    height: 300px;
+    margin-top: 15px;
+  }
+  .panel-hint{
+    top: 0%;
+  }
+</style>
 
+<script>
+<!--
+// 这里把JS用到的所有语言都赋值到这里
+var process_request = "正在处理您的请求...";
+var todolist_caption = "记事本";
+var todolist_autosave = "自动保存";
+var todolist_save = "保存";
+var todolist_clear = "清除";
+var todolist_confirm_save = "是否将更改保存到记事本？";
+var todolist_confirm_clear = "是否清空内容？";
+var no_brandname = "您必须输入品牌名称！";
+var require_num = "排序序号必须是一个数字";
+//-->
+/*关闭按钮*/
+  function get_certificate(){
+	  var panel = document.getElementById('panelCloud');
+	  var mask  = document.getElementById('CMask')||null;
+	  var frame = document.getElementById('CFrame');
+	  if(panel&&CMask&&frame){
+	      panel.style.display = 'block';
+	      mask.style.display = 'block';
+	      frame.src = 'https://openapi.shopex.cn/oauth/authorize?response_type=code&client_id=yogfss4l&redirect_uri=http%3A%2F%2F127.0.0.1%2FECShop_V4.0.0_UTF8_release0830%2Fsource%2Fecshop%2Fadmin%2Fcertificate.php%3Fact%3Dget_certificate%26type%3Dindex&view=auth_ecshop';
+	    }
+	}
 
+	/*关闭按钮*/
+	function btnCancel(item){
+	  var par  = item.offsetParent;
+	  var mask  = document.getElementById('CMask')||null;
+	  var frame = document.getElementById('CFrame');
+	  par.style.display = 'none';
+	  if(mask){mask.style.display = 'none';}
+	  frame.src = '';
+	}
+</script>
 </head>
 <body>
 <!--云起激活系统面板-->
@@ -41,169 +82,107 @@
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-<<<<<<< HEAD:ThinkPHP/application/index/view/quanxi/privilege_add.html
-      <a class="btn btn-right" href="{:url('quanxi/privilege')}">管理员列表</a>
-=======
-      <a class="btn btn-right" href="privilege.html">管理员列表</a>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3:ThinkPHP/application/index/view/quanxi/privilege_add.html
+      <a class="btn btn-right" href="/index/goods/brand_add">添加品牌</a>
   
-    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;添加管理员 </span>
+    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;商品品牌 </span>
   <div style="clear:both"></div>
-</h1><div class="main-div">
-<form name="theForm" method="post" enctype="multipart/form-data" onsubmit="return validate();">
-<table width="100%">
-  <tr>
-    <td class="label">用户名</td>
-    <td>
-      <input type="text" name="user_name" maxlength="20" value="" size="34"/><span class="require-field">*</span></td>
-  </tr>
-  <tr>
-    <td class="label">Email地址</td>
-    <td>
-      <input type="text" name="email" value="" size="34" /><span class="require-field">*</span></td>
-  </tr>
-   <tr>
-    <td class="label">密  码</td>
-    <td>
-      <input type="password" name="password" maxlength="32" size="34" /><span class="require-field">*</span></td>
-  </tr>
-  <tr>
-    <td class="label">确认密码</td>
-    <td>
-      <input type="password" name="pwd_confirm" maxlength="32" size="34" /><span class="require-field">*</span></td>
-  </tr>
-           <tr>
-    <td colspan="2" align="center">
-      <input type="submit" value=" 确定 " class="button" />&nbsp;&nbsp;&nbsp;
-      <input type="reset" value=" 重置 " class="button" />
-      <input type="hidden" name="act" value="insert" />
-      <input type="hidden" name="token" value="" />
-      <input type="hidden" name="id" value="" /></td>
-  </tr>
-</table>
-</form>
+</h1><script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/listtable.js"></script><!-- 品牌搜索 -->
+<!-- $Id: brand_search.htm 2009-05-04 liuhui $ -->
+<div class="form-div">
+  <form action="javascript:search_brand()" name="searchForm">
+    <img src="../../../static/picture/icon_search.svg" width="26" height="22" border="0" alt="SEARCH" />
+     <input type="text" name="brand_name" size="15" />
+    <input type="submit" value=" 搜索 " class="button" />
+  </form>
 </div>
-<script type="text/javascript" src="static/js/utils.js"></script><script type="text/javascript" src="static/js/validator.js"></script><script language="JavaScript">
-var action = "add";
-<!--
 
-document.forms['theForm'].elements['user_name'].focus();
-onload = function()
-{
-    // 开始检查订单
-    startCheckOrder();
-}
-
-/**
- * 切换增加按钮的状态
- */
-function toggleAddButton()
-{
-    var sel = document.getElementById("all_menu_list");
-    document.getElementById("btnAdd").disabled = (sel.selectedIndex > -1) ? false : true;
-}
-
-/**
- * 切换移出，上移，下移按钮状态
- */
-function toggleButtonSatus()
-{
-    var sel = document.getElementById("menus_navlist");
-    document.getElementById("btnRemove").disabled = (sel.selectedIndex > -1) ? false : true;
-    document.getElementById("btnMoveUp").disabled = (sel.selectedIndex > -1) ? false : true;
-    document.getElementById("btnMoveDown").disabled = (sel.selectedIndex > -1) ? false : true;
-}
-
-/**
- * 移动选定的列表项
- */
-function moveOptions(direction)
-{
-    var sel = document.getElementById('menus_navlist');
-    if (sel.selectedIndex == -1)
+<script language="JavaScript">
+    function search_brand()
     {
-        return;
+        listTable.filter['brand_name'] = Utils.trim(document.forms['searchForm'].elements['brand_name'].value);
+        listTable.filter['page'] = 1;
+        
+        listTable.loadList();
     }
-
-    len = sel.length
-    for (i = 0; i < len; i++)
-    {
-        if (sel.options[i].selected)
-        {
-            if (i == 0 && direction == 'up')
-            {
-                return;
-            }
-
-            newOpt = sel.options[i].cloneNode(true);
-
-            sel.removeChild(sel.options[i]);
-            tarOpt = (direction == "up") ? sel.options[i-1] : sel.options[i+1]
-            sel.insertBefore(newOpt, tarOpt);
-            newOpt.selected = true;
-            break;
-        }
-    }
-}
-
-/**
-* 检查表单输入的数据
-*/
-function validate()
-{
-  get_navlist();
-
-  validator = new Validator("theForm");
-  validator.password = function (controlId, msg)
-  {
-    var obj = document.forms[this.formName].elements[controlId];
-    obj.value = Utils.trim(obj.value);
-    if (!(obj.value.length >= 6 && /\d+/.test(obj.value) && /[a-zA-Z]+/.test(obj.value)))
-    {
-      this.addErrorMsg(msg);
-    }
-
-  }
-
-  validator.required("user_name", user_name_empty);
-  validator.required("email", email_empty, 1);
-  validator.isEmail("email", email_error);
-
-  if (action == "add")
-  {
-    if (document.forms['theForm'].elements['password'])
-    {
-      validator.password("password", password_invaild);
-      validator.eqaul("password", "pwd_confirm", password_error);
-    }
-  }
-  if (action == "edit" || action == "modif")
-  {
-    if (document.forms['theForm'].elements['old_password'].value.length > 0)
-    {
-      validator.password("new_password", password_invaild);
-      validator.eqaul("new_password", "pwd_confirm", password_error);
-    }
-  }
-
-  return validator.passed();
-}
-
-function get_navlist()
-{
-  if (!document.getElementById('nav_list[]'))
-  {
-    return;
-  }
-
-  document.getElementById('nav_list[]').value = joinItem(document.getElementById('menus_navlist'));
-  //alert(document.getElementById('nav_list[]').value);
-}
-//-->
 
 </script>
+<form method="post" action="" name="listForm">
+<!-- start brand list -->
+<div class="list-div" id="listDiv">
+
+  <table cellpadding="3" cellspacing="1">
+    <tr>
+      <th>品牌名称</th>
+      <th>品牌LOGO</th>
+      <th>品牌网址</th>
+      <th>品牌描述</th>
+      <th>排序</th>
+      <th>是否显示</th>
+      <th>操作</th>
+    </tr>
+    <?php foreach($arr as $k=>$v){ ?>
+    <tr>
+      <td class="first-cell">
+        <span style="float:right"></span>
+        <span onclick="javascript:listTable.edit(this, 'edit_brand_name', 1)"><?php echo $v['brand_name']; ?></span>
+      </td>
+      <td><img src="/uploads/<?php echo $v['brand_img']; ?>" width="100" alt=""></td>
+      <td><?php echo $v['brand_url']; ?></td>
+      <td align="left"><?php echo $v['brand_desc']; ?></td>
+      <td align="right"><span onclick="javascript:listTable.edit(this, 'edit_sort_order', 1)"><?php echo $v['sort_order']; ?></span></td>
+      <td align="center"><img src="../../../static/picture/yes.svg" width="20" onclick="listTable.toggle(this, 'toggle_show', 1)" /></td>
+      <td align="center">
+        <a href="brand.php?act=edit&id=1" title="编辑">编辑</a> |
+        <a href="javascript:;" onclick="listTable.remove(1, '你确认要删除选定的商品品牌吗？')" title="编辑">移除</a> 
+      </td>
+    </tr>
+    <?php } ?>
+      <td align="right" nowrap="true" colspan="6">
+      <!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+<div id="turn-page">
+  <span id="pageCurrent">1</span> / <span id="totalPages">1</span>
+  页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">
+  条记录，总共 <span id="totalRecords">2</span>
+  条记录
+  <span id="page-link">
+    <a href="javascript:listTable.gotoPageFirst()">第一页</a>
+    <a href="javascript:listTable.gotoPagePrev()">上一页</a>
+    <a href="javascript:listTable.gotoPageNext()">下一页</a>
+    <a href="javascript:listTable.gotoPageLast()">最末页</a>
+    <select id="gotoPage" onchange="listTable.gotoPage(this.value)">
+      <option value='1'>1</option>    </select>
+  </span>
+</div>
+      </td>
+    </tr>
+  </table>
+
+<!-- end brand list -->
+</div>
+</form>
+
+<script type="text/javascript" language="javascript">
+  <!--
+  listTable.recordCount = 2;
+  listTable.pageCount = 1;
+
+    listTable.filter.record_count = '2';
+    listTable.filter.page_size = '15';
+    listTable.filter.page = '1';
+    listTable.filter.page_count = '1';
+    listTable.filter.start = '0';
+  
+  
+  onload = function()
+  {
+      // 开始检查订单
+      startCheckOrder();
+  }
+  
+  //-->
+</script>
 <div id="footer">
-共执行 3 个查询，用时 0.010002 秒，Gzip 已禁用，内存占用 1.438 MB<br />
+共执行 4 个查询，用时 0.024000 秒，Gzip 已禁用，内存占用 1.394 MB<br />
 版权所有 &copy; 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
 <!-- 新订单提示信息 -->
 <div id="popMsg">
@@ -230,7 +209,7 @@ function get_navlist()
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
   <param name="movie" value="images/online.swf">
   <param name="quality" value="high">
-  <embed src="images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
+  <embed src="../../../images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
 
