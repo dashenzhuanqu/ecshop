@@ -359,3 +359,1803 @@
 [ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html [ array (
 ) ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:37+08:00 ] 127.0.0.1 GET /
+[ info ] www.perject.com/ [运行时间：0.366973s][吞吐率：2.72req/s] [内存消耗：1,461.59kb] [文件加载：35]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:37+08:00 ] 127.0.0.1 GET /index/index/menu.html
+[ info ] www.perject.com/index/index/menu.html [运行时间：0.082972s][吞吐率：12.05req/s] [内存消耗：1,536.30kb] [文件加载：35]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'menu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2008%3A32%3A11%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->menu[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:37+08:00 ] 127.0.0.1 GET /index/index/top.html
+[ info ] www.perject.com/index/index/top.html [运行时间：0.078720s][吞吐率：12.70req/s] [内存消耗：1,409.77kb] [文件加载：34]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'top',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2008%3A32%3A11%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->top[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:37+08:00 ] 127.0.0.1 GET /index/index/main.html
+[ info ] www.perject.com/index/index/main.html [运行时间：0.072414s][吞吐率：13.81req/s] [内存消耗：1,450.99kb] [文件加载：34]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2008%3A32%3A11%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->main[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:46+08:00 ] 127.0.0.1 GET /index/login/login
+[ info ] www.perject.com/index/login/login [运行时间：0.148213s][吞吐率：6.75req/s] [内存消耗：1,517.00kb] [文件加载：37]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Login.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:46+08:00 ] 127.0.0.1 GET /static/css/jquery.mCustomScrollbar.css
+[ info ] www.perject.com/static/css/jquery.mCustomScrollbar.css [运行时间：0.045351s][吞吐率：22.05req/s] [内存消耗：1,051.14kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'jquery.mCustomScrollbar.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.perject.com/index/login/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:46+08:00 ] 127.0.0.1 GET /static/css/font/adminthemes-webfont.woff2
+[ info ] www.perject.com/static/css/font/adminthemes-webfont.woff2 [运行时间：0.039532s][吞吐率：25.30req/s] [内存消耗：1,051.12kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'font',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://www.perject.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/static/css/style.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:47+08:00 ] 127.0.0.1 GET /static/css/font/adminthemes-webfont.woff
+[ info ] www.perject.com/static/css/font/adminthemes-webfont.woff [运行时间：0.036431s][吞吐率：27.45req/s] [内存消耗：1,051.12kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'font',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://www.perject.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/static/css/style.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:47+08:00 ] 127.0.0.1 GET /static/css/font/adminthemes-webfont.ttf
+[ info ] www.perject.com/static/css/font/adminthemes-webfont.ttf [运行时间：0.034555s][吞吐率：28.94req/s] [内存消耗：1,051.06kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'font',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://www.perject.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/static/css/style.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:53+08:00 ] 127.0.0.1 POST /index/login/login_do.html
+[ info ] www.perject.com/index/login/login_do.html [运行时间：0.272002s][吞吐率：3.68req/s] [内存消耗：2,095.39kb] [文件加载：40]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login_do',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.perject.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.perject.com/index/login/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhangsan',
+  'pwd' => '000000',
+)
+[ info ] [ RUN ] app\index\controller\Login->login_do[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003344s ] mysql:host=127.0.0.1;dbname=ecsp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `login` [ RunTime:0.129427s ]
+[ sql ] [ SQL ] SELECT * FROM `login` WHERE  `username` = 'zhangsan' [ RunTime:0.000739s ]
+---------------------------------------------------------------
+[ 2018-09-11T17:08:53+08:00 ] 127.0.0.1 GET /index/index/index.html
+[ info ] www.perject.com/index/index/index.html [运行时间：0.033491s][吞吐率：29.86req/s] [内存消耗：1,322.59kb] [文件加载：33]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/login/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:53+08:00 ] 127.0.0.1 GET /index/index/menu.html
+[ info ] www.perject.com/index/index/menu.html [运行时间：0.043295s][吞吐率：23.10req/s] [内存消耗：1,338.63kb] [文件加载：33]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'menu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->menu[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:53+08:00 ] 127.0.0.1 GET /index/index/top.html
+[ info ] www.perject.com/index/index/top.html [运行时间：0.047947s][吞吐率：20.86req/s] [内存消耗：1,260.92kb] [文件加载：32]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'top',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->top[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:08:53+08:00 ] 127.0.0.1 GET /index/index/main.html
+[ info ] www.perject.com/index/index/main.html [运行时间：0.052745s][吞吐率：18.96req/s] [内存消耗：1,276.93kb] [文件加载：32]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->main[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:04+08:00 ] 127.0.0.1 GET /index/system/system_list.html
+[ info ] www.perject.com/index/system/system_list.html [运行时间：0.054836s][吞吐率：18.24req/s] [内存消耗：1,831.40kb] [文件加载：35]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'system',
+    2 => 'system_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Mon%2C%2010%20Sep%202018%2013%3A34%3A26%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\Index\controller\System->system_list[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\System.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\system\system_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:04+08:00 ] 127.0.0.1 GET /static/js/region.js
+[ info ] www.perject.com/static/js/region.js [运行时间：0.035856s][吞吐率：27.89req/s] [内存消耗：1,050.84kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'region.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:04+08:00 ] 127.0.0.1 GET /static/images/no.svg
+[ info ] www.perject.com/static/images/no.svg [运行时间：0.035637s][吞吐率：28.06req/s] [内存消耗：1,050.96kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'no.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:04+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.066466s][吞吐率：15.05req/s] [内存消耗：1,051.03kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:04+08:00 ] 127.0.0.1 GET /static/js/region.js
+[ info ] www.perject.com/static/js/region.js [运行时间：0.030354s][吞吐率：32.94req/s] [内存消耗：1,050.84kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'region.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:04+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.039880s][吞吐率：25.08req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:04+08:00 ] 127.0.0.1 GET /static/images/no.svg
+[ info ] www.perject.com/static/images/no.svg [运行时间：0.036302s][吞吐率：27.55req/s] [内存消耗：1,050.96kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'no.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:04+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.039197s][吞吐率：25.51req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:04+08:00 ] 127.0.0.1 GET /static/images/no.svg
+[ info ] www.perject.com/static/images/no.svg [运行时间：0.041125s][吞吐率：24.32req/s] [内存消耗：1,050.96kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'no.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:04+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.037259s][吞吐率：26.84req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:14+08:00 ] 127.0.0.1 GET /index/system/system_list.html
+[ info ] www.perject.com/index/system/system_list.html [运行时间：0.033406s][吞吐率：29.93req/s] [内存消耗：1,424.41kb] [文件加载：33]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'system',
+    2 => 'system_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/menu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Mon%2C%2010%20Sep%202018%2013%3A34%3A26%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\Index\controller\System->system_list[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\System.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\system\system_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:14+08:00 ] 127.0.0.1 GET /static/js/region.js
+[ info ] www.perject.com/static/js/region.js [运行时间：0.033953s][吞吐率：29.45req/s] [内存消耗：1,050.84kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'region.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:14+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.056526s][吞吐率：17.69req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:14+08:00 ] 127.0.0.1 GET /static/images/no.svg
+[ info ] www.perject.com/static/images/no.svg [运行时间：0.084336s][吞吐率：11.86req/s] [内存消耗：1,050.96kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'no.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:14+08:00 ] 127.0.0.1 GET /static/js/region.js
+[ info ] www.perject.com/static/js/region.js [运行时间：0.028010s][吞吐率：35.70req/s] [内存消耗：1,050.84kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'region.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:14+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.035859s][吞吐率：27.89req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:14+08:00 ] 127.0.0.1 GET /static/images/no.svg
+[ info ] www.perject.com/static/images/no.svg [运行时间：0.034405s][吞吐率：29.07req/s] [内存消耗：1,050.96kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'no.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:09:14+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.045477s][吞吐率：21.99req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:04+08:00 ] 127.0.0.1 GET /index/system/system_list.html
+[ info ] www.perject.com/index/system/system_list.html [运行时间：0.033180s][吞吐率：30.14req/s] [内存消耗：1,424.40kb] [文件加载：33]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'system',
+    2 => 'system_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Mon%2C%2010%20Sep%202018%2013%3A34%3A26%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\Index\controller\System->system_list[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\System.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\system\system_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:04+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.033522s][吞吐率：29.83req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:04+08:00 ] 127.0.0.1 GET /static/images/no.svg
+[ info ] www.perject.com/static/images/no.svg [运行时间：0.032371s][吞吐率：30.89req/s] [内存消耗：1,050.96kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'no.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:04+08:00 ] 127.0.0.1 GET /static/js/region.js
+[ info ] www.perject.com/static/js/region.js [运行时间：0.039820s][吞吐率：25.11req/s] [内存消耗：1,050.84kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'region.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:05+08:00 ] 127.0.0.1 GET /static/js/region.js
+[ info ] www.perject.com/static/js/region.js [运行时间：0.031004s][吞吐率：32.25req/s] [内存消耗：1,050.84kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'region.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:05+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.039347s][吞吐率：25.41req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:05+08:00 ] 127.0.0.1 GET /static/images/no.svg
+[ info ] www.perject.com/static/images/no.svg [运行时间：0.036790s][吞吐率：27.18req/s] [内存消耗：1,050.96kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'no.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:05+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.035520s][吞吐率：28.15req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:05+08:00 ] 127.0.0.1 GET /index/index/index.html
+[ info ] www.perject.com/index/index/index.html [运行时间：0.032631s][吞吐率：30.65req/s] [内存消耗：1,322.82kb] [文件加载：33]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/login/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:06+08:00 ] 127.0.0.1 GET /index/index/top.html
+[ info ] www.perject.com/index/index/top.html [运行时间：0.037030s][吞吐率：27.01req/s] [内存消耗：1,260.92kb] [文件加载：32]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'top',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->top[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:06+08:00 ] 127.0.0.1 GET /index/index/main.html
+[ info ] www.perject.com/index/index/main.html [运行时间：0.036699s][吞吐率：27.25req/s] [内存消耗：1,276.93kb] [文件加载：32]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->main[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:06+08:00 ] 127.0.0.1 GET /index/index/menu.html
+[ info ] www.perject.com/index/index/menu.html [运行时间：0.043776s][吞吐率：22.84req/s] [内存消耗：1,338.63kb] [文件加载：33]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'menu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->menu[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:06+08:00 ] 127.0.0.1 GET /index/index/index.html
+[ info ] www.perject.com/index/index/index.html [运行时间：0.040706s][吞吐率：24.57req/s] [内存消耗：1,322.82kb] [文件加载：33]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/login/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:06+08:00 ] 127.0.0.1 GET /index/index/main.html
+[ info ] www.perject.com/index/index/main.html [运行时间：0.043820s][吞吐率：22.82req/s] [内存消耗：1,276.93kb] [文件加载：32]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->main[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:06+08:00 ] 127.0.0.1 GET /index/index/top.html
+[ info ] www.perject.com/index/index/top.html [运行时间：0.051414s][吞吐率：19.45req/s] [内存消耗：1,260.92kb] [文件加载：32]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'top',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->top[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:06+08:00 ] 127.0.0.1 GET /index/index/menu.html
+[ info ] www.perject.com/index/index/menu.html [运行时间：0.069170s][吞吐率：14.46req/s] [内存消耗：1,338.67kb] [文件加载：33]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'menu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Tue%2C%2011%20Sep%202018%2009%3A08%3A38%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->menu[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:08+08:00 ] 127.0.0.1 GET /index/system/system_list.html
+[ info ] www.perject.com/index/system/system_list.html [运行时间：0.033931s][吞吐率：29.47req/s] [内存消耗：1,424.41kb] [文件加载：33]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'system',
+    2 => 'system_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Mon%2C%2010%20Sep%202018%2013%3A34%3A26%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\Index\controller\System->system_list[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\System.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\system\system_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:08+08:00 ] 127.0.0.1 GET /static/images/no.svg
+[ info ] www.perject.com/static/images/no.svg [运行时间：0.032751s][吞吐率：30.53req/s] [内存消耗：1,050.96kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'no.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:08+08:00 ] 127.0.0.1 GET /static/js/region.js
+[ info ] www.perject.com/static/js/region.js [运行时间：0.035096s][吞吐率：28.49req/s] [内存消耗：1,050.84kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'region.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:08+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.034571s][吞吐率：28.93req/s] [内存消耗：1,051.03kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:08+08:00 ] 127.0.0.1 GET /static/js/region.js
+[ info ] www.perject.com/static/js/region.js [运行时间：0.031236s][吞吐率：32.01req/s] [内存消耗：1,050.84kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'region.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:08+08:00 ] 127.0.0.1 GET /static/images/no.svg
+[ info ] www.perject.com/static/images/no.svg [运行时间：0.043578s][吞吐率：22.95req/s] [内存消耗：1,050.96kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'no.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:08+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.059062s][吞吐率：16.93req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:08+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.039249s][吞吐率：25.48req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:20+08:00 ] 127.0.0.1 GET /images/online.swf
+[ info ] www.perject.com/images/online.swf [运行时间：0.029147s][吞吐率：34.31req/s] [内存消耗：1,051.10kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'online.swf',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'x-requested-with' => 'ShockwaveFlash/30.0.0.154',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:24+08:00 ] 127.0.0.1 GET /index/system/system_list.html
+[ info ] www.perject.com/index/system/system_list.html [运行时间：0.033555s][吞吐率：29.80req/s] [内存消耗：1,424.41kb] [文件加载：33]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'system',
+    2 => 'system_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/index/menu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'ECS_LastCheckOrder=Mon%2C%2010%20Sep%202018%2013%3A34%3A26%20GMT; pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\Index\controller\System->system_list[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\System.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\system\system_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:24+08:00 ] 127.0.0.1 GET /static/js/region.js
+[ info ] www.perject.com/static/js/region.js [运行时间：0.033376s][吞吐率：29.96req/s] [内存消耗：1,050.84kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'region.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:24+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.039465s][吞吐率：25.34req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:24+08:00 ] 127.0.0.1 GET /static/images/no.svg
+[ info ] www.perject.com/static/images/no.svg [运行时间：0.040811s][吞吐率：24.50req/s] [内存消耗：1,050.96kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'no.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:24+08:00 ] 127.0.0.1 GET /static/js/region.js
+[ info ] www.perject.com/static/js/region.js [运行时间：0.027005s][吞吐率：37.03req/s] [内存消耗：1,050.84kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'region.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => '*/*',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:24+08:00 ] 127.0.0.1 GET /static/images/no.svg
+[ info ] www.perject.com/static/images/no.svg [运行时间：0.037060s][吞吐率：26.98req/s] [内存消耗：1,050.96kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'no.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:24+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.051486s][吞吐率：19.42req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-11T17:10:24+08:00 ] 127.0.0.1 GET /static/images/notice.svg
+[ info ] www.perject.com/static/images/notice.svg [运行时间：0.035229s][吞吐率：28.39req/s] [内存消耗：1,051.02kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'notice.svg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/index/system/system_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
