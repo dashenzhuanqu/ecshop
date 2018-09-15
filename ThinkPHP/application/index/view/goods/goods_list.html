@@ -122,19 +122,40 @@ var cancel_color = "无样式";
 <!-- 商品搜索 -->
 <!-- $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ -->
 <div class="form-div">
-  <form action="{:url('goods/goods')}" method="post">
+  <form action="{:url('goods/goods')}" method="get">
         <!-- 分类 -->
     商品分类
-    <select name="cat_id"><option value="0">所有分类</option><option value="1" >饮料</option><option value="2" >&nbsp;&nbsp;&nbsp;&nbsp;学习</option></select>
+    <select name="cat_id">
+      <option value="0">所有分类</option>
+      {volist name='$res' id='v'}
+      <option value="{$v.cat_id}" ><?php echo str_repeat("&nbsp;&nbsp;&nbsp;├",substr_count($v['new'],"-")-1) ?>{$v.cat_name}</option>
+      {/volist}
+    </select>
     <!-- 品牌 -->
     品牌
-    <select name="brand_id"><option value="0">所有品牌</option><option value="1">可口可乐</option><option value="2">文档</option></select>
+    <select name="b_id">
+      <option value="0">所有品牌</option>
+      {volist name='$arr' id='v'}
+      <option value="{$v.b_id}">{$v.brand_name}</option>
+      {/volist}
+    </select>
     <!-- 推荐 -->
     推荐类别
-    <select name="intro_type"><option value="0">全部</option><option value="is_best">精品</option><option value="is_new">新品</option><option value="is_hot">热销</option><option value="is_promote">特价</option><option value="all_type">全部推荐</option></select>
+    <select name="info_type">
+      <option value="0">全部</option>
+      <option value="is_best">精品</option>
+      <option value="is_new">新品</option>
+      <option value="is_hot">热销</option>
+      <!--<option value="is_promote">特价</option>-->
+      <!--<option value="all_type">全部推荐</option>-->
+    </select>
         <!-- 上架 -->
     上架状态
-    <input type="radio" name="is_on_sale" id="" value="1"> 上架    <input type="radio" name="is_on_sale" id="" value="0"> 下架        <!-- 关键字 -->
+    <select name="is_put">
+      <option value="">全部</option>
+      <option value="1">上架</option>
+      <option value="2">下架</option>
+    </select>
     &nbsp;&nbsp; 关键字 <input type="text" name="search" size="25" />
     <button type="submit" class="btn"> 搜索 </button>
   </form>
@@ -175,11 +196,11 @@ var cancel_color = "无样式";
         <!--<th><a href="javascript:listTable.sort('virtual_sales'); ">虚拟销量</a></th>-->
     <th>操作</th>
   </tr>
-  <?php foreach ($arr as $k=>$v){?>
+  <?php foreach ($data as $k=>$v){?>
     <tr>
     <td><input type="checkbox" name="checkboxes[]"></td>
     <td>{$v.g_id}</td>
-    <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 1)">{$v.goods_name}</span></td>
+    <td class="first-cell" name="{$v.goods_name}">{$v.goods_name}</td>
     <td><span onclick="listTable.edit(this, 'edit_goods_sn', 1)">{$v.goods_art}</span></td>
     <td align="right"><span onclick="listTable.edit(this, 'edit_goods_price', 1)">{$v.goods_price}</span></td>
       <td>
@@ -217,12 +238,12 @@ var cancel_color = "无样式";
       <a href="../goods.php?id=1" target="_blank" title="查看">查看</a>
       <a href="/index/goods/goods_a" title="编辑">编辑</a>
       <a href="/index/goods/coty" title="复制">复制</a>
-      <a href="javascript:;" class="is_delete" id="{$v.g_id}" value="is_delete" title="回收站">回收站</a>
+      <a href="javascript:;" class="is_delete" id="{$v.g_id}" value="{$v.is_delete}" title="回收站">回收站</a>
       <img src="../../../static/picture/empty.gif" width="16" height="16" border="0">          </td>
   </tr>
   <?php } ?>
   </table>
-    {$arr->render()}
+    {$data->render()}
 <!-- end goods list -->
 
 <!-- 分页 -->
@@ -268,11 +289,8 @@ var cancel_color = "无样式";
     <!--</td>-->
   <!--</tr>-->
 </table>
-
 </div>
-
 </form>
-
 <script type="text/javascript">
   listTable.recordCount = 1;
   listTable.pageCount = 1;
@@ -397,7 +415,6 @@ document.onmousemove=function(e)
     obj.title = '点击对列表排序';
   }
 }
-<!--
 
 
 var MyTodolist;
@@ -520,7 +537,6 @@ if (document.getElementById("listDiv"))
 
 }
 
-//-->
 </script>
 </body>
 </html>
@@ -542,7 +558,7 @@ if (document.getElementById("listDiv"))
                 }else{
                     if(status==1){
                         obj.prop("src","../../../static/picture/no.svg");
-                        obj.attr("value",0)
+                        obj.attr("value",2)
                     }else{
                         obj.prop("src","../../../static/picture/yes.svg");
                         obj.attr("value",1)
@@ -636,18 +652,19 @@ if (document.getElementById("listDiv"))
              data:{g_id:g_id,status:status},
              dataType:"json",
              success:function(res){
-                 if(res.status==1){
-                     alert(res.msg);
-                     return false;
-                 }else{
+//                 if(res.status==1){
+//                     alert(res.msg);
+//                     return false;
+//                 }else{
                      if(status==1){
                         alert('放入回收站成功');
-                        obj.parents().remove();
+//                        obj.parents().remove();
+                         history.go(0)
                      }else{
                         alert("放入回收站失败");
                      }
                  }
-             }
+//             }
          })
      })
 </script>

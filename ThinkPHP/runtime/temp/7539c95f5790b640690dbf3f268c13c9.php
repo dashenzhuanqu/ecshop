@@ -1,6 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:102:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html";i:1536656477;}*/ ?>
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:102:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html";i:1536909220;}*/ ?>
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>ECSHOP Menu</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -41,27 +40,27 @@ var helpLang = "zh_cn";
                         </ul>
           </div>
                   </li>
-                          <li key="02_cat_and_goods" class="icon-goods" data-url="goods.php?act=list" data-key="01_goods_list" name="menu" onclick="showsub(this)">
+                          <li key="02_cat_and_goods" class="icon-goods" data-url="<?php echo url('goods/goods'); ?>" data-key="01_goods_list" name="menu" onclick="showsub(this)">
           商品管理                    <div class="submenu">
             <div class="title">商品管理</div>
             <ul>
-                          <li id="sub-menu-01_goods_list" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=list" target="main-frame">商品列表</a></li>
-                          <li id="sub-menu-02_goods_add" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=add" target="main-frame">添加新商品</a></li>
-                          <li id="sub-menu-03_category_list" class="menu-item" onclick="showact(this, event)"><a href="category.php?act=list" target="main-frame">商品分类</a></li>
-                          <li id="sub-menu-05_comment_manage" class="menu-item" onclick="showact(this, event)"><a href="comment_manage.php?act=list" target="main-frame">用户评论</a></li>
-                          <li id="sub-menu-06_goods_brand_list" class="menu-item" onclick="showact(this, event)"><a href="brand.php?act=list" target="main-frame">商品品牌</a></li>
-                          <li id="sub-menu-08_goods_type" class="menu-item" onclick="showact(this, event)"><a href="goods_type.php?act=manage" target="main-frame">商品类型</a></li>
-                          <li id="sub-menu-11_goods_trash" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=trash" target="main-frame">商品回收站</a></li>
-                          <li id="sub-menu-12_batch_pic" class="menu-item" onclick="showact(this, event)"><a href="picture_batch.php" target="main-frame">图片批量处理</a></li>
-                          <li id="sub-menu-13_batch_add" class="menu-item" onclick="showact(this, event)"><a href="goods_batch.php?act=add" target="main-frame">商品批量上传</a></li>
-                          <li id="sub-menu-14_goods_export" class="menu-item" onclick="showact(this, event)"><a href="goods_export.php?act=goods_export" target="main-frame">商品批量导出</a></li>
-                          <li id="sub-menu-15_batch_edit" class="menu-item" onclick="showact(this, event)"><a href="goods_batch.php?act=select" target="main-frame">商品批量修改</a></li>
-                          <li id="sub-menu-16_goods_script" class="menu-item" onclick="showact(this, event)"><a href="gen_goods_script.php?act=setup" target="main-frame">生成商品代码</a></li>
-                          <li id="sub-menu-17_tag_manage" class="menu-item" onclick="showact(this, event)"><a href="tag_manage.php?act=list" target="main-frame">标签管理</a></li>
-                          <li id="sub-menu-50_virtual_card_list" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=list&extension_code=virtual_card" target="main-frame">虚拟商品列表</a></li>
-                          <li id="sub-menu-51_virtual_card_add" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=add&extension_code=virtual_card" target="main-frame">添加虚拟商品</a></li>
-                          <li id="sub-menu-52_virtual_card_change" class="menu-item" onclick="showact(this, event)"><a href="virtual_card.php?act=change" target="main-frame">更改加密串</a></li>
-                          <li id="sub-menu-goods_auto" class="menu-item" onclick="showact(this, event)"><a href="goods_auto.php?act=list" target="main-frame">商品自动上下架</a></li>
+                          <li id="sub-menu-01_goods_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/goods'); ?>" target="main-frame">商品列表</a></li>
+                          <li id="sub-menu-02_goods_add" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/goods_add'); ?>" target="main-frame">添加新商品</a></li>
+                          <li id="sub-menu-03_category_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/category_list'); ?>" target="main-frame">商品分类</a></li>
+                          <li id="sub-menu-05_comment_manage" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/comment_manage_list'); ?>" target="main-frame">用户评论</a></li>
+                          <li id="sub-menu-06_goods_brand_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/brand_list'); ?>" target="main-frame">商品品牌</a></li>
+                          <li id="sub-menu-08_goods_type" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/goods_type_manage'); ?>" target="main-frame">商品类型</a></li>
+                          <li id="sub-menu-11_goods_trash" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('goods/goods_trash'); ?>" target="main-frame">商品回收站</a></li>
+                          <!--<li id="sub-menu-12_batch_pic" class="menu-item" onclick="showact(this, event)"><a href="picture_batch.php" target="main-frame">图片批量处理</a></li>-->
+                          <!--<li id="sub-menu-13_batch_add" class="menu-item" onclick="showact(this, event)"><a href="goods_batch.php?act=add" target="main-frame">商品批量上传</a></li>-->
+                          <!--<li id="sub-menu-14_goods_export" class="menu-item" onclick="showact(this, event)"><a href="goods_export.php?act=goods_export" target="main-frame">商品批量导出</a></li>-->
+                          <!--<li id="sub-menu-15_batch_edit" class="menu-item" onclick="showact(this, event)"><a href="goods_batch.php?act=select" target="main-frame">商品批量修改</a></li>-->
+                          <!--<li id="sub-menu-16_goods_script" class="menu-item" onclick="showact(this, event)"><a href="gen_goods_script.php?act=setup" target="main-frame">生成商品代码</a></li>-->
+                          <!--<li id="sub-menu-17_tag_manage" class="menu-item" onclick="showact(this, event)"><a href="tag_manage.php?act=list" target="main-frame">标签管理</a></li>-->
+                          <!--<li id="sub-menu-50_virtual_card_list" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=list&extension_code=virtual_card" target="main-frame">虚拟商品列表</a></li>-->
+                          <!--<li id="sub-menu-51_virtual_card_add" class="menu-item" onclick="showact(this, event)"><a href="goods.php?act=add&extension_code=virtual_card" target="main-frame">添加虚拟商品</a></li>-->
+                          <!--<li id="sub-menu-52_virtual_card_change" class="menu-item" onclick="showact(this, event)"><a href="virtual_card.php?act=change" target="main-frame">更改加密串</a></li>-->
+                          <!--<li id="sub-menu-goods_auto" class="menu-item" onclick="showact(this, event)"><a href="goods_auto.php?act=list" target="main-frame">商品自动上下架</a></li>-->
                         </ul>
           </div>
                   </li>
@@ -134,48 +133,31 @@ var helpLang = "zh_cn";
                         </ul>
           </div>
                   </li>
-                          <li key="08_members" class="icon-members" data-url="users.php?act=list" data-key="03_users_list" name="menu" onclick="showsub(this)">
+                          <li key="08_members" class="icon-members" data-url="<?php echo url('user/user_list'); ?>" data-key="03_users_list" name="menu" onclick="showsub(this)">
           会员管理                    <div class="submenu">
             <div class="title">会员管理</div>
             <ul>
-                          <li id="sub-menu-03_users_list" class="menu-item" onclick="showact(this, event)"><a href="users.php?act=list" target="main-frame">会员列表</a></li>
-                          <li id="sub-menu-04_users_add" class="menu-item" onclick="showact(this, event)"><a href="users.php?act=add" target="main-frame">添加会员</a></li>
-                          <li id="sub-menu-05_user_rank_list" class="menu-item" onclick="showact(this, event)"><a href="user_rank.php?act=list" target="main-frame">会员等级</a></li>
-                          <li id="sub-menu-06_list_integrate" class="menu-item" onclick="showact(this, event)"><a href="integrate.php?act=list" target="main-frame">会员整合</a></li>
-                          <li id="sub-menu-08_unreply_msg" class="menu-item" onclick="showact(this, event)"><a href="user_msg.php?act=list_all" target="main-frame">会员留言</a></li>
-                          <li id="sub-menu-09_user_account" class="menu-item" onclick="showact(this, event)"><a href="user_account.php?act=list" target="main-frame">充值和提现申请</a></li>
-                          <li id="sub-menu-10_user_account_manage" class="menu-item" onclick="showact(this, event)"><a href="user_account_manage.php?act=list" target="main-frame">资金管理</a></li>
+                          <li id="sub-menu-03_users_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('user/user_list'); ?>" target="main-frame">会员列表</a></li>
+                          <li id="sub-menu-04_users_add" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('user/user_add'); ?>" target="main-frame">添加会员</a></li>
+                          <li id="sub-menu-05_user_rank_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('user/user_rank'); ?>" target="main-frame">会员等级</a></li>
+                          <li id="sub-menu-06_list_integrate" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('user/integrate'); ?>" target="main-frame">会员整合</a></li>
+                          <li id="sub-menu-08_unreply_msg" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('user/user_msg'); ?>" target="main-frame">会员留言</a></li>
+                          <li id="sub-menu-09_user_account" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('user/user_account'); ?>" target="main-frame">充值和提现申请</a></li>
+                          <li id="sub-menu-10_user_account_manage" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('user/user_account_manage'); ?>" target="main-frame">资金管理</a></li>
                         </ul>
           </div>
-
-
                   </li>
                           <li key="10_priv_admin" class="icon-priv" data-url="<?php echo url('Quanxi/privilege'); ?>" data-key="admin_list" name="menu" onclick="showsub(this)">
           权限管理                    <div class="submenu">
- <div class="title">权限管理</div>
+            <div class="title">权限管理</div>
             <ul>
-<<<<<<< HEAD
                           <li id="sub-menu-admin_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('Quanxi/privilege'); ?>" target="main-frame">管理员列表</a></li>
                           <li id="sub-menu-admin_logs" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('Quanxi/admin_logs'); ?>" target="main-frame">管理员日志</a></li>
                           <li id="sub-menu-admin_role" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('Quanxi/role'); ?>" target="main-frame">角色管理</a></li>
                           <li id="sub-menu-agency_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('Quanxi/agency'); ?>" target="main-frame">办事处列表</a></li>
                           <li id="sub-menu-suppliers_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('Quanxi/suppliers'); ?>" target="main-frame">供货商列表</a></li>
-=======
-            <li id="sub-menu-admin_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('quanxi/privilege'); ?>" target="main-frame">管理员列表</a></li>
-
-            <li id="sub-menu-admin_logs" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('quanxi/admin_logs'); ?>" target="main-frame">管理员日志</a></li>
-
-            <li id="sub-menu-admin_role" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('quanxi/role'); ?>" target="main-frame">角色管理</a></li>
-
-            <li id="sub-menu-agency_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('quanxi/agency'); ?>" target="main-frame">办事处列表</a></li>
-
-            <li id="sub-menu-suppliers_list" class="menu-item" onclick="showact(this, event)"><a href="<?php echo url('quanxi/suppliers'); ?>" target="main-frame">供货商列表</a></li>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
                         </ul>
-          </div
-
-
-
+          </div>
                   </li>
                           <li key="11_system" class="icon-system" data-url="<?php echo url('system/system_list'); ?>" data-key="01_shop_config" name="menu" onclick="showsub(this)">
           系统设置                    <div class="submenu">
@@ -268,7 +250,7 @@ var helpLang = "zh_cn";
       <script language="JavaScript" src="../../../static/js/menu_ext.js"></script>
     </div>
     <div id="help-div" style="display:none">
-      <h1 id="help-title"></h1>index
+      <h1 id="help-title"></h1>
       <div id="help-content"></div>
     </div>
   </div>
@@ -287,10 +269,6 @@ var helpLang = "zh_cn";
   </div>
 </div>
 <script type="text/javascript" src="../../../static/js/global.js"></script><script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/menu.js"></script><script language="JavaScript">
-window.setInterval(crontab,30000);
-function crontab(){
-  Ajax.call('cloud.php?is_ajax=1&act=load_crontab','','', 'GET', 'JSON');
-}
 function showBar(item){
   var silb = item.lastElementChild;
   silb.style.display = "block";

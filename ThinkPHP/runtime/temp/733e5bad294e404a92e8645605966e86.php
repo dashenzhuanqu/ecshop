@@ -1,7 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html";i:1536638786;}*/ ?>
-﻿<!-- $Id: start.htm 17216 2011-01-19 06:03:12Z liubo $ -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html";i:1536909220;}*/ ?>
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>ECSHOP 管理中心</title>
 <meta name="robots" content="noindex, nofollow">

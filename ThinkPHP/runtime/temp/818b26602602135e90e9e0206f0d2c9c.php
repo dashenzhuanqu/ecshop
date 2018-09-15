@@ -1,18 +1,15 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:104:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\system\system_list.html";i:1536656477;}*/ ?>
-
-<!-- $Id: shop_config.htm 16865 2009-12-10 06:05:32Z sxc_shop $ -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:104:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\system\system_list.html";i:1536659604;}*/ ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>ECSHOP 管理中心 - 商店设置 </title>
-<base href="\">
+<base href="/static/System/">
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="static/css/general.css" rel="stylesheet" type="text/css" />
-<link href="static/css/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="static/js/transport.js"></script>
-<script type="text/javascript" src="static/js/common.js"></script>
-<script type="text/javascript" src="static/js/jquery-2.1.4.min.js"></script>
+<link href="styles/general.css" rel="stylesheet" type="text/css" />
+<link href="styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/transport.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <style>
   .panel-icloud .panel-right iframe {
     height: 300px;
@@ -92,7 +89,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
     
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;商店设置 </span>
   <div style="clear:both"></div>
-</h1><script type="text/javascript" src="static/js/utils.js"></script><script type="text/javascript" src="static/js/region.js"></script><div class="tab-div">
+</h1><script type="text/javascript" src="js/utils.js"></script><script type="text/javascript" src="js/region.js"></script><div class="tab-div">
   <!-- tab bar -->
   <div id="tabbar-div">
     <p>
@@ -130,7 +127,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeshop_title');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeshop_title');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     商店标题:
         </td>
         <td class="panel-par">
@@ -316,7 +313,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeqq');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeqq');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     客服QQ号码:
         </td>
         <td class="panel-par">
@@ -339,7 +336,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeww');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeww');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     淘宝旺旺:
         </td>
         <td class="panel-par">
@@ -362,7 +359,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeskype');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeskype');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     Skype:
         </td>
         <td class="panel-par">
@@ -385,7 +382,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeym');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeym');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     Yahoo Messenger:
         </td>
         <td class="panel-par">
@@ -408,7 +405,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticemsn');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticemsn');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     MSN Messenger:
         </td>
         <td class="panel-par">
@@ -514,12 +511,12 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeshop_logo');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeshop_logo');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     商店 Logo:
         </td>
         <td class="panel-par">
                     <input name="shop_logo" type="file" size="40" />
-                                  <img src="static/images/no.svg" width="16">
+                                  <img src="images/no.svg" width="16">
                                                     <br />
           <span class="notice-span" style="display:block"  id="noticeshop_logo">请在上传前将图片的文件名命名为logo.gif</span>
                             </td>
@@ -560,7 +557,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeuser_notice');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeuser_notice');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     用户中心公告:
         </td>
         <td class="panel-par">
@@ -583,7 +580,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeshop_notice');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeshop_notice');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     商店公告:
         </td>
         <td class="panel-par">
@@ -676,7 +673,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
         </td>
         <td class="panel-par">
                     <input name="icp_file" type="file" size="40" />
-                                  <img src="static/images/no.svg" width="16">
+                                  <img src="images/no.svg" width="16">
                                                             </td>
       </tr>
 
@@ -692,12 +689,12 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticewatermark');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticewatermark');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     水印文件:
         </td>
         <td class="panel-par">
                     <input name="watermark" type="file" size="40" />
-                                  <img src="static/images/no.svg" width="16">
+                                  <img src="images/no.svg" width="16">
                                                     <br />
           <span class="notice-span" style="display:block"  id="noticewatermark">水印文件须为gif格式才可支持透明度设置。</span>
                             </td>
@@ -746,7 +743,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticewatermark_alpha');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticewatermark_alpha');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     水印透明度:
         </td>
         <td class="panel-par">
@@ -792,7 +789,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticemarket_price_rate');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticemarket_price_rate');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     市场价格比例:
         </td>
         <td class="panel-par">
@@ -815,7 +812,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticerewrite');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticerewrite');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     URL重写:
         </td>
         <td class="panel-par">
@@ -846,7 +843,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeintegral_name');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeintegral_name');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     消费积分名称:
         </td>
         <td class="panel-par">
@@ -869,7 +866,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeintegral_scale');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeintegral_scale');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     积分换算比例:
         </td>
         <td class="panel-par">
@@ -892,7 +889,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeintegral_percent');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeintegral_percent');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     积分支付比例:
         </td>
         <td class="panel-par">
@@ -962,7 +959,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
         </td>
         <td class="panel-par">
                     <input name="no_picture" type="file" size="40" />
-                                  <img src="static/images/no.svg" width="16">
+                                  <img src="images/no.svg" width="16">
                                                             </td>
       </tr>
 
@@ -978,7 +975,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticestats_code');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticestats_code');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     统计代码:
         </td>
         <td class="panel-par">
@@ -1001,7 +998,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticecache_time');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticecache_time');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     缓存存活时间（秒）:
         </td>
         <td class="panel-par">
@@ -1044,7 +1041,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeenable_gzip');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeenable_gzip');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     是否启用Gzip模式:
         </td>
         <td class="panel-par">
@@ -1165,7 +1162,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticecomment_factor');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticecomment_factor');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     商品评论的条件:
         </td>
         <td class="panel-par">
@@ -1238,7 +1235,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticebgcolor');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticebgcolor');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     缩略图背景色:
         </td>
         <td class="panel-par">
@@ -1284,7 +1281,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticesend_mail_on');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticesend_mail_on');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     是否开启自动发送邮件:
         </td>
         <td class="panel-par">
@@ -1403,7 +1400,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticesend_verify_email');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticesend_verify_email');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     用户注册时自动发送验证邮件:
         </td>
         <td class="panel-par">
@@ -1477,7 +1474,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
         <table width="90%" id="display-table" class="gk-table" style="display:none">
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticesearch_keywords');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticesearch_keywords');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     首页搜索的关键字:
         </td>
         <td class="panel-par">
@@ -1520,7 +1517,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticecurrency_format');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticecurrency_format');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     货币格式:
         </td>
         <td class="panel-par">
@@ -1603,7 +1600,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeimage_height');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeimage_height');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     商品图片高度:
         </td>
         <td class="panel-par">
@@ -1666,7 +1663,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticecomments_number');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticecomments_number');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     评论数量:
         </td>
         <td class="panel-par">
@@ -1689,7 +1686,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticebought_goods');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticebought_goods');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     相关商品数量:
         </td>
         <td class="panel-par">
@@ -1876,7 +1873,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeattr_related_number');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeattr_related_number');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     属性关联的商品数量:
         </td>
         <td class="panel-par">
@@ -2105,7 +2102,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticerecommend_order');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticerecommend_order');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     推荐商品排序:
         </td>
         <td class="panel-par">
@@ -2133,7 +2130,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
         <table width="90%" id="shopping_flow-table" class="gk-table" style="display:none">
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticecart_confirm');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticecart_confirm');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     购物车确定提示:
         </td>
         <td class="panel-par">
@@ -2249,7 +2246,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeuse_how_oos');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeuse_how_oos');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     是否使用缺货处理:
         </td>
         <td class="panel-par">
@@ -2551,7 +2548,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticeinvoice_content');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticeinvoice_content');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     发票内容:
         </td>
         <td class="panel-par">
@@ -2597,7 +2594,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticemin_goods_amount');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticemin_goods_amount');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     最小购物金额:
         </td>
         <td class="panel-par">
@@ -2703,7 +2700,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
       </script>
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticesend_service_email');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticesend_service_email');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     下订单时是否给客服发邮件:
         </td>
         <td class="panel-par">
@@ -2942,7 +2939,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
         <table width="90%" id="sms-table" class="gk-table" style="display:none">
                   <tr>
         <td class="label" valign="top">
-                    <a href="javascript:showNotice('noticesms_shop_mobile');" title="点击此处查看提示信息"><img src="static/images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
+                    <a href="javascript:showNotice('noticesms_shop_mobile');" title="点击此处查看提示信息"><img src="images/notice.svg" width="16" height="16" border="0" alt="点击此处查看提示信息" /></a>
                     商家的手机号码:
         </td>
         <td class="panel-par">
@@ -3068,7 +3065,7 @@ var email_address_same = "邮件回复地址与发送测试邮件的地址不能
     </form>
   </div>
 </div>
-<!--<script type="text/javascript" src="static/js/tab.js"></script><script type="text/javascript" src="static/js/validator.js"></script>-->
+<script type="text/javascript" src="js/tab.js"></script><script type="text/javascript" src="js/validator.js"></script>
 <script language="JavaScript">
 region.isAdmin = true;
 onload = function()

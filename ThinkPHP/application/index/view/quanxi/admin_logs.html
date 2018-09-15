@@ -3,24 +3,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<<<<<<< HEAD
-  <base href="\">
-=======
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 <title>ECSHOP 管理中心 - 管理员日志 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/static/css/general_2.css" rel="stylesheet" type="text/css" />
-<link href="/static/css/main_2.css" rel="stylesheet" type="text/css" />
+<link href="../../../static/css/general_2.css" rel="stylesheet" type="text/css" />
+<link href="../../../static/css/main_2.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
 <!--云起激活系统面板-->
-<<<<<<< HEAD
-<div class="panel-hint panel-icloud" id="panelCloud">
-=======
 <!-- <div class="panel-hint panel-icloud" id="panelCloud">
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -39,11 +31,7 @@
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-<<<<<<< HEAD
-</div>
-=======
 </div> -->
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
@@ -88,143 +76,25 @@
 <table cellpadding="3" cellspacing="1">
   <tr>
     <th><input onclick='listTable.selectAll(this, "checkboxes")' type="checkbox">
-<<<<<<< HEAD
-    <a href="javascript:listTable.sort('log_id'); ">编号</a><img src="/static/picture/sort_desc.png"/></th>
-=======
-    <a href="javascript:listTable.sort('log_id'); ">编号</a><img src="static/picture/sort_desc_1.png"/></th>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
+    <a href="javascript:listTable.sort('log_id'); ">编号</a><img src="../../../static/images/112.png"/></th>
     <th><a href="javascript:listTable.sort('user_id'); ">操作者</a></th>
     <th><a href="javascript:listTable.sort('log_time'); ">操作日期</a></th>
     <th><a href="javascript:listTable.sort('ip_address'); ">IP地址</a></th>
     <th>操作记录</th>
   </tr>
+    {volist name="list" id="v"}
+    <tr>
+    <td width="10%"><span><input name="checkboxes[]" type="checkbox" />{$v.log_id}</span></td>
+    <td width="15%" class="first-cell"><span>{$v.user_id}</span></td>
+    <td width="20%" align="center"><span>{$v.log_time}</span></td>
+    <td width="15%" align="left"><span>{$v.ip_address}</span></td>
+    <td width="40%" align="left"><span>{$v.log_info}</span></td>
+  </tr>
+  {/volist}
+    <tr>
   
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="470" />470</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2018-09-05 14:16:49</span></td>
-    <td width="15%" align="left"><span>127.0.0.1</span></td>
-    <td width="40%" align="left"><span>编辑会员账号: vip</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="469" />469</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2018-09-05 10:12:44</span></td>
-    <td width="15%" align="left"><span>127.0.0.1</span></td>
-    <td width="40%" align="left"><span>编辑会员账号: vip</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="468" />468</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2018-08-31 10:09:52</span></td>
-    <td width="15%" align="left"><span>127.0.0.1</span></td>
-    <td width="40%" align="left"><span>添加订单: 2018083161519</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="467" />467</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2018-08-31 10:07:53</span></td>
-    <td width="15%" align="left"><span>127.0.0.1</span></td>
-    <td width="40%" align="left"><span>添加订单: 2018083167782</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="466" />466</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2018-08-31 09:36:35</span></td>
-    <td width="15%" align="left"><span>127.0.0.1</span></td>
-    <td width="40%" align="left"><span>编辑商品类型: 音乐</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="465" />465</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2018-08-31 09:36:34</span></td>
-    <td width="15%" align="left"><span>127.0.0.1</span></td>
-    <td width="40%" align="left"><span>编辑商品类型: 书</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="464" />464</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2018-08-31 09:36:32</span></td>
-    <td width="15%" align="left"><span>127.0.0.1</span></td>
-    <td width="40%" align="left"><span>编辑商品类型: 手机</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="463" />463</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2009-06-17 15:26:51</span></td>
-    <td width="15%" align="left"><span>0.0.0.0</span></td>
-    <td width="40%" align="left"><span>还原数据库备份: 备份时间2009-06-17 07:23:51</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="462" />462</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2009-06-17 15:23:07</span></td>
-    <td width="15%" align="left"><span>0.0.0.0</span></td>
-    <td width="40%" align="left"><span>编辑文章: 诺基亚牵手移动 5款热门TD手机机型推荐</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="461" />461</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2009-06-17 15:22:20</span></td>
-    <td width="15%" align="left"><span>0.0.0.0</span></td>
-    <td width="40%" align="left"><span>编辑文章: 诺基亚牵手移动 5款热门TD手机机型推荐</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="460" />460</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2009-06-17 15:18:48</span></td>
-    <td width="15%" align="left"><span>0.0.0.0</span></td>
-    <td width="40%" align="left"><span>编辑商品分类: GSM手机</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="459" />459</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2009-06-17 15:17:23</span></td>
-    <td width="15%" align="left"><span>0.0.0.0</span></td>
-    <td width="40%" align="left"><span>编辑商品分类: 手机类型</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="458" />458</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2009-06-17 15:16:18</span></td>
-    <td width="15%" align="left"><span>0.0.0.0</span></td>
-    <td width="40%" align="left"><span>编辑商店设置: </span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="457" />457</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2009-06-17 15:13:52</span></td>
-    <td width="15%" align="left"><span>0.0.0.0</span></td>
-    <td width="40%" align="left"><span>编辑商品: KD876</span></td>
-  </tr>
-    <tr>
-    <td width="10%"><span><input name="checkboxes[]" type="checkbox" value="456" />456</span></td>
-    <td width="15%" class="first-cell"><span>admin</span></td>
-    <td width="20%" align="center"><span>2009-06-17 15:10:58</span></td>
-    <td width="15%" align="left"><span>0.0.0.0</span></td>
-    <td width="40%" align="left"><span>编辑商品: 飞利浦9@9v</span></td>
-  </tr>
-    <tr>
-    <td colspan="2"><input name="drop_type_id" type="submit" id="btnSubmit" value="清除日志" disabled="true" class="button" /></td>
-    <td align="right" nowrap="true" colspan="10"><!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-<div id="turn-page">
-  <span id="pageCurrent">1</span> / <span id="totalPages">32</span>
-  页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">
-  条记录，总共 <span id="totalRecords">469</span>
-  条记录
-  <span id="page-link">
-    <a href="javascript:listTable.gotoPageFirst()">第一页</a>
-    <a href="javascript:listTable.gotoPagePrev()">上一页</a>
-    <a href="javascript:listTable.gotoPageNext()">下一页</a>
-    <a href="javascript:listTable.gotoPageLast()">最末页</a>
-    <select id="gotoPage" onchange="listTable.gotoPage(this.value)">
-      <option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='32'>32</option>    </select>
-  </span>
-</div>
-</td>
-  </tr>
 </table>
-
+{$list->render()}
 </div>
 <!-- end ad_position list -->
 
@@ -250,10 +120,6 @@
   </tr>
   </table>
 </div>
-<<<<<<< HEAD
-  </form>
-=======
 
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 </body>
 </html>

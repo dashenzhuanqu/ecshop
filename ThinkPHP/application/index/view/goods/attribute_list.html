@@ -1,13 +1,11 @@
-﻿<!-- $Id: attribute_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <base href="/">
 <title>ECSHOP 管理中心 - 商品属性 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="static/css/main.css" rel="stylesheet" type="text/css" />
+  <script src="static/js/jquery.js"></script>
 <style>
   .panel-icloud .panel-right iframe {
     height: 300px;
@@ -91,7 +89,13 @@ var cat_id_not_null = "请您选择该属性所属的商品类型。";
 <div class="form-div">
   <form action="" name="searchForm">
     <img src="static/picture/icon_search.svg" width="26" height="22" border="0" alt="SEARCH" />
-    按商品类型显示：<select name="goods_type" onchange="searchAttr(this.value)"><option value="0">所有商品类型</caption><option value='1' selected="true">书</option><option value='2'>音乐</option><option value='3'>电影</option><option value='4'>手机</option><option value='5'>笔记本电脑</option><option value='6'>数码相机</option><option value='7'>数码摄像机</option><option value='8'>化妆品</option><option value='9'>精品手机</option></select>
+    按商品类型显示：
+    <select name="t_id" class="type">
+      <option value="0">所有商品类型</option>
+    {volist name='$res' id='v'}
+    <option value="{$v.t_id}">{$v.goods_type_name}</option>
+    {/volist}
+  </select>
   </form>
 </div>
 
@@ -110,23 +114,35 @@ var cat_id_not_null = "请您选择该属性所属的商品类型。";
       <th><a href="javascript:listTable.sort('sort_order'); ">排序</a><img src="static/picture/sort_desc.png"/></th>
       <th>操作</th>
     </tr>
+    {volist name='$arr' id='v'}
         <tr>
-      <td nowrap="true" valign="top"><span><input value="1" name="checkboxes[]" type="checkbox">1</span></td>
-      <td class="first-cell" nowrap="true" valign="top"><span onclick="listTable.edit(this, 'edit_attr_name', 1)">作者</span></td>
-      <td nowrap="true" valign="top"><span>书</span></td>
-      <td nowrap="true" valign="top"><span>手工录入</span></td>
-      <td valign="top"><span></span></td>
-      <td align="right" nowrap="true" valign="top"><span onclick="listTable.edit(this, 'edit_sort_order', 1)">0</span></td>
+      <td nowrap="true" valign="top"><span><input value="1" name="checkboxes[]" type="checkbox">{$v.attr_id}</span></td>
+      <td class="first-cell" nowrap="true" valign="top"><span onclick="listTable.edit(this, 'edit_attr_name', 1)">{$v.attr_name}</span></td>
+      <td nowrap="true" valign="top"><span>
+            <option value="{$v.t_id}">{$v.goods_type_name}</option>
+      </span></td>
+      <td nowrap="true" valign="top"><span>
+        {if($v.attr_input_type==0)}
+        手工录入
+        {elseif($v.attr_input_type==1)}
+        从下面的列表中选择（一行代表一个可选值）
+        {else}
+        多行文本框
+        {/if}
+      </span></td>
+      <td valign="top"><span>{$v.attr_values}</span></td>
+      <td align="right" nowrap="true" valign="top"><span onclick="listTable.edit(this, 'edit_sort_order', 1)">{$v.sort}</span></td>
       <td align="center" nowrap="true" valign="top">
-        <a href="{:url('goods/attribute_edit')}">编辑</a>
-        <a href="javascript:;" onclick="removeRow(1)" title="移除">移除</a>
+        <a href="{:url('goods/attribute_edit')}?id={$v.attr_id}">编辑</a>
+        <a href="{:url('goods/attribute_del')}?id={$v.attr_id}" title="移除">移除</a>
       </td>
     </tr>
+    {/volist}
       </table>
   <table cellpadding="4" cellspacing="0">
-    <tr>
-      <td><input type="submit" id="btnSubmit" value="删除" class="button" disabled="true" /></td>
-      <td align="right"><!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+    <!--<tr>-->
+    <!--<td><input type="submit" id="btnSubmit" value="删除" class="button" disabled="true" /></td>-->
+      <!--<td align="right">&lt;!&ndash; $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ &ndash;&gt;-->
 <!--<div id="turn-page">-->
   <!--<span id="pageCurrent">1</span> / <span id="totalPages">1</span>-->
   <!--页，每页 <input type='text' size='3' id='pageSize' value="15" onkeypress="return listTable.changePageSize(event)">-->
@@ -141,64 +157,65 @@ var cat_id_not_null = "请您选择该属性所属的商品类型。";
       <!--<option value='1'>1</option>    </select>-->
   <!--</span>-->
 <!--</div>-->
-</td>
-    </tr>
+<!--</td>-->
+    <!--</tr>-->
   </table>
+  {$arr->render()}
 </div>
 
 </form>
-<script language="JavaScript">
-<!--
-  listTable.recordCount = 12;
-  listTable.pageCount = 1;
+<!--<script language="JavaScript">-->
+<!--&lt;!&ndash;-->
+  <!--listTable.recordCount = 12;-->
+  <!--listTable.pageCount = 1;-->
 
-    listTable.filter.goods_type = '1';
-    listTable.filter.sort_by = 'sort_order';
-    listTable.filter.sort_order = 'DESC';
-    listTable.filter.record_count = '12';
-    listTable.filter.page_size = '15';
-    listTable.filter.page = '1';
-    listTable.filter.page_count = '1';
-    listTable.filter.start = '0';
-
-
-  onload = function()
-  {
-      // 开始检查订单
-      startCheckOrder();
-  }
-
-  /**
-   * 查询商品属性
-   */
-  function searchAttr(goodsType)
-  {
-    listTable.filter.goods_type = goodsType;
-    listTable.filter.page = 1;
-    listTable.loadList();
-  }
-
-  function removeRow(attr_id)
-  {
-    Ajax.call('attribute.php?act=get_attr_num&attr_id=' + attr_id, '', removeRowResponse, 'GET', 'JSON');
-  }
-
-  function removeRowResponse(result)
-  {
-    if (result.message.length > 0)
-    {
-      alert(result.message);
-    }
-
-    if (result.error == 0)
-    {
-      listTable.remove(result.content.attr_id, result.content.drop_confirm);
-    }
-  }
+    <!--listTable.filter.goods_type = '1';-->
+    <!--listTable.filter.sort_by = 'sort_order';-->
+    <!--listTable.filter.sort_order = 'DESC';-->
+    <!--listTable.filter.record_count = '12';-->
+    <!--listTable.filter.page_size = '15';-->
+    <!--listTable.filter.page = '1';-->
+    <!--listTable.filter.page_count = '1';-->
+    <!--listTable.filter.start = '0';-->
 
 
-//-->
-</script>
+  <!--onload = function()-->
+  <!--{-->
+      <!--// 开始检查订单-->
+      <!--startCheckOrder();-->
+  <!--}-->
+
+  <!--/**-->
+   <!--* 查询商品属性-->
+   <!--*/-->
+  <!--function searchAttr(goodsType)-->
+  <!--{-->
+    <!--listTable.filter.goods_type = goodsType;-->
+    <!--listTable.filter.page = 1;-->
+    <!--listTable.loadList();-->
+  <!--}-->
+
+  <!--function removeRow(attr_id)-->
+  <!--{-->
+    <!--Ajax.call('attribute.php?act=get_attr_num&attr_id=' + attr_id, '', removeRowResponse, 'GET', 'JSON');-->
+  <!--}-->
+
+  <!--function removeRowResponse(result)-->
+  <!--{-->
+    <!--if (result.message.length > 0)-->
+    <!--{-->
+      <!--alert(result.message);-->
+    <!--}-->
+
+    <!--if (result.error == 0)-->
+    <!--{-->
+      <!--listTable.remove(result.content.attr_id, result.content.drop_confirm);-->
+    <!--}-->
+  <!--}-->
+
+
+<!--//&ndash;&gt;-->
+<!--</script>-->
 <div id="footer">
 共执行 5 个查询，用时 0.014500 秒，Gzip 已禁用，内存占用 1.344 MB<br />
 版权所有 &copy; 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
@@ -231,148 +248,154 @@ var cat_id_not_null = "请您选择该属性所属的商品类型。";
   </embed>
 </object>
 
-<script language="JavaScript">
-document.onmousemove=function(e)
-{
-  var obj = Utils.srcElement(e);
-  if (typeof(obj.onclick) == 'function' && obj.onclick.toString().indexOf('listTable.edit') != -1)
-  {
-    obj.title = '点击修改内容';
-    obj.style.cssText = 'background-color: #eee;';
-    obj.onmouseout = function(e)
-    {
-      this.style.cssText = '';
-    }
-  }
-  else if (typeof(obj.href) != 'undefined' && obj.href.indexOf('listTable.sort') != -1)
-  {
-    obj.title = '点击对列表排序';
-  }
-}
-<!--
+<!--<script language="JavaScript">-->
+<!--document.onmousemove=function(e)-->
+<!--{-->
+  <!--var obj = Utils.srcElement(e);-->
+  <!--if (typeof(obj.onclick) == 'function' && obj.onclick.toString().indexOf('listTable.edit') != -1)-->
+  <!--{-->
+    <!--obj.title = '点击修改内容';-->
+    <!--obj.style.cssText = 'background-color: #eee;';-->
+    <!--obj.onmouseout = function(e)-->
+    <!--{-->
+      <!--this.style.cssText = '';-->
+    <!--}-->
+  <!--}-->
+  <!--else if (typeof(obj.href) != 'undefined' && obj.href.indexOf('listTable.sort') != -1)-->
+  <!--{-->
+    <!--obj.title = '点击对列表排序';-->
+  <!--}-->
+<!--}-->
+<!--var MyTodolist;-->
+<!--function showTodoList(adminid)-->
+<!--{-->
+  <!--if(!MyTodolist)-->
+  <!--{-->
+    <!--var global = $import("../js/global.js","js");-->
+    <!--global.onload = global.onreadystatechange= function()-->
+    <!--{-->
+      <!--if(this.readyState && this.readyState=="loading")return;-->
+      <!--var md5 = $import("js/md5.js","js");-->
+      <!--md5.onload = md5.onreadystatechange= function()-->
+      <!--{-->
+        <!--if(this.readyState && this.readyState=="loading")return;-->
+        <!--var todolist = $import("js/todolist.js","js");-->
+        <!--todolist.onload = todolist.onreadystatechange = function()-->
+        <!--{-->
+          <!--if(this.readyState && this.readyState=="loading")return;-->
+          <!--MyTodolist = new Todolist();-->
+          <!--MyTodolist.show();-->
+        <!--}-->
+      <!--}-->
+    <!--}-->
+  <!--}-->
+  <!--else-->
+  <!--{-->
+    <!--if(MyTodolist.visibility)-->
+    <!--{-->
+      <!--MyTodolist.hide();-->
+    <!--}-->
+    <!--else-->
+    <!--{-->
+      <!--MyTodolist.show();-->
+    <!--}-->
+  <!--}-->
+<!--}-->
 
+<!--if (Browser.isIE)-->
+<!--{-->
+  <!--onscroll = function()-->
+  <!--{-->
+    <!--//document.getElementById('calculator').style.top = document.body.scrollTop;-->
+    <!--document.getElementById('popMsg').style.top = (document.body.scrollTop + document.body.clientHeight - document.getElementById('popMsg').offsetHeight) + "px";-->
+  <!--}-->
+<!--}-->
 
-var MyTodolist;
-function showTodoList(adminid)
-{
-  if(!MyTodolist)
-  {
-    var global = $import("../js/global.js","js");
-    global.onload = global.onreadystatechange= function()
-    {
-      if(this.readyState && this.readyState=="loading")return;
-      var md5 = $import("js/md5.js","js");
-      md5.onload = md5.onreadystatechange= function()
-      {
-        if(this.readyState && this.readyState=="loading")return;
-        var todolist = $import("js/todolist.js","js");
-        todolist.onload = todolist.onreadystatechange = function()
-        {
-          if(this.readyState && this.readyState=="loading")return;
-          MyTodolist = new Todolist();
-          MyTodolist.show();
-        }
-      }
-    }
-  }
-  else
-  {
-    if(MyTodolist.visibility)
-    {
-      MyTodolist.hide();
-    }
-    else
-    {
-      MyTodolist.show();
-    }
-  }
-}
+<!--if (document.getElementById("listDiv"))-->
+<!--{-->
+  <!--document.getElementById("listDiv").onmouseover = function(e)-->
+  <!--{-->
+    <!--obj = Utils.srcElement(e);-->
 
-if (Browser.isIE)
-{
-  onscroll = function()
-  {
-    //document.getElementById('calculator').style.top = document.body.scrollTop;
-    document.getElementById('popMsg').style.top = (document.body.scrollTop + document.body.clientHeight - document.getElementById('popMsg').offsetHeight) + "px";
-  }
-}
+    <!--if (obj)-->
+    <!--{-->
+      <!--if (obj.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode;-->
+      <!--else if (obj.parentNode.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode.parentNode;-->
+      <!--else return;-->
 
-if (document.getElementById("listDiv"))
-{
-  document.getElementById("listDiv").onmouseover = function(e)
-  {
-    obj = Utils.srcElement(e);
+      <!--for (i = 0; i < row.cells.length; i++)-->
+      <!--{-->
+        <!--if (row.cells[i].tagName != "TH") row.cells[i].style.backgroundColor = '#F4FAFB';-->
+      <!--}-->
+    <!--}-->
 
-    if (obj)
-    {
-      if (obj.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode;
-      else if (obj.parentNode.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode.parentNode;
-      else return;
+  <!--}-->
 
-      for (i = 0; i < row.cells.length; i++)
-      {
-        if (row.cells[i].tagName != "TH") row.cells[i].style.backgroundColor = '#F4FAFB';
-      }
-    }
+  <!--document.getElementById("listDiv").onmouseout = function(e)-->
+  <!--{-->
+    <!--obj = Utils.srcElement(e);-->
 
-  }
+    <!--if (obj)-->
+    <!--{-->
+      <!--if (obj.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode;-->
+      <!--else if (obj.parentNode.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode.parentNode;-->
+      <!--else return;-->
 
-  document.getElementById("listDiv").onmouseout = function(e)
-  {
-    obj = Utils.srcElement(e);
+      <!--for (i = 0; i < row.cells.length; i++)-->
+      <!--{-->
+          <!--if (row.cells[i].tagName != "TH") row.cells[i].style.backgroundColor = '#FFF';-->
+      <!--}-->
+    <!--}-->
+  <!--}-->
 
-    if (obj)
-    {
-      if (obj.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode;
-      else if (obj.parentNode.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode.parentNode;
-      else return;
+  <!--document.getElementById("listDiv").onclick = function(e)-->
+  <!--{-->
+    <!--var obj = Utils.srcElement(e);-->
 
-      for (i = 0; i < row.cells.length; i++)
-      {
-          if (row.cells[i].tagName != "TH") row.cells[i].style.backgroundColor = '#FFF';
-      }
-    }
-  }
+    <!--if (obj.tagName == "INPUT" && obj.type == "checkbox")-->
+    <!--{-->
+      <!--if (!document.forms['listForm'])-->
+      <!--{-->
+        <!--return;-->
+      <!--}-->
+      <!--var nodes = document.forms['listForm'].elements;-->
+      <!--var checked = false;-->
 
-  document.getElementById("listDiv").onclick = function(e)
-  {
-    var obj = Utils.srcElement(e);
+      <!--for (i = 0; i < nodes.length; i++)-->
+      <!--{-->
+        <!--if (nodes[i].checked)-->
+        <!--{-->
+           <!--checked = true;-->
+           <!--break;-->
+         <!--}-->
+      <!--}-->
 
-    if (obj.tagName == "INPUT" && obj.type == "checkbox")
-    {
-      if (!document.forms['listForm'])
-      {
-        return;
-      }
-      var nodes = document.forms['listForm'].elements;
-      var checked = false;
+      <!--if(document.getElementById("btnSubmit"))-->
+      <!--{-->
+        <!--document.getElementById("btnSubmit").disabled = !checked;-->
+      <!--}-->
+      <!--for (i = 1; i <= 10; i++)-->
+      <!--{-->
+        <!--if (document.getElementById("btnSubmit" + i))-->
+        <!--{-->
+          <!--document.getElementById("btnSubmit" + i).disabled = !checked;-->
+        <!--}-->
+      <!--}-->
+    <!--}-->
+  <!--}-->
 
-      for (i = 0; i < nodes.length; i++)
-      {
-        if (nodes[i].checked)
-        {
-           checked = true;
-           break;
-         }
-      }
-
-      if(document.getElementById("btnSubmit"))
-      {
-        document.getElementById("btnSubmit").disabled = !checked;
-      }
-      for (i = 1; i <= 10; i++)
-      {
-        if (document.getElementById("btnSubmit" + i))
-        {
-          document.getElementById("btnSubmit" + i).disabled = !checked;
-        }
-      }
-    }
-  }
-
-}
-
-//-->
-</script>
+<!--}-->
+<!--</script>-->
 </body>
 </html>
+<script>
+  $(document).on('change','.type',function(){
+      var id=$(this).val();
+      var obj=$(this);
+     if(id==0){
+         window.location.href="{:url('goods/attribute_list')}";
+     }else{
+         window.location.href='{:url("goods/attribute_lists")}?id='+id+'';
+     }
+  })
+</script>

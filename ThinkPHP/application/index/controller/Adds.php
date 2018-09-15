@@ -44,11 +44,42 @@ class Adds extends Controller{
         $ads_id = input('get.ads_id');
         $data = model('ads')->shan($ads_id);
         if($data){
-//            return $this->fetch('add');
             $list = Db::name('Ads')->paginate(5);
             $this->assign('data', $list);
             return $this->fetch('success');
         }
     }
 
+    public function adds_select(){
+        $ads_id = input('get.ads_id');
+//        print_r($ads_id);
+        $data = model('ads')->cha($ads_id);
+//        print_r($data);die;
+        if($data){
+            $this ->assign('data',$data);
+            return $this->fetch('update');
+        }
+    }
+
+    public function Ads_update(){
+        $ads_id = input('post.ads_id');
+//        print_r($ads_id);
+        $request = Request::instance()->post();
+        $db = new Ads();
+        $data = $db->save($request,$ads_id);
+        if($data){
+            $this ->assign('data',$data);
+            return $this->fetch('success');
+        }else{
+            echo "网络异常";
+        }
+    }
+
+    public function gai(){
+        $ads_id = input('post.ads_id');
+//        return $ads_id;
+        $ads_name=input("post.ads_name");
+        $data=model('ads')->ajaxChange($ads_id,$ads_name);
+        return $data;
+    }
 }

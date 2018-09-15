@@ -11,10 +11,8 @@ class Money extends Controller{
     **/
     public function money(){
         $list = Db::name('moneytype')->paginate(5);
-        // 把分页数据赋值给模板变量list
-        $this->assign('arr', $list);
-        // 渲染模板输出
-        return $this->fetch('money');
+//        $this->assign('arr', $list);
+        return $this->fetch('money',['arr'=>$list]);
     }
 
     public function money_add(){
@@ -45,7 +43,31 @@ class Money extends Controller{
 
     public function money_select(){
         $type_id = input('get.type_id');
-//        print_r($type_id);
-//        $data = model('moneytype')->select($type_id);
+        $data = model('moneytype')->cha($type_id);
+        if($data){
+            $this->assign('arr', $data);
+            return $this->fetch('update');
+        }
+    }
+
+    public function money_update(){
+        $type_id = input('post.type_id');
+//        print_r($type_id);die;
+        $request = Request::instance()->post();
+        $db=new Moneytype();
+        $data=$db->upd($request,$type_id);
+        if($data){
+            return $this ->fetch('success');
+        }else{
+            echo "网络异常";
+        }
+    }
+
+    public function gai(){
+        $type_id=input("post.type_id");
+//        return $id;die;
+        $type_type=input("post.type_type");
+        $data=model('moneytype')->ajaxChange($type_id,$type_type);
+        return $data;
     }
 }

@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="../../../static/css/general.css" rel="stylesheet" type="text/css">
     <link href="../../../static/css/main.css" rel="stylesheet" type="text/css">
-    <script src="//hm.baidu.com/hm.js?dde6ba2851f3db0ddc415ce0f895822e"></script><script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>
+    <script src="../../../jquery-2.1.4.min.js"></script>
     <style>
         .panel-icloud .panel-right iframe {
             height: 300px;
@@ -95,7 +95,7 @@
 
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;&gt;&nbsp;&nbsp;广告位置 </span>
     <div style="clear:both"></div>
-</h1><script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/listtable.js"></script>
+</h1>
 <form method="post" action="" name="listForm">
     <!-- start ad position list -->
     <div class="list-div" id="listDiv">
@@ -112,18 +112,21 @@
 
             <?php foreach($data as $k => $v){ ?>
             <tr>
-                <td class="first-cell" style="background-color: rgb(255, 255, 255);"><span onclick="listTable.edit(this, 'edit_type_name', 1)"><?= $v['ads_name']?></span></td>
+                <td class="first-cell" style="background-color: rgb(255, 255, 255);">
+                    <span class="author"><?= $v['ads_name']?></span>
+                    <input type="text" value="<?= $v['ads_name']?>" style="display: none" class="show" where="<?= $v['ads_id']?>">
+                </td>
+
                 <td align="right" style="background-color: rgb(255, 255, 255);"><span onclick="listTable.edit(this, 'edit_type_money', 1)"><?= $v['ads_width']?></span></td>
                 <td align="right" style="background-color: rgb(255, 255, 255);"><span onclick="listTable.edit(this, 'edit_min_amount', 1)"><?= $v['ads_height']?></span></td>
                 <td align="right" style="background-color: rgb(255, 255, 255);"><span><?= $v['ads_descs']?></span></td>
                 <td align="right" style="background-color: rgb(255, 255, 255);">
                     <a href="bonus.php?act=send&amp;id=1&amp;send_by=0">发放</a> |
                     <a href="bonus.php?act=bonus_list&amp;bonus_type=1">查看</a> |
-                    <a href="bonus.php?act=edit&amp;type_id=1">编辑</a> |
+                    <a href="__URL__/adds_select/?ads_id=<?= $v['ads_id']?>">编辑</a> |
                     <a href="__URL__/adds_delete/?ads_id=<?= $v['ads_id']?>" onclick="listTable.remove(1, '您确认要删除这条记录吗?')">移除</a></td>
             </tr>
             <?php } ?>
-
             <tr><td class="no-records" colspan="5" style="background-color: rgb(255, 255, 255);">您还没有设置广告位置</td></tr>
             <tr><td align="right" nowrap="true" colspan="5" style="background-color: rgb(255, 255, 255);"><!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
                 <div id="turn-page">
@@ -133,26 +136,8 @@
             </tbody></table>
 
     </div>
-    <!-- end ad_position list -->
 </form>
 
-<script type="text/javascript">
-    listTable.recordCount = 0;
-    listTable.pageCount = 1;
-
-    listTable.filter.record_count = '0';
-    listTable.filter.page_size = '15';
-    listTable.filter.page = '1';
-    listTable.filter.page_count = '1';
-    listTable.filter.start = '0';
-
-    onload = function()
-    {
-        // &#64138;&#53036;&#10870;鵥
-        startCheckOrder();
-    }
-
-</script>
 <div id="footer">
     共执行 4 个查询，用时 0.017001 秒，Gzip 已禁用，内存占用 1.319 MB<br>
     版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
@@ -185,148 +170,36 @@
 
 </object>
 
-<script language="JavaScript">
-    document.onmousemove=function(e)
-        {
-            var obj = Utils.srcElement(e);
-            if (typeof(obj.onclick) == 'function' && obj.onclick.toString().indexOf('listTable.edit') != -1)
-            {
-                obj.title = '点击修改内容';
-                obj.style.cssText = 'background-color: #eee;';
-                obj.onmouseout = function(e)
-                {
-                    this.style.cssText = '';
-                }
-            }
-            else if (typeof(obj.href) != 'undefined' && obj.href.indexOf('listTable.sort') != -1)
-            {
-                obj.title = '点击对列表排序';
-            }
-        }
-        <!--
-
-
-    var MyTodolist;
-    function showTodoList(adminid)
-    {
-        if(!MyTodolist)
-        {
-            var global = $import("../js/global.js","js");
-            global.onload = global.onreadystatechange= function()
-            {
-                if(this.readyState && this.readyState=="loading")return;
-                var md5 = $import("js/md5.js","js");
-                md5.onload = md5.onreadystatechange= function()
-                {
-                    if(this.readyState && this.readyState=="loading")return;
-                    var todolist = $import("js/todolist.js","js");
-                    todolist.onload = todolist.onreadystatechange = function()
-                    {
-                        if(this.readyState && this.readyState=="loading")return;
-                        MyTodolist = new Todolist();
-                        MyTodolist.show();
-                    }
-                }
-            }
-        }
-        else
-        {
-            if(MyTodolist.visibility)
-            {
-                MyTodolist.hide();
-            }
-            else
-            {
-                MyTodolist.show();
-            }
-        }
-    }
-
-    if (Browser.isIE)
-    {
-        onscroll = function()
-        {
-            //document.getElementById('calculator').style.top = document.body.scrollTop;
-            document.getElementById('popMsg').style.top = (document.body.scrollTop + document.body.clientHeight - document.getElementById('popMsg').offsetHeight) + "px";
-        }
-    }
-
-    if (document.getElementById("listDiv"))
-    {
-        document.getElementById("listDiv").onmouseover = function(e)
-        {
-            obj = Utils.srcElement(e);
-
-            if (obj)
-            {
-                if (obj.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode;
-                else if (obj.parentNode.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode.parentNode;
-                else return;
-
-                for (i = 0; i < row.cells.length; i++)
-                {
-                    if (row.cells[i].tagName != "TH") row.cells[i].style.backgroundColor = '#F4FAFB';
-                }
-            }
-
-        }
-
-        document.getElementById("listDiv").onmouseout = function(e)
-        {
-            obj = Utils.srcElement(e);
-
-            if (obj)
-            {
-                if (obj.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode;
-                else if (obj.parentNode.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode.parentNode;
-                else return;
-
-                for (i = 0; i < row.cells.length; i++)
-                {
-                    if (row.cells[i].tagName != "TH") row.cells[i].style.backgroundColor = '#FFF';
-                }
-            }
-        }
-
-        document.getElementById("listDiv").onclick = function(e)
-        {
-            var obj = Utils.srcElement(e);
-
-            if (obj.tagName == "INPUT" && obj.type == "checkbox")
-            {
-                if (!document.forms['listForm'])
-                {
-                    return;
-                }
-                var nodes = document.forms['listForm'].elements;
-                var checked = false;
-
-                for (i = 0; i < nodes.length; i++)
-                {
-                    if (nodes[i].checked)
-                    {
-                        checked = true;
-                        break;
-                    }
-                }
-
-                if(document.getElementById("btnSubmit"))
-                {
-                    document.getElementById("btnSubmit").disabled = !checked;
-                }
-                for (i = 1; i <= 10; i++)
-                {
-                    if (document.getElementById("btnSubmit" + i))
-                    {
-                        document.getElementById("btnSubmit" + i).disabled = !checked;
-                    }
-                }
-            }
-        }
-
-    }
-
-    //-->
-</script>
-
 </body></html>
+
+<script>
+    $(document).on('click','.author',function () {
+        $(this).hide();
+        $(this).next().show();
+        var content = $(this).next().val();
+        $(this).next().val('');
+        $(this).next().focus();
+        $(this).next().val(content);
+    });
+
+    $(document).on('blur','.show',function () {
+        $(this).hide();
+        $(this).prev().show();
+
+        var ads_name = $(this).val();
+//        alert(ads_name)
+        var ads_id = $(this).attr('where');
+//        alert(ads_id);
+        $.ajax({
+            url:"__URL__/gai",
+            type:"post",
+            data:{ads_name:ads_name,ads_id:ads_id},
+            success:function (e){
+//                alert(e);
+                if(e){
+                    history.go(0)
+                }
+            }
+        })
+    })
+</script>

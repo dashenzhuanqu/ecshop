@@ -1,13 +1,12 @@
-﻿<!-- $Id: goods_trash.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>ECSHOP 管理中心 - 商品回收站 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../../static/css/general.css" rel="stylesheet" type="text/css" />
 <link href="../../../static/css/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>
+  <script src="../../../static/js/jquery.js"></script>
+<!--<script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>-->
 <style>
   .panel-icloud .panel-right iframe {
     height: 300px;
@@ -111,7 +110,8 @@ var cancel_color = "无样式";
   
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;商品回收站 </span>
   <div style="clear:both"></div>
-</h1><script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/listtable.js"></script>
+</h1>
+<!--<script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/listtable.js"></script>-->
 <!-- 商品搜索 -->
 <!-- $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ -->
 <div class="form-div">
@@ -148,12 +148,12 @@ var cancel_color = "无样式";
   <tr>
   {foreach ($list as $k => $v)}
   <tr>
-    <td>{$v.goods_id}</td>
+    <td>{$v.g_id}</td>
     <td>{$v.goods_name}</td>
     <td>{$v.goods_art}</td>
     <td>{$v.goods_price}</td>
-    <td><a href="#">还原</a> |
-    <a href="{:url('goods/goods_trash_del')}?id={$v.goods_id}">移除</a></td>
+    <td><a href="javascript:;" class="is_delete" id="{$v.g_id}" value="{$v.is_delete}" >还原</a> |
+    <a href="{:url('goods/goods_del')}?id={$v.g_id}">移除</a></td>
   </tr>
   {/foreach}
     <!--<tr><td class="no-records" colspan="10">没有找到任何记录</td></tr>-->
@@ -192,77 +192,75 @@ var cancel_color = "无样式";
   <!--</span>-->
 <!--</div>-->
     <!--</td>-->
-
+</table>
 </div>
-
 </form>
+<!--<script language="JavaScript">-->
+  <!--listTable.recordCount = 0;-->
+  <!--listTable.pageCount = 1;-->
 
-<script language="JavaScript">
-  listTable.recordCount = 0;
-  listTable.pageCount = 1;
+    <!--listTable.filter.cat_id = '0';-->
+    <!--listTable.filter.intro_type = '';-->
+    <!--listTable.filter.is_promote = '0';-->
+    <!--listTable.filter.stock_warning = '0';-->
+    <!--listTable.filter.brand_id = '0';-->
+    <!--listTable.filter.keyword = '';-->
+    <!--listTable.filter.suppliers_id = '';-->
+    <!--listTable.filter.is_on_sale = '';-->
+    <!--listTable.filter.sort_by = 'goods_id';-->
+    <!--listTable.filter.sort_order = 'DESC';-->
+    <!--listTable.filter.extension_code = '';-->
+    <!--listTable.filter.is_delete = '1';-->
+    <!--listTable.filter.real_goods = '-1';-->
+    <!--listTable.filter.record_count = '0';-->
+    <!--listTable.filter.page_size = '15';-->
+    <!--listTable.filter.page = '1';-->
+    <!--listTable.filter.page_count = '1';-->
+    <!--listTable.filter.start = '0';-->
+  <!---->
+  <!---->
+  <!--onload = function()-->
+  <!--{-->
+    <!--startCheckOrder(); // 开始检查订单-->
+    <!--document.forms['listForm'].reset();-->
+  <!--}-->
 
-    listTable.filter.cat_id = '0';
-    listTable.filter.intro_type = '';
-    listTable.filter.is_promote = '0';
-    listTable.filter.stock_warning = '0';
-    listTable.filter.brand_id = '0';
-    listTable.filter.keyword = '';
-    listTable.filter.suppliers_id = '';
-    listTable.filter.is_on_sale = '';
-    listTable.filter.sort_by = 'goods_id';
-    listTable.filter.sort_order = 'DESC';
-    listTable.filter.extension_code = '';
-    listTable.filter.is_delete = '1';
-    listTable.filter.real_goods = '-1';
-    listTable.filter.record_count = '0';
-    listTable.filter.page_size = '15';
-    listTable.filter.page = '1';
-    listTable.filter.page_count = '1';
-    listTable.filter.start = '0';
-  
-  
-  onload = function()
-  {
-    startCheckOrder(); // 开始检查订单
-    document.forms['listForm'].reset();
-  }
+  <!--function confirmSubmit(frm, ext)-->
+  <!--{-->
+    <!--if (frm.elements['type'].value == 'restore')-->
+    <!--{-->
+      <!---->
+      <!--return confirm("您确实要把该商品还原吗？");-->
+      <!---->
+    <!--}-->
+    <!--else if (frm.elements['type'].value == 'drop')-->
+    <!--{-->
+      <!---->
+      <!--return confirm("彻底删除商品将删除与该商品有关的所有信息。\n您确实要删除选中的商品吗？");-->
+      <!---->
+    <!--}-->
+    <!--else if (frm.elements['type'].value == '')-->
+    <!--{-->
+        <!--return false;-->
+    <!--}-->
+    <!--else-->
+    <!--{-->
+        <!--return true;-->
+    <!--}-->
+  <!--}-->
 
-  function confirmSubmit(frm, ext)
-  {
-    if (frm.elements['type'].value == 'restore')
-    {
-      
-      return confirm("您确实要把该商品还原吗？");
-      
-    }
-    else if (frm.elements['type'].value == 'drop')
-    {
-      
-      return confirm("彻底删除商品将删除与该商品有关的所有信息。\n您确实要删除选中的商品吗？");
-      
-    }
-    else if (frm.elements['type'].value == '')
-    {
-        return false;
-    }
-    else
-    {
-        return true;
-    }
-  }
+  <!--function changeAction()-->
+  <!--{-->
+      <!--var frm = document.forms['listForm'];-->
 
-  function changeAction()
-  {
-      var frm = document.forms['listForm'];
-
-      if (!document.getElementById('btnSubmit').disabled &&
-          confirmSubmit(frm, false))
-      {
-          frm.submit();
-      }
-  }
-  
-</script>
+      <!--if (!document.getElementById('btnSubmit').disabled &&-->
+          <!--confirmSubmit(frm, false))-->
+      <!--{-->
+          <!--frm.submit();-->
+      <!--}-->
+  <!--}-->
+  <!---->
+<!--</script>-->
 <div id="footer">
 共执行 8 个查询，用时 0.018004 秒，Gzip 已禁用，内存占用 2.070 MB<br />
 版权所有 &copy; 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
@@ -295,148 +293,172 @@ var cancel_color = "无样式";
   </embed>
 </object>
 
-<script language="JavaScript">
-document.onmousemove=function(e)
-{
-  var obj = Utils.srcElement(e);
-  if (typeof(obj.onclick) == 'function' && obj.onclick.toString().indexOf('listTable.edit') != -1)
-  {
-    obj.title = '点击修改内容';
-    obj.style.cssText = 'background-color: #eee;';
-    obj.onmouseout = function(e)
-    {
-      this.style.cssText = '';
-    }
-  }
-  else if (typeof(obj.href) != 'undefined' && obj.href.indexOf('listTable.sort') != -1)
-  {
-    obj.title = '点击对列表排序';
-  }
-}
-<!--
+<!--<script language="JavaScript">-->
+<!--document.onmousemove=function(e)-->
+<!--{-->
+  <!--var obj = Utils.srcElement(e);-->
+  <!--if (typeof(obj.onclick) == 'function' && obj.onclick.toString().indexOf('listTable.edit') != -1)-->
+  <!--{-->
+    <!--obj.title = '点击修改内容';-->
+    <!--obj.style.cssText = 'background-color: #eee;';-->
+    <!--obj.onmouseout = function(e)-->
+    <!--{-->
+      <!--this.style.cssText = '';-->
+    <!--}-->
+  <!--}-->
+  <!--else if (typeof(obj.href) != 'undefined' && obj.href.indexOf('listTable.sort') != -1)-->
+  <!--{-->
+    <!--obj.title = '点击对列表排序';-->
+  <!--}-->
+<!--}-->
+<!--var MyTodolist;-->
+<!--function showTodoList(adminid)-->
+<!--{-->
+  <!--if(!MyTodolist)-->
+  <!--{-->
+    <!--var global = $import("../js/global.js","js");-->
+    <!--global.onload = global.onreadystatechange= function()-->
+    <!--{-->
+      <!--if(this.readyState && this.readyState=="loading")return;-->
+      <!--var md5 = $import("js/md5.js","js");-->
+      <!--md5.onload = md5.onreadystatechange= function()-->
+      <!--{-->
+        <!--if(this.readyState && this.readyState=="loading")return;-->
+        <!--var todolist = $import("js/todolist.js","js");-->
+        <!--todolist.onload = todolist.onreadystatechange = function()-->
+        <!--{-->
+          <!--if(this.readyState && this.readyState=="loading")return;-->
+          <!--MyTodolist = new Todolist();-->
+          <!--MyTodolist.show();-->
+        <!--}-->
+      <!--}-->
+    <!--}-->
+  <!--}-->
+  <!--else-->
+  <!--{-->
+    <!--if(MyTodolist.visibility)-->
+    <!--{-->
+      <!--MyTodolist.hide();-->
+    <!--}-->
+    <!--else-->
+    <!--{-->
+      <!--MyTodolist.show();-->
+    <!--}-->
+  <!--}-->
+<!--}-->
 
+<!--if (Browser.isIE)-->
+<!--{-->
+  <!--onscroll = function()-->
+  <!--{-->
+    <!--//document.getElementById('calculator').style.top = document.body.scrollTop;-->
+    <!--document.getElementById('popMsg').style.top = (document.body.scrollTop + document.body.clientHeight - document.getElementById('popMsg').offsetHeight) + "px";-->
+  <!--}-->
+<!--}-->
 
-var MyTodolist;
-function showTodoList(adminid)
-{
-  if(!MyTodolist)
-  {
-    var global = $import("../js/global.js","js");
-    global.onload = global.onreadystatechange= function()
-    {
-      if(this.readyState && this.readyState=="loading")return;
-      var md5 = $import("js/md5.js","js");
-      md5.onload = md5.onreadystatechange= function()
-      {
-        if(this.readyState && this.readyState=="loading")return;
-        var todolist = $import("js/todolist.js","js");
-        todolist.onload = todolist.onreadystatechange = function()
-        {
-          if(this.readyState && this.readyState=="loading")return;
-          MyTodolist = new Todolist();
-          MyTodolist.show();
-        }
-      }
-    }
-  }
-  else
-  {
-    if(MyTodolist.visibility)
-    {
-      MyTodolist.hide();
-    }
-    else
-    {
-      MyTodolist.show();
-    }
-  }
-}
+<!--if (document.getElementById("listDiv"))-->
+<!--{-->
+  <!--document.getElementById("listDiv").onmouseover = function(e)-->
+  <!--{-->
+    <!--obj = Utils.srcElement(e);-->
 
-if (Browser.isIE)
-{
-  onscroll = function()
-  {
-    //document.getElementById('calculator').style.top = document.body.scrollTop;
-    document.getElementById('popMsg').style.top = (document.body.scrollTop + document.body.clientHeight - document.getElementById('popMsg').offsetHeight) + "px";
-  }
-}
+    <!--if (obj)-->
+    <!--{-->
+      <!--if (obj.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode;-->
+      <!--else if (obj.parentNode.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode.parentNode;-->
+      <!--else return;-->
 
-if (document.getElementById("listDiv"))
-{
-  document.getElementById("listDiv").onmouseover = function(e)
-  {
-    obj = Utils.srcElement(e);
+      <!--for (i = 0; i < row.cells.length; i++)-->
+      <!--{-->
+        <!--if (row.cells[i].tagName != "TH") row.cells[i].style.backgroundColor = '#F4FAFB';-->
+      <!--}-->
+    <!--}-->
 
-    if (obj)
-    {
-      if (obj.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode;
-      else if (obj.parentNode.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode.parentNode;
-      else return;
+  <!--}-->
 
-      for (i = 0; i < row.cells.length; i++)
-      {
-        if (row.cells[i].tagName != "TH") row.cells[i].style.backgroundColor = '#F4FAFB';
-      }
-    }
+  <!--document.getElementById("listDiv").onmouseout = function(e)-->
+  <!--{-->
+    <!--obj = Utils.srcElement(e);-->
 
-  }
+    <!--if (obj)-->
+    <!--{-->
+      <!--if (obj.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode;-->
+      <!--else if (obj.parentNode.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode.parentNode;-->
+      <!--else return;-->
 
-  document.getElementById("listDiv").onmouseout = function(e)
-  {
-    obj = Utils.srcElement(e);
+      <!--for (i = 0; i < row.cells.length; i++)-->
+      <!--{-->
+          <!--if (row.cells[i].tagName != "TH") row.cells[i].style.backgroundColor = '#FFF';-->
+      <!--}-->
+    <!--}-->
+  <!--}-->
 
-    if (obj)
-    {
-      if (obj.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode;
-      else if (obj.parentNode.parentNode.tagName.toLowerCase() == "tr") row = obj.parentNode.parentNode;
-      else return;
+  <!--document.getElementById("listDiv").onclick = function(e)-->
+  <!--{-->
+    <!--var obj = Utils.srcElement(e);-->
 
-      for (i = 0; i < row.cells.length; i++)
-      {
-          if (row.cells[i].tagName != "TH") row.cells[i].style.backgroundColor = '#FFF';
-      }
-    }
-  }
+    <!--if (obj.tagName == "INPUT" && obj.type == "checkbox")-->
+    <!--{-->
+      <!--if (!document.forms['listForm'])-->
+      <!--{-->
+        <!--return;-->
+      <!--}-->
+      <!--var nodes = document.forms['listForm'].elements;-->
+      <!--var checked = false;-->
 
-  document.getElementById("listDiv").onclick = function(e)
-  {
-    var obj = Utils.srcElement(e);
+      <!--for (i = 0; i < nodes.length; i++)-->
+      <!--{-->
+        <!--if (nodes[i].checked)-->
+        <!--{-->
+           <!--checked = true;-->
+           <!--break;-->
+         <!--}-->
+      <!--}-->
 
-    if (obj.tagName == "INPUT" && obj.type == "checkbox")
-    {
-      if (!document.forms['listForm'])
-      {
-        return;
-      }
-      var nodes = document.forms['listForm'].elements;
-      var checked = false;
+      <!--if(document.getElementById("btnSubmit"))-->
+      <!--{-->
+        <!--document.getElementById("btnSubmit").disabled = !checked;-->
+      <!--}-->
+      <!--for (i = 1; i <= 10; i++)-->
+      <!--{-->
+        <!--if (document.getElementById("btnSubmit" + i))-->
+        <!--{-->
+          <!--document.getElementById("btnSubmit" + i).disabled = !checked;-->
+        <!--}-->
+      <!--}-->
+    <!--}-->
+  <!--}-->
 
-      for (i = 0; i < nodes.length; i++)
-      {
-        if (nodes[i].checked)
-        {
-           checked = true;
-           break;
-         }
-      }
-
-      if(document.getElementById("btnSubmit"))
-      {
-        document.getElementById("btnSubmit").disabled = !checked;
-      }
-      for (i = 1; i <= 10; i++)
-      {
-        if (document.getElementById("btnSubmit" + i))
-        {
-          document.getElementById("btnSubmit" + i).disabled = !checked;
-        }
-      }
-    }
-  }
-
-}
-
-//-->
-</script>
+<!--}-->
+<!--</script>-->
 </body>
 </html>
+<script>
+    $(document).on('click','.is_delete',function(){
+        var r=confirm("你确定要还原吗？");
+        if(!r){return}
+        var g_id=$(this).attr('id');
+        var status=$(this).attr('value');
+        var obj=$(this);
+        $.ajax({
+            url:"{:url('goods/trash_do')}",
+            data:{g_id:g_id,status:status},
+            dataType:"json",
+            success:function(res){
+//                if(res.status==1){
+//                    alert(res.msg);
+//                    return false;
+//                }else{
+                    if(status==0){
+                        alert('还原成功');
+//                        obj.parents().remove();
+                        history.go(0)
+                    }else{
+                        alert("还原失败");
+                        history.go(0)
+                    }
+                }
+//            }
+        })
+    })
+</script>

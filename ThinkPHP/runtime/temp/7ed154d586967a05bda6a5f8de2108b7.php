@@ -1,6 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:101:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html";i:1536656477;}*/ ?>
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:101:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html";i:1536909220;}*/ ?>
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -115,9 +114,9 @@ var adminId = "1";
     <!-- <li class="fix-spacel">&nbsp;</li> -->
     <li><a href="index.php?act=main" target="main-frame">起始页</a></li>
     <li><a href="privilege.php?act=modif" target="main-frame">设置导航栏</a></li>
-        <li><a href="goods.php?act=list" target="main-frame">商品列表</a></li>
+        <li><a href="<?php echo url('goods/goods'); ?>" target="main-frame">商品列表</a></li>
         <li><a href="order.php?act=list" target="main-frame">订单列表</a></li>
-        <li><a href="/index/goods/comment_manage_list" target="main-frame">用户评论</a></li>
+        <li><a href="<?php echo url('goods/comment_manage_list'); ?>" target="main-frame">用户评论</a></li>
         <li><a href="users.php?act=list" target="main-frame">会员列表</a></li>
         <li><a href="shop_config.php?act=list_edit" target="main-frame">商店设置</a></li>
         <li><a href="lead.php?act=list" target="main-frame">店铺二维码</a></li>
