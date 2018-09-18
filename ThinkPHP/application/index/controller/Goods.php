@@ -42,7 +42,11 @@ class Goods extends Controller
             $where['goods_name']= ["like","%$search%"];
         }
         $model=new Good();
+<<<<<<< HEAD
         $data=$model->where($where)->where('is_show',1)->where('is_delete',1)->paginate(['query'=>Request::instance()->param()]
+=======
+        $data=$model->where($where)->where('is_delete',1)->paginate(['query'=>Request::instance()->param()]
+>>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
         );
         $cate=new Classify();
         $res=$cate->getPathList("cat_id");
@@ -185,6 +189,7 @@ class Goods extends Controller
         }else{
             echo "<script>alert('上传失败');location.href='goods_add'</script>";
         }
+<<<<<<< HEAD
     }
     //商品上传
     public function upload(){
@@ -205,6 +210,28 @@ class Goods extends Controller
             return $file->getError();
         }
     }
+=======
+    }
+    //商品上传
+    public function upload(){
+        // 获取表单上传文件 例如上传了001.jpg
+        $file = request()->file('goods_img');
+        // 移动到框架应用根目录/public/uploads/ 目录下
+        $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
+        if($info){
+            // 成功上传后 获取上传信息
+            // 输出 jpg
+//           echo $info->getExtension();
+            // 输出 20160820/42a79759f284b767dfcb2a0197904287.jpg
+            return $info->getSaveName();
+            // 输出 42a79759f284b767dfcb2a0197904287.jpg
+//           echo $info->getFilename();
+        }else{
+            // 上传失败获取错误信息
+            return $file->getError();
+        }
+    }
+>>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
     //编辑商品信息
     public function goods_a(){
         $g_id=input('post.g_id');

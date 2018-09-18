@@ -195,7 +195,12 @@ var cancel_color = "无样式";
   </tr>
   <?php foreach ($data as $k=>$v){?>
     <tr>
+<<<<<<< HEAD
     <td><input type="checkbox" class ='box' name="box" alt="<?=$v['g_id']; ?>" /></td>
+=======
+    <td><input type="checkbox" name="checkboxes[]"></td>
+    <td>{$v.g_id}</td>
+>>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
     <td class="first-cell" name="{$v.goods_name}">{$v.goods_name}</td>
     <td><span onclick="listTable.edit(this, 'edit_goods_sn', 1)">{$v.goods_art}</span></td>
     <td align="right"><span onclick="listTable.edit(this, 'edit_goods_price', 1)">{$v.goods_price}</span></td>
