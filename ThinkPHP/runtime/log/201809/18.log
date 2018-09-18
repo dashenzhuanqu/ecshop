@@ -1,11 +1,18 @@
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2018-09-18T14:52:46+08:00 ] 127.0.0.1 GET /index/login/login
 [ info ] www.perject.com/index/login/login [运行时间：0.159386s][吞吐率：6.27req/s] [内存消耗：1,517.20kb] [文件加载：37]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+[ 2018-09-18T17:42:18+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.123001s][吞吐率：8.13req/s] [内存消耗：1,509.82kb] [文件加载：36]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'login',
     2 => 'login',
@@ -32,10 +39,40 @@
 [ 2018-09-18T14:52:46+08:00 ] 127.0.0.1 GET /static/css/jquery.mCustomScrollbar.css
 [ info ] www.perject.com/static/css/jquery.mCustomScrollbar.css [运行时间：0.054502s][吞吐率：18.35req/s] [内存消耗：1,051.13kb] [文件加载：28]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:42:18+08:00 ] 127.0.0.1 GET /goods.php?act=price&id=2&attr=&number=1&1537263738876876
+[ info ] www.ecshop4.com/goods.php?act=price&id=2&attr=&number=1&1537263738876876 [运行时间：0.056999s][吞吐率：17.54req/s] [内存消耗：1,051.22kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'css',
     2 => 'jquery.mCustomScrollbar.css',
@@ -5436,10 +5473,40 @@
 [ 2018-09-18T16:47:59+08:00 ] 127.0.0.1 GET /index/login/login
 [ info ] www.perject.com/index/login/login [运行时间：0.040028s][吞吐率：24.98req/s] [内存消耗：1,378.19kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'goods.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'price',
+  'id' => '2',
+  'attr' => '',
+  'number' => '1',
+  '1537263738876876' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:42:21+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.047997s][吞吐率：20.83req/s] [内存消耗：1,329.09kb] [文件加载：34]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'login',
     2 => 'login',
@@ -5519,10 +5586,41 @@
 [ 2018-09-18T16:47:59+08:00 ] 127.0.0.1 GET /static/css/font/adminthemes-webfont.woff
 [ info ] www.perject.com/static/css/font/adminthemes-webfont.woff [运行时间：0.037190s][吞吐率：26.89req/s] [内存消耗：1,051.13kb] [文件加载：28]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:42:22+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.064005s][吞吐率：15.62req/s] [内存消耗：1,329.09kb] [文件加载：34]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'css',
     2 => 'font',
@@ -5546,10 +5644,41 @@
 [ 2018-09-18T16:47:59+08:00 ] 127.0.0.1 GET /static/css/font/adminthemes-webfont.ttf
 [ info ] www.perject.com/static/css/font/adminthemes-webfont.ttf [运行时间：0.051619s][吞吐率：19.37req/s] [内存消耗：1,051.07kb] [文件加载：28]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:42:22+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.121998s][吞吐率：8.20req/s] [内存消耗：1,329.09kb] [文件加载：34]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'css',
     2 => 'font',
@@ -5573,10 +5702,41 @@
 [ 2018-09-18T19:02:23+08:00 ] 127.0.0.1 GET /index/login/login
 [ info ] www.perject.com/index/login/login [运行时间：0.869413s][吞吐率：1.15req/s] [内存消耗：1,377.98kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:42:22+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.068999s][吞吐率：14.49req/s] [内存消耗：1,329.09kb] [文件加载：34]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'login',
     2 => 'login',
@@ -5602,10 +5762,41 @@
 [ 2018-09-18T19:02:23+08:00 ] 127.0.0.1 GET /static/css/font/adminthemes-webfont.woff2
 [ info ] www.perject.com/static/css/font/adminthemes-webfont.woff2 [运行时间：0.069307s][吞吐率：14.43req/s] [内存消耗：1,051.15kb] [文件加载：28]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:42:22+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.080001s][吞吐率：12.50req/s] [内存消耗：1,329.09kb] [文件加载：34]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'css',
     2 => 'font',
@@ -5629,10 +5820,41 @@
 [ 2018-09-18T19:02:23+08:00 ] 127.0.0.1 GET /static/css/font/adminthemes-webfont.woff
 [ info ] www.perject.com/static/css/font/adminthemes-webfont.woff [运行时间：0.024860s][吞吐率：40.23req/s] [内存消耗：1,051.13kb] [文件加载：28]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:42:22+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.072008s][吞吐率：13.89req/s] [内存消耗：1,329.09kb] [文件加载：34]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'css',
     2 => 'font',
@@ -5656,10 +5878,41 @@
 [ 2018-09-18T19:02:23+08:00 ] 127.0.0.1 GET /static/css/font/adminthemes-webfont.ttf
 [ info ] www.perject.com/static/css/font/adminthemes-webfont.ttf [运行时间：0.034433s][吞吐率：29.04req/s] [内存消耗：1,051.07kb] [文件加载：28]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:42:23+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.085002s][吞吐率：11.76req/s] [内存消耗：1,329.09kb] [文件加载：34]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'css',
     2 => 'font',
@@ -5683,10 +5936,41 @@
 [ 2018-09-18T19:02:37+08:00 ] 127.0.0.1 POST /index/login/login_do.html
 [ info ] www.perject.com/index/login/login_do.html [运行时间：0.292433s][吞吐率：3.42req/s] [内存消耗：2,098.18kb] [文件加载：40]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:43:23+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.053005s][吞吐率：18.87req/s] [内存消耗：1,328.84kb] [文件加载：34]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'login',
     2 => 'login_do',
@@ -5727,10 +6011,40 @@
 [ 2018-09-18T19:02:37+08:00 ] 127.0.0.1 GET /index/index/index.html
 [ info ] www.perject.com/index/index/index.html [运行时间：0.071329s][吞吐率：14.02req/s] [内存消耗：1,120.45kb] [文件加载：33]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:43:28+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.043029s][吞吐率：23.24req/s] [内存消耗：1,328.84kb] [文件加载：34]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'index',
@@ -5755,16 +6069,50 @@
 [ 2018-09-18T19:07:39+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.033121s][吞吐率：30.19req/s] [内存消耗：1,119.90kb] [文件加载：33]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:43:33+08:00 ] 127.0.0.1 GET /user.php?act=affiliate&goodsid=2
+[ info ] www.ecshop4.com/user.php?act=affiliate&goodsid=2 [运行时间：0.047005s][吞吐率：21.27req/s] [内存消耗：1,051.27kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
+=======
+    0 => 'user.php',
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
     1 => NULL,
     2 => NULL,
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'host' => 'www.perject.com',
   'connection' => 'keep-alive',
   'upgrade-insecure-requests' => '1',
@@ -5782,16 +6130,42 @@
 [ 2018-09-18T19:08:21+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.032975s][吞吐率：30.33req/s] [内存消耗：1,120.05kb] [文件加载：33]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'affiliate',
+  'goodsid' => '2',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:43:36+08:00 ] 127.0.0.1 GET /user.php?act=affiliate&goodsid=2
+[ info ] www.ecshop4.com/user.php?act=affiliate&goodsid=2 [运行时间：0.036000s][吞吐率：27.78req/s] [内存消耗：1,051.27kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
+=======
+    0 => 'user.php',
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
     1 => NULL,
     2 => NULL,
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'host' => 'www.perject.com',
   'connection' => 'keep-alive',
   'cache-control' => 'max-age=0',
@@ -5810,10 +6184,32 @@
 [ 2018-09-18T19:08:24+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.063448s][吞吐率：15.76req/s] [内存消耗：1,120.05kb] [文件加载：33]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'affiliate',
+  'goodsid' => '2',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:44:47+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.068999s][吞吐率：14.49req/s] [内存消耗：1,571.36kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -5838,10 +6234,40 @@
 [ 2018-09-18T19:08:24+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.031359s][吞吐率：31.89req/s] [内存消耗：1,120.05kb] [文件加载：33]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T17:44:47+08:00 ] 127.0.0.1 GET /admin/admin/flow.html
+[ info ] www.ecshop4.com/admin/admin/flow.html [运行时间：0.051998s][吞吐率：19.23req/s] [内存消耗：1,527.11kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -5866,10 +6292,39 @@
 [ 2018-09-18T19:08:24+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.030661s][吞吐率：32.61req/s] [内存消耗：1,120.05kb] [文件加载：33]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'flow',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->flow[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\flow.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T18:36:40+08:00 ] 127.0.0.1 GET /admin/js/maps/swiper.min.js.map
+[ info ] www.ecshop4.com/admin/js/maps/swiper.min.js.map [运行时间：0.081001s][吞吐率：12.35req/s] [内存消耗：1,055.75kb] [文件加载：29]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -5885,25 +6340,51 @@
   'accept-encoding' => 'gzip, deflate',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'cookie' => 'pgv_pvi=1980837888; pgv_si=s4963795968; PHPSESSID=206fdppq7pqjqom3kkm43b80t1',
+=======
+    0 => 'admin',
+    1 => 'js',
+    2 => 'maps',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 )
 [ info ] [ PARAM ] array (
 )
 [ info ] [ LOG ] INIT File
+<<<<<<< HEAD
 [ error ] [2048]Declaration of app\index\controller\Index::success() should be compatible with think\Controller::success($msg = '', $url = NULL, $data = '', $wait = 3, array $header = Array)[G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php:14]
 ---------------------------------------------------------------
 [ 2018-09-18T19:08:25+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.053186s][吞吐率：18.80req/s] [内存消耗：1,120.05kb] [文件加载：33]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+---------------------------------------------------------------
+[ 2018-09-18T18:37:04+08:00 ] 127.0.0.1 GET /category.php?id=3
+[ info ] www.ecshop4.com/category.php?id=3 [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：1,050.98kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
+=======
+    0 => 'category.php',
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
     1 => NULL,
     2 => NULL,
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'host' => 'www.perject.com',
   'connection' => 'keep-alive',
   'cache-control' => 'max-age=0',
@@ -5922,16 +6403,41 @@
 [ 2018-09-18T19:08:25+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.033621s][吞吐率：29.74req/s] [内存消耗：1,120.05kb] [文件加载：33]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:00:04+08:00 ] 127.0.0.1 GET /category.php?id=2
+[ info ] www.ecshop4.com/category.php?id=2 [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：1,050.98kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
+=======
+    0 => 'category.php',
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
     1 => NULL,
     2 => NULL,
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'host' => 'www.perject.com',
   'connection' => 'keep-alive',
   'cache-control' => 'max-age=0',
@@ -5950,10 +6456,31 @@
 [ 2018-09-18T19:10:02+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.148607s][吞吐率：6.73req/s] [内存消耗：1,381.70kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:00:07+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.054002s][吞吐率：18.52req/s] [内存消耗：1,570.91kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -5987,10 +6514,39 @@
 [ 2018-09-18T19:10:02+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.055912s][吞吐率：17.89req/s] [内存消耗：1,382.14kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:00:08+08:00 ] 127.0.0.1 GET /index.php
+[ info ] www.ecshop4.com/index.php [运行时间：0.049999s][吞吐率：20.00req/s] [内存消耗：1,575.17kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -6024,10 +6580,33 @@
 [ 2018-09-18T19:10:02+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.108929s][吞吐率：9.18req/s] [内存消耗：1,336.69kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'accept-encoding' => 'compress,gzip',
+  'connection' => 'Close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->index[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:00:09+08:00 ] 127.0.0.1 GET /admin/admin/flow.html
+[ info ] www.ecshop4.com/admin/admin/flow.html [运行时间：0.046029s][吞吐率：21.73req/s] [内存消耗：1,374.16kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -6061,10 +6640,39 @@
 [ 2018-09-18T19:10:02+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.146933s][吞吐率：6.81req/s] [内存消耗：1,398.12kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'flow',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->flow[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\flow.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:00:14+08:00 ] 127.0.0.1 GET /user.php?act=affiliate&goodsid=2
+[ info ] www.ecshop4.com/user.php?act=affiliate&goodsid=2 [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,051.27kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -6098,16 +6706,48 @@
 [ 2018-09-18T19:10:06+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.046615s][吞吐率：21.45req/s] [内存消耗：1,381.70kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
+=======
+    0 => 'user.php',
     1 => NULL,
     2 => NULL,
   ),
 )
 [ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'affiliate',
+  'goodsid' => '2',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:15:26+08:00 ] 127.0.0.1 GET /flow.php
+[ info ] www.ecshop4.com/flow.php [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,050.70kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+<<<<<<< HEAD
+    0 => '',
+=======
+    0 => 'flow.php',
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'host' => 'www.perject.com',
   'connection' => 'keep-alive',
   'cache-control' => 'max-age=0',
@@ -6135,10 +6775,30 @@
 [ 2018-09-18T19:10:06+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.044113s][吞吐率：22.67req/s] [内存消耗：1,382.14kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:15:30+08:00 ] 127.0.0.1 GET /user.php?act=register
+[ info ] www.ecshop4.com/user.php?act=register [运行时间：0.036002s][吞吐率：27.78req/s] [内存消耗：1,051.08kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -6172,10 +6832,37 @@
 [ 2018-09-18T19:10:06+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.055004s][吞吐率：18.18req/s] [内存消耗：1,336.69kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'user.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'register',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:15:33+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.051002s][吞吐率：19.61req/s] [内存消耗：1,390.15kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -6209,10 +6896,39 @@
 [ 2018-09-18T19:10:06+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.079789s][吞吐率：12.53req/s] [内存消耗：1,398.12kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:33+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.075001s][吞吐率：13.33req/s] [内存消耗：1,571.48kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -6274,10 +6990,70 @@
 [ 2018-09-18T19:15:35+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.034525s][吞吐率：28.96req/s] [内存消耗：1,380.61kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:34+08:00 ] 127.0.0.1 GET /admin/admin/flow.html
+[ info ] www.ecshop4.com/admin/admin/flow.html [运行时间：0.043999s][吞吐率：22.73req/s] [内存消耗：1,374.16kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'flow',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->flow[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\flow.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:37+08:00 ] 127.0.0.1 GET /admin/admin/user.html
+[ info ] www.ecshop4.com/admin/admin/user.html [运行时间：0.048999s][吞吐率：20.41req/s] [内存消耗：1,525.23kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -6304,10 +7080,39 @@
 [ 2018-09-18T19:15:35+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.055648s][吞吐率：17.97req/s] [内存消耗：1,396.95kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->user[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\user.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:37+08:00 ] 127.0.0.1 GET /static/picture/bottom.jpg
+[ info ] www.ecshop4.com/static/picture/bottom.jpg [运行时间：0.058998s][吞吐率：16.95req/s] [内存消耗：1,050.37kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -6334,10 +7139,35 @@
 [ 2018-09-18T19:15:35+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.051590s][吞吐率：19.38req/s] [内存消耗：1,335.52kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'static',
+    1 => 'picture',
+    2 => 'bottom.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/user.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:40+08:00 ] 127.0.0.1 GET /admin/admin/user.html
+[ info ] www.ecshop4.com/admin/admin/user.html [运行时间：0.043998s][吞吐率：22.73req/s] [内存消耗：1,374.09kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -6364,10 +7194,39 @@
 [ 2018-09-18T19:15:35+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.062065s][吞吐率：16.11req/s] [内存消耗：1,380.91kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->user[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\user.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:40+08:00 ] 127.0.0.1 GET /static/picture/bottom.jpg
+[ info ] www.ecshop4.com/static/picture/bottom.jpg [运行时间：0.048002s][吞吐率：20.83req/s] [内存消耗：1,050.37kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -6394,10 +7253,35 @@
 [ 2018-09-18T19:15:37+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.032316s][吞吐率：30.94req/s] [内存消耗：1,380.61kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'static',
+    1 => 'picture',
+    2 => 'bottom.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/user.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:42+08:00 ] 127.0.0.1 GET /admin/admin/user_register.html
+[ info ] www.ecshop4.com/admin/admin/user_register.html [运行时间：0.051030s][吞吐率：19.60req/s] [内存消耗：1,533.28kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -6424,10 +7308,39 @@
 [ 2018-09-18T19:15:37+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.051216s][吞吐率：19.53req/s] [内存消耗：1,396.95kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'user_register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->user_register[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\user_register.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:42+08:00 ] 127.0.0.1 GET /static/picture/bottom.jpg
+[ info ] www.ecshop4.com/static/picture/bottom.jpg [运行时间：0.069997s][吞吐率：14.29req/s] [内存消耗：1,050.46kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -6454,10 +7367,35 @@
 [ 2018-09-18T19:15:37+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.132719s][吞吐率：7.53req/s] [内存消耗：1,380.91kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'static',
+    1 => 'picture',
+    2 => 'bottom.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/user_register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:45+08:00 ] 127.0.0.1 GET /admin/admin/user.html
+[ info ] www.ecshop4.com/admin/admin/user.html [运行时间：0.047987s][吞吐率：20.84req/s] [内存消耗：1,374.09kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -6484,10 +7422,39 @@
 [ 2018-09-18T19:15:37+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.128006s][吞吐率：7.81req/s] [内存消耗：1,335.52kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->user[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\user.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:45+08:00 ] 127.0.0.1 GET /static/picture/bottom.jpg
+[ info ] www.ecshop4.com/static/picture/bottom.jpg [运行时间：0.047999s][吞吐率：20.83req/s] [内存消耗：1,050.37kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -6514,10 +7481,35 @@
 [ 2018-09-18T19:15:38+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.035224s][吞吐率：28.39req/s] [内存消耗：1,380.61kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'static',
+    1 => 'picture',
+    2 => 'bottom.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/user.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:49+08:00 ] 127.0.0.1 GET /admin/admin/user_register.html
+[ info ] www.ecshop4.com/admin/admin/user_register.html [运行时间：0.044997s][吞吐率：22.22req/s] [内存消耗：1,374.25kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -6544,10 +7536,39 @@
 [ 2018-09-18T19:15:38+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.040412s][吞吐率：24.75req/s] [内存消耗：1,335.52kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'user_register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->user_register[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\user_register.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:49+08:00 ] 127.0.0.1 GET /static/picture/bottom.jpg
+[ info ] www.ecshop4.com/static/picture/bottom.jpg [运行时间：0.049001s][吞吐率：20.41req/s] [内存消耗：1,050.46kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -6574,10 +7595,35 @@
 [ 2018-09-18T19:15:38+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.045460s][吞吐率：22.00req/s] [内存消耗：1,396.95kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'static',
+    1 => 'picture',
+    2 => 'bottom.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/user_register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:17:53+08:00 ] 127.0.0.1 GET /admin/admin/flow.html
+[ info ] www.ecshop4.com/admin/admin/flow.html [运行时间：0.044993s][吞吐率：22.23req/s] [内存消耗：1,374.16kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -6604,10 +7650,39 @@
 [ 2018-09-18T19:15:38+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.051769s][吞吐率：19.32req/s] [内存消耗：1,380.91kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'flow',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->flow[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\flow.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:18:12+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.053002s][吞吐率：18.87req/s] [内存消耗：1,390.30kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -6634,10 +7709,40 @@
 [ 2018-09-18T19:15:39+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.039856s][吞吐率：25.09req/s] [内存消耗：1,380.61kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:19:53+08:00 ] 127.0.0.1 GET /admin/admin/goods.html
+[ info ] www.ecshop4.com/admin/admin/goods.html [运行时间：0.062993s][吞吐率：15.87req/s] [内存消耗：1,571.47kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -6664,10 +7769,40 @@
 [ 2018-09-18T19:15:39+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.042014s][吞吐率：23.80req/s] [内存消耗：1,380.91kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->goods[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:19:54+08:00 ] 127.0.0.1 GET /admin/goods/user_collection_list.html
+[ info ] www.ecshop4.com/admin/goods/user_collection_list.html [运行时间：0.057036s][吞吐率：17.53req/s] [内存消耗：1,539.84kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -6694,10 +7829,39 @@
 [ 2018-09-18T19:15:39+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.038963s][吞吐率：25.67req/s] [内存消耗：1,335.52kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_collection_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_collection_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_collection_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:19:58+08:00 ] 127.0.0.1 GET /admin/goods/user_collection_list.html
+[ info ] www.ecshop4.com/admin/goods/user_collection_list.html [运行时间：0.045973s][吞吐率：21.75req/s] [内存消耗：1,380.55kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -6724,10 +7888,39 @@
 [ 2018-09-18T19:15:39+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.056637s][吞吐率：17.66req/s] [内存消耗：1,396.95kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_collection_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_collection_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_collection_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_collection_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:19:59+08:00 ] 127.0.0.1 GET /admin/goods/user_message_list.html
+[ info ] www.ecshop4.com/admin/goods/user_message_list.html [运行时间：0.051003s][吞吐率：19.61req/s] [内存消耗：1,532.49kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -6754,10 +7947,39 @@
 [ 2018-09-18T19:16:42+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.037485s][吞吐率：26.68req/s] [内存消耗：1,380.88kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_message_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_collection_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_message_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_message_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:01+08:00 ] 127.0.0.1 GET /admin/goods/user_tag_list.html
+[ info ] www.ecshop4.com/admin/goods/user_tag_list.html [运行时间：0.050999s][吞吐率：19.61req/s] [内存消耗：1,528.76kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -6784,10 +8006,39 @@
 [ 2018-09-18T19:16:42+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.043297s][吞吐率：23.10req/s] [内存消耗：1,381.26kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_tag_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_message_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_tag_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_tag_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:02+08:00 ] 127.0.0.1 GET /admin/goods/user_booking_list.html
+[ info ] www.ecshop4.com/admin/goods/user_booking_list.html [运行时间：0.050002s][吞吐率：20.00req/s] [内存消耗：1,529.48kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -6814,10 +8065,39 @@
 [ 2018-09-18T19:16:42+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.054620s][吞吐率：18.31req/s] [内存消耗：1,397.26kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_booking_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_tag_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_booking_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_booking_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:02+08:00 ] 127.0.0.1 GET /admin/goods/user_booking_list.html
+[ info ] www.ecshop4.com/admin/goods/user_booking_list.html [运行时间：0.043005s][吞吐率：23.25req/s] [内存消耗：1,380.47kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -6844,10 +8124,39 @@
 [ 2018-09-18T19:16:42+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.046609s][吞吐率：21.46req/s] [内存消耗：1,335.80kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_booking_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_booking_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_booking_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_booking_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:03+08:00 ] 127.0.0.1 GET /admin/goods/user_bonus.html
+[ info ] www.ecshop4.com/admin/goods/user_bonus.html [运行时间：0.050002s][吞吐率：20.00req/s] [内存消耗：1,536.49kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -6874,10 +8183,39 @@
 [ 2018-09-18T19:16:43+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.030531s][吞吐率：32.75req/s] [内存消耗：1,380.88kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_bonus',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_booking_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_bonus[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_bonus.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:04+08:00 ] 127.0.0.1 GET /admin/goods/user_affiliate.html
+[ info ] www.ecshop4.com/admin/goods/user_affiliate.html [运行时间：0.053002s][吞吐率：18.87req/s] [内存消耗：1,540.58kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -6904,10 +8242,39 @@
 [ 2018-09-18T19:16:43+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.040600s][吞吐率：24.63req/s] [内存消耗：1,335.80kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_affiliate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_bonus.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_affiliate[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_affiliate.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:04+08:00 ] 127.0.0.1 GET /admin/goods/user_comment_list.html
+[ info ] www.ecshop4.com/admin/goods/user_comment_list.html [运行时间：0.053002s][吞吐率：18.87req/s] [内存消耗：1,528.70kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -6934,10 +8301,39 @@
 [ 2018-09-18T19:16:43+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.050590s][吞吐率：19.77req/s] [内存消耗：1,381.26kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_comment_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_affiliate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_comment_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_comment_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:05+08:00 ] 127.0.0.1 GET /admin/goods/user_track_packages.html
+[ info ] www.ecshop4.com/admin/goods/user_track_packages.html [运行时间：0.051003s][吞吐率：19.61req/s] [内存消耗：1,533.81kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -6964,10 +8360,39 @@
 [ 2018-09-18T19:16:43+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.070375s][吞吐率：14.21req/s] [内存消耗：1,397.26kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_track_packages',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_comment_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_track_packages[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_track_packages.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:06+08:00 ] 127.0.0.1 GET /admin/goods/user_account_log.html
+[ info ] www.ecshop4.com/admin/goods/user_account_log.html [运行时间：0.050002s][吞吐率：20.00req/s] [内存消耗：1,536.77kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -6994,10 +8419,39 @@
 [ 2018-09-18T19:19:11+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.045569s][吞吐率：21.94req/s] [内存消耗：1,382.51kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_account_log',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_track_packages.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_account_log[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_account_log.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:07+08:00 ] 127.0.0.1 GET /admin/goods/user_message_list.html
+[ info ] www.ecshop4.com/admin/goods/user_message_list.html [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：1,380.47kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -7031,10 +8485,39 @@
 [ 2018-09-18T19:19:11+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.045375s][吞吐率：22.04req/s] [内存消耗：1,398.93kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_message_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_account_log.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_message_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_message_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:08+08:00 ] 127.0.0.1 GET /admin/goods/user_collection_list.html
+[ info ] www.ecshop4.com/admin/goods/user_collection_list.html [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：1,380.54kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -7068,10 +8551,39 @@
 [ 2018-09-18T19:19:11+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.061284s][吞吐率：16.32req/s] [内存消耗：1,382.89kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_collection_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_message_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_collection_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_collection_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:09+08:00 ] 127.0.0.1 GET /admin/goods/user_address_list.html
+[ info ] www.ecshop4.com/admin/goods/user_address_list.html [运行时间：0.063001s][吞吐率：15.87req/s] [内存消耗：1,580.33kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -7105,10 +8617,39 @@
 [ 2018-09-18T19:19:11+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.046983s][吞吐率：21.28req/s] [内存消耗：1,337.50kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_address_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_collection_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_address_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_address_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:10+08:00 ] 127.0.0.1 GET /admin/goods/user_order_list.html
+[ info ] www.ecshop4.com/admin/goods/user_order_list.html [运行时间：0.049003s][吞吐率：20.41req/s] [内存消耗：1,536.84kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -7142,10 +8683,39 @@
 [ 2018-09-18T19:20:30+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.030060s][吞吐率：33.27req/s] [内存消耗：1,382.53kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_order_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_address_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_order_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_order_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:11+08:00 ] 127.0.0.1 GET /admin/goods/user_address_list.html
+[ info ] www.ecshop4.com/admin/goods/user_address_list.html [运行时间：0.042976s][吞吐率：23.27req/s] [内存消耗：1,396.42kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -7179,10 +8749,39 @@
 [ 2018-09-18T19:20:30+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.067663s][吞吐率：14.78req/s] [内存消耗：1,398.98kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_address_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_order_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_address_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_address_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:17+08:00 ] 127.0.0.1 GET /admin/goods/user_address_list.html
+[ info ] www.ecshop4.com/admin/goods/user_address_list.html [运行时间：0.052998s][吞吐率：18.87req/s] [内存消耗：1,396.66kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -7216,10 +8815,40 @@
 [ 2018-09-18T19:20:30+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.072027s][吞吐率：13.88req/s] [内存消耗：1,382.86kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_address_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_order_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_address_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_address_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:21+08:00 ] 127.0.0.1 GET /admin/goods/user_address_list.html
+[ info ] www.ecshop4.com/admin/goods/user_address_list.html [运行时间：0.050030s][吞吐率：19.99req/s] [内存消耗：1,396.45kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -7253,10 +8882,39 @@
 [ 2018-09-18T19:20:30+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.077896s][吞吐率：12.84req/s] [内存消耗：1,337.51kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_address_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_address_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_address_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_address_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:22+08:00 ] 127.0.0.1 GET /admin/goods/user_order_list.html
+[ info ] www.ecshop4.com/admin/goods/user_order_list.html [运行时间：0.044998s][吞吐率：22.22req/s] [内存消耗：1,380.40kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -7290,10 +8948,39 @@
 [ 2018-09-18T19:20:43+08:00 ] 127.0.0.1 GET /index/index/images/online.swf
 [ info ] www.perject.com/index/index/images/online.swf [运行时间：0.029540s][吞吐率：33.85req/s] [内存消耗：1,116.08kb] [文件加载：32]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_order_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_address_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_order_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_order_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:24+08:00 ] 127.0.0.1 GET /admin/goods/user_list.html
+[ info ] www.ecshop4.com/admin/goods/user_list.html [运行时间：0.052961s][吞吐率：18.88req/s] [内存消耗：1,530.77kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'images',
@@ -7324,10 +9011,39 @@
 [ 2018-09-18T19:20:46+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.038519s][吞吐率：25.96req/s] [内存消耗：1,382.53kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_order_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:42+08:00 ] 127.0.0.1 GET /admin/goods/user_profile.html
+[ info ] www.ecshop4.com/admin/goods/user_profile.html [运行时间：0.052030s][吞吐率：19.22req/s] [内存消耗：1,565.95kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -7361,10 +9077,39 @@
 [ 2018-09-18T19:20:46+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.047857s][吞吐率：20.90req/s] [内存消耗：1,398.98kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_profile',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_profile[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_profile.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:43+08:00 ] 127.0.0.1 GET /admin/goods/user_order_list.html
+[ info ] www.ecshop4.com/admin/goods/user_order_list.html [运行时间：0.043996s][吞吐率：22.73req/s] [内存消耗：1,380.40kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -7398,10 +9143,39 @@
 [ 2018-09-18T19:20:46+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.061196s][吞吐率：16.34req/s] [内存消耗：1,337.51kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_order_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_profile.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_order_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_order_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:44+08:00 ] 127.0.0.1 GET /admin/goods/user_address_list.html
+[ info ] www.ecshop4.com/admin/goods/user_address_list.html [运行时间：0.051030s][吞吐率：19.60req/s] [内存消耗：1,396.42kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -7435,10 +9209,39 @@
 [ 2018-09-18T19:20:46+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.065071s][吞吐率：15.37req/s] [内存消耗：1,382.86kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_address_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_order_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_address_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_address_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:44+08:00 ] 127.0.0.1 GET /admin/goods/user_collection_list.html
+[ info ] www.ecshop4.com/admin/goods/user_collection_list.html [运行时间：0.044001s][吞吐率：22.73req/s] [内存消耗：1,380.54kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -7472,10 +9275,39 @@
 [ 2018-09-18T19:21:39+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.029477s][吞吐率：33.92req/s] [内存消耗：1,046.16kb] [文件加载：28]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_collection_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_address_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_collection_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_collection_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:20:45+08:00 ] 127.0.0.1 GET /admin/goods/user_address_list.html
+[ info ] www.ecshop4.com/admin/goods/user_address_list.html [运行时间：0.042996s][吞吐率：23.26req/s] [内存消耗：1,396.46kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -7506,10 +9338,39 @@
 [ 2018-09-18T19:22:04+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.039506s][吞吐率：25.31req/s] [内存消耗：1,045.93kb] [文件加载：28]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_address_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_collection_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_address_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_address_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:21:04+08:00 ] 127.0.0.1 GET /admin/goods/user_logout.html
+[ info ] www.ecshop4.com/admin/goods/user_logout.html [运行时间：0.061001s][吞吐率：16.39req/s] [内存消耗：1,516.06kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -7527,6 +9388,27 @@
 )
 [ info ] [ PARAM ] array (
 )
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_address_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_logout[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
@@ -7534,15 +9416,31 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
 [ 2018-09-18T19:22:30+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.251023s][吞吐率：3.98req/s] [内存消耗：1,382.27kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:21:07+08:00 ] 127.0.0.1 GET /admin/goods/admin.html
+[ info ] www.ecshop4.com/admin/goods/admin.html [运行时间：0.061997s][吞吐率：16.13req/s] [内存消耗：1,341.15kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -7575,10 +9473,36 @@
 [ 2018-09-18T19:22:31+08:00 ] 127.0.0.1 GET /index/index/menu.html
 [ info ] www.perject.com/index/index/menu.html [运行时间：0.053254s][吞吐率：18.78req/s] [内存消耗：1,398.98kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_logout.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105; PHPSESSID=9pmu3ce22v23nb72ctti5heqm5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:21:49+08:00 ] 127.0.0.1 GET /admin/goods/user_logout.html
+[ info ] www.ecshop4.com/admin/goods/user_logout.html [运行时间：0.061998s][吞吐率：16.13req/s] [内存消耗：1,375.40kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'menu',
@@ -7597,6 +9521,27 @@
 )
 [ info ] [ PARAM ] array (
 )
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_address_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105; PHPSESSID=9pmu3ce22v23nb72ctti5heqm5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_logout[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
@@ -7604,6 +9549,7 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\index\controller\Index->menu[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
 [ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_menu.html [ array (
 ) ]
@@ -7612,10 +9558,25 @@
 [ 2018-09-18T19:22:31+08:00 ] 127.0.0.1 GET /index/index/top.html
 [ info ] www.perject.com/index/index/top.html [运行时间：0.120431s][吞吐率：8.30req/s] [内存消耗：1,382.86kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:21:52+08:00 ] 127.0.0.1 GET /admin/goods/admin.html
+[ info ] www.ecshop4.com/admin/goods/admin.html [运行时间：0.052002s][吞吐率：19.23req/s] [内存消耗：1,341.15kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'top',
@@ -7649,10 +9610,36 @@
 [ 2018-09-18T19:22:31+08:00 ] 127.0.0.1 GET /index/index/main.html
 [ info ] www.perject.com/index/index/main.html [运行时间：0.135226s][吞吐率：7.40req/s] [内存消耗：1,337.51kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_logout.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105; PHPSESSID=9pmu3ce22v23nb72ctti5heqm5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:21:53+08:00 ] 127.0.0.1 GET /admin/goods/user_logout.html
+[ info ] www.ecshop4.com/admin/goods/user_logout.html [运行时间：0.052000s][吞吐率：19.23req/s] [内存消耗：1,375.40kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'index',
     2 => 'main',
@@ -7671,6 +9658,27 @@
 )
 [ info ] [ PARAM ] array (
 )
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_address_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105; PHPSESSID=9pmu3ce22v23nb72ctti5heqm5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_logout[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
@@ -7678,6 +9686,7 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\index\controller\Index->main[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\index\controller\Index.php ]
 [ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html [ array (
 ) ]
@@ -7686,10 +9695,25 @@
 [ 2018-09-18T19:22:44+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.049641s][吞吐率：20.14req/s] [内存消耗：1,381.69kb] [文件加载：36]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:22:09+08:00 ] 127.0.0.1 GET /admin/goods/user_address_list.html
+[ info ] www.ecshop4.com/admin/goods/user_address_list.html [运行时间：0.062002s][吞吐率：16.13req/s] [内存消耗：1,396.95kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -7721,10 +9745,40 @@
 [ 2018-09-18T19:23:59+08:00 ] 127.0.0.1 GET /
 [ info ] www.perject.com/ [运行时间：0.194694s][吞吐率：5.14req/s] [内存消耗：1,514.95kb] [文件加载：38]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_address_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_collection_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105; PHPSESSID=9pmu3ce22v23nb72ctti5heqm5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_address_list[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_address_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:22:10+08:00 ] 127.0.0.1 GET /admin/goods/user_logout.html
+[ info ] www.ecshop4.com/admin/goods/user_logout.html [运行时间：0.051999s][吞吐率：19.23req/s] [内存消耗：1,375.41kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -7742,6 +9796,27 @@
 )
 [ info ] [ PARAM ] array (
 )
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_address_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105; PHPSESSID=9pmu3ce22v23nb72ctti5heqm5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_logout[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
@@ -7749,7 +9824,11 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\tpl\dispatch_jump.tpl [ array (
+=======
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\tpl\dispatch_jump.tpl [ array (
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
   0 => 'code',
   1 => 'msg',
   2 => 'data',
@@ -7758,13 +9837,20 @@
 ) ]
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2018-09-18T19:24:02+08:00 ] 127.0.0.1 GET /index/login/login.html
 [ info ] www.perject.com/index/login/login.html [运行时间：0.034839s][吞吐率：28.70req/s] [内存消耗：1,378.08kb] [文件加载：35]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+[ 2018-09-18T19:22:13+08:00 ] 127.0.0.1 GET /admin/admin/user.html
+[ info ] www.ecshop4.com/admin/admin/user.html [运行时间：0.058002s][吞吐率：17.24req/s] [内存消耗：1,374.31kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'index',
     1 => 'login',
     2 => 'login',
@@ -7791,11 +9877,40 @@
 [ 2018-09-18T19:24:02+08:00 ] 127.0.0.1 GET /static/css/font/adminthemes-webfont.woff2
 [ info ] www.perject.com/static/css/font/adminthemes-webfont.woff2 [运行时间：0.036203s][吞吐率：27.62req/s] [内存消耗：1,050.90kb] [文件加载：28]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_logout.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105; PHPSESSID=9pmu3ce22v23nb72ctti5heqm5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->user[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\user.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T19:22:13+08:00 ] 127.0.0.1 GET /static/picture/bottom.jpg
+[ info ] www.ecshop4.com/static/picture/bottom.jpg [运行时间：0.070996s][吞吐率：14.09req/s] [内存消耗：1,050.58kb] [文件加载：28]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'static',
+<<<<<<< HEAD
     1 => 'css',
     2 => 'font',
   ),
@@ -7810,18 +9925,40 @@
   'accept-encoding' => 'gzip, deflate',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'cookie' => 'PHPSESSID=qafc42nggc7dvq21m5kgdq7h41',
+=======
+    1 => 'picture',
+    2 => 'bottom.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/admin/user.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105; PHPSESSID=9pmu3ce22v23nb72ctti5heqm5',
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 )
 [ info ] [ PARAM ] array (
 )
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2018-09-18T19:24:03+08:00 ] 127.0.0.1 GET /static/css/font/adminthemes-webfont.woff
 [ info ] www.perject.com/static/css/font/adminthemes-webfont.woff [运行时间：0.035692s][吞吐率：28.02req/s] [内存消耗：1,050.91kb] [文件加载：28]
 [ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+=======
+[ 2018-09-18T19:22:19+08:00 ] 127.0.0.1 GET /admin/goods/user_logout.html
+[ info ] www.ecshop4.com/admin/goods/user_logout.html [运行时间：0.058002s][吞吐率：17.24req/s] [内存消耗：1,375.41kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'css',
     2 => 'font',
@@ -7861,6 +9998,120 @@
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.56',
   'accept' => '*/*',
   'referer' => 'http://www.perject.com/static/css/style.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qafc42nggc7dvq21m5kgdq7h41',
+)
+[ info ] [ PARAM ] array (
+)
+=======
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'user_logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ecshop4.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.ecshop4.com/admin/goods/user_address_list.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_dde6ba2851f3db0ddc415ce0f895822e=1536712131,1536799780,1536930101,1536981105; PHPSESSID=9pmu3ce22v23nb72ctti5heqm5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->user_logout[ C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+>>>>>>> 2b01580aae9f7fdeaa6f2a06ac257dbf735a1203
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T20:08:45+08:00 ] 127.0.0.1 GET /
+[ info ] www.perject.com/ [运行时间：0.142295s][吞吐率：7.03req/s] [内存消耗：1,579.27kb] [文件加载：37]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.56',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qafc42nggc7dvq21m5kgdq7h41',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\admin->index[ G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/admin\view\admin\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T20:08:45+08:00 ] 127.0.0.1 GET /admin/js/maps/swiper.min.js.map
+[ info ] www.perject.com/admin/js/maps/swiper.min.js.map [运行时间：0.041051s][吞吐率：24.36req/s] [内存消耗：1,056.18kb] [文件加载：29]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'js',
+    2 => 'maps',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.56',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qafc42nggc7dvq21m5kgdq7h41',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T20:08:45+08:00 ] 127.0.0.1 GET /animated_favicon.gif
+[ info ] www.perject.com/animated_favicon.gif [运行时间：0.029907s][吞吐率：33.44req/s] [内存消耗：1,050.73kb] [文件加载：28]
+[ info ] [ LANG ] G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'animated_favicon.gif',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.perject.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.56',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.perject.com/',
   'accept-encoding' => 'gzip, deflate',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'cookie' => 'PHPSESSID=qafc42nggc7dvq21m5kgdq7h41',

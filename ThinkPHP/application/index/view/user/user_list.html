@@ -147,7 +147,11 @@
     {/in}
     </td>
     <td>{$v.user_money}</td>
+<<<<<<< HEAD
+    <td>{$v.frozen_money}</td>
+=======
     <td>{$v.frozen_money}</td>{
+>>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
         <td>{$v.pay_points}</td>
         <td>{$v.rank_points}</td>
         <td align="center">{$v.reg_time}</td>
@@ -159,22 +163,31 @@
   {/volist}
 </table>
 {$data->render()}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
 </div>
 <!-- end users list -->
 </form>
 <script src="../../../static/js/jquery-2.1.4.min.js"></script>
 <script>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
 function show(){
   var date = new Date();
   var a = date.toLocaleString();
   document.getElementById('time').innerHTML = a;
 }
 setInterval('show()',1000);
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
     $(document).on('click','.status',function(){
         var status = $(this).attr('value');
         var user_id = $(this).attr('id');
@@ -222,7 +235,10 @@ setInterval('show()',1000);
   </tr>
   </table>
 </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
 <!--
 <embed src="static/flash/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
 -->
@@ -232,7 +248,10 @@ setInterval('show()',1000);
   <embed src="../../../static/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
 </body>
 </html>

@@ -50,6 +50,23 @@ class Goods extends Controller
 //        var_dump($data);die;
         return $this->fetch('goods_list',['data'=>$data,'arr'=>$arr,'res'=>$res]);
     }
+    //批量删除
+    public function goods_pishan(){
+        $g_id = input('get.g_id');
+        $res = Db::table('good')->where("g_id in($g_id)")->update(["is_show" => '0']);
+        if($res){
+            $arr['msg'] = 1;
+            $arr['data'] = "$g_id";
+            // $arr['msg'] = '成功';
+        }else{
+            $arr['msg'] = 0;
+            $arr['data'] = '"$g_id"';
+            // $arr['msg'] = '失败';
+        }
+
+        echo json_encode($arr);
+    }
+
     //商品列表即点即改
     public function goods_show(){
         $g_id = input('get.g_id');
