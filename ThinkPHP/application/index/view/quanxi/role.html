@@ -3,24 +3,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<<<<<<< HEAD
-  <base href="\">
-=======
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 <title>ECSHOP 管理中心 - 角色管理 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/static/css/general_2.css" rel="stylesheet" type="text/css" />
-<link href="/static/css/main_2.css" rel="stylesheet" type="text/css" />
+<link href="../../../static/css/general_2.css" rel="stylesheet" type="text/css" />
+<link href="../../../static/css/main_2.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
 <!--云起激活系统面板-->
-<<<<<<< HEAD
-<div class="panel-hint panel-icloud" id="panelCloud">
-=======
 <!-- <div class="panel-hint panel-icloud" id="panelCloud">
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
   <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
   <div class="panel-title">
     <span class="tit">您需要激活系统</span>
@@ -39,21 +31,13 @@
       <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
     </div>
   </div>
-<<<<<<< HEAD
-</div>
-=======
 </div> -->
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
 <!--云起激活系统面板-->
 <!--遮罩-->
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
-<<<<<<< HEAD
-      <a class="btn btn-right" href="{:url('quanxi/role_add')}">添加角色</a>
-=======
       <a class="btn btn-right" href="role_add.html">添加角色</a>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
   
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;角色管理 </span>
   <div style="clear:both"></div>
@@ -72,11 +56,7 @@
     <td class="first-cell" ><?=$v['role_desc'];?></td>
     <td align="center">
       <a href="role_edit.html?id=<?=$v['role_id'];?>" title="编辑">编辑</a>&nbsp;&nbsp;
-<<<<<<< HEAD
-      <a href="javascript:;" title="移除">移除</a></td>
-=======
-      <a href="javascript:;" onclick="listTable.remove(<?=$v['role_id'];?>, '您确认要删除这条记录吗?')" title="移除">移除</a></td>
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
+      <a href="{:url('delete')}?id=<?=$v['role_id'];?>" onclick="listTable.remove(<?=$v['role_id'];?>, '您确认要删除这条记录吗?')" title="移除">移除</a></td>
   </tr>
   <?php } ?>
   </table>
@@ -111,11 +91,7 @@
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
   <param name="movie" value="images/online.swf">
   <param name="quality" value="high">
-<<<<<<< HEAD
-  <embed src="/static/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
-=======
   <embed src="images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
->>>>>>> caef6ce988b066b906a5933aa36a429782ee76f3
   </embed>
 </object>
 

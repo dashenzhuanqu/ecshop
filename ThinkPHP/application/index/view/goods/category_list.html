@@ -97,8 +97,7 @@ var filter_attr_not_selected = "请选择筛选属性";
 <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
   <tr>
     <th>分类名称</th>
-    <th>商品数量</th>
-    <th>数量单位</th>
+    <th>商品描述</th>
     <th>导航栏</th>
     <th>是否显示</th>
     <th>价格分级</th>
@@ -109,15 +108,15 @@ var filter_attr_not_selected = "请选择筛选属性";
     <tr align="center" class="0" id="0_1">
     <td align="left" class="first-cell" >
             <img src="../../../static/picture/menu_minus.gif" id="icon_0_1" width="9" height="9" border="0" style="margin-left:0em" />
-            <span><a href="goods.html?act=list&cat_id=1">{$v.cat_name}</a></span>
+            <span><a href="{:url('goods/goods')}?id={$v.cat_id}"><?php echo str_repeat("&nbsp;&nbsp;&nbsp;├",substr_count($v['new'],"-")-1) ?>
+              {$v.cat_name}</a></span>
         </td>
     <td width="10%">{$v.cat_desc}</td>
-    <td width="10%">{$v.filter_attr}<span onclick="listTable.edit(this, 'edit_measure_unit', 1)"><!--  -->&nbsp;&nbsp;&nbsp;&nbsp;<!--  --></span></td>
     <td width="10%">
-      {in name="$v.parent_id" value="1"}
-      <img src="../../../static/picture/yes.svg"  class="parent_id" id="{$v.cat_id}" value="{$v.parent_id}" width="20"/>
+      {in name="$v.is_nav" value="1"}
+      <img src="../../../static/picture/yes.svg"  class="is_nav" id="{$v.cat_id}" value="{$v.is_nav}" width="20"/>
       {else/}
-      <img src="../../../static/picture/no.svg"  class="parent_id" id="{$v.cat_id}" value="{$v.parent_id}"  width="20"/>
+      <img src="../../../static/picture/no.svg"  class="is_nav" id="{$v.cat_id}" value="{$v.is_nav}"  width="20"/>
       {/in}</td>
     <td width="10%">
       {in name="$v.is_show" value="1"}
@@ -125,7 +124,7 @@ var filter_attr_not_selected = "请选择筛选属性";
       {else/}
       <img src="../../../static/picture/no.svg"  class="is_show" id="{$v.cat_id}" value="{$v.is_show}"  width="20"/>
       {/in}</td>
-    <td><span onclick="listTable.edit(this, 'edit_grade', 1)">{$v.is_nav}</span></td>
+    <td><span>{$v.parent_id}</span></td>
     <td width="10%" align="right"><span onclick="listTable.edit(this, 'edit_sort_order', 1)">{$v.sort}</span></td>
     <td width="24%" align="center">
       <a href="{:url('goods/category_move')}?id={$v.cat_id}">转移商品</a> |
@@ -187,7 +186,7 @@ var filter_attr_not_selected = "请选择筛选属性";
             }
         })
     });
-    $(document).on('click','.parent_id',function(){
+    $(document).on('click','.is_nav',function(){
         var status = $(this).attr('value');
         var cat_id = $(this).attr('id');
         var obj = $(this);

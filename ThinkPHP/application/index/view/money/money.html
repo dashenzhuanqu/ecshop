@@ -4,7 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="../../../static/css/general.css" rel="stylesheet" type="text/css">
     <link href="../../../static/css/main.css" rel="stylesheet" type="text/css">
-    <script src="//hm.baidu.com/hm.js?dde6ba2851f3db0ddc415ce0f895822e"></script><script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>
+    <!--<script src="//hm.baidu.com/hm.js?dde6ba2851f3db0ddc415ce0f895822e"></script><script type="text/javascript" src="../../../static/js/transport.js"></script><script type="text/javascript" src="../../../static/js/common.js"></script>-->
+    <script src="../../../jquery-2.1.4.min.js"></script>
     <style>
         .panel-icloud .panel-right iframe {
             height: 300px;
@@ -95,7 +96,10 @@
 
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;&gt;&nbsp;&nbsp;红包类型 </span>
     <div style="clear:both"></div>
-</h1><script type="text/javascript" src="../../../static/js/utils.js"></script><script type="text/javascript" src="../../../static/js/listtable.js"></script><!-- start bonus_type list -->
+</h1>
+<!--<script type="text/javascript" src="../../../static/js/utils.js"></script>-->
+<!--<script type="text/javascript" src="../../../static/js/listtable.js"></script>-->
+<!-- start bonus_type list -->
 <form method="post" action="" name="listForm">
     <div class="list-div" id="listDiv">
 
@@ -103,7 +107,6 @@
             <tbody>
             <tr>
                 <th><a href="javascript:listTable.sort('type_name'); ">类型名称</a></th>
-                <th><a href="javascript:listTable.sort('send_type'); ">发放类型</a></th>
                 <th><a href="javascript:listTable.sort('type_money'); ">红包金额</a></th>
                 <th><a href="javascript:listTable.sort('min_amount'); ">订单下限</a></th>
                 <th>发放数量</th>
@@ -111,12 +114,18 @@
                 <th>操作</th>
             </tr>
             <?php foreach($arr as $k => $v){ ?>
-                <tr>
-                    <td class="first-cell" style="background-color: rgb(255, 255, 255);"><span onclick="listTable.edit(this, 'edit_type_name', 1)"><?= $v['type_type']?></span></td>
-                    <td style="background-color: rgb(255, 255, 255);">按用户发放</td>
-                    <td align="right" style="background-color: rgb(255, 255, 255);"><span onclick="listTable.edit(this, 'edit_type_money', 1)">100.00</span></td>
-                    <td align="right" style="background-color: rgb(255, 255, 255);"><span onclick="listTable.edit(this, 'edit_min_amount', 1)">0.00</span></td>
-                    <td align="right" style="background-color: rgb(255, 255, 255);"><span>0</span></td>
+                <tr id="<?= $v['type_id']?>">
+                    <td class="first-cell" id="types" style="background-color: rgb(255, 255, 255);">
+                        <span class="author"><?= $v['type_type']?></span>
+                        <input type="text" value="<?= $v['type_type']?>" style="display: none;" class="inputAuthor" where="<?= $v['type_id']?>">
+                    </td>
+                    <td align="right" style="background-color: rgb(255, 255, 255);">
+                        <?= $v['money_money']?>
+                    </td>
+                    <td align="right" style="background-color: rgb(255, 255, 255);">
+                        <?= $v['money_money']?>
+                    </td>
+                    <td align="right" style="background-color: rgb(255, 255, 255);"><?= $v['type_money']?></td>
                     <td align="right" style="background-color: rgb(255, 255, 255);">0</td>
                     <td align="right" style="background-color: rgb(255, 255, 255);">
                         <a href="bonus.php?act=send&amp;id=1&amp;send_by=0">发放</a> |
@@ -181,5 +190,35 @@
 
 </object>
 
+</body>
+</html>
+<script type="text/javascript">
 
-</body></html>
+    $(document).on('click','.author',function(){
+        $(this).hide();
+        $(this).next().show();
+        var content=$(this).next().val();
+        $(this).next().val("");
+        $(this).next().focus();
+        $(this).next().val(content)
+        });
+
+        $(document).on('blur','.inputAuthor',function(){
+            $(this).hide();
+            $(this).prev().show();
+
+            var type_type =$(this).val();
+            var type_id=$(this).attr('where');
+            $.ajax({
+                url:"__URL__/gai",
+                type:"post",
+                data:{type_type:type_type,type_id:type_id},
+                success:function(e){
+                    if(e){
+                        history.go(0)
+                    }
+                }
+        })
+    })
+
+</script>

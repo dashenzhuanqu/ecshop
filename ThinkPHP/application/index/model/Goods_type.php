@@ -18,5 +18,6 @@ class Goods_type extends Model{
     public function upd($request,$t_id){
         return Db::table('goods_type')->where("t_id=$t_id")->update($request);
     }
+
 }
 ?>

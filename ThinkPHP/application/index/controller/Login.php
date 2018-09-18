@@ -10,13 +10,11 @@ use think\Controller;
 use think\Db;
 use think\Request;
 use think\Session;
-
 /**
  * Class Login
  * @package app\index\controller
  */
-class Login extends Controller
-{
+class Login extends Controller{
     /**
      * @return \think\response\View
      */
@@ -24,15 +22,13 @@ class Login extends Controller
     {
         return view('login');
     }
-
     /**
      * @return array
      * @throws \think\db\exception\DataNotFoundException
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException
      */
-    public function login_do()
-    {
+    public function login_do(){
         $request = Request::instance();
         $post = $request->post();
         $code = 
@@ -50,7 +46,6 @@ class Login extends Controller
             return ['code'=>101,'message'=>'帐号不正确'];
         }
     }
-
     /*public function verify()
     {
         $captcha = new Captcha();
@@ -62,5 +57,9 @@ class Login extends Controller
         $captcha = new Captcha();
         return $captcha->check($code, $id);
     }*/
-
+    //退出
+    public function privilege_logout(){
+        session(null);//退出清空session
+        return $this->success('退出成功',url('login'));//跳转到登录页面
+    }
 }

@@ -62,4 +62,38 @@ class Add extends Controller{
             return $this->fetch('success');
         }
     }
+
+    public function add_select(){
+        $ad_id = input('get.ad_id');
+//        print_r($ad_id);
+        $data = model('ad')->cha($ad_id);
+//        print_r($data);
+        if($data){
+            $this->assign('data',$data);
+            return $this->fetch('update');
+        }
+    }
+
+    public function Ad_update(){
+//        echo "123";
+        $ad_id = input('post.ad_id');
+//        print_r($ad_id);
+        $request = Request::instance()->post();
+        $db = new Ad();
+        $data = $db->save($request,$ad_id);
+        if($data){
+            return $this->fetch('success');
+        }else{
+            echo "网络异常";
+        }
+    }
+
+    public function gai(){
+        $ad_id=input("post.ad_id");
+//        return $ad_id;die;
+        $ad_name=input("post.ad_name");
+
+        $data=model('ad')->ajaxChange($ad_id,$ad_name);
+        return $data;
+    }
 }
