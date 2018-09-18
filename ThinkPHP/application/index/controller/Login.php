@@ -17,6 +17,8 @@ use think\Session;
  */
 class Login extends Controller
 {
+   
+
     /**
      * @return \think\response\View
      */
@@ -35,7 +37,6 @@ class Login extends Controller
     {
         $request = Request::instance();
         $post = $request->post();
-        $code = 
         $pwd = md5($post['pwd']);
         $data = Db::table('login')->where('username',$post['username'])->select();
         //var_dump($post);die;
@@ -51,16 +52,23 @@ class Login extends Controller
         }
     }
 
-    /*public function verify()
-    {
-        $captcha = new Captcha();
-        return $captcha->entry();   
-    }
-    // 检测输入的验证码是否正确，$code为用户输入的验证码字符串，$id多个验证码标识
-    function check_verify($code, $id = '')
-    {
-        $captcha = new Captcha();
-        return $captcha->check($code, $id);
-    }*/
+    //退出登录
+    public function logout()
+	{ 
+	   session(null);
+	   $this->success('登出成功！',url('/admin/login/index'));
+	}
+	
+	   // 验证码检测
+       public function check($code='')
+       {
+           if (!captcha_check($code)) {
+               $this->error('验证码错误');
+           } else {
+               return true;
+           }
+       }
+   
+
 
 }
