@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:97:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\login\login.html";i:1537260335;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,19 +29,19 @@ $(document).ready(function() {
     var username = $(".user_icon .login_txtbx").val();
     var pwd = $(".pwd_icon .login_txtbx").val();
     $.ajax({
-                url: '{:url("Login/login_do")}',
+                url: '<?php echo url("Login/login_do"); ?>',
                 type: 'post',
                 dataType: 'json',
                 data: {'username': username ,'pwd':pwd},
                 success:function (msg) {
                     if (msg.code == 101) {
                         if (confirm('帐号没有注册,请联系管理员!')){
-                            location.href="{:url('Login/login')}";
+                            location.href="<?php echo url('Login/login'); ?>";
                         }
                     } else if(msg.code == 102) {
                         alert('密码不正确')
                     }else{
-                        location.href="{:url('Index/index')}";
+                        location.href="<?php echo url('Index/index'); ?>";
                     }
                 }
             })
@@ -50,7 +51,6 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-<center>
 <dl class="admin_login">
  <dt>
   <strong>站点后台管理系统</strong>
@@ -78,6 +78,5 @@ $(document).ready(function() {
   <p>陕B2-20080224-1</p>
  </dd>
 </dl>
-</center>
 </body>
 </html>
