@@ -11,45 +11,7 @@
 <link href="admin/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="admin/js/transport.js"></script><script type="text/javascript" src="admin/js/common.js"></script><script type="text/javascript" src="admin/js/user.js"></script></head>
 <body>
-<script type="text/javascript">
-var process_request = "正在处理您的请求...";
-</script>
-<div class="top-bar">
-  <div class="fd_top fd_top1">
-    <div class="bar-left">
-          <div class="top_menu1"> <script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
- <font > 您好，<font class="f4_b">root</font>, 欢迎您回来！ <a href="{:url('admin/user')}">用户中心</a>| <a href="{:url('user_logout')}">退出</a> </font>  </font> </div>
-    </div>
-    <div class="bar-cart">
-      <div class="fl cart-yh">
-        <a href="{:url('admin/user')}" class="">用户中心</a>
-      </div>
-             <div class="cart" id="ECS_CARTINFO"> <a href="{:url('admin/flow')}" title="查看购物车">购物车(0)</a> </div>
-    </div>
-  </div>
-</div>
-<div class="nav-menu">
-  <div class="wrap">
-    <div class="logo"><a href="index.php" name="top"><img src="admin/picture/logo.gif" /></a></div>
-    <div id="mainNav" class="clearfix maxmenu">
-      <div class="m_left">
-      <ul>
-        <li><a href="index.php" class="cur">首页</a></li>
-              </ul>
-      </div>
-    </div>
-    <div class="serach-box">
-      <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td width="135"><input name="keywords" type="text" id="keyword" value="" class="B_input"  /></td>
-            <td><input name="imageField" type="submit" value="搜索" class="go" style="cursor:pointer;" /></td>
-          </tr>
-        </table>
-      </form>
-    </div>
-  </div>
-</div>
+{include file='module/header'}
 <div class="clear0 "></div>
 <div class="block box">
   <div id="ur_here"> <div class="path"><div>当前位置: <a href=".">首页</a> <code>&gt;</code> 用户中心</div></div> </div>
@@ -59,23 +21,11 @@ var process_request = "正在处理您的请求...";
   <div class="AreaL">
     <div class="box">
       <div class="box_1">
-        <div class="userCenterBox"> <div class="userMenu">
-  <a href="{:url('user_list')}" ><img src="admin/picture/u1.gif"> 欢迎页</a>
-  <a href="{:url('user_profile')}"><img src="admin/picture/u2.gif"> 用户信息</a>
-  <a href="{:url('user_order_list')}"><img src="admin/picture/u3.gif"> 我的订单</a>
-  <a href="{:url('user_address_list')}"><img src="admin/picture/u4.gif"> 收货地址</a>
-  <a href="{:url('user_collection_list')}"><img src="admin/picture/u5.gif"> 我的收藏</a>
-  <a href="{:url('user_message_list')}"><img src="admin/picture/u6.gif"> 我的留言</a>
-  <a href="{:url('user_tag_list')}"><img src="admin/picture/u7.gif"> 我的标签</a>
-  <a href="{:url('user_booking_list')}"><img src="admin/picture/u8.gif"> 缺货登记</a>
-  <a href="{:url('user_bonus')}"><img src="admin/picture/u9.gif"> 我的红包</a>
-  <a href="{:url('user_affiliate')}"><img src="admin/picture/u10.gif"> 我的推荐</a>
-  <a href="{:url('user_comment_list')}"><img src="admin/picture/u11.gif"> 我的评论</a>
-            <!--<a href="user.php?act=group_buy">我的团购</a>-->
-  <a href="{:url('user_track_packages')}"><img src="admin/picture/u12.gif"> 跟踪包裹</a>
-  <a href="{:url('user_account_log')}"class="curs"><img src="admin/picture/u13.gif">资金管理</a>
-  <a href="{:url('user_logout')}" style="background:none; text-align:right; margin-right:10px;"><img src="admin/picture/bnt_sign.gif"></a>
-</div></div>
+        <div class="userCenterBox">
+            <div class="userMenu">
+            {include file='module/in'}
+            </div>
+        </div>
       </div>
     </div>
   </div>
@@ -101,17 +51,7 @@ var process_request = "正在处理您的请求...";
   </div>
 </div>
 <div class="blank"></div>
-<div class="foot-body">
-  <div class="bads"><img src="admin/picture/bottom.jpg"></div>
-  <div class="clear10"></div>
-  <div class="blank"></div>
-<div class="footer_info"> &copy; 2005-2018 ECSHOP 版权所有，并保留所有权利。       <br />
-      <a href="http://xyunqi.com/products/ecshop?from=nav" target="_blank" style=" font-family:Verdana; font-size:11px;">Powered&nbsp;by&nbsp;<strong><span style="color: #3366FF">ECShop</span>&nbsp;<span style="color: #FF9966">v4.0.0</span></strong></a>&nbsp;<a href="http://www.ecshop.com/license.php?product=ecshop_b2c&url=http%3A%2F%2F127.0.0.1%2FECShop_V4.0.0_UTF8_release0830%2Fsource%2Fecshop%2F" target="_blank"
->&nbsp;&nbsp;Licensed</a><br />
-            <div>ICP备案证书号:<a href="http://www.miibeian.gov.cn/" target="_blank"></a></div>
-    </div>
-  <div class="clear10"></div>
-</div>
+{include file='module/tail'}
 </body>
 <script type="text/javascript">
 var msg_title_empty = "留言标题为空";

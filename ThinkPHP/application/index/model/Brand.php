@@ -18,6 +18,10 @@ class Brand extends Model{
     public function del($id){
         return Db::table('brand')->delete($id);
     }
+
+    public function show(){
+        return Db::table('good')->select();
+    }
 }
 
 ?>

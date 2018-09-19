@@ -1,11 +1,8 @@
-﻿<!-- $Id: users_list.htm 17053 2010-03-15 06:50:26Z sxc_shop $ -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>ECSHOP 管理中心 - 会员列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
 <link href="../../../static/css/general.css" rel="stylesheet" type="text/css" />
 <link href="../../../static/css/main.css" rel="stylesheet" type="text/css" />
 <style>
@@ -90,7 +87,6 @@
 </div> -->
 <!--云起激活系统面板-->
 <!--遮罩-->
-
 <div class="mask-black" id="CMask"></div>
 <!--遮罩-->
 <h1>
@@ -100,7 +96,6 @@
     <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;>&nbsp;&nbsp;会员列表 </span>
   <div style="clear:both"></div>
 </h1>
-
 <div class="form-div">
   <form action="{:url('user/user_search')}">
     &nbsp;会员等级 <select name="user_rank"><option value="0">所有等级</option><option value="1">注册用户</option><option value="3">代销用户</option><option value="2">vip</option></select>
@@ -112,10 +107,7 @@
 
 </div>
 
-
-
 <form method="POST" action="" name="listForm" onsubmit="return confirm_bath()">
-
 <!-- start users list -->
 <div class="list-div" id="listDiv">
 <!--用户列表部分-->
@@ -147,11 +139,8 @@
     {/in}
     </td>
     <td>{$v.user_money}</td>
-<<<<<<< HEAD
     <td>{$v.frozen_money}</td>
-=======
-    <td>{$v.frozen_money}</td>{
->>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
+    <td>{$v.frozen_money}</td>
         <td>{$v.pay_points}</td>
         <td>{$v.rank_points}</td>
         <td align="center">{$v.reg_time}</td>
@@ -163,31 +152,18 @@
   {/volist}
 </table>
 {$data->render()}
-<<<<<<< HEAD
-=======
-
->>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
 </div>
 <!-- end users list -->
 </form>
 <script src="../../../static/js/jquery-2.1.4.min.js"></script>
 <script>
-<<<<<<< HEAD
-=======
 
->>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
 function show(){
   var date = new Date();
   var a = date.toLocaleString();
   document.getElementById('time').innerHTML = a;
 }
 setInterval('show()',1000);
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
     $(document).on('click','.status',function(){
         var status = $(this).attr('value');
         var user_id = $(this).attr('id');
@@ -235,10 +211,6 @@ setInterval('show()',1000);
   </tr>
   </table>
 </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
 <!--
 <embed src="static/flash/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
 -->
@@ -248,10 +220,5 @@ setInterval('show()',1000);
   <embed src="../../../static/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
 </body>
 </html>

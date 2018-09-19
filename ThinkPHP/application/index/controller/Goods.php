@@ -7,6 +7,8 @@ use think\db\Query;
 use think\Db;
 use app\index\model\Good;
 use app\index\model\Brand;
+use app\index\model\Comment;
+use app\index\model\Areply;
 use app\index\model\Classify;
 use app\index\model\Goods_type;
 use app\index\model\Goods_trash;
@@ -42,12 +44,7 @@ class Goods extends Controller
             $where['goods_name']= ["like","%$search%"];
         }
         $model=new Good();
-<<<<<<< HEAD
-        $data=$model->where($where)->where('is_show',1)->where('is_delete',1)->paginate(['query'=>Request::instance()->param()]
-=======
-        $data=$model->where($where)->where('is_delete',1)->paginate(['query'=>Request::instance()->param()]
->>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
-        );
+        $data=$model->where($where)->where('is_show',1)->where('is_delete',1)->paginate(['query'=>Request::instance()->param()]);
         $cate=new Classify();
         $res=$cate->getPathList("cat_id");
         $arr=Db::table('brand')->select();
@@ -189,7 +186,6 @@ class Goods extends Controller
         }else{
             echo "<script>alert('上传失败');location.href='goods_add'</script>";
         }
-<<<<<<< HEAD
     }
     //商品上传
     public function upload(){
@@ -210,28 +206,6 @@ class Goods extends Controller
             return $file->getError();
         }
     }
-=======
-    }
-    //商品上传
-    public function upload(){
-        // 获取表单上传文件 例如上传了001.jpg
-        $file = request()->file('goods_img');
-        // 移动到框架应用根目录/public/uploads/ 目录下
-        $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
-        if($info){
-            // 成功上传后 获取上传信息
-            // 输出 jpg
-//           echo $info->getExtension();
-            // 输出 20160820/42a79759f284b767dfcb2a0197904287.jpg
-            return $info->getSaveName();
-            // 输出 42a79759f284b767dfcb2a0197904287.jpg
-//           echo $info->getFilename();
-        }else{
-            // 上传失败获取错误信息
-            return $file->getError();
-        }
-    }
->>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
     //编辑商品信息
     public function goods_a(){
         $g_id=input('post.g_id');
@@ -388,10 +362,39 @@ class Goods extends Controller
             echo "<script>alert('删除失败');location.href='category_list'</script>";
         }
     }
-    //用户评论
+    /**
+     * 商品评论列表
+     */
     public function comment_manage_list(){
-        return view('comment_manage_list');
+//        $id = input('get.comment_id');
+        $comment = new Comment();
+        $arr = $comment->cha1();
+        return $this->fetch('comment_manage_list',['data' => $arr]);
     }
+
+    public function comment_manage(){
+        $id = input('get.comment_id');
+//        print_r($id);die;
+        $comment = new Comment();
+        $arr = $comment->cha($id);
+//        print_r($arr);die;
+        return $this->fetch('comment_message',['data' => $arr]);
+    }
+/**
+ * 回复
+*/
+    public function comment(){
+        $reply_message = input('post.areply_message');
+//        print_r($reply_message);
+        $model = model('areply')->jia($reply_message);
+        if($model){
+            echo "成功";
+        }else{
+            echo "失败";
+        }
+    }
+
+
     //商品品牌列表
     public function brand_list(){
 //        $brand = new Brand;
@@ -704,4 +707,8 @@ class Goods extends Controller
         }
         echo json_encode($arr);
     }
+
+
+
+
 }

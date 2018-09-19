@@ -162,11 +162,7 @@ class User extends Controller
 	{
 		$user_id = input("user_id");
 		$del_res = Db("users")->where("user_id=".$user_id)->delete();
-<<<<<<< HEAD
-		if ($del_res){
-=======
 		if ($del_res) {
->>>>>>> 3652eca2600fe77443b1039126fb1b862771e0f3
 			$this->success("删除成功","index/User/user_list");
 		}
 		 $this->success("删除失败","index/User/user_list");
