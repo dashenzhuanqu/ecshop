@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:97:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html";i:1537346552;}*/ ?>
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -43,13 +44,13 @@ var process_request = "正在处理您的请求...";
   <div class="fd_top fd_top1">
     <div class="bar-left">
           <div class="top_menu1"> <script type="text/javascript" src="admin/js/transport.js"></script><script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
- 欢迎光临本店<a href="{:url('user')}">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="{:url('user_register')}">免费注册</a>  </font> </div>
+ 欢迎光临本店<a href="<?php echo url('user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('user_register'); ?>">免费注册</a>  </font> </div>
     </div>
     <div class="bar-cart">
       <div class="fl cart-yh">
-        <a href="{:url('user')}" class="">用户中心</a>
+        <a href="<?php echo url('user'); ?>" class="">用户中心</a>
       </div>
-             <div class="cart" id="ECS_CARTINFO"> <a href="{:url('flow')}" title="查看购物车">购物车(0)</a> </div>
+             <div class="cart" id="ECS_CARTINFO"> <a href="<?php echo url('flow'); ?>" title="查看购物车">购物车(0)</a> </div>
     </div>
   </div>
 </div>
@@ -89,7 +90,7 @@ var process_request = "正在处理您的请求...";
     <div id="goodsInfo" class="clearfix">
       
       <div class="imgInfo">
-                <a href="javascript:;" onclick="window.open('gallery.php?id=2'); return false;"> <img src="__ROOT__/uploads/{$list.goods_img}" alt="文档"/> </a>
+                <a href="javascript:;" onclick="window.open('gallery.php?id=2'); return false;"> <img src="/uploads/<?php echo $list['goods_img']; ?>" alt="文档"/> </a>
                 <div class="blank5"></div>
         
          <div class="clearfix">
@@ -196,24 +197,24 @@ var process_request = "正在处理您的请求...";
           </div>
       <div class="textInfo">
         <form action="javascript:addToCart(2)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
-          <div class="goods_style_name"> <strong><font color=#FE0000>{$list.goods_info}</font></strong> </div>
+          <div class="goods_style_name"> <strong><font color=#FE0000><?php echo $list['goods_info']; ?></font></strong> </div>
           <ul>
                         <li class="clearfix">
               <dd>
-                                <strong>商品货号：</strong>{$list.goods_art}                              </dd>
+                                <strong>商品货号：</strong>11                              </dd>
               <dd class="ddR">
-                                                <strong>商品库存：</strong> {$list.suk}                                               </dd>
+                                                <strong>商品库存：</strong> <?php echo $list['suk']; ?>                                               </dd>
             </li>
             <li class="clearfix">
               <dd>
-                                <strong>商品品牌：</strong><a href="brand.php?id=2" >{$list.brand_name}}</a>
+                                <strong>商品品牌：</strong><a href="brand.php?id=2" ><?php echo $list['brand_name']; ?>}</a>
                               </dd>
               <dd class="ddR">
-                                <strong>商品重量：</strong>{$list.goods_weight}克                              </dd>
+                                <strong>商品重量：</strong>0克                              </dd>
             </li>
             <li class="clearfix">
               <dd>
-                                <strong>上架时间：</strong>{$list.add_time}                              </dd>
+                                <strong>上架时间：</strong><?php echo $list['add_time']; ?>                              </dd>
               <dd class="ddR">
                 
                 <strong>商品点击数：</strong>2 </dd>
@@ -223,10 +224,10 @@ var process_request = "正在处理您的请求...";
             </li>
             <li class="clearfix">
               <dd>
-                                <strong>市场价格：</strong><font class="market">￥{$list.mall_price}元</font> </dd>
+                                <strong>市场价格：</strong><font class="market">￥<?php echo $list['mall_price']; ?>元</font> </dd>
                             
-              <dd><strong>本店售价：</strong><font class="shop" id="ECS_SHOPPRICE">￥{$list.goods_price}元</font> </dd>
-                            <dd><strong>注册用户：</strong><font class="shop" id="ECS_RANKPRICE_1">￥{$list.vip_price}元</font> </dd>
+              <dd><strong>本店售价：</strong><font class="shop" id="ECS_SHOPPRICE">￥<?php echo $list['goods_price']; ?>元</font> </dd>
+                            <dd><strong>注册用户：</strong><font class="shop" id="ECS_RANKPRICE_1">￥<?php echo $list['vip_price']; ?>元</font> </dd>
                           </li>
                         <li class="padd"> <font class="f1">购买商品达到以下数量区间时可享受的优惠价格</font><br />
               <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#aad6ff">
@@ -258,8 +259,8 @@ var process_request = "正在处理您的请求...";
             <li class="padd">
               <table border="0" cellspacing="0" cellpadding="0">
                 <tr>
-                  <td class="td1"><a href="{:url('flow')}"><img src="admin/picture/buybtn1.png" /></a></td>
-                  <td class="td2"><a href="{:url('goods/user_collection_list')}"><img src="admin/picture/bnt_colles.gif" /></a></td>
+                  <td class="td1"><a href="<?php echo url('flow'); ?>"><img src="admin/picture/buybtn1.png" /></a></td>
+                  <td class="td2"><a href="<?php echo url('goods/user_collection_list'); ?>"><img src="admin/picture/bnt_colles.gif" /></a></td>
                                     <td class="td3"><a href="user.php?act=affiliate&goodsid=2"><img src='admin/picture/bnt_recommend.gif'></a> </td>
                                   </tr>
               </table>

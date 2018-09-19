@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:97:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/admin\view\admin\index.html";i:1537272177;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:97:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/admin\view\admin\index.html";i:1537348964;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <base href="\">
@@ -101,7 +101,7 @@ if (Object.prototype.toJSONString){
  
  
   </div>
-  <div class="index-banner"> 
+<div class="index-banner"> 
  <style>
     .swiper-container {
         width: 100%;
@@ -128,12 +128,16 @@ if (Object.prototype.toJSONString){
     </style>
 <div class="swiper-container swiper1">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
+            <div class="swiper-slide">
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                <img src="/uploads/<?php echo $v['ad_img']; ?>" alt="">
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
         </div>
         <div class="swiper-pagination"></div>
-    </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+</div>
 <script>
        var swiper = new Swiper('.swiper1', {
            pagination: '.swiper-pagination',
@@ -146,10 +150,12 @@ if (Object.prototype.toJSONString){
            loop:true,
            autoplayDisableOnInteraction: false
        });
-</script> </div>
+</script> 
 </div>
-<div class="indexpage clearfix index-ad">
+</div>
+<!-- <div class="indexpage clearfix index-ad">
   <div class="ad-tg">
+      
   </div>
   <div class="ad-lb">
  <style>
@@ -183,10 +189,12 @@ if (Object.prototype.toJSONString){
     </style>
 <div class="swiper-container swiper2">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
+            <div class="swiper-slide">
+                    <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                    <img src="/uploads/<?php echo $v['ad_img']; ?>" alt="">
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
+         
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
@@ -202,82 +210,30 @@ if (Object.prototype.toJSONString){
         loop:true
     });
 </script>  </div>
-</div>
+</div> -->
 <div class="index-body">
     <div class="indexpage">
         <div class="body-goods">
             <div class="goods-title">1F 家用电器</div>
             <div class="clearfix goods-wrap">
                 <div class="goods-leftad">
-
+sasdf
                 </div>
                 <div class="goods-right">
 
                     <div class="all_ms">
-                        <a class="goodsItem" href="<?php echo url('admin/goods'); ?>"> <div  class="img-box"><img src="/admin/picture/72_thumb_g_1462956048008.jpg" alt="智能相机" class="goodsimg" /></div>
+                       
+                        <?php if(is_array($goods) || $goods instanceof \think\Collection || $goods instanceof \think\Paginator): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                        <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>"> <div  class="img-box"><img src="/uploads/<?php echo $v['goods_img']; ?>" alt="智能相机" class="goodsimg" /></div>
                             <div class="goods-brief"></div>
-                            <div class="gos-title">智能相机</div>
+                            <div class="gos-title"><?php echo $v['goods_name']; ?></div>
                             <div class="prices">
-                                <font class="shop_s"><b>￥149元</b></font>
+                                <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
                             </div>
 
                         </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">炫彩翻页保护套</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥39元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">平衡车</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥1999元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">透明超薄软胶保...</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥19元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">运动相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥399元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">自拍杆</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥49元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/62_thumb_g_1462952557730.jpg" alt="随身风扇" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">随身风扇</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/61_thumb_g_1462952376889.jpg" alt="视频" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">视频</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-
-                        </a>
+                       <?php endforeach; endif; else: echo "" ;endif; ?>
+                      
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -291,70 +247,16 @@ if (Object.prototype.toJSONString){
                 <div class="goods-right">
 
                     <div class="all_ms">
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/72_thumb_g_1462956048008.jpg" alt="智能相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">智能相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥149元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">炫彩翻页保护套</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥39元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">平衡车</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥1999元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">透明超薄软胶保...</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥19元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">运动相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥399元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">自拍杆</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥49元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/62_thumb_g_1462952557730.jpg" alt="随身风扇" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">随身风扇</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/61_thumb_g_1462952376889.jpg" alt="视频" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">视频</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-
-                        </a>
+                            <?php if(is_array($goods1) || $goods1 instanceof \think\Collection || $goods1 instanceof \think\Paginator): $i = 0; $__LIST__ = $goods1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                            <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>"> <div  class="img-box"><img src="/uploads/<?php echo $v['goods_img']; ?>" alt="智能相机" class="goodsimg" /></div>
+                                <div class="goods-brief"></div>
+                                <div class="gos-title"><?php echo $v['goods_name']; ?></div>
+                                <div class="prices">
+                                    <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
+                                </div>
+    
+                            </a>
+                           <?php endforeach; endif; else: echo "" ;endif; ?>
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -367,70 +269,16 @@ if (Object.prototype.toJSONString){
                 <div class="goods-right">
 
                     <div class="all_ms">
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/72_thumb_g_1462956048008.jpg" alt="智能相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">智能相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥149元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">炫彩翻页保护套</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥39元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">平衡车</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥1999元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">透明超薄软胶保...</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥19元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">运动相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥399元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">自拍杆</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥49元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/62_thumb_g_1462952557730.jpg" alt="随身风扇" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">随身风扇</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-
-                        </a>
-                        <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/61_thumb_g_1462952376889.jpg" alt="视频" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">视频</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-
-                        </a>
+                            <?php if(is_array($goods2) || $goods2 instanceof \think\Collection || $goods2 instanceof \think\Paginator): $i = 0; $__LIST__ = $goods2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                            <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>"> <div  class="img-box"><img src="/uploads/<?php echo $v['goods_img']; ?>" alt="智能相机" class="goodsimg" /></div>
+                                <div class="goods-brief"></div>
+                                <div class="gos-title"><?php echo $v['goods_name']; ?></div>
+                                <div class="prices">
+                                    <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
+                                </div>
+    
+                            </a>
+                           <?php endforeach; endif; else: echo "" ;endif; ?>
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -440,46 +288,16 @@ if (Object.prototype.toJSONString){
 
 
                 <div id="show_hot_area" class="clearfix goodsBox all_mid all_ms">
-                    <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
+                 <?php if(is_array($goods_hot) || $goods_hot instanceof \think\Collection || $goods_hot instanceof \think\Paginator): $i = 0; $__LIST__ = $goods_hot;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                    <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>"> <div  class="img-box"><img src="/uploads/<?php echo $v['goods_img']; ?>" alt="<?php echo $v['goods_name']; ?>" class="goodsimg" /></div>
                         <div class="goods-brief"></div>
-                        <div class="gos-title">炫彩翻页保护套</div>
+                        <div class="gos-title"><?php echo $v['goods_name']; ?></div>
                         <div class="prices">
-                            <font class="shop_s"><b>￥39元</b></font>
+                            <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
                         </div>
 
                     </a>
-                    <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">透明超薄软胶保...</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥19元</b></font>
-                        </div>
-
-                    </a>
-                    <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">平衡车</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥1999元</b></font>
-                        </div>
-
-                    </a>
-                    <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">自拍杆</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥49元</b></font>
-                        </div>
-
-                    </a>
-                    <a class="goodsItem" href="/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">运动相机</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥399元</b></font>
-                        </div>
-
-                    </a>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                     <div class="clear0"></div>
                 </div> <div class="clear10"></div>
             </div>

@@ -6,7 +6,7 @@
 <meta name="Keywords" content="" />
 <meta name="Description" content="" />
 
-<title>用户中心_ECSHOP演示站 - Powered by ECShop</title>
+<title>用户中心_登录</title>
 
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
@@ -22,7 +22,7 @@ var process_request = "正在处理您的请求...";
   <div class="fd_top fd_top1">
     <div class="bar-left">
           <div class="top_menu1"> <script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
- 欢迎光临本店<a href="{:url('user')}">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="{:url('user_register')}">免费注册</a>  </font> </div>
+ 欢迎光临本店&nbsp;|&nbsp;<a href="{:url('user')}">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="{:url('user_register')}">免费注册</a>  </font> </div>
     </div>
     <div class="bar-cart">
       <div class="fl cart-yh">
@@ -66,7 +66,7 @@ var process_request = "正在处理您的请求...";
 <div class="usBox clearfix">
   <div class="usBox_1 f_l">
    <div class="logtitle"></div>
-   <form name="formLogin" action="user.php" method="post" onSubmit="return userLogin()">
+   <form name="formLogin" action="{:url('admin/user_do')}" method="post" onSubmit="return userLogin()">
         <table width="100%" border="0" align="left" cellpadding="3" cellspacing="5">
           <tr>
             <td width="15%" align="right">用户名</td>
@@ -102,7 +102,7 @@ var process_request = "正在处理您的请求...";
     2. 收藏您关注的商品<br />
     3. 享受会员积分制度<br />
     4. 订阅本店商品信息  <br />
-    <a href="user.php?act=register"><img src="admin/picture/bnt_ur_reg.gif" /></a>
+    <a href="{:url('admin/user_register')}"><img src="admin/picture/bnt_ur_reg.gif" /></a>
   </div>
 </div>
 

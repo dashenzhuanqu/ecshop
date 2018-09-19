@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/admin\view\admin\flow.html";i:1537272177;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v4.0.0" />
@@ -5,7 +6,7 @@
 <meta name="Keywords" content="" />
 <meta name="Description" content="" />
     <base href="\">
-<title>购物车</title>
+<title>购物流程_ECSHOP演示站 - Powered by ECShop</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="admin/css/style.css" rel="stylesheet" type="text/css" />
@@ -18,13 +19,13 @@ var process_request = "正在处理您的请求...";
   <div class="fd_top fd_top1">
     <div class="bar-left">
           <div class="top_menu1"> <script type="text/javascript" src="admin/js/transport.js"></script><script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
- 欢迎光临本店<a href="{:url('user')}">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="{:url('user_register')}">免费注册</a>  </font> </div>
+ 欢迎光临本店<a href="<?php echo url('user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('user_register'); ?>">免费注册</a>  </font> </div>
     </div>
     <div class="bar-cart">
       <div class="fl cart-yh">
-        <a href="{:url('user')}" class="">用户中心</a>
+        <a href="<?php echo url('user'); ?>" class="">用户中心</a>
       </div>
-             <div class="cart" id="ECS_CARTINFO"> <a href="{:url('flow')}" title="查看购物车">购物车(0)</a> </div>
+             <div class="cart" id="ECS_CARTINFO"> <a href="<?php echo url('flow'); ?>" title="查看购物车">购物车(0)</a> </div>
     </div>
   </div>
 </div>
@@ -96,7 +97,7 @@ var process_request = "正在处理您的请求...";
         <table width="99%" align="center" border="0" cellpadding="5" cellspacing="0" bgcolor="#dddddd">
           <tr>
             <td bgcolor="#ffffff"><a href="./"><img src="admin/picture/continue.gif" alt="continue" /></a></td>
-            <td bgcolor="#ffffff" align="right"><a href="{:url('flow_checkout')}"><img src="admin/picture/checkout.gif" alt="checkout" /></a></td>
+            <td bgcolor="#ffffff" align="right"><a href="<?php echo url('flow_checkout'); ?>"><img src="admin/picture/checkout.gif" alt="checkout" /></a></td>
           </tr>
         </table>
     </div>

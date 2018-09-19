@@ -55,7 +55,7 @@ visibility:hidden;
   .f4{color:#A51F1C;}
   .f4_b{color:#A51F1C; font-weight:bold;}
   .f5{ font-size:14px; font-weight:bold;}
-  .f6{ }
+  /* .f6{ } */
   .market{ font-size:14px; text-decoration:line-through;}
   .shop{color:#A51F1C; font-size:14px; font-weight:600;}
 
@@ -204,7 +204,7 @@ visibility:hidden;
 .m_left { float:left; width:680px; padding-top:4px;height:35px; overflow:hidden}
 .m_left  ul li{float:left; background:URL(../images/m_leftli.gif) left bottom no-repeat;width:94px; padding:0px 0px 0px 3px; margin:0px;}
 .m_left  ul li.lif{ background:none}
-.m_left  ul li a{color:#fff;  line-height:35px; height:35px; padding:0px; margin:0px; width:94px; background:none; text-align:center; fonECS_CARTINFOt-size:15px; font-weight:normal; display:block}
+.m_left  ul li a{color:#fff;  line-height:35px; height:35px; padding:0px; margin:0px; width:94px; background:none; text-align:center; font-size:15px; font-weight:normal; display:block}
 .m_left  ul li a:hover,.m_left  ul li a.visited{background:URL(../images/lihover.gif) left bottom  repeat-x}
 .m_left  ul li.lifirst{ background:none}
  
@@ -254,7 +254,7 @@ position:absolute; top:0px; right:0px;}
      模块
 ==================== */
    /*购物车*/
-#ECS_CARTINFO{ float:right; height:40px; line-height: 40px; width:110px; display:inline-block; background: url(../images/cart.png) no-repeat 5px center #444;}
+#ECS_CARTINFO{ height:40px; line-height: 40px; width:110px; display:inline-block; background: url(../images/cart.png) no-repeat 5px center #444;}
 #ECS_CARTINFO a{ display:block; line-height:40px; text-indent:26px; color:#aeaeaa}
 #ECS_CARTINFO a b{ color:#198500; padding-left:0px; padding-right:2px;}
 
@@ -344,12 +344,12 @@ position:absolute; top:0px; right:0px;}
    .itemTit.New{background:url(../images/bg.gif) no-repeat 0px -225px;}
    .itemTit.Hot{background:url(../images/bg.gif) no-repeat 0px -256px;}
    .itemTit img{position:relative; top:7px;}
-   .itemTit h2{float:left; height:27px; background:url(../images/itemh2bg.gif) repeat-x left top; border:1px solid #d6ecff;
+   .itemTit h2{ background:url(../images/itemh2bg.gif) repeat-x left top; border:1px solid #d6ecff;
    font-size:12px; text-align:center; color:#3f3f3f; font-weight:100; padding:0px 10px; line-height:28px; margin:0 6px 0 0;
    border-bottom:none; position:relative; bottom:-3px; display:inline; white-space:nowrap;
    }
    .itemTit h2 a{color:#3f3f3f; text-decoration:none;}
-   .itemTit .h2bg{height:27px; line-height:28px; border:none; background:none;
+   .itemTit .h2bg{ line-height:28px; border:none; background:none;
    font-size:12px; text-align:center; color:#006ace; font-weight:100; padding:0px 10px;
      display:inline; white-space:nowrap;
    }
@@ -413,12 +413,12 @@ position:absolute; top:0px; right:0px;}
    #goodsInfo .textInfo{background:URL(../images/bgcont_13.gif) left top repeat-y #F9F9F9; width:390px; float:right; padding:10px 10px 10px 20px;}
   
    #goodsInfo .textInfo p{font-size:14px; font-weight:bold; padding:0 5px 5px 8px;}
-   #goodsInfo .textInfo ul{}
+   /* #goodsInfo .textInfo ul{} */
    #goodsInfo .textInfo li{ padding:0px 8px; _height:1%;}  
    #goodsInfo .textInfo li dd{width:49%; float:left; font-weight:normal; line-height:25px; height:25px; overflow:hidden}
    #goodsInfo .textInfo li dd strong{ font-weight:normal; color:#666666}
    #goodsInfo .textInfo li dd.ddR{ width:49%;}
-   #goodsInfo .textInfo li dd.ddL{}
+   /* #goodsInfo .textInfo li dd.ddL{} */
    #goodsInfo .textInfo a{color:#006bce; text-decoration:underline;}
    #goodsInfo .textInfo .loop{background:#f7f7f7; margin-top:8px;}
    #goodsInfo .textInfo li.padd{padding:7px 0px 10px 8px;}
@@ -609,7 +609,7 @@ position:absolute; top:0px; right:0px;}
 
 	
    .centerPadd{padding:0px 0px 8px 0px; overflow:hidden;border:1px solid #d8d8d8; background:URL(../images/bgcont_10.gif) left top repeat-x #fff;}
-   .centerPadd .goodsBox{}
+   /* .centerPadd .goodsBox{} */
    .centerPadd .goodsBox .more{text-align:right; clear:both; margin:0 8px 8px 0;}
    
    .displaylist{background:URL(../images/bgbr_08.gif) left top repeat-x; height:38px; line-height:38px; border:1px solid #CECCBD; border-top:0px; padding-top:8px; margin-bottom:5px;}
@@ -678,7 +678,7 @@ position:absolute; top:0px; right:0px;}
 .Foot_Help a{ padding-left:10px; padding-right:10px;}
 .Foot_Help .cat1first{ background:none;}
 .footer_info{ width:950px; margin:auto; text-align:center; color:#666666}
-.footer_info a{ }
+/* .footer_info a{ } */
 
 
 /*新增样式*/
@@ -1031,7 +1031,7 @@ position:absolute; top:0px; right:0px;}
   }
   .order-info .order-ft .get-money, .order-info .order-ft .trade-money {
     text-align: right;
-    float: right;
+    /* float: right; */
     display: inline;
     clear: both;
     line-height: 14px;

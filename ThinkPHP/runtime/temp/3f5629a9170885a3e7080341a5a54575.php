@@ -1,30 +1,35 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/admin\view\admin\user.html";i:1537322740;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <base href="\">
 <meta name="Generator" content="ECSHOP v4.0.0" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="Keywords" content="" />
 <meta name="Description" content="" />
-    <base href="\">
-<title>购物车</title>
+
+<title>用户中心_登录</title>
+
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="admin/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="admin/js/common.js"></script><script type="text/javascript" src="admin/js/shopping_flow.js"></script></head>
+
+<script type="text/javascript" src="admin/js/common.js"></script><script type="text/javascript" src="admin/js/user.js"></script><script type="text/javascript" src="admin/js/transport.js"></script>
 <body>
+
 <script type="text/javascript">
 var process_request = "正在处理您的请求...";
 </script>
 <div class="top-bar">
   <div class="fd_top fd_top1">
     <div class="bar-left">
-          <div class="top_menu1"> <script type="text/javascript" src="admin/js/transport.js"></script><script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
- 欢迎光临本店<a href="{:url('user')}">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="{:url('user_register')}">免费注册</a>  </font> </div>
+          <div class="top_menu1"> <script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
+ 欢迎光临本店&nbsp;|&nbsp;<a href="<?php echo url('user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('user_register'); ?>">免费注册</a>  </font> </div>
     </div>
     <div class="bar-cart">
       <div class="fl cart-yh">
-        <a href="{:url('user')}" class="">用户中心</a>
+        <a href="<?php echo url('user'); ?>" class="">用户中心</a>
       </div>
-             <div class="cart" id="ECS_CARTINFO"> <a href="{:url('flow')}" title="查看购物车">购物车(0)</a> </div>
+             <div class="cart" id="ECS_CARTINFO"> <a href="<?php echo url('flow'); ?>" title="查看购物车">购物车(0)</a> </div>
     </div>
   </div>
 </div>
@@ -51,63 +56,82 @@ var process_request = "正在处理您的请求...";
   </div>
 </div>
 <div class="clear0 "></div>
+
 <div class="block box">
  <div id="ur_here">
-  <div class="path"><div>当前位置: <a href=".">首页</a> <code>&gt;</code> 购物流程</div></div> </div>
+  <div class="path"><div>当前位置: <a href=".">首页</a> <code>&gt;</code> 用户中心</div></div>  </div>
 </div>
+
 <div class="blank"></div>
-<div class="block">
-  <script type="text/javascript" src="admin/js/showdiv.js"></script>  <script type="text/javascript">
-      var user_name_empty = "请输入您的用户名！";
-      var email_address_empty = "请输入您的电子邮件地址！";
-      var email_address_error = "您输入的电子邮件地址格式不正确！";
-      var new_password_empty = "请输入您的新密码！";
-      var confirm_password_empty = "请输入您的确认密码！";
-      var both_password_error = "您两次输入的密码不一致！";
-      var show_div_text = "请点击更新购物车按钮";
-      var show_div_exit = "关闭";
-    </script>
-  <div class="flowBox">
-    <h6><span>商品列表</span></h6>
-        <form id="formCart" name="formCart" method="post" action="flow.php">
-           <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
-            <tr>
-              <th bgcolor="#ffffff">商品名称</th>
-                    <th bgcolor="#ffffff">属性</th>
-                                          <th bgcolor="#ffffff">市场价</th>
-                            <th bgcolor="#ffffff">本店价</th>
-              <th bgcolor="#ffffff">购买数量</th>
-              <th bgcolor="#ffffff">小计</th>
-              <th bgcolor="#ffffff">操作</th>
-            </tr>
-                      </table>
-          <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
-            <tr>
-              <td bgcolor="#ffffff">
-                            购物金额小计 ￥0.00元，比市场价 ￥0.00元 节省了 ￥0.00元 (0)              </td>
-              <td align="right" bgcolor="#ffffff">
-                <input type="button" value="清空购物车" class="bnt_blue_1" onclick="location.href='flow.php?step=clear'" />
-                <input name="submit" type="submit" class="bnt_blue_1" value="更新购物车" />
-              </td>
-            </tr>
-          </table>
-          <input type="hidden" name="step" value="update_cart" />
-        </form>
-        <table width="99%" align="center" border="0" cellpadding="5" cellspacing="0" bgcolor="#dddddd">
+
+<div class="usBox clearfix">
+  <div class="usBox_1 f_l">
+   <div class="logtitle"></div>
+   <form name="formLogin" action="<?php echo url('admin/user_do'); ?>" method="post" onSubmit="return userLogin()">
+        <table width="100%" border="0" align="left" cellpadding="3" cellspacing="5">
           <tr>
-            <td bgcolor="#ffffff"><a href="./"><img src="admin/picture/continue.gif" alt="continue" /></a></td>
-            <td bgcolor="#ffffff" align="right"><a href="{:url('flow_checkout')}"><img src="admin/picture/checkout.gif" alt="checkout" /></a></td>
+            <td width="15%" align="right">用户名</td>
+            <td width="85%"><input name="username" type="text" size="25" class="inputBg" placeholder="请输入用户名/手机号" /></td>
           </tr>
-        </table>
-    </div>
-    <div class="blank5"></div>
+          <tr>
+            <td align="right">密码</td>
+            <td>
+            <input name="password" type="password" size="15"  class="inputBg"/>
+            </td>
+          </tr>
+                    <tr>
+            <td colspan="2"><input type="checkbox" value="1" name="remember" id="remember" /><label for="remember">请保存我这次的登录信息。</label></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="left">
+            <input type="hidden" name="act" value="act_login" />
+            <input type="hidden" name="back_act" value="user.php" />
+            <input type="submit" name="submit" value="" class="us_Submit" />
+            </td>
+          </tr>
+	  <tr><td></td><td class="f3">找回密码：（<a href="user.php?act=qpassword_name" class="f3">密码问题</a>&nbsp;<a href="user.php?act=get_password" class="f3">邮件</a>&nbsp;<a href="user.php?act=sms_get_password" class="f3">短信验证</a>）</td></tr>
+      </table>
+    </form>
+  </div>
+  <div class="usTxt">
+    <strong>如果您不是会员，请注册</strong>  <br />
+    <strong class="f4">友情提示：</strong><br />
+        不注册为会员也可在本店购买商品<br />
+            但注册之后您可以：<br />
+    1. 保存您的个人资料<br />
+    2. 收藏您关注的商品<br />
+    3. 享受会员积分制度<br />
+    4. 订阅本店商品信息  <br />
+    <a href="<?php echo url('admin/user_register'); ?>"><img src="admin/picture/bnt_ur_reg.gif" /></a>
+  </div>
 </div>
-<div class="blank5"></div>
+
+
+
+    
+
+
+    
+
+    
+
+    
+
+
+
+
 <div class="blank"></div>
 <div class="foot-body">
-  <div class="bads"><img src="admin/picture/bottom.jpg"></div>
+  <div class="bads"><img src="static/picture/bottom.jpg"></div>
   <div class="clear10"></div>
+  
+  
+    
+   
+  
   <div class="blank"></div>
+  
 <div class="footer_info"> &copy; 2005-2018 ECSHOP 版权所有，并保留所有权利。       <br />
       <a href="http://xyunqi.com/products/ecshop?from=nav" target="_blank" style=" font-family:Verdana; font-size:11px;">Powered&nbsp;by&nbsp;<strong><span style="color: #3366FF">ECShop</span>&nbsp;<span style="color: #FF9966">v4.0.0</span></strong></a>&nbsp;<a href="http://www.ecshop.com/license.php?product=ecshop_b2c&url=http%3A%2F%2F127.0.0.1%2FECShop_V4.0.0_UTF8_release0830%2Fsource%2Fecshop%2F" target="_blank"
 >&nbsp;&nbsp;Licensed</a><br />
@@ -115,6 +139,10 @@ var process_request = "正在处理您的请求...";
     </div>
   <div class="clear10"></div>
 </div>
+ 
+
+ 
+
 </body>
 <script type="text/javascript">
 var process_request = "正在处理您的请求...";
@@ -144,19 +172,5 @@ var msg_blank = "不能为空";
 var no_select_question = "- 您没有完成密码提示问题的操作";
 var passwd_balnk = "- 密码中不能包含空格";
 var username_exist = "用户名 %s 已经存在";
-var compare_no_goods = "您没有选定任何需要比较的商品或者比较的商品数少于 2 个。";
-var btn_buy = "购买";
-var is_cancel = "取消";
-var select_spe = "请选择商品属性";
-function checkIpt(item){
-  var val = item.value;
-  var method = document.getElementById('payMethod');
-  if(val == 'wxpay'){
-    method.innerHTML = '微&nbsp;&nbsp;&nbsp;信';
-  }else{
-    method.innerHTML = '支付宝';
-  }
-  document.getElementById('yunqi_payment').click();
-}
 </script>
 </html>
