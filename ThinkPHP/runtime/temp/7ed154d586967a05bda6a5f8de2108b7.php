@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:101:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html";i:1536909220;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:101:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_top.html";i:1537349429;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title></title>
@@ -87,8 +87,6 @@ function ShowToDoList()
   {
   }
 }
-
-
 var adminId = "1";
 </script>
 </head>
@@ -103,6 +101,7 @@ var adminId = "1";
       <li><a href="index.php">刷新</a></li>
       <li><a href="#" onclick="ShowToDoList()">记事本</a></li>
       <li style="border-left:none;"><a href="index.php?act=first" target="main-frame">开店向导</a></li>
+
     </ul>
     <div id="send_info" style="padding: 5px 10px 0 0; clear:right;text-align: right; color: #FF9900;width:40%;float: right;">
           </div>
@@ -112,9 +111,15 @@ var adminId = "1";
 <div id="menu-div">
   <ul>
     <!-- <li class="fix-spacel">&nbsp;</li> -->
-    <li><a href="index.php?act=main" target="main-frame">起始页</a></li>
+    <li><a href="<?php echo url('index/main'); ?>" target="main-frame">起始页</a></li>
     <li><a href="privilege.php?act=modif" target="main-frame">设置导航栏</a></li>
-        <li><a href="<?php echo url('goods/goods'); ?>" target="main-frame">商品列表</a></li>
+        <li><a href="<?php echo url('goods/goods'); ?>" target="main-frame">商品列表</a></li
+        <li><a href="<?php echo url('order/orders_list'); ?>" target="main-frame">订单列表</a></li>
+        <li><a href="<?php echo url('goods/comment_manage_list'); ?>" target="main-frame">用户评论</a></li>
+        <li><a href="<?php echo url('user/user_list'); ?>" target="main-frame">会员列表</a></li>
+        <li><a href="<?php echo url('system/system_list'); ?>" target="main-frame">商店设置</a></li>
+        <!--<li><a href="lead.php?act=list" target="main-frame">店铺二维码</a></li>-->
+        <!--<li><a href="service_market.php" target="main-frame">服务市场</a></li>-->
         <li><a href="order.php?act=list" target="main-frame">订单列表</a></li>
         <li><a href="<?php echo url('goods/comment_manage_list'); ?>" target="main-frame">用户评论</a></li>
         <li><a href="users.php?act=list" target="main-frame">会员列表</a></li>
@@ -130,7 +135,6 @@ var adminId = "1";
   </ul>
   <br class="clear" />
 </div>
-
 <script>
   function showBar(item){
     var silb = item.lastElementChild;
@@ -159,7 +163,6 @@ var adminId = "1";
       }
     }
   }
-
   document.getElementById('menu-div').onclick = function(e) {
     var li = this.getElementsByTagName('li');
     for (var i = 0; i < li.length; i++) {

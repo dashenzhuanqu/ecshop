@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:97:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html";i:1537346552;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:97:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html";i:1537349463;s:89:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537357078;s:87:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537349429;}*/ ?>
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -37,62 +37,67 @@ function reg(str){
 </script>
 </head>
 <body>
-<script type="text/javascript">
-var process_request = "正在处理您的请求...";
-</script>
 <div class="top-bar">
-  <div class="fd_top fd_top1">
-    <div class="bar-left">
-          <div class="top_menu1"> <script type="text/javascript" src="admin/js/transport.js"></script><script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
- 欢迎光临本店<a href="<?php echo url('user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('user_register'); ?>">免费注册</a>  </font> </div>
+    <div class="fd_top fd_top1">
+        <div class="bar-left">
+            <div class="top_menu1">
+                <script type="text/javascript" src="admin/js/transport.js"></script>
+                <script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
+
+
+                欢迎光临本店<a href="<?php echo url('admin/user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('admin/user_register'); ?>">免费注册</a>  </font>
+
+
+            <font > 您好，<font class="f4_b">root</font>, 欢迎您回来！ <a href="<?php echo url('admin/user'); ?>">用户中心</a>| <a href="<?php echo url('user_logout'); ?>">退出</a> </font>  </font>
+
+            
+        </div> </div>
+        <div class="bar-cart">
+            <div class="fl cart-yh">
+                <a href="<?php echo url('admin/user'); ?>" class="">用户中心</a>
+            </div>
+            <div class="cart" id="ECS_CARTINFO"> <a href="<?php echo url('admin/flow'); ?>" title="查看购物车">购物车(0)</a> </div>
+        </div>
     </div>
-    <div class="bar-cart">
-      <div class="fl cart-yh">
-        <a href="<?php echo url('user'); ?>" class="">用户中心</a>
-      </div>
-             <div class="cart" id="ECS_CARTINFO"> <a href="<?php echo url('flow'); ?>" title="查看购物车">购物车(0)</a> </div>
-    </div>
-  </div>
 </div>
 <div class="nav-menu">
-  <div class="wrap">
-    <div class="logo"><a href="index.php" name="top"><img src="admin/picture/logo.gif" /></a></div>
-    <div id="mainNav" class="clearfix maxmenu">
-      <div class="m_left">
-      <ul>
-        <li><a href="index.php" class="cur">首页</a></li>
-              </ul>
-      </div>
+    <div class="wrap">
+        <div class="logo"><a href="index.php" name="top"><img src="admin/picture/logo.gif" /></a></div>
+        <div id="mainNav" class="clearfix maxmenu">
+            <div class="m_left">
+                <ul>
+                    <li><a href="index.php" class="cur">首页</a></li>
+                    <li><a href="<?php echo url('category'); ?>" class="cur">电器</a></li>
+                    <li><a href="<?php echo url('category'); ?>" class="cur">电子产品</a></li>
+                    <li><a href="<?php echo url('category'); ?>" class="cur">医疗设备</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="serach-box">
+            <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="135"><input name="keywords" type="text" id="keyword" value="" class="B_input"/></td>
+                        <td><input name="imageField" type="submit" value="搜索" class="go" style="cursor:pointer;"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </div>
-    <div class="serach-box">
-      <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td width="135"><input name="keywords" type="text" id="keyword" value="" class="B_input"  /></td>
-            <td><input name="imageField" type="submit" value="搜索" class="go" style="cursor:pointer;" /></td>
-          </tr>
-        </table>
-      </form>
-    </div>
-  </div>
 </div>
+
 <div class="clear0 "></div>
 <div class="goods-home">
-  
 <div class="block box">
   <div id="ur_here"> <div class="path"><div>当前位置: <a href=".">首页</a> <code>&gt;</code> <a href="category.php?id=1">饮料</a> <code>&gt;</code> <a href="category.php?id=2">学习</a> <code>&gt;</code> 文档</div></div> </div>
 </div>
 <div class="blank"></div>
 <div class="block clearfix">
-  
   <div class="AreaR">
-    
     <div id="goodsInfo" class="clearfix">
-      
       <div class="imgInfo">
                 <a href="javascript:;" onclick="window.open('gallery.php?id=2'); return false;"> <img src="/uploads/<?php echo $list['goods_img']; ?>" alt="文档"/> </a>
                 <div class="blank5"></div>
-        
          <div class="clearfix">
       <span onmouseover="moveLeft()" onmousedown="clickLeft()" onmouseup="moveLeft()" onmouseout="scrollStop()"></span>
       <div class="gallery">
@@ -201,7 +206,7 @@ var process_request = "正在处理您的请求...";
           <ul>
                         <li class="clearfix">
               <dd>
-                                <strong>商品货号：</strong>11                              </dd>
+                                <strong>商品货号：</strong><?php echo $list['goods_art']; ?>                              </dd>
               <dd class="ddR">
                                                 <strong>商品库存：</strong> <?php echo $list['suk']; ?>                                               </dd>
             </li>
@@ -210,7 +215,7 @@ var process_request = "正在处理您的请求...";
                                 <strong>商品品牌：</strong><a href="brand.php?id=2" ><?php echo $list['brand_name']; ?>}</a>
                               </dd>
               <dd class="ddR">
-                                <strong>商品重量：</strong>0克                              </dd>
+                                <strong>商品重量：</strong><?php echo $list['goods_weight']; ?>克                              </dd>
             </li>
             <li class="clearfix">
               <dd>
@@ -254,8 +259,6 @@ var process_request = "正在处理您的请求...";
                                 <strong>购买此商品可使用：</strong><font class="f4">0 积分</font>
                               </dd>
             </li>
-                        
-                        
             <li class="padd">
               <table border="0" cellspacing="0" cellpadding="0">
                 <tr>
@@ -265,14 +268,11 @@ var process_request = "正在处理您的请求...";
                                   </tr>
               </table>
             </li>
-            
           </ul>
         </form>
       </div>
     </div>
     <div class="blank"></div>
-    
-    
     <div class="box clearfix">
       <div class="box_1 goods-boxg">
         <div class="box_top">
@@ -292,13 +292,9 @@ var process_request = "正在处理您的请求...";
       </div>
     </div>
     <script type="text/javascript">
-    //<!--
     reg("com");
-    //-->
     </script>
     <div class="blank"></div>
-    
-     
      <div class="box">
      <div class="box_1">
       <h3><span class="text">商品标签</span></h3>
@@ -312,8 +308,6 @@ var process_request = "正在处理您的请求...";
           <input type="hidden" name="goods_id" value="2"  />
         </p>
                 <script type="text/javascript">
-                //<![CDATA[
-                
                 /**
                  * 用户添加标记的处理函数
                  */
@@ -352,8 +346,6 @@ var process_request = "正在处理您的请求...";
                     catch (e) {alert(e);}
                   }
                 }
-                
-                //]]>
                 </script>
               </form>
       </div>
@@ -372,17 +364,12 @@ var process_request = "正在处理您的请求...";
                     </div>
                 </form>
         <script type="Text/Javascript" language="JavaScript">
-        <!--
-        
         function selectPage(sel)
         {
           sel.form.submit();
         }
-        
-        //-->
         </script>
       </div>
-      
       <div class="blank5"></div>
       </div>
      </div>
@@ -399,7 +386,6 @@ var process_request = "正在处理您的请求...";
 				        <p><font class="f1">管理员：</font>阿斯蒂芬</p>
 				        </li>
                        </ul>
-       
        <div id="pagebar" class="f_r">
         <form name="selectPageForm" action="/ECShop_V4.0.0_UTF8_release0830/source/ecshop/goods.php" method="get">
                 <div id="pager">
@@ -407,14 +393,10 @@ var process_request = "正在处理您的请求...";
                     </div>
                 </form>
         <script type="Text/Javascript" language="JavaScript">
-        <!--
-        
         function selectPage(sel)
         {
           sel.form.submit();
         }
-        
-        //-->
         </script>
       </div>
       
@@ -552,16 +534,17 @@ function submitComment(frm)
 <div class="blank5"></div>
 <div class="blank"></div>
 </div>
+<div class="blank"></div>
 <div class="foot-body">
-  <div class="bads"><img src="admin/picture/bottom.jpg"></div>
-  <div class="clear10"></div>
-  <div class="blank"></div>
-<div class="footer_info"> &copy; 2005-2018 ECSHOP 版权所有，并保留所有权利。       <br />
-      <a href="http://xyunqi.com/products/ecshop?from=nav" target="_blank" style=" font-family:Verdana; font-size:11px;">Powered&nbsp;by&nbsp;<strong><span style="color: #3366FF">ECShop</span>&nbsp;<span style="color: #FF9966">v4.0.0</span></strong></a>&nbsp;<a href="http://www.ecshop.com/license.php?product=ecshop_b2c&url=http%3A%2F%2F127.0.0.1%2FECShop_V4.0.0_UTF8_release0830%2Fsource%2Fecshop%2F" target="_blank"
->&nbsp;&nbsp;Licensed</a><br />
-            <div>ICP备案证书号:<a href="http://www.miibeian.gov.cn/" target="_blank"></a></div>
+    <div class="bads"><img src="admin/picture/bottom.jpg"></div>
+    <div class="clear10"></div>
+    <div class="blank"></div>
+    <div class="footer_info"> &copy; 2005-2018 ECSHOP 版权所有，并保留所有权利。       <br />
+        <a href="http://xyunqi.com/products/ecshop?from=nav" target="_blank" style=" font-family:Verdana; font-size:11px;">Powered&nbsp;by&nbsp;<strong><span style="color: #3366FF">ECShop</span>&nbsp;<span style="color: #FF9966">v4.0.0</span></strong></a>&nbsp;<a href="http://www.ecshop.com/license.php?product=ecshop_b2c&url=http%3A%2F%2F127.0.0.1%2FECShop_V4.0.0_UTF8_release0830%2Fsource%2Fecshop%2F" target="_blank"
+        >&nbsp;&nbsp;Licensed</a><br />
+        <div>ICP备案证书号:<a href="http://www.miibeian.gov.cn/" target="_blank"></a></div>
     </div>
-  <div class="clear10"></div>
+    <div class="clear10"></div>
 </div>
 </body>
 <script type="text/javascript">

@@ -1,0 +1,218 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <title>ECSHOP 管理中心 - 评论详情 </title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="../../../static/css/general.css" rel="stylesheet" type="text/css">
+    <link href="../../../static/css/main.css" rel="stylesheet" type="text/css">
+    <script src="//hm.baidu.com/hm.js?dde6ba2851f3db0ddc415ce0f895822e"></script>
+    <script type="text/javascript" src="../../../static/js/transport.js"></script>
+    <script type="text/javascript" src="../../../static/js/common.js"></script>
+    <style>
+        .panel-icloud .panel-right iframe {
+            height: 300px;
+            margin-top: 15px;
+        }
+        .panel-hint{
+            top: 0%;
+        }
+    </style>
+
+    <script>
+        //<!--
+        // 这里把JS用到的所有语言都赋值到这里
+        var process_request = "正在处理您的请求...";
+        var todolist_caption = "记事本";
+        var todolist_autosave = "自动保存";
+        var todolist_save = "保存";
+        var todolist_clear = "清除";
+        var todolist_confirm_save = "是否将更改保存到记事本？";
+        var todolist_confirm_clear = "是否清空内容？";
+        var no_content = "回复的评论内容不能为空!";
+        //-->
+        /*关闭按钮*/
+        function get_certificate(){
+            var panel = document.getElementById('panelCloud');
+            var mask  = document.getElementById('CMask')||null;
+            var frame = document.getElementById('CFrame');
+            if(panel&&CMask&&frame){
+                panel.style.display = 'block';
+                mask.style.display = 'block';
+                frame.src = 'https://openapi.shopex.cn/oauth/authorize?response_type=code&client_id=yogfss4l&redirect_uri=http%3A%2F%2F127.0.0.1%2Fecshop0%2Fsource%2Fecshop%2Fadmin%2Fcertificate.php%3Fact%3Dget_certificate%26type%3Dindex&view=auth_ecshop';
+            }
+        }
+
+        /*关闭按钮*/
+        function btnCancel(item){
+            var par  = item.offsetParent;
+            var mask  = document.getElementById('CMask')||null;
+            var frame = document.getElementById('CFrame');
+            par.style.display = 'none';
+            if(mask){mask.style.display = 'none';}
+            frame.src = '';
+        }
+    </script>
+</head>
+<body rlt="1">
+<!--云起激活系统面板-->
+<div class="panel-hint panel-icloud" id="panelCloud">
+    <div class="panel-cross"><span onclick="btnCancel(this)">Ｘ</span></div>
+    <div class="panel-title">
+        <span class="tit">您需要激活系统</span>
+        <p>用云起账号激活您的系统，享受物流查询，天工收银，手机短信等更多应用和服务</p>
+    </div>
+    <div class="panel-left">
+        <span>没有云起账号吗？</span>
+        <p>点击下列按钮一步完成注册激活！</p>
+        <a href="https://account.shopex.cn/reg?refer=yunqi_ecshop" target="_blank" class="btn btn-yellow">免费注册云起账号</a>
+    </div>
+    <div class="panel-right">
+        <h5 class="logo">云起</h5>
+        <p>正在激活中</p>
+        <iframe src="" frameborder="0" id="CFrame"></iframe>
+        <div class="cloud-passw">
+            <a target="_blank" href="https://account.shopex.cn/forget?">忘记密码？</a>
+        </div>
+    </div>
+</div>
+<!--云起激活系统面板-->
+<!--遮罩-->
+<div class="mask-black" id="CMask"></div>
+<!--遮罩-->
+<h1>
+    <a class="btn btn-right" href="__URL__/comment_manage_list">用户评论</a>
+
+
+    <span class="action-span1"><a href="index.php?act=main">ECSHOP 管理中心</a> </span><span id="search_id" class="action-span1">&nbsp;&nbsp;&gt;&nbsp;&nbsp;评论详情 </span>
+    <div style="clear:both"></div>
+</h1><!-- comment content list -->
+<div class="main-div">
+    <table width="100%">
+        <tbody>
+
+        <?php foreach($data as $k=>$v){?>
+
+        <tr>
+            <td>
+                <a href=""><b><?= $v['user_name']?></b>
+                </a>&nbsp;于      &nbsp;<?= $v['comment_time']?>&nbsp;对&nbsp;<b><?= $v['goods_name']?></b>&nbsp;发表评论    </td>
+        </tr>
+        <tr>
+            <td><hr color="#dadada" size="1"></td>
+        </tr>
+        <tr>
+            <td>
+                <div style="overflow:hidden; word-break:break-all;"><?= $v['reply_message']?></div>
+                <div align="right"><b>评论等级:</b> 5&nbsp;&nbsp;<b>IP地址</b>: 127.0.0.1</div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" onclick="location.href='comment_manage.php?act=check&amp;check=forbid&amp;id=1'" value="禁止显示" class="button">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- reply content list -->
+<div class="main-div">
+    <table width="100%">
+        <tbody><tr>
+            <td>
+                管理员&nbsp;<a href="mailto:1847557656@qq.com"><b>admin</b></a>&nbsp;于      &nbsp;2018-09-14 08:48:55&nbsp;回复    </td>
+        </tr>
+        <tr>
+            <td><hr color="#dadada" size="1"></td>
+        </tr>
+
+
+            <tr>
+                <td>
+                    <div style="overflow:hidden; word-break:break-all;"><?= $v['areply_message']?></div>
+                    <div align="right"><b>IP地址</b>: 127.0.0.1</div>
+                </td>
+            </tr>
+
+
+        </tbody></table>
+</div>
+
+
+<div class="main-div">
+
+    <form method="post" action="__URL__/comment" name="theForm" onsubmit="return validate()">
+        <table border="0" align="center">
+            <tbody><tr><th colspan="2">
+                <strong>回复评论</strong>
+            </th></tr>
+            <tr>
+                <td>用户名:</td>
+                <td><input name="user_name" type="text" value="<?= $v['user_name']?>" size="30" readonly="true"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input name="email" type="text" value="<?= $v['email']?>" size="30" readonly="true"></td>
+            </tr>
+            <tr>
+                <td>回复内容:</td>
+                <td><textarea name="areply_message" cols="50" rows="4" wrap="VIRTUAL"></textarea></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>提示: 此条评论已有回复, 如果继续回复将更新原来回复的内容!</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input name="send_email_notice" type="checkbox" value="1">邮件通知</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input name="submit" type="submit" value=" 确定 " class="button">
+                    <input type="reset" value=" 重置 " class="button">
+                    <input type="submit" name="remail" value="重发邮件" class="button">      <input type="hidden" name="comment_id" value="1">
+                    <input type="hidden" name="comment_type" value="0">
+                    <input type="hidden" name="id_value" value="1">
+                </td>
+            </tr>
+            </tbody></table>
+
+        <?php }?>
+
+    </form>
+</div>
+
+
+<script type="text/javascript" src="../../../static/js/utils.js"></script>
+<script type="text/javascript" src="../../../static/js/validator.js"></script>
+
+
+<div id="footer">
+    共执行 6 个查询，用时 0.017001 秒，Gzip 已禁用，内存占用 1.350 MB<br>
+    版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
+<!-- 新订单提示信息 -->
+<div id="popMsg">
+    <table cellspacing="0" cellpadding="0" width="100%" bgcolor="#cfdef4" border="0">
+        <tbody><tr>
+            <td style="color: #0f2c8c" width="30" height="24"></td>
+            <td style="font-weight: normal; color: #1f336b; padding-top: 4px;padding-left: 4px" valign="center" width="100%"> 新订单通知</td>
+            <td style="padding-top: 2px;padding-right:2px" valign="center" align="right" width="19"><span title="关闭" style="cursor: hand;cursor:pointer;color:red;font-size:12px;font-weight:bold;margin-right:4px;" onclick="Message.close()">×</span><!-- <img title=关闭 style="cursor: hand" onclick=closediv() hspace=3 src="msgclose.jpg"> --></td>
+        </tr>
+        <tr>
+            <td style="padding-right: 1px; padding-bottom: 1px" colspan="3" height="70">
+                <div id="popMsgContent">
+                    <p>您有 <strong style="color:#ff0000" id="spanNewOrder">1</strong> 个新订单以及       <strong style="color:#ff0000" id="spanNewPaid">0</strong> 个新付款的订单</p>
+                    <p align="center" style="word-break:break-all"><a href="order.php?act=list"><span style="color:#ff0000">点击查看新订单</span></a></p>
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+</div>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
+    <param name="movie" value="images/online.swf">
+    <param name="quality" value="high">
+    <embed src="images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
+</object>
+
+</body>
+</html>

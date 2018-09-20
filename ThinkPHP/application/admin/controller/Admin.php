@@ -3,7 +3,7 @@ namespace app\admin\controller;
 
 use think\Controller;
 use think\Db;
-use think\Request;
+use app\admin\model\Category;
 class admin extends Controller
 {
     //首页
@@ -14,8 +14,13 @@ class admin extends Controller
         $goods2 = Db::table('good')->where('b_id',11)->limit(8)->select();
         $goods_hot = Db::table('good')->order('is_hot desc')->limit(5)->select();
         $list = Db::table('ad')->select();
-        return view('index',['list'=>$list,'goods'=>$goods,'goods1'=>$goods1,'goods2'=>$goods2,'goods_hot'=>$goods_hot]);
+        // 查询商品类型
+        $category=new Category();
+        $category_data=Db::name('classify')->select();
+        $cate_list=$category->createTreeBySon($category_data);
+        return view('index',['list'=>$list,'goods'=>$goods,'goods1'=>$goods1,'goods2'=>$goods2,'goods_hot'=>$goods_hot,'cat_data'=>$cate_list]);
     }
+
     //购物车
     public function flow()
     {
@@ -54,5 +59,13 @@ class admin extends Controller
         $list = Db::table('good')->join('brand','good.b_id=brand.b_id')->join('classify','good.cat_id=classify.cat_id')->where('g_id',$id)->find();
         //print_r($list);die;
         return view('goods',['list'=>$list]);
+    }
+    public function category(){
+        return view('category');
+    }
+    public function user_logout()
+    {
+        session(null);//退出清空session
+        return $this->success('退出成功',url('admin/user'));//跳转到登录页面
     }
 }

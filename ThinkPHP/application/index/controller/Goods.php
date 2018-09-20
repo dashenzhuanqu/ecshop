@@ -7,6 +7,8 @@ use think\db\Query;
 use think\Db;
 use app\index\model\Good;
 use app\index\model\Brand;
+use app\index\model\Comment;
+use app\index\model\Areply;
 use app\index\model\Classify;
 use app\index\model\Goods_type;
 use app\index\model\Goods_trash;
@@ -361,10 +363,39 @@ class Goods extends Controller
             echo "<script>alert('删除失败');location.href='category_list'</script>";
         }
     }
-    //用户评论
+    /**
+     * 商品评论列表
+     */
     public function comment_manage_list(){
-        return view('comment_manage_list');
+//        $id = input('get.comment_id');
+        $comment = new Comment();
+        $arr = $comment->cha1();
+        return $this->fetch('comment_manage_list',['data' => $arr]);
     }
+
+    public function comment_manage(){
+        $id = input('get.comment_id');
+//        print_r($id);die;
+        $comment = new Comment();
+        $arr = $comment->cha($id);
+//        print_r($arr);die;
+        return $this->fetch('comment_message',['data' => $arr]);
+    }
+/**
+ * 回复
+*/
+    public function comment(){
+        $reply_message = input('post.areply_message');
+//        print_r($reply_message);
+        $model = model('areply')->jia($reply_message);
+        if($model){
+            echo "成功";
+        }else{
+            echo "失败";
+        }
+    }
+
+
     //商品品牌列表
     public function brand_list(){
 //        $brand = new Brand;
@@ -677,4 +708,8 @@ class Goods extends Controller
         }
         echo json_encode($arr);
     }
+
+
+
+
 }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:102:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html";i:1536909220;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:102:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html";i:1537407534;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>ECSHOP 管理中心</title>
@@ -18,7 +18,7 @@
 </style>
 
 <script>
-<!--
+//<!--
 // 这里把JS用到的所有语言都赋值到这里
 var process_request = "正在处理您的请求...";
 var todolist_caption = "记事本";
@@ -426,7 +426,7 @@ document.onmousemove=function(e)
     obj.title = '点击对列表排序';
   }
 }
-<!--
+//<!--
 
 
 var MyTodolist;

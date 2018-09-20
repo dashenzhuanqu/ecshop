@@ -1,15 +1,12 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:102:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\goods\goods_list.html";i:1536909563;}*/ ?>
-﻿<!-- $Id: goods_list.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:102:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\goods\goods_list.html";i:1537349429;}*/ ?>
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>ECSHOP 管理中心 - 商品列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../../../static/css/general.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" style="background-color: blue">
+  <link href="../../../static/css/general.css" rel="stylesheet" type="text/css" />
 <link href="../../../static/css/main.css" rel="stylesheet" type="text/css" />
-  <link href="../../../static/css/main.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../../static/js/jquery-2.1.4.min.js"></script>
 <!--<script type="text/javascript" src="../../../static/js/transport.js"></script>-->
   <!--<script type="text/javascript" src="../../../static/js/common.js"></script>-->
@@ -183,8 +180,8 @@ var cancel_color = "无样式";
   <div class="list-div" id="listDiv">
 <table cellpadding="3" cellspacing="1">
   <tr>
-    <th class="checks"><input onclick='listTable.selectAll(this, "checkboxes")' type="checkbox"></th>
-    <th><a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="../../../static/picture/sort_desc.png"/></th>
+    <th class="checks"><input  class="ace" type="checkbox"></th>
+    <th><a href="javascript:listTable.sort('g_id'); ">编号</a><img src="../../../static/picture/sort_desc.png"/></th>
     <th><a href="javascript:listTable.sort('goods_name'); ">商品名称</a></th>
     <th><a href="javascript:listTable.sort('goods_sn'); ">货号</a></th>
     <th><a href="javascript:listTable.sort('shop_price'); ">价格</a></th>
@@ -199,7 +196,8 @@ var cancel_color = "无样式";
   </tr>
   <?php foreach ($data as $k=>$v){?>
     <tr>
-    <td><input type="checkbox" name="checkboxes[]"></td>
+    <td><input type="checkbox" class ='box' name="box" alt="<?=$v['g_id']; ?>" /></td>
+    <!--<td><input type="checkbox" name="checkboxes[]"></td>-->
     <td><?php echo $v['g_id']; ?></td>
     <td class="first-cell" name="<?php echo $v['goods_name']; ?>"><?php echo $v['goods_name']; ?></td>
     <td><span onclick="listTable.edit(this, 'edit_goods_sn', 1)"><?php echo $v['goods_art']; ?></span></td>
@@ -252,24 +250,28 @@ var cancel_color = "无样式";
   <tr>
     <td style="text-align: left">
       <input type="hidden" name="act" value="batch" />
-      <select name="type" id="selAction" onchange="changeAction()">
-        <option value="">请选择...</option>
-        <option value="trash">回收站</option>
-        <option value="on_sale">上架</option>
-        <option value="not_on_sale">下架</option>
-        <option value="best">精品</option>
-        <option value="not_best">取消精品</option>
-        <option value="new">新品</option>
-        <option value="not_new">取消新品</option>
-        <option value="hot">热销</option>
-        <option value="not_hot">取消热销</option>
-        <option value="move_to">转移到分类</option>
-      </select>
-      <select name="target_cat" style="display:none">
-        <option value="0">请选择...</option><option value="1" >饮料</option><option value="2" >&nbsp;&nbsp;&nbsp;&nbsp;学习</option>      </select>
+      <input type="button" class="quan" value="全选">
+      <input type="button" class="quanbu" value="全不选">
+      <input type="button" class="fan" value="反选">
+      <input type="button" class="pishan" value="批删">
+      <!--<select name="type" id="selAction" onchange="changeAction()">-->
+        <!--<option value="">请选择...</option>-->
+        <!--<option value="trash">回收站</option>-->
+        <!--<option value="on_sale">上架</option>-->
+        <!--<option value="not_on_sale">下架</option>-->
+        <!--<option value="best">精品</option>-->
+        <!--<option value="not_best">取消精品</option>-->
+        <!--<option value="new">新品</option>-->
+        <!--<option value="not_new">取消新品</option>-->
+        <!--<option value="hot">热销</option>-->
+        <!--<option value="not_hot">取消热销</option>-->
+        <!--<option value="move_to">转移到分类</option>-->
+      <!--</select>-->
+      <!--<select name="target_cat" style="display:none">-->
+        <!--<option value="0">请选择...</option><option value="1" >饮料</option><option value="2" >&nbsp;&nbsp;&nbsp;&nbsp;学习</option>      </select>-->
         
-            <input type="hidden" name="extension_code" value="" />
-            <button class="btn" type="submit" id="btnSubmit" disabled="true"> 确定 </button>
+            <!--<input type="hidden" name="extension_code" value="" />-->
+            <!--<button class="btn" type="submit" id="btnSubmit" disabled="true"> 确定 </button>-->
     </td>
     <td align="right" nowrap="true">
     <!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
@@ -668,4 +670,70 @@ if (document.getElementById("listDiv"))
 //             }
          })
      })
+     //全选
+     $('.ace').click(function(){
+         var box=document.getElementsByName('box');
+         for(var i=0;i<=box.length;i++){
+             // box[i].checked=true;
+             if( box[i].checked==true){
+                 box[i].checked=false;
+             }else{
+                 box[i].checked=true;
+             }
+         }
+     });
+     //全不选
+     $('.quanbu').click(function(){
+         var box=document.getElementsByName('box');
+
+         for(var i=0;i<=box.length;i++){
+             box[i].checked=false;
+
+         }
+     });
+     //全选123
+     $('.quan').click(function(){
+         var box=document.getElementsByName('box');
+         for(var i=0;i<=box.length;i++){
+             box[i].checked=true;
+         }
+     });
+     //反选
+     $('.fan').click(function(){
+         var box=document.getElementsByName('box');
+         for(var i=0;i<=box.length;i++){
+             if( box[i].checked==true){
+                 box[i].checked=false;
+             }else{
+                 box[i].checked=true;
+             }
+         }
+     });
+     //批量删除
+     $(document).on('click','.pishan',function(){
+         var r=confirm("你确定要批量删除吗？");
+         if(!r){return};
+         var box=document.getElementsByName('box');
+         var str='';
+         var _this=$(this);
+         $('.box').each(function(){
+             if(this.checked==true){
+                 str +=','+$(this).attr('alt');
+             }
+         })
+         var g_id=str.substr(1);
+         $.ajax({
+             url:"<?php echo url('goods_pishan'); ?>",
+             data:{g_id:g_id},
+             dataType:"json",
+             success:function(res){
+                 if(res.msg==1){
+
+                     window.location.href='<?php echo url("goods_list"); ?>';
+                 }else{
+                     alert('批量删除失败');
+                 }
+             }
+         })
+     });
 </script>
