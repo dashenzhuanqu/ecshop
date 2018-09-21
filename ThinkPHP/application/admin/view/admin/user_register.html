@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <base href="\">
 <meta name="Generator" content="ECSHOP v4.0.0" />
@@ -23,7 +22,7 @@
             <div class="usBox">
   <div class="usBox_2 clearfix">
    <div class="regtitle"></div>
-    <form action="user.php" method="post" name="formUser" onsubmit="return register();">
+    <form action="{:url('user_add')}" method="post" name="formUser" onsubmit="return register();">
       <table width="100%"  border="0" align="left" cellpadding="5" cellspacing="3">
         <tr>
           <td width="13%" align="right">用户名</td>
@@ -42,7 +41,7 @@
         <tr>
           <td align="right">密码</td>
           <td>
-          <input name="password" type="password" id="password1" onblur="check_password(this.value);" onkeyup="checkIntensity(this.value)" class="inputBg" style="width:179px;" />
+          <input name="pwd" type="password" id="password1" onblur="check_password(this.value);" onkeyup="checkIntensity(this.value)" class="inputBg" style="width:179px;" />
             <span style="color:#FF0000" id="password_notice"> *</span>
           </td>
         </tr>
@@ -61,30 +60,30 @@
         <tr>
           <td align="right">确认密码</td>
           <td>
-          <input name="confirm_password" type="password" id="conform_password" onblur="check_conform_password(this.value);"  class="inputBg" style="width:179px;"/>
+          <input name="pwds" type="password" id="conform_password" onblur="check_conform_password(this.value);"  class="inputBg" style="width:179px;"/>
             <span style="color:#FF0000" id="conform_password_notice"> *</span>
           </td>
         </tr>
         	        <tr>
           <td align="right" >QQ          <td>
-          <input name="extend_field2" type="text" size="25" class="inputBg" />          </td>
+          <input name="qq" type="text" size="25" class="inputBg" />          </td>
         </tr>
 			        <tr>
           <td align="right" >办公电话          <td>
-          <input name="extend_field3" type="text" size="25" class="inputBg" />          </td>
+          <input name="dtel" type="text" size="25" class="inputBg" />          </td>
         </tr>
 			        <tr>
           <td align="right" >家庭电话          <td>
-          <input name="extend_field4" type="text" size="25" class="inputBg" />          </td>
+          <input name="atel" type="text" size="25" class="inputBg" />          </td>
         </tr>
 			        <tr>
           <td align="right" id="extend_field5i">手机          <td>
-          <input name="extend_field5" type="text" size="25" class="inputBg" /><span style="color:#FF0000"> *</span>          </td>
+          <input name="tel" type="text" size="25" class="inputBg" /><span style="color:#FF0000"> *</span>          </td>
         </tr>
 			        <tr>
           <td align="right">密码提示问题</td>
           <td>
-          <select name='sel_question'>
+          <select name='pwdquestion'>
 	  <option value='0'>请选择密码提示问题</option>
 	  <option value="friend_birthday">我最好朋友的生日？</option><option value="old_address">我儿时居住地的地址？</option><option value="motto">我的座右铭是？</option><option value="favorite_movie">我最喜爱的电影？</option><option value="favorite_song">我最喜爱的歌曲？</option><option value="favorite_food">我最喜爱的食物？</option><option value="interest">我最大的爱好？</option><option value="favorite_novel">我最喜欢的小说？</option><option value="favorite_equipe">我最喜欢的运动队？</option>	  </select>
           </td>
@@ -92,23 +91,23 @@
         <tr>
           <td align="right" >密码问题答案</td>
           <td>
-	  <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20'/>          </td>
+	  <input name="pwdanswer" type="text" size="25" class="inputBg" maxlengt='20'/>          </td>
         </tr>
-		      <tr id="vcode" style="display: none">
-      <td align="right">验证码</td>
-      <td><input id="vcode_input" type="text" size="8" name="captcha" class="inputBg" onchange="validate_vcode(this.value);"/>
-      <img id="captcha" src="admin/picture/captcha.php" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" />
-        <span style="color:#FF0000;display: none" id="vcode_tip"></span>
-      </td>
-      </tr>
-        <tr id="sms" style="display: none">
-          <td align="right">短信验证码</td>
-          <td>
-            <input type="text" name="sms_code" value=""size="8" class="inputBg">
-            <input id="get_sms" type="button" style="align-content: center;width:80px;height:22px;background:#d2d2d2;color:#fff;cursor:pointer" class="inputBg" onclick="send_sms()" value="获取验证码" disabled="disabled"/>
-            <span style="color:#FF0000;display: none" id="sms_tip"></span>
-          </td>
-        </tr>
+		      <!--<tr id="vcode" style="display: none">-->
+      <!--<td align="right">验证码</td>-->
+      <!--<td><input id="vcode_input" type="text" size="8" name="captcha" class="inputBg" onchange="validate_vcode(this.value);"/>-->
+      <!--<img id="captcha" src="admin/picture/captcha.php" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" />-->
+        <!--<span style="color:#FF0000;display: none" id="vcode_tip"></span>-->
+      <!--</td>-->
+      <!--</tr>-->
+        <!--<tr id="sms" style="display: none">-->
+          <!--<td align="right">短信验证码</td>-->
+          <!--<td>-->
+            <!--<input type="text" name="sms_code" value=""size="8" class="inputBg">-->
+            <!--<input id="get_sms" type="button" style="align-content: center;width:80px;height:22px;background:#d2d2d2;color:#fff;cursor:pointer" class="inputBg" onclick="send_sms()" value="获取验证码" disabled="disabled"/>-->
+            <!--<span style="color:#FF0000;display: none" id="sms_tip"></span>-->
+          <!--</td>-->
+        <!--</tr>-->
         <script type="text/javascript">
           var captch = "";
           if(captch == 1){
@@ -124,9 +123,9 @@
         <tr>
           <td>&nbsp;</td>
           <td align="left">
-          <input name="act" type="hidden" value="act_register" >
-          <input type="hidden" name="back_act" value="" />
-          <input name="Submit" type="submit" value="" class="us_Submit_reg">
+          <!--<input name="act" type="hidden" value="act_register" >-->
+          <!--<input type="hidden" name="back_act" value="" />-->
+          <input type="submit" value="" class="us_Submit_reg">
           </td>
         </tr>
         <tr>
@@ -135,7 +134,7 @@
         <tr>
           <td>&nbsp;</td>
           <td class="actionSub">
-          <a href="user.php?act=login">我已有账号，我要登录</a><br />
+          <a href="{:url('user')}">我已有账号，我要登录</a><br />
           <a href="user.php?act=get_password">您忘记密码了吗？</a>
           </td>
         </tr>

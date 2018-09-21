@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:90:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\flow.html";i:1537343775;s:83:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537346653;s:81:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537343751;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:90:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\flow.html";i:1537343775;s:83:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537514234;s:81:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537343751;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v4.0.0" />
@@ -18,12 +18,15 @@
             <div class="top_menu1">
                 <script type="text/javascript" src="admin/js/transport.js"></script>
                 <script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
+                <?php if(empty($_SESSION)){ ?>
                 欢迎光临本店<a href="<?php echo url('admin/user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('admin/user_register'); ?>">免费注册</a>  </font>
-            <font > 您好，<font class="f4_b">root</font>, 欢迎您回来！ <a href="<?php echo url('admin/user'); ?>">用户中心</a>| <a href="<?php echo url('user_logout'); ?>">退出</a> </font>  </font>
+                <?php }else{ ?>
+            <font > 您好，<font class="f4_b"><?php echo $username; ?></font>, 欢迎您回来！ <a href="<?php echo url('goods/user_list'); ?>">用户中心</a>| <a href="<?php echo url('admin/module/user_logout'); ?>">退出</a> </font>  </font>
+                <?php }?>
         </div> </div>
         <div class="bar-cart">
             <div class="fl cart-yh">
-                <a href="<?php echo url('admin/user'); ?>" class="">用户中心</a>
+                <a href="<?php echo url('goods/user_list'); ?>" class="">用户中心</a>
             </div>
             <div class="cart" id="ECS_CARTINFO"> <a href="<?php echo url('admin/flow'); ?>" title="查看购物车">购物车(0)</a> </div>
         </div>
@@ -36,14 +39,14 @@
             <div class="m_left">
                 <ul>
                     <li><a href="index.php" class="cur">首页</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">电器</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">电子产品</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">医疗设备</a></li>
+                    <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                    <li><a href="<?php echo url('admin/category'); ?>?id=<?php echo $v['cat_id']; ?>" class="cur"><?php echo $v['cat_name']; ?></a></li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
         </div>
         <div class="serach-box">
-            <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r">
+            <form id="searchForm" name="searchForm" method="get" action="<?php echo url('category'); ?>" onSubmit="return checkSearchForm()" class="f_r">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td width="135"><input name="keywords" type="text" id="keyword" value="" class="B_input"/></td>

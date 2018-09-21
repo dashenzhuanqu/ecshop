@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <base href="\">
 <meta name="Generator" content="ECSHOP v4.0.0" />
@@ -10,7 +9,8 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="admin/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="admin/js/common.js"></script><script type="text/javascript">
+<script type="text/javascript" src="admin/js/common.js"></script>
+<script type="text/javascript">
 function $id(element) {
   return document.getElementById(element);
 }
@@ -47,7 +47,7 @@ function reg(str){
   <div class="AreaR">
     <div id="goodsInfo" class="clearfix">
       <div class="imgInfo">
-                <a href="javascript:;" onclick="window.open('gallery.php?id=2'); return false;"> <img src="/admin/picture/72_thumb_g_1462956048008.jpg" alt="文档"/> </a>
+                <a href="javascript:;" onclick="window.open('gallery.php?id=2'); return false;"> <img src="__ROOT__/uploads/{$list.goods_img}" alt="文档"/> </a>
                 <div class="blank5"></div>
          <div class="clearfix">
       <span onmouseover="moveLeft()" onmousedown="clickLeft()" onmouseup="moveLeft()" onmouseout="scrollStop()"></span>
@@ -153,37 +153,37 @@ function reg(str){
           </div>
       <div class="textInfo">
         <form action="javascript:addToCart(2)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
-          <div class="goods_style_name"> <strong><font color=#FE0000>文档</font></strong> </div>
+          <div class="goods_style_name"> <strong><font color=#FE0000>{$list.goods_info}</font></strong> </div>
           <ul>
                         <li class="clearfix">
               <dd>
-                                <strong>商品货号：</strong>11                              </dd>
+                                <strong>商品货号：</strong>{$list.goods_art}                              </dd>
               <dd class="ddR">
-                                                <strong>商品库存：</strong> 1                                               </dd>
+                                                <strong>商品库存：</strong> {$list.suk}                                               </dd>
             </li>
             <li class="clearfix">
               <dd>
-                                <strong>商品品牌：</strong><a href="brand.php?id=2" >文档</a>
+                                <strong>商品品牌：</strong><a href="brand.php?id=2" >{$list.brand_name}</a>
                               </dd>
               <dd class="ddR">
-                                <strong>商品重量：</strong>0克                              </dd>
+                                <strong>商品重量：</strong>{$list.goods_weight}克                              </dd>
             </li>
             <li class="clearfix">
               <dd>
-                                <strong>上架时间：</strong>2018-08-31                              </dd>
+                                <strong>上架时间：</strong>{$list.add_time}                              </dd>
               <dd class="ddR">
                 
                 <strong>商品点击数：</strong>2 </dd>
                 <dd class="ddR">
        
-       <strong>累计销量：</strong>65535       </dd>
+       <strong>累计销量：</strong>65535</dd>
             </li>
             <li class="clearfix">
               <dd>
-                                <strong>市场价格：</strong><font class="market">￥13元</font> </dd>
+                                <strong>市场价格：</strong><font class="market">￥{$list.mall_price}元</font> </dd>
                             
-              <dd><strong>本店售价：</strong><font class="shop" id="ECS_SHOPPRICE">￥11元</font> </dd>
-                            <dd><strong>注册用户：</strong><font class="shop" id="ECS_RANKPRICE_1">￥11元</font> </dd>
+              <dd><strong>本店售价：</strong><font class="shop" id="ECS_SHOPPRICE">￥{$list.goods_price}元</font> </dd>
+                            <dd><strong>注册用户：</strong><font class="shop" id="ECS_RANKPRICE_1">￥{$list.vip_price}元</font> </dd>
                           </li>
                         <li class="padd"> <font class="f1">购买商品达到以下数量区间时可享受的优惠价格</font><br />
               <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#aad6ff">

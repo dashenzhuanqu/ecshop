@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:91:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\index.html";i:1537346564;s:83:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537346653;s:81:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537343751;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:91:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\index.html";i:1537489732;s:83:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537514909;s:81:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537343751;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <base href="\">
@@ -21,12 +21,15 @@
             <div class="top_menu1">
                 <script type="text/javascript" src="admin/js/transport.js"></script>
                 <script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
+                <?php if(empty($_SESSION)){ ?>
                 欢迎光临本店<a href="<?php echo url('admin/user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('admin/user_register'); ?>">免费注册</a>  </font>
-            <font > 您好，<font class="f4_b">root</font>, 欢迎您回来！ <a href="<?php echo url('admin/user'); ?>">用户中心</a>| <a href="<?php echo url('user_logout'); ?>">退出</a> </font>  </font>
+                <?php }else{ ?>
+            <font > 您好，<font class="f4_b"><?php echo $username; ?></font>, 欢迎您回来！ <a href="<?php echo url('goods/user_list'); ?>">用户中心</a>| <a href="<?php echo url('admin/user_logout'); ?>">退出</a> </font>  </font>
+                <?php }?>
         </div> </div>
         <div class="bar-cart">
             <div class="fl cart-yh">
-                <a href="<?php echo url('admin/user'); ?>" class="">用户中心</a>
+                <a href="<?php echo url('goods/user_list'); ?>" class="">用户中心</a>
             </div>
             <div class="cart" id="ECS_CARTINFO"> <a href="<?php echo url('admin/flow'); ?>" title="查看购物车">购物车(0)</a> </div>
         </div>
@@ -39,14 +42,14 @@
             <div class="m_left">
                 <ul>
                     <li><a href="index.php" class="cur">首页</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">电器</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">电子产品</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">医疗设备</a></li>
+                    <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                    <li><a href="<?php echo url('admin/category'); ?>?id=<?php echo $v['cat_id']; ?>" class="cur"><?php echo $v['cat_name']; ?></a></li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
         </div>
         <div class="serach-box">
-            <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r">
+            <form id="searchForm" name="searchForm" method="get" action="<?php echo url('category'); ?>" onSubmit="return checkSearchForm()" class="f_r">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td width="135"><input name="keywords" type="text" id="keyword" value="" class="B_input"/></td>
@@ -58,216 +61,124 @@
     </div>
 </div>
 
-<div class="clear0 "></div>
 <script>
 if (Object.prototype.toJSONString){
-      var oldToJSONString = Object.toJSONString;
-      Object.prototype.toJSONString = function(){
-        if (arguments.length > 0){
-          return false;
-        }else{
-          return oldToJSONString.apply(this, arguments);
+        var oldToJSONString = Object.toJSONString;
+        Object.prototype.toJSONString = function(){
+            if (arguments.length > 0){
+            return false;
+            }else{
+            return oldToJSONString.apply(this, arguments);
+            }
         }
-}}</script>
-<div class="indexpage clearfix">
-  <div class="index-cat">
-      <div class="category_info">
-          <div id="category_tree">
-              <!-- 无限极分类 start-->
-              <?php foreach ($cat_data as $key => $value) { ?>
-              <div class="cat-box">
-                  <div class="cat1">
-                      <a href="http://www.ecshop4.com/admin/admin/goods.html?cat_id=<?php echo $value['cat_id']; ?>"><?php echo $value['cat_name']; ?></a>
-                  </div>
-                  <div class="cat2-box">
-                      <?php foreach ($value['son'] as $key => $val) { ?>
-                      <div class="cat2 clearfix">
-                          <a class="cat2-link" href="http://www.ecshop4.com/admin/admin/goods.html?cat_id=<?php echo $val['cat_id']; ?>"><?php echo $val['cat_name']; ?></a>
-                          <div class="cat3-block">
-                          </div>
-                          <div class="cat3-box">
-                              <?php foreach ($val['son'] as $key => $v) { ?>
-                              <a href="http://www.ecshop4.com/admin/admin/goods.html?cat_id=<?php echo $v['cat_id']; ?>"><?php echo $v['cat_name']; ?></a>&nbsp;&nbsp;
-                              <?php } ?>
-                          </div>
-                      </div>
-                      <?php } ?>
-                  </div>
-              </div>
-              <?php } ?>
-          </div>
-          <div class="clear0"></div>
-      </div>
-  </div>
-  <div class="clear0"></div>
-</div>
-  <div class="index-banner"> 
- <style>
-    .swiper-container {
-        width: 100%;
-        height: 100%;
     }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-    </style>
-<div class="swiper-container swiper1">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-<script>
-       var swiper = new Swiper('.swiper1', {
-           pagination: '.swiper-pagination',
-           nextButton: '.swiper-button-next',
-           prevButton: '.swiper-button-prev',
-           paginationClickable: true,
-           spaceBetween: 0,
-           centeredSlides: true,
-           autoplay: 4000,
-           loop:true,
-           autoplayDisableOnInteraction: false
-       });
-</script> </div>
-</div>
-<div class="indexpage clearfix index-ad">
-  <div class="ad-tg">
-  </div>
-  <div class="ad-lb">
- <style>
-    .swiper-container.swiper2 {
-        width: 100%;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        overflow:hidden;
-    }
-    .swiper2 .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        height: 200px;
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-    </style>
-<div class="swiper-container swiper2">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-<script>
-    var swiper = new Swiper('.swiper2', {
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        slidesPerView: 4,
-        paginationClickable: true,
-        spaceBetween: 0,
-        loop:true
-    });
 </script>
-  </div>
-</div>
+    <div class="indexpage clearfix">
+        <div class="index-cat">
+            <div class="category_info">
+                <div id="category_tree">
+                    <?php foreach ($cat_data as $key => $value) { ?>
+                    <div class="cat-box">
+                        <div class="cat1">
+                            <a href="<?php echo url('admin/goods'); ?>?cat_id=<?php echo $value['cat_id']; ?>"><?php echo $value['cat_name']; ?></a>
+                        </div>
+                        <div class="cat2-box">
+                            <?php foreach ($value['son'] as $key => $val) { ?>
+                            <div class="cat2 clearfix">
+                                <a class="cat2-link" href="<?php echo url('admin/goods'); ?>?cat_id=<?php echo $val['cat_id']; ?>"><?php echo $val['cat_name']; ?></a>
+                                <div class="cat3-block">
+    
+                                </div>
+                                <div class="cat3-box">
+                                    <?php foreach ($val['son'] as $key => $v) { ?>
+                                    <a href="<?php echo url('admin/goods'); ?>?cat_id=<?php echo $v['cat_id']; ?>"><?php echo $v['cat_name']; ?></a>&nbsp;&nbsp;
+                                    <?php } ?>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <?php } ?>
+                    <div class="clear0"></div>
+                </div>
+                <div class="clear0"></div>
+            </div>
+        </div>
+        <div class="index-banner">
+            <style>
+                .swiper-container {
+                    width: 100%;
+                    height: 100%;
+                }
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 18px;
+                    background: #fff;
+                    /* Center slide text vertically */
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                }
+            </style>
+            <div class="swiper-container swiper1">
+                <div class="swiper-wrapper">
+                    <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                    <div class="swiper-slide">
+                        <img src="/uploads/<?php echo $v['ad_img']; ?>" alt="">
+                    </div>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                </div>
+            </div>
+                <!-- <div class="swiper-pagination"></div> -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+        </div>
+            <script>
+               var swiper = new Swiper('.swiper1', {
+                   pagination: '.swiper-pagination',
+                   nextButton: '.swiper-button-next',
+                   prevButton: '.swiper-button-prev',
+                   paginationClickable: true,
+                   spaceBetween: 2,
+                   centeredSlides: true,
+                   autoplay: 4000,
+                   loop:true,
+                   autoplayDisableOnInteraction: false
+               });
+            </script>
+        </div>
+    </div>
 <div class="index-body">
     <div class="indexpage">
         <div class="body-goods">
             <div class="goods-title">1F 家用电器</div>
             <div class="clearfix goods-wrap">
                 <div class="goods-leftad">
+sasdf
                 </div>
                 <div class="goods-right">
                     <div class="all_ms">
-                        <a class="goodsItem" href="<?php echo url('admin/goods'); ?>"> <div  class="img-box"><img src="/admin/picture/72_thumb_g_1462956048008.jpg" alt="智能相机" class="goodsimg" /></div>
+                        <?php if(is_array($goods) || $goods instanceof \think\Collection || $goods instanceof \think\Paginator): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>">
+       <div  class="img-box">
+         <img src="/uploads/<?php echo $v['goods_img']; ?>" alt="<?php echo $v['goods_name']; ?>" class="goodsimg" />
+       </div>
                             <div class="goods-brief"></div>
-                            <div class="gos-title">智能相机</div>
+                            <div class="gos-title"><?php echo $v['goods_name']; ?></div>
                             <div class="prices">
-                                <font class="shop_s"><b>￥149元</b></font>
+                                <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
                             </div>
                         </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">炫彩翻页保护套</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥39元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">平衡车</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥1999元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">透明超薄软胶保...</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥19元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">运动相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥399元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">自拍杆</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥49元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/62_thumb_g_1462952557730.jpg" alt="随身风扇" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">随身风扇</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/61_thumb_g_1462952376889.jpg" alt="视频" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">视频</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
+                       <?php endforeach; endif; else: echo "" ;endif; ?>
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -279,62 +190,15 @@ if (Object.prototype.toJSONString){
                     </div>        </div>
                 <div class="goods-right">
                     <div class="all_ms">
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/72_thumb_g_1462956048008.jpg" alt="智能相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">智能相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥149元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">炫彩翻页保护套</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥39元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">平衡车</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥1999元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">透明超薄软胶保...</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥19元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">运动相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥399元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">自拍杆</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥49元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/62_thumb_g_1462952557730.jpg" alt="随身风扇" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">随身风扇</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/61_thumb_g_1462952376889.jpg" alt="视频" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">视频</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
+                            <?php if(is_array($goods1) || $goods1 instanceof \think\Collection || $goods1 instanceof \think\Paginator): $i = 0; $__LIST__ = $goods1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                            <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>"> <div  class="img-box"><img src="/uploads/<?php echo $v['goods_img']; ?>" alt="<?php echo $v['goods_name']; ?>" class="goodsimg" /></div>
+                                <div class="goods-brief"></div>
+                                <div class="gos-title"><?php echo $v['goods_name']; ?></div>
+                                <div class="prices">
+                                    <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
+                                </div>
+                            </a>
+                           <?php endforeach; endif; else: echo "" ;endif; ?>
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -345,62 +209,15 @@ if (Object.prototype.toJSONString){
                 </div>
                 <div class="goods-right">
                     <div class="all_ms">
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/72_thumb_g_1462956048008.jpg" alt="智能相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">智能相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥149元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">炫彩翻页保护套</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥39元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">平衡车</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥1999元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">透明超薄软胶保...</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥19元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">运动相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥399元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">自拍杆</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥49元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/62_thumb_g_1462952557730.jpg" alt="随身风扇" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">随身风扇</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/61_thumb_g_1462952376889.jpg" alt="视频" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">视频</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
+                            <?php if(is_array($goods2) || $goods2 instanceof \think\Collection || $goods2 instanceof \think\Paginator): $i = 0; $__LIST__ = $goods2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                            <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>"> <div  class="img-box"><img src="/uploads/<?php echo $v['goods_img']; ?>" alt="<?php echo $v['goods_name']; ?>" class="goodsimg" /></div>
+                                <div class="goods-brief"></div>
+                                <div class="gos-title"><?php echo $v['goods_name']; ?></div>
+                                <div class="prices">
+                                    <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
+                                </div>
+                            </a>
+                           <?php endforeach; endif; else: echo "" ;endif; ?>
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -408,43 +225,20 @@ if (Object.prototype.toJSONString){
             <div class="goods-title">热门商品推荐</div>
             <div class="clearfix goods-wrap hot-goods">
                 <div id="show_hot_area" class="clearfix goodsBox all_mid all_ms">
-                    <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
+                 <?php if(is_array($goods_hot) || $goods_hot instanceof \think\Collection || $goods_hot instanceof \think\Paginator): $i = 0; $__LIST__ = $goods_hot;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                    <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>"> 
+                        <div  class="img-box"><img src="/uploads/<?php echo $v['goods_img']; ?>" alt="<?php echo $v['goods_name']; ?>" class="goodsimg" />
+                        </div>
                         <div class="goods-brief"></div>
-                        <div class="gos-title">炫彩翻页保护套</div>
+                        <div class="gos-title"><?php echo $v['goods_name']; ?></div>
                         <div class="prices">
-                            <font class="shop_s"><b>￥39元</b></font>
+                            <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
                         </div>
                     </a>
-                    <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">透明超薄软胶保...</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥19元</b></font>
-                        </div>
-                    </a>
-                    <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">平衡车</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥1999元</b></font>
-                        </div>
-                    </a>
-                    <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">自拍杆</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥49元</b></font>
-                        </div>
-                    </a>
-                    <a class="goodsItem" href="/index.php/admin/admin/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">运动相机</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥399元</b></font>
-                        </div>
-                    </a>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                     <div class="clear0"></div>
-                </div> <div class="clear10"></div>
+                </div> 
+                <div class="clear10"></div>
             </div>
         </div>
     </div>

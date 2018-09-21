@@ -1,6 +1,5 @@
 <?php
 namespace app\index\controller;
-
 use think\Request;
 use think\Validate;
 use app\index\controller\Base;

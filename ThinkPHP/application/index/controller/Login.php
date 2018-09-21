@@ -45,14 +45,12 @@ class Login extends Controller{
             return ['code'=>101,'message'=>'帐号不正确'];
         }
     }
-
     //退出登录
     public function logout()
 	{ 
 	   session(null);
 	   $this->success('登出成功！',url('/admin/login/index'));
 	}
-	
 	   // 验证码检测
        public function check($code='')
        {
@@ -62,7 +60,4 @@ class Login extends Controller{
                return true;
            }
        }
-   
-
-
 }

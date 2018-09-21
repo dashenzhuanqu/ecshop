@@ -41,8 +41,6 @@ class System extends Controller{
 	public function system_yq_upd(){
 		return $this->fetch();
 	}
-
-
 }//结尾
 
 

@@ -15,216 +15,124 @@
 <script type="text/javascript" src="admin/js/common.js"></script><script type="text/javascript" src="admin/js/index.js"></script></head>
 <body>
 {include file='module/header'}
-<div class="clear0 "></div>
 <script>
 if (Object.prototype.toJSONString){
-      var oldToJSONString = Object.toJSONString;
-      Object.prototype.toJSONString = function(){
-        if (arguments.length > 0){
-          return false;
-        }else{
-          return oldToJSONString.apply(this, arguments);
+        var oldToJSONString = Object.toJSONString;
+        Object.prototype.toJSONString = function(){
+            if (arguments.length > 0){
+            return false;
+            }else{
+            return oldToJSONString.apply(this, arguments);
+            }
         }
-}}</script>
-<div class="indexpage clearfix">
-  <div class="index-cat">
-      <div class="category_info">
-          <div id="category_tree">
-              <!-- 无限极分类 start-->
-              <?php foreach ($cat_data as $key => $value) { ?>
-              <div class="cat-box">
-                  <div class="cat1">
-                      <a href="http://www.ecshop4.com/admin/admin/goods.html?cat_id={$value.cat_id}">{$value.cat_name}</a>
-                  </div>
-                  <div class="cat2-box">
-                      <?php foreach ($value['son'] as $key => $val) { ?>
-                      <div class="cat2 clearfix">
-                          <a class="cat2-link" href="http://www.ecshop4.com/admin/admin/goods.html?cat_id={$val.cat_id}">{$val.cat_name}</a>
-                          <div class="cat3-block">
-                          </div>
-                          <div class="cat3-box">
-                              <?php foreach ($val['son'] as $key => $v) { ?>
-                              <a href="http://www.ecshop4.com/admin/admin/goods.html?cat_id={$v.cat_id}">{$v.cat_name}</a>&nbsp;&nbsp;
-                              <?php } ?>
-                          </div>
-                      </div>
-                      <?php } ?>
-                  </div>
-              </div>
-              <?php } ?>
-          </div>
-          <div class="clear0"></div>
-      </div>
-  </div>
-  <div class="clear0"></div>
-</div>
-  <div class="index-banner"> 
- <style>
-    .swiper-container {
-        width: 100%;
-        height: 100%;
     }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-    </style>
-<div class="swiper-container swiper1">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-<script>
-       var swiper = new Swiper('.swiper1', {
-           pagination: '.swiper-pagination',
-           nextButton: '.swiper-button-next',
-           prevButton: '.swiper-button-prev',
-           paginationClickable: true,
-           spaceBetween: 0,
-           centeredSlides: true,
-           autoplay: 4000,
-           loop:true,
-           autoplayDisableOnInteraction: false
-       });
-</script> </div>
-</div>
-<div class="indexpage clearfix index-ad">
-  <div class="ad-tg">
-  </div>
-  <div class="ad-lb">
- <style>
-    .swiper-container.swiper2 {
-        width: 100%;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        overflow:hidden;
-    }
-    .swiper2 .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        height: 200px;
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-    </style>
-<div class="swiper-container swiper2">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-<script>
-    var swiper = new Swiper('.swiper2', {
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        slidesPerView: 4,
-        paginationClickable: true,
-        spaceBetween: 0,
-        loop:true
-    });
 </script>
-  </div>
-</div>
+    <div class="indexpage clearfix">
+        <div class="index-cat">
+            <div class="category_info">
+                <div id="category_tree">
+                    <?php foreach ($cat_data as $key => $value) { ?>
+                    <div class="cat-box">
+                        <div class="cat1">
+                            <a href="{:url('admin/goods')}?cat_id={$value.cat_id}">{$value.cat_name}</a>
+                        </div>
+                        <div class="cat2-box">
+                            <?php foreach ($value['son'] as $key => $val) { ?>
+                            <div class="cat2 clearfix">
+                                <a class="cat2-link" href="{:url('admin/goods')}?cat_id={$val.cat_id}">{$val.cat_name}</a>
+                                <div class="cat3-block">
+    
+                                </div>
+                                <div class="cat3-box">
+                                    <?php foreach ($val['son'] as $key => $v) { ?>
+                                    <a href="{:url('admin/goods')}?cat_id={$v.cat_id}">{$v.cat_name}</a>&nbsp;&nbsp;
+                                    <?php } ?>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <?php } ?>
+                    <div class="clear0"></div>
+                </div>
+                <div class="clear0"></div>
+            </div>
+        </div>
+        <div class="index-banner">
+            <style>
+                .swiper-container {
+                    width: 100%;
+                    height: 100%;
+                }
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 18px;
+                    background: #fff;
+                    /* Center slide text vertically */
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                }
+            </style>
+            <div class="swiper-container swiper1">
+                <div class="swiper-wrapper">
+                    {volist name='list' id='v'}
+                    <div class="swiper-slide">
+                        <img src="__ROOT__/uploads/{$v.ad_img}" alt="">
+                    </div>
+                    {/volist}
+                </div>
+            </div>
+                <!-- <div class="swiper-pagination"></div> -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+        </div>
+            <script>
+               var swiper = new Swiper('.swiper1', {
+                   pagination: '.swiper-pagination',
+                   nextButton: '.swiper-button-next',
+                   prevButton: '.swiper-button-prev',
+                   paginationClickable: true,
+                   spaceBetween: 2,
+                   centeredSlides: true,
+                   autoplay: 4000,
+                   loop:true,
+                   autoplayDisableOnInteraction: false
+               });
+            </script>
+        </div>
+    </div>
 <div class="index-body">
     <div class="indexpage">
         <div class="body-goods">
             <div class="goods-title">1F 家用电器</div>
             <div class="clearfix goods-wrap">
                 <div class="goods-leftad">
+sasdf
                 </div>
                 <div class="goods-right">
                     <div class="all_ms">
-                        <a class="goodsItem" href="{:url('admin/goods')}"> <div  class="img-box"><img src="/admin/picture/72_thumb_g_1462956048008.jpg" alt="智能相机" class="goodsimg" /></div>
+                        {volist name='goods' id='v'}
+                <a class="goodsItem" href="{:url('admin/goods',['id'=>$v.g_id])}">
+       <div  class="img-box">
+         <img src="__ROOT__/uploads/{$v.goods_img}" alt="{$v.goods_name}" class="goodsimg" />
+       </div>
                             <div class="goods-brief"></div>
-                            <div class="gos-title">智能相机</div>
+                            <div class="gos-title">{$v.goods_name}</div>
                             <div class="prices">
-                                <font class="shop_s"><b>￥149元</b></font>
+                                <font class="shop_s"><b>￥{$v.goods_price}元</b></font>
                             </div>
                         </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">炫彩翻页保护套</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥39元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">平衡车</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥1999元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">透明超薄软胶保...</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥19元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">运动相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥399元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">自拍杆</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥49元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/62_thumb_g_1462952557730.jpg" alt="随身风扇" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">随身风扇</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/61_thumb_g_1462952376889.jpg" alt="视频" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">视频</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
+                       {/volist}
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -236,62 +144,15 @@ if (Object.prototype.toJSONString){
                     </div>        </div>
                 <div class="goods-right">
                     <div class="all_ms">
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/72_thumb_g_1462956048008.jpg" alt="智能相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">智能相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥149元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods__URL__/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">炫彩翻页保护套</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥39元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods__URL__/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">平衡车</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥1999元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods__URL__/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">透明超薄软胶保...</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥19元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">运动相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥399元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">自拍杆</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥49元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/62_thumb_g_1462952557730.jpg" alt="随身风扇" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">随身风扇</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/61_thumb_g_1462952376889.jpg" alt="视频" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">视频</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
+                            {volist name='goods1' id='v'}
+                            <a class="goodsItem" href="{:url('admin/goods',['id'=>$v.g_id])}"> <div  class="img-box"><img src="__ROOT__/uploads/{$v.goods_img}" alt="{$v.goods_name}" class="goodsimg" /></div>
+                                <div class="goods-brief"></div>
+                                <div class="gos-title">{$v.goods_name}</div>
+                                <div class="prices">
+                                    <font class="shop_s"><b>￥{$v.goods_price}元</b></font>
+                                </div>
+                            </a>
+                           {/volist}
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -302,62 +163,15 @@ if (Object.prototype.toJSONString){
                 </div>
                 <div class="goods-right">
                     <div class="all_ms">
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/72_thumb_g_1462956048008.jpg" alt="智能相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">智能相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥149元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">炫彩翻页保护套</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥39元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">平衡车</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥1999元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">透明超薄软胶保...</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥19元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">运动相机</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥399元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">自拍杆</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥49元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/62_thumb_g_1462952557730.jpg" alt="随身风扇" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">随身风扇</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
-                        <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/61_thumb_g_1462952376889.jpg" alt="视频" class="goodsimg" /></div>
-                            <div class="goods-brief"></div>
-                            <div class="gos-title">视频</div>
-                            <div class="prices">
-                                <font class="shop_s"><b>￥20元</b></font>
-                            </div>
-                        </a>
+                            {volist name='goods2' id='v'}
+                            <a class="goodsItem" href="{:url('admin/goods',['id'=>$v.g_id])}"> <div  class="img-box"><img src="__ROOT__/uploads/{$v.goods_img}" alt="{$v.goods_name}" class="goodsimg" /></div>
+                                <div class="goods-brief"></div>
+                                <div class="gos-title">{$v.goods_name}</div>
+                                <div class="prices">
+                                    <font class="shop_s"><b>￥{$v.goods_price}元</b></font>
+                                </div>
+                            </a>
+                           {/volist}
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -365,43 +179,20 @@ if (Object.prototype.toJSONString){
             <div class="goods-title">热门商品推荐</div>
             <div class="clearfix goods-wrap hot-goods">
                 <div id="show_hot_area" class="clearfix goodsBox all_mid all_ms">
-                    <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/70_thumb_g_1462955414561.jpg" alt="炫彩翻页保护套" class="goodsimg" /></div>
+                 {volist name='goods_hot' id='v'}
+                    <a class="goodsItem" href="{:url('admin/goods',['id'=>$v.g_id])}"> 
+                        <div  class="img-box"><img src="__ROOT__/uploads/{$v.goods_img}" alt="{$v.goods_name}" class="goodsimg" />
+                        </div>
                         <div class="goods-brief"></div>
-                        <div class="gos-title">炫彩翻页保护套</div>
+                        <div class="gos-title">{$v.goods_name}</div>
                         <div class="prices">
-                            <font class="shop_s"><b>￥39元</b></font>
+                            <font class="shop_s"><b>￥{$v.goods_price}元</b></font>
                         </div>
                     </a>
-                    <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/68_thumb_g_1462955204381.jpg" alt="透明超薄软胶保护套" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">透明超薄软胶保...</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥19元</b></font>
-                        </div>
-                    </a>
-                    <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/69_thumb_g_1462955300971.jpg" alt="平衡车" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">平衡车</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥1999元</b></font>
-                        </div>
-                    </a>
-                    <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/63_thumb_g_1462953395609.jpg" alt="自拍杆" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">自拍杆</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥49元</b></font>
-                        </div>
-                    </a>
-                    <a class="goodsItem" href="__URL__/goods"> <div  class="img-box"><img src="/admin/picture/64_thumb_g_1462952811633.jpg" alt="运动相机" class="goodsimg" /></div>
-                        <div class="goods-brief"></div>
-                        <div class="gos-title">运动相机</div>
-                        <div class="prices">
-                            <font class="shop_s"><b>￥399元</b></font>
-                        </div>
-                    </a>
+                    {/volist}
                     <div class="clear0"></div>
-                </div> <div class="clear10"></div>
+                </div> 
+                <div class="clear10"></div>
             </div>
         </div>
     </div>

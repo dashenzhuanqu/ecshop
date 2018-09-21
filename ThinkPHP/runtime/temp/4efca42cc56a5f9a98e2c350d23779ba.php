@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:99:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\flow_checkout.html";i:1537344722;s:83:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537514234;s:81:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537343751;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_show.html";i:1537427758;s:83:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537514909;s:81:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537343751;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <base href="\">
@@ -7,7 +7,7 @@
 <meta name="Keywords" content="" />
 <meta name="Description" content="" />
 <meta name="Description" content="" />
-<meta http-equiv="refresh" content="3;URL=javascript:history.back()" />
+<meta http-equiv="refresh" content="3;URL=http://www.ecshop4.com/index.php" />
 <title>系统提示_ECSHOP演示站 - Powered by ECShop</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
@@ -26,7 +26,7 @@ p a{color:#006acd; text-decoration:underline;}
                 <?php if(empty($_SESSION)){ ?>
                 欢迎光临本店<a href="<?php echo url('admin/user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('admin/user_register'); ?>">免费注册</a>  </font>
                 <?php }else{ ?>
-            <font > 您好，<font class="f4_b"><?php echo $username; ?></font>, 欢迎您回来！ <a href="<?php echo url('goods/user_list'); ?>">用户中心</a>| <a href="<?php echo url('admin/module/user_logout'); ?>">退出</a> </font>  </font>
+            <font > 您好，<font class="f4_b"><?php echo $username; ?></font>, 欢迎您回来！ <a href="<?php echo url('goods/user_list'); ?>">用户中心</a>| <a href="<?php echo url('admin/user_logout'); ?>">退出</a> </font>  </font>
                 <?php }?>
         </div> </div>
         <div class="bar-cart">
@@ -71,9 +71,17 @@ p a{color:#006acd; text-decoration:underline;}
     <h3><span>系统信息</span></h3>
     <div class="boxCenterList RelaArticle" align="center">
       <div style="margin:20px auto;">
-      <p style="font-size: 14px; font-weight:bold; color: red;">您的购物车中没有商品！</p>
-        <div class="blank"></div>
-                            <p><a href="javascript:history.back()">返回上一页</a></p>
+          <?php if(empty($_SESSION)){ ?>
+          <p style="font-size: 14px; font-weight:bold; color: red;">您已经成功的退出了。</p>
+          <div class="blank"></div>
+          <p><a href="http://www.ecshop4.com/index.php">返回上一页</a></p>
+                    <p><a href="index.php">返回首页</a></p>
+          <?php }else{ ?>
+          <p style="font-size: 14px; font-weight:bold; color: red;">登陆成功。</p>
+          <div class="blank"></div>
+          <p><a href="http://www.ecshop4.com/index.php">返回上一页</a></p>
+                    <p><a href="<?php echo url('goods/user_list'); ?>">查看我的个人信息</a></p>
+          <?php }?>
                         </div>
     </div>
    </div>

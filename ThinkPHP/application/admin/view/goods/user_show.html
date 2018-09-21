@@ -1,0 +1,47 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <base href="\">
+<meta name="Generator" content="ECSHOP v4.0.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<meta name="Description" content="" />
+<meta http-equiv="refresh" content="3;URL=http://www.ecshop4.com/index.php" />
+<title>系统提示_ECSHOP演示站 - Powered by ECShop</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="admin/js/common.js"></script><style type="text/css">
+p a{color:#006acd; text-decoration:underline;}
+</style>
+</head>
+<body>
+{include file='module/header'}
+<div class="clear0 "></div>
+<div class="blank"></div>
+<div class="block">
+  <div class="box">
+   <div class="box_1">
+    <h3><span>系统信息</span></h3>
+    <div class="boxCenterList RelaArticle" align="center">
+      <div style="margin:20px auto;">
+          <?php if(empty($_SESSION)){ ?>
+          <p style="font-size: 14px; font-weight:bold; color: red;">您已经成功的退出了。</p>
+          <div class="blank"></div>
+          <p><a href="http://www.ecshop4.com/index.php">返回上一页</a></p>
+                    <p><a href="index.php">返回首页</a></p>
+          <?php }else{ ?>
+          <p style="font-size: 14px; font-weight:bold; color: red;">登陆成功。</p>
+          <div class="blank"></div>
+          <p><a href="http://www.ecshop4.com/index.php">返回上一页</a></p>
+                    <p><a href="{:url('goods/user_list')}">查看我的个人信息</a></p>
+          <?php }?>
+                        </div>
+    </div>
+   </div>
+  </div>
+</div>
+<div class="blank"></div>
+{include file='module/tail'}
+</body>
+</html>

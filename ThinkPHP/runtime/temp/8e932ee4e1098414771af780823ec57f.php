@@ -1,6 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:91:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html";i:1537346564;s:83:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537346653;s:81:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537343751;}*/ ?>
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:91:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\admin\goods.html";i:1537447047;s:83:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537514234;s:81:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537343751;}*/ ?>
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <base href="\">
 <meta name="Generator" content="ECSHOP v4.0.0" />
@@ -11,7 +10,8 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="admin/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="admin/js/common.js"></script><script type="text/javascript">
+<script type="text/javascript" src="admin/js/common.js"></script>
+<script type="text/javascript">
 function $id(element) {
   return document.getElementById(element);
 }
@@ -43,12 +43,15 @@ function reg(str){
             <div class="top_menu1">
                 <script type="text/javascript" src="admin/js/transport.js"></script>
                 <script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
+                <?php if(empty($_SESSION)){ ?>
                 欢迎光临本店<a href="<?php echo url('admin/user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('admin/user_register'); ?>">免费注册</a>  </font>
-            <font > 您好，<font class="f4_b">root</font>, 欢迎您回来！ <a href="<?php echo url('admin/user'); ?>">用户中心</a>| <a href="<?php echo url('user_logout'); ?>">退出</a> </font>  </font>
+                <?php }else{ ?>
+            <font > 您好，<font class="f4_b"><?php echo $username; ?></font>, 欢迎您回来！ <a href="<?php echo url('goods/user_list'); ?>">用户中心</a>| <a href="<?php echo url('admin/module/user_logout'); ?>">退出</a> </font>  </font>
+                <?php }?>
         </div> </div>
         <div class="bar-cart">
             <div class="fl cart-yh">
-                <a href="<?php echo url('admin/user'); ?>" class="">用户中心</a>
+                <a href="<?php echo url('goods/user_list'); ?>" class="">用户中心</a>
             </div>
             <div class="cart" id="ECS_CARTINFO"> <a href="<?php echo url('admin/flow'); ?>" title="查看购物车">购物车(0)</a> </div>
         </div>
@@ -61,14 +64,14 @@ function reg(str){
             <div class="m_left">
                 <ul>
                     <li><a href="index.php" class="cur">首页</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">电器</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">电子产品</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">医疗设备</a></li>
+                    <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                    <li><a href="<?php echo url('admin/category'); ?>?id=<?php echo $v['cat_id']; ?>" class="cur"><?php echo $v['cat_name']; ?></a></li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
         </div>
         <div class="serach-box">
-            <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r">
+            <form id="searchForm" name="searchForm" method="get" action="<?php echo url('category'); ?>" onSubmit="return checkSearchForm()" class="f_r">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td width="135"><input name="keywords" type="text" id="keyword" value="" class="B_input"/></td>
@@ -90,7 +93,7 @@ function reg(str){
   <div class="AreaR">
     <div id="goodsInfo" class="clearfix">
       <div class="imgInfo">
-                <a href="javascript:;" onclick="window.open('gallery.php?id=2'); return false;"> <img src="/admin/picture/72_thumb_g_1462956048008.jpg" alt="文档"/> </a>
+                <a href="javascript:;" onclick="window.open('gallery.php?id=2'); return false;"> <img src="/uploads/<?php echo $list['goods_img']; ?>" alt="文档"/> </a>
                 <div class="blank5"></div>
          <div class="clearfix">
       <span onmouseover="moveLeft()" onmousedown="clickLeft()" onmouseup="moveLeft()" onmouseout="scrollStop()"></span>
@@ -196,37 +199,37 @@ function reg(str){
           </div>
       <div class="textInfo">
         <form action="javascript:addToCart(2)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
-          <div class="goods_style_name"> <strong><font color=#FE0000>文档</font></strong> </div>
+          <div class="goods_style_name"> <strong><font color=#FE0000><?php echo $list['goods_info']; ?></font></strong> </div>
           <ul>
                         <li class="clearfix">
               <dd>
-                                <strong>商品货号：</strong>11                              </dd>
+                                <strong>商品货号：</strong><?php echo $list['goods_art']; ?>                              </dd>
               <dd class="ddR">
-                                                <strong>商品库存：</strong> 1                                               </dd>
+                                                <strong>商品库存：</strong> <?php echo $list['suk']; ?>                                               </dd>
             </li>
             <li class="clearfix">
               <dd>
-                                <strong>商品品牌：</strong><a href="brand.php?id=2" >文档</a>
+                                <strong>商品品牌：</strong><a href="brand.php?id=2" ><?php echo $list['brand_name']; ?></a>
                               </dd>
               <dd class="ddR">
-                                <strong>商品重量：</strong>0克                              </dd>
+                                <strong>商品重量：</strong><?php echo $list['goods_weight']; ?>克                              </dd>
             </li>
             <li class="clearfix">
               <dd>
-                                <strong>上架时间：</strong>2018-08-31                              </dd>
+                                <strong>上架时间：</strong><?php echo $list['add_time']; ?>                              </dd>
               <dd class="ddR">
                 
                 <strong>商品点击数：</strong>2 </dd>
                 <dd class="ddR">
        
-       <strong>累计销量：</strong>65535       </dd>
+       <strong>累计销量：</strong>65535</dd>
             </li>
             <li class="clearfix">
               <dd>
-                                <strong>市场价格：</strong><font class="market">￥13元</font> </dd>
+                                <strong>市场价格：</strong><font class="market">￥<?php echo $list['mall_price']; ?>元</font> </dd>
                             
-              <dd><strong>本店售价：</strong><font class="shop" id="ECS_SHOPPRICE">￥11元</font> </dd>
-                            <dd><strong>注册用户：</strong><font class="shop" id="ECS_RANKPRICE_1">￥11元</font> </dd>
+              <dd><strong>本店售价：</strong><font class="shop" id="ECS_SHOPPRICE">￥<?php echo $list['goods_price']; ?>元</font> </dd>
+                            <dd><strong>注册用户：</strong><font class="shop" id="ECS_RANKPRICE_1">￥<?php echo $list['vip_price']; ?>元</font> </dd>
                           </li>
                         <li class="padd"> <font class="f1">购买商品达到以下数量区间时可享受的优惠价格</font><br />
               <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#aad6ff">

@@ -4,12 +4,15 @@
             <div class="top_menu1">
                 <script type="text/javascript" src="admin/js/transport.js"></script>
                 <script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
+                <?php if(empty($_SESSION)){ ?>
                 欢迎光临本店<a href="{:url('admin/user')}">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="{:url('admin/user_register')}">免费注册</a>  </font>
-            <font > 您好，<font class="f4_b">root</font>, 欢迎您回来！ <a href="{:url('admin/user')}">用户中心</a>| <a href="{:url('user_logout')}">退出</a> </font>  </font>
+                <?php }else{ ?>
+            <font > 您好，<font class="f4_b">{$username}</font>, 欢迎您回来！ <a href="{:url('goods/user_list')}">用户中心</a>| <a href="{:url('admin/user_logout')}">退出</a> </font>  </font>
+                <?php }?>
         </div> </div>
         <div class="bar-cart">
             <div class="fl cart-yh">
-                <a href="{:url('admin/user')}" class="">用户中心</a>
+                <a href="{:url('goods/user_list')}" class="">用户中心</a>
             </div>
             <div class="cart" id="ECS_CARTINFO"> <a href="{:url('admin/flow')}" title="查看购物车">购物车(0)</a> </div>
         </div>
@@ -22,14 +25,14 @@
             <div class="m_left">
                 <ul>
                     <li><a href="index.php" class="cur">首页</a></li>
-                    <li><a href="{:url('category')}" class="cur">电器</a></li>
-                    <li><a href="{:url('category')}" class="cur">电子产品</a></li>
-                    <li><a href="{:url('category')}" class="cur">医疗设备</a></li>
+                    {volist name='data' id='v'}
+                    <li><a href="{:url('admin/category')}?id={$v.cat_id}" class="cur">{$v.cat_name}</a></li>
+                    {/volist}
                 </ul>
             </div>
         </div>
         <div class="serach-box">
-            <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r">
+            <form id="searchForm" name="searchForm" method="get" action="{:url('category')}" onSubmit="return checkSearchForm()" class="f_r">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td width="135"><input name="keywords" type="text" id="keyword" value="" class="B_input"/></td>

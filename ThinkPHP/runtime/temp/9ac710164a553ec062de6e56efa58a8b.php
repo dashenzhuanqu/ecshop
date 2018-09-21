@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_list.html";i:1537346176;s:83:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537346653;s:79:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\in.html";i:1537343751;s:81:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537343751;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:95:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/admin\view\goods\user_list.html";i:1537414495;s:83:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537514909;s:79:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\in.html";i:1537361785;s:81:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537343751;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v4.0.0" />
@@ -18,12 +18,15 @@
             <div class="top_menu1">
                 <script type="text/javascript" src="admin/js/transport.js"></script>
                 <script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
+                <?php if(empty($_SESSION)){ ?>
                 欢迎光临本店<a href="<?php echo url('admin/user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('admin/user_register'); ?>">免费注册</a>  </font>
-            <font > 您好，<font class="f4_b">root</font>, 欢迎您回来！ <a href="<?php echo url('admin/user'); ?>">用户中心</a>| <a href="<?php echo url('user_logout'); ?>">退出</a> </font>  </font>
+                <?php }else{ ?>
+            <font > 您好，<font class="f4_b"><?php echo $username; ?></font>, 欢迎您回来！ <a href="<?php echo url('goods/user_list'); ?>">用户中心</a>| <a href="<?php echo url('admin/user_logout'); ?>">退出</a> </font>  </font>
+                <?php }?>
         </div> </div>
         <div class="bar-cart">
             <div class="fl cart-yh">
-                <a href="<?php echo url('admin/user'); ?>" class="">用户中心</a>
+                <a href="<?php echo url('goods/user_list'); ?>" class="">用户中心</a>
             </div>
             <div class="cart" id="ECS_CARTINFO"> <a href="<?php echo url('admin/flow'); ?>" title="查看购物车">购物车(0)</a> </div>
         </div>
@@ -36,14 +39,14 @@
             <div class="m_left">
                 <ul>
                     <li><a href="index.php" class="cur">首页</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">电器</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">电子产品</a></li>
-                    <li><a href="<?php echo url('category'); ?>" class="cur">医疗设备</a></li>
+                    <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                    <li><a href="<?php echo url('admin/category'); ?>?id=<?php echo $v['cat_id']; ?>" class="cur"><?php echo $v['cat_name']; ?></a></li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
         </div>
         <div class="serach-box">
-            <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r">
+            <form id="searchForm" name="searchForm" method="get" action="<?php echo url('category'); ?>" onSubmit="return checkSearchForm()" class="f_r">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td width="135"><input name="keywords" type="text" id="keyword" value="" class="B_input"/></td>
@@ -66,21 +69,21 @@
       <div class="box_1">
         <div class="userCenterBox">
             <div class="userMenu">
-            <a href="<?php echo url('user_list'); ?>" ><img src="admin/picture/u1.gif"> 欢迎页</a>
-<a href="<?php echo url('user_profile'); ?>"><img src="admin/picture/u2.gif"> 用户信息</a>
-<a href="<?php echo url('user_order_list'); ?>"><img src="admin/picture/u3.gif"> 我的订单</a>
-<a href="<?php echo url('user_address_list'); ?>"><img src="admin/picture/u4.gif"> 收货地址</a>
-<a href="<?php echo url('user_collection_list'); ?>"><img src="admin/picture/u5.gif"> 我的收藏</a>
-<a href="<?php echo url('user_message_list'); ?>"><img src="admin/picture/u6.gif"> 我的留言</a>
-<a href="<?php echo url('user_tag_list'); ?>"><img src="admin/picture/u7.gif"> 我的标签</a>
-<a href="<?php echo url('user_booking_list'); ?>"><img src="admin/picture/u8.gif"> 缺货登记</a>
-<a href="<?php echo url('user_bonus'); ?>"><img src="admin/picture/u9.gif"> 我的红包</a>
-<a href="<?php echo url('user_affiliate'); ?>"><img src="admin/picture/u10.gif"> 我的推荐</a>
-<a href="<?php echo url('user_comment_list'); ?>"><img src="admin/picture/u11.gif"> 我的评论</a>
+            <a href="<?php echo url('goods/user_list'); ?>" ><img src="admin/picture/u1.gif"> 欢迎页</a>
+<a href="<?php echo url('goods/user_profile'); ?>"><img src="admin/picture/u2.gif"> 用户信息</a>
+<a href="<?php echo url('goods/user_order_list'); ?>"><img src="admin/picture/u3.gif"> 我的订单</a>
+<a href="<?php echo url('goods/user_address_list'); ?>"><img src="admin/picture/u4.gif"> 收货地址</a>
+<a href="<?php echo url('goods/user_collection_list'); ?>"><img src="admin/picture/u5.gif"> 我的收藏</a>
+<a href="<?php echo url('goods/user_message_list'); ?>"><img src="admin/picture/u6.gif"> 我的留言</a>
+<a href="<?php echo url('goods/user_tag_list'); ?>"><img src="admin/picture/u7.gif"> 我的标签</a>
+<a href="<?php echo url('goods/user_booking_list'); ?>"><img src="admin/picture/u8.gif"> 缺货登记</a>
+<a href="<?php echo url('goods/user_bonus'); ?>"><img src="admin/picture/u9.gif"> 我的红包</a>
+<a href="<?php echo url('goods/user_affiliate'); ?>"><img src="admin/picture/u10.gif"> 我的推荐</a>
+<a href="<?php echo url('goods/user_comment_list'); ?>"><img src="admin/picture/u11.gif"> 我的评论</a>
 <!--<a href="user.php?act=group_buy">我的团购</a>-->
-<a href="<?php echo url('user_track_packages'); ?>"><img src="admin/picture/u12.gif"> 跟踪包裹</a>
-<a href="<?php echo url('user_account_log'); ?>"class="curs"><img src="admin/picture/u13.gif"> 资金管理</a>
-<a href="<?php echo url('user_logout'); ?>" style="background:none; text-align:right; margin-right:10px;"><img src="admin/picture/bnt_sign.gif"></a>
+<a href="<?php echo url('goods/user_track_packages'); ?>"><img src="admin/picture/u12.gif"> 跟踪包裹</a>
+<a href="<?php echo url('goods/user_account_log'); ?>"class="curs"><img src="admin/picture/u13.gif"> 资金管理</a>
+<a href="<?php echo url('goods/user_logout'); ?>" style="background:none; text-align:right; margin-right:10px;"><img src="admin/picture/bnt_sign.gif"></a>
             </div>
         </div>
       </div>
@@ -90,7 +93,7 @@
     <div class="box">
       <div class="box_1">
         <div class="userCenterBox boxCenterList clearfix" style="_height:1%;">
-                    <font class="f5"><b class="f4">root</b> 欢迎您回到 ECSHOP！</font><br />
+                    <font class="f5"><b class="f4"><?php echo $username; ?></b> 欢迎您回到 ECSHOP！</font><br />
           <div class="blank"></div>
           您的上一次登录时间: 2018-09-17 16:09:05<br />
           <div class="blank5"></div>

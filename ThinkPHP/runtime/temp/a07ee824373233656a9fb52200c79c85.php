@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:97:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\login\login.html";i:1537260335;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:91:"C:\Users\Shinelon\Desktop\ecshop\ThinkPHP\public/../application/index\view\login\login.html";i:1537349270;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,6 +51,7 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
+<center>
 <dl class="admin_login">
  <dt>
   <strong>站点后台管理系统</strong>
@@ -73,10 +74,11 @@ $(document).ready(function() {
  <dd>
   <input type="button" value="立即登陆" class="submit_btn"/>
  </dd>
- <dd>
-  <p>© 2015-2016 DeathGhost 版权所有</p>
-  <p>陕B2-20080224-1</p>
- </dd>
+ <!--<dd>-->
+  <!--<p>© 2015-2016 DeathGhost 版权所有</p>-->
+  <!--<p>陕B2-20080224-1</p>-->
+ <!--</dd>-->
 </dl>
+</center>
 </body>
 </html>

@@ -53,19 +53,21 @@
   <div class="blank5"></div>
     <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
             <div class="centerPadd">
+                {volist name='list' id='v'}
       <div class="clearfix goodsBox" style="border:none;">
-                        <div class="goodsItem"> <a href="{:url('goods')}" class="img-box"><img src="admin/picture/3_thumb_g_1536199224277.jpg" alt="文档" class="goodsimg" /></a>
+                        <div class="goodsItem"> <a href="{:url('goods')}?id={$v.g_id}" class="img-box"><img src="admin/picture/3_thumb_g_1536199224277.jpg" alt="文档" class="goodsimg" /></a>
         <div class="goods-info">
-            <div class="goods-title"><a href="{:url('goods')}" title="文档">文档</a></div>
+            <div class="goods-title"><a href="{:url('goods')}?id={$v.g_id}" title="文档">{$v.goods_name}</a></div>
             <div class="goods-ms">
                           </div>
             <div class="clearfix price-box">
-              <div class="shop_s">￥11元</div>
+              <div class="shop_s">￥{$v.goods_price}</div>
               <a class="price-btn" href="{:url('flow')}">立即购买</a>
             </div>
         </div>
         </div>
         </div>
+                {/volist}
     </div>
           </form>
   </div>
