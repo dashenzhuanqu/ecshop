@@ -20,7 +20,7 @@
 </style>
 
 <script>
-<!--
+//<!--
 // 这里把JS用到的所有语言都赋值到这里
 var process_request = "正在处理您的请求...";
 var todolist_caption = "记事本";
@@ -141,7 +141,7 @@ var cancel_color = "无样式";
         <table width="90%" id="general-table" align="center" class="gk-table">
           <tr>
             <td class="label">商品名称：</td>
-            <td><input type="text" name="goods_name" value="" style="float:left;color:;" size="30" /><div style="background-color:;float:left;margin-left:2px;" id="font_color" onclick="ColorSelecter.Show(this);"><img src="static/picture/color_selecter.gif" style="margin-top:-1px;" /></div><input type="hidden" id="goods_name_color" name="goods_name_color" value="" />&nbsp;
+            <td><input type="text" name="goods_name" value="" style="float:left;" size="30" /><div style="float:left;margin-left:2px;" id="font_color" onclick="ColorSelecter.Show(this);"><img src="static/picture/color_selecter.gif" style="margin-top:-1px;" /></div><input type="hidden" id="goods_name_color" name="goods_name_color" value="" />&nbsp;
             <select name="goods_name_style">
               <option value="">字体样式</option>
               <option value="strong">加粗</option><option value="em">斜体</option><option value="u">下划线</option><option value="strike">删除线</option>            </select>
@@ -1192,7 +1192,7 @@ document.onmousemove=function(e)
     obj.title = '点击对列表排序';
   }
 }
-<!--
+//<!--
 
 
 var MyTodolist;

@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:97:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/admin\view\admin\index.html";i:1537363214;s:89:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\admin\view\module\header.html";i:1537357078;s:87:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\application\admin\view\module\tail.html";i:1537349429;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <base href="\">
@@ -14,11 +15,56 @@
 <script language='javascript' src='admin/js/swiper.min.js' type='text/javascript' charset='utf-8'></script>
 <script type="text/javascript" src="admin/js/common.js"></script><script type="text/javascript" src="admin/js/index.js"></script></head>
 <body>
-{include file='module/header'}
-<<<<<<< HEAD
-=======
+<div class="top-bar">
+    <div class="fd_top fd_top1">
+        <div class="bar-left">
+            <div class="top_menu1">
+                <script type="text/javascript" src="admin/js/transport.js"></script>
+                <script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
 
->>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
+
+                欢迎光临本店<a href="<?php echo url('admin/user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('admin/user_register'); ?>">免费注册</a>  </font>
+
+
+            <font > 您好，<font class="f4_b">root</font>, 欢迎您回来！ <a href="<?php echo url('admin/user'); ?>">用户中心</a>| <a href="<?php echo url('user_logout'); ?>">退出</a> </font>  </font>
+
+            
+        </div> </div>
+        <div class="bar-cart">
+            <div class="fl cart-yh">
+                <a href="<?php echo url('admin/user'); ?>" class="">用户中心</a>
+            </div>
+            <div class="cart" id="ECS_CARTINFO"> <a href="<?php echo url('admin/flow'); ?>" title="查看购物车">购物车(0)</a> </div>
+        </div>
+    </div>
+</div>
+<div class="nav-menu">
+    <div class="wrap">
+        <div class="logo"><a href="index.php" name="top"><img src="admin/picture/logo.gif" /></a></div>
+        <div id="mainNav" class="clearfix maxmenu">
+            <div class="m_left">
+                <ul>
+                    <li><a href="index.php" class="cur">首页</a></li>
+                    <li><a href="<?php echo url('category'); ?>" class="cur">电器</a></li>
+                    <li><a href="<?php echo url('category'); ?>" class="cur">电子产品</a></li>
+                    <li><a href="<?php echo url('category'); ?>" class="cur">医疗设备</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="serach-box">
+            <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="135"><input name="keywords" type="text" id="keyword" value="" class="B_input"/></td>
+                        <td><input name="imageField" type="submit" value="搜索" class="go" style="cursor:pointer;"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+
 <script>
 if (Object.prototype.toJSONString){
         var oldToJSONString = Object.toJSONString;
@@ -38,30 +84,18 @@ if (Object.prototype.toJSONString){
                     <?php foreach ($cat_data as $key => $value) { ?>
                     <div class="cat-box">
                         <div class="cat1">
-<<<<<<< HEAD
-                            <a href="{:url('admin/goods')}?cat_id={$value.cat_id}">{$value.cat_name}</a>
-=======
-                            <a href="http://www.ecshop4.com/admin/admin/goods.html?cat_id={$value.cat_id}">{$value.cat_name}</a>
->>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
+                            <a href="http://www.ecshop4.com/admin/admin/goods.html?cat_id=<?php echo $value['cat_id']; ?>"><?php echo $value['cat_name']; ?></a>
                         </div>
                         <div class="cat2-box">
                             <?php foreach ($value['son'] as $key => $val) { ?>
                             <div class="cat2 clearfix">
-<<<<<<< HEAD
-                                <a class="cat2-link" href="{:url('admin/goods')}?cat_id={$val.cat_id}">{$val.cat_name}</a>
-=======
-                                <a class="cat2-link" href="http://www.ecshop4.com/admin/admin/goods.html?cat_id={$val.cat_id}">{$val.cat_name}</a>
->>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
+                                <a class="cat2-link" href="http://www.ecshop4.com/admin/admin/goods.html?cat_id=<?php echo $val['cat_id']; ?>"><?php echo $val['cat_name']; ?></a>
                                 <div class="cat3-block">
     
                                 </div>
                                 <div class="cat3-box">
                                     <?php foreach ($val['son'] as $key => $v) { ?>
-<<<<<<< HEAD
-                                    <a href="{:url('admin/goods')}?cat_id={$v.cat_id}">{$v.cat_name}</a>&nbsp;&nbsp;
-=======
-                                    <a href="http://www.ecshop4.com/admin/admin/goods.html?cat_id={$v.cat_id}">{$v.cat_name}</a>&nbsp;&nbsp;
->>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
+                                    <a href="http://www.ecshop4.com/admin/admin/goods.html?cat_id=<?php echo $v['cat_id']; ?>"><?php echo $v['cat_name']; ?></a>&nbsp;&nbsp;
                                     <?php } ?>
                                 </div>
                             </div>
@@ -101,11 +135,11 @@ if (Object.prototype.toJSONString){
             </style>
             <div class="swiper-container swiper1">
                 <div class="swiper-wrapper">
-                    {volist name='list' id='v'}
+                    <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
                     <div class="swiper-slide">
-                        <img src="__ROOT__/uploads/{$v.ad_img}" alt="">
+                        <img src="/uploads/<?php echo $v['ad_img']; ?>" alt="">
                     </div>
-                    {/volist}
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </div>
                 <!-- <div class="swiper-pagination"></div> -->
@@ -127,10 +161,7 @@ if (Object.prototype.toJSONString){
             </script>
         </div>
     </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
 <div class="index-body">
     <div class="indexpage">
         <div class="body-goods">
@@ -141,28 +172,17 @@ sasdf
                 </div>
                 <div class="goods-right">
                     <div class="all_ms">
-<<<<<<< HEAD
-                        {volist name='goods' id='v'}
-                <a class="goodsItem" href="{:url('admin/goods',['id'=>$v.g_id])}">
-       <div  class="img-box">
-         <img src="__ROOT__/uploads/{$v.goods_img}" alt="{$v.goods_name}" class="goodsimg" />
-       </div>
-=======
                        
-                        {volist name='goods' id='v'}
-                        <a class="goodsItem" href="{:url('admin/goods',['id'=>$v.g_id])}"> <div  class="img-box"><img src="__ROOT__/uploads/{$v.goods_img}" alt="{$v.goods_name}" class="goodsimg" /></div>
->>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
+                        <?php if(is_array($goods) || $goods instanceof \think\Collection || $goods instanceof \think\Paginator): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                        <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>"> <div  class="img-box"><img src="/uploads/<?php echo $v['goods_img']; ?>" alt="智能相机" class="goodsimg" /></div>
                             <div class="goods-brief"></div>
-                            <div class="gos-title">{$v.goods_name}</div>
+                            <div class="gos-title"><?php echo $v['goods_name']; ?></div>
                             <div class="prices">
-                                <font class="shop_s"><b>￥{$v.goods_price}元</b></font>
+                                <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
                             </div>
                         </a>
-                       {/volist}
-<<<<<<< HEAD
-=======
+                       <?php endforeach; endif; else: echo "" ;endif; ?>
                       
->>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -174,19 +194,16 @@ sasdf
                     </div>        </div>
                 <div class="goods-right">
                     <div class="all_ms">
-                            {volist name='goods1' id='v'}
-                            <a class="goodsItem" href="{:url('admin/goods',['id'=>$v.g_id])}"> <div  class="img-box"><img src="__ROOT__/uploads/{$v.goods_img}" alt="{$v.goods_name}" class="goodsimg" /></div>
+                            <?php if(is_array($goods1) || $goods1 instanceof \think\Collection || $goods1 instanceof \think\Paginator): $i = 0; $__LIST__ = $goods1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                            <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>"> <div  class="img-box"><img src="/uploads/<?php echo $v['goods_img']; ?>" alt="智能相机" class="goodsimg" /></div>
                                 <div class="goods-brief"></div>
-                                <div class="gos-title">{$v.goods_name}</div>
+                                <div class="gos-title"><?php echo $v['goods_name']; ?></div>
                                 <div class="prices">
-                                    <font class="shop_s"><b>￥{$v.goods_price}元</b></font>
+                                    <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
                                 </div>
-<<<<<<< HEAD
-=======
     
->>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
                             </a>
-                           {/volist}
+                           <?php endforeach; endif; else: echo "" ;endif; ?>
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -198,19 +215,16 @@ sasdf
                 </div>
                 <div class="goods-right">
                     <div class="all_ms">
-                            {volist name='goods2' id='v'}
-                            <a class="goodsItem" href="{:url('admin/goods',['id'=>$v.g_id])}"> <div  class="img-box"><img src="__ROOT__/uploads/{$v.goods_img}" alt="{$v.goods_name}" class="goodsimg" /></div>
+                            <?php if(is_array($goods2) || $goods2 instanceof \think\Collection || $goods2 instanceof \think\Paginator): $i = 0; $__LIST__ = $goods2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                            <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>"> <div  class="img-box"><img src="/uploads/<?php echo $v['goods_img']; ?>" alt="智能相机" class="goodsimg" /></div>
                                 <div class="goods-brief"></div>
-                                <div class="gos-title">{$v.goods_name}</div>
+                                <div class="gos-title"><?php echo $v['goods_name']; ?></div>
                                 <div class="prices">
-                                    <font class="shop_s"><b>￥{$v.goods_price}元</b></font>
+                                    <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
                                 </div>
-<<<<<<< HEAD
-=======
     
->>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
                             </a>
-                           {/volist}
+                           <?php endforeach; endif; else: echo "" ;endif; ?>
                         <div class="clear0"></div>
                     </div>
                 </div>
@@ -218,17 +232,17 @@ sasdf
             <div class="goods-title">热门商品推荐</div>
             <div class="clearfix goods-wrap hot-goods">
                 <div id="show_hot_area" class="clearfix goodsBox all_mid all_ms">
-                 {volist name='goods_hot' id='v'}
-                    <a class="goodsItem" href="{:url('admin/goods',['id'=>$v.g_id])}"> 
-                        <div  class="img-box"><img src="__ROOT__/uploads/{$v.goods_img}" alt="{$v.goods_name}" class="goodsimg" />
+                 <?php if(is_array($goods_hot) || $goods_hot instanceof \think\Collection || $goods_hot instanceof \think\Paginator): $i = 0; $__LIST__ = $goods_hot;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                    <a class="goodsItem" href="<?php echo url('admin/goods',['id'=>$v['g_id']]); ?>"> 
+                        <div  class="img-box"><img src="/uploads/<?php echo $v['goods_img']; ?>" alt="<?php echo $v['goods_name']; ?>" class="goodsimg" />
                         </div>
                         <div class="goods-brief"></div>
-                        <div class="gos-title">{$v.goods_name}</div>
+                        <div class="gos-title"><?php echo $v['goods_name']; ?></div>
                         <div class="prices">
-                            <font class="shop_s"><b>￥{$v.goods_price}元</b></font>
+                            <font class="shop_s"><b>￥<?php echo $v['goods_price']; ?>元</b></font>
                         </div>
                     </a>
-                    {/volist}
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                     <div class="clear0"></div>
                 </div> 
                 <div class="clear10"></div>
@@ -271,7 +285,18 @@ sasdf
         </div>
     </div>
     <div class="blank"></div>
-    {include file='module/tail'}
+    <div class="blank"></div>
+<div class="foot-body">
+    <div class="bads"><img src="admin/picture/bottom.jpg"></div>
+    <div class="clear10"></div>
+    <div class="blank"></div>
+    <div class="footer_info"> &copy; 2005-2018 ECSHOP 版权所有，并保留所有权利。       <br />
+        <a href="http://xyunqi.com/products/ecshop?from=nav" target="_blank" style=" font-family:Verdana; font-size:11px;">Powered&nbsp;by&nbsp;<strong><span style="color: #3366FF">ECShop</span>&nbsp;<span style="color: #FF9966">v4.0.0</span></strong></a>&nbsp;<a href="http://www.ecshop.com/license.php?product=ecshop_b2c&url=http%3A%2F%2F127.0.0.1%2FECShop_V4.0.0_UTF8_release0830%2Fsource%2Fecshop%2F" target="_blank"
+        >&nbsp;&nbsp;Licensed</a><br />
+        <div>ICP备案证书号:<a href="http://www.miibeian.gov.cn/" target="_blank"></a></div>
+    </div>
+    <div class="clear10"></div>
+</div>
 </div>
 </body>
 </html>

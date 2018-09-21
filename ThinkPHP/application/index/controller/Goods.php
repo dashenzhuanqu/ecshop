@@ -44,7 +44,10 @@ class Goods extends Controller
             $where['goods_name']= ["like","%$search%"];
         }
         $model=new Good();
+<<<<<<< HEAD
         $data=$model->where($where)->where('is_show',1)->where('is_delete',1)->paginate(['query'=>Request::instance()->param()]);
+=======
+>>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
         $data=$model->where($where)->where('is_delete',1)->paginate(['query'=>Request::instance()->param()]
         );
         $cate=new Classify();

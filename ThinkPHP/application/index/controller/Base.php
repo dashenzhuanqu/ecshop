@@ -1,4 +1,14 @@
 <?php
+<<<<<<< HEAD
+=======
+/**
+ * Created by PhpStorm.
+ * User: 琞
+ * Date: 2018/9/15
+ * Time: 11:23
+ */
+
+>>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
 namespace app\index\controller;
 use think\Controller;
 use think\Request;
@@ -16,4 +26,9 @@ class Base extends Controller
 			 $this->error('请先登录！',url('/index/login/login'));
 		 }
 	}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f1ddab25b5b29e067f0eb7694ade5f2acf9b861b
 }

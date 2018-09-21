@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:102:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/index\view\index\index_main.html";i:1537407534;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>ECSHOP 管理中心</title>

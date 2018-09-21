@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"G:\CodeFile\WWW\month12\perject\ecshop\ThinkPHP\public/../application/admin\view\admin\flow.html";i:1537272177;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v4.0.0" />
@@ -5,13 +6,51 @@
 <meta name="Keywords" content="" />
 <meta name="Description" content="" />
     <base href="\">
-<title>购物车</title>
+<title>购物流程_ECSHOP演示站 - Powered by ECShop</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="admin/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="admin/js/common.js"></script><script type="text/javascript" src="admin/js/shopping_flow.js"></script></head>
 <body>
-{include file='module/header'}
+<script type="text/javascript">
+var process_request = "正在处理您的请求...";
+</script>
+<div class="top-bar">
+  <div class="fd_top fd_top1">
+    <div class="bar-left">
+          <div class="top_menu1"> <script type="text/javascript" src="admin/js/transport.js"></script><script type="text/javascript" src="admin/js/utils.js"></script> <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
+ 欢迎光临本店<a href="<?php echo url('user'); ?>">请登录 <strong></strong></a>&nbsp;|&nbsp;&nbsp;<a href="<?php echo url('user_register'); ?>">免费注册</a>  </font> </div>
+    </div>
+    <div class="bar-cart">
+      <div class="fl cart-yh">
+        <a href="<?php echo url('user'); ?>" class="">用户中心</a>
+      </div>
+             <div class="cart" id="ECS_CARTINFO"> <a href="<?php echo url('flow'); ?>" title="查看购物车">购物车(0)</a> </div>
+    </div>
+  </div>
+</div>
+<div class="nav-menu">
+  <div class="wrap">
+    <div class="logo"><a href="index.php" name="top"><img src="admin/picture/logo.gif" /></a></div>
+    <div id="mainNav" class="clearfix maxmenu">
+      <div class="m_left">
+      <ul>
+        <li><a href="index.php" class="cur">首页</a></li>
+              </ul>
+      </div>
+    </div>
+    <div class="serach-box">
+      <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="135"><input name="keywords" type="text" id="keyword" value="" class="B_input"  /></td>
+            <td><input name="imageField" type="submit" value="搜索" class="go" style="cursor:pointer;" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
 <div class="clear0 "></div>
 <div class="block box">
  <div id="ur_here">
@@ -58,7 +97,7 @@
         <table width="99%" align="center" border="0" cellpadding="5" cellspacing="0" bgcolor="#dddddd">
           <tr>
             <td bgcolor="#ffffff"><a href="./"><img src="admin/picture/continue.gif" alt="continue" /></a></td>
-            <td bgcolor="#ffffff" align="right"><a href="{:url('flow_checkout')}"><img src="admin/picture/checkout.gif" alt="checkout" /></a></td>
+            <td bgcolor="#ffffff" align="right"><a href="<?php echo url('flow_checkout'); ?>"><img src="admin/picture/checkout.gif" alt="checkout" /></a></td>
           </tr>
         </table>
     </div>
@@ -66,7 +105,15 @@
 </div>
 <div class="blank5"></div>
 <div class="blank"></div>
-{include file='module/tail'}
+<div class="foot-body">
+  <div class="bads"><img src="admin/picture/bottom.jpg"></div>
+  <div class="clear10"></div>
+  <div class="blank"></div>
+<div class="footer_info"> &copy; 2005-2018 ECSHOP 版权所有，并保留所有权利。       <br />
+      <a href="http://xyunqi.com/products/ecshop?from=nav" target="_blank" style=" font-family:Verdana; font-size:11px;">Powered&nbsp;by&nbsp;<strong><span style="color: #3366FF">ECShop</span>&nbsp;<span style="color: #FF9966">v4.0.0</span></strong></a>&nbsp;<a href="http://www.ecshop.com/license.php?product=ecshop_b2c&url=http%3A%2F%2F127.0.0.1%2FECShop_V4.0.0_UTF8_release0830%2Fsource%2Fecshop%2F" target="_blank"
+>&nbsp;&nbsp;Licensed</a><br />
+            <div>ICP备案证书号:<a href="http://www.miibeian.gov.cn/" target="_blank"></a></div>
+    </div>
   <div class="clear10"></div>
 </div>
 </body>
